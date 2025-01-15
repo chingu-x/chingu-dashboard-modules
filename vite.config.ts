@@ -13,4 +13,9 @@ export default defineConfig({
       external: [],
     },
   },
+  test: {
+    globals: true,
+    environment: "node",
+    include: ["src/**/*.{test,spec}.{ts,js}"],
+  },
 });
