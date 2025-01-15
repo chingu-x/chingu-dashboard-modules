@@ -1,15 +1,45 @@
 {
-  "name": "chingu-modules",
-  "private": true,
+  "name": "@chingu-x/modules",
+  "description": "Module with all of the business logic in Chingu dashboard projects",
   "version": "0.0.0",
   "type": "module",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "GPL-3.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build && tsc",
+    "preview": "vite preview",
+    "prepublishOnly": "pnpm build",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "husky": "^9.1.7",
+    "semantic-release": "^24.2.1",
     "typescript": "~5.6.2",
     "vite": "^6.0.5"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./test": {
+      "import": "./dist/test/index.js",
+      "types": "./dist/types/test/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types/index.js",
+      "types": "./dist/types/types/index.d.ts"
+    }
   }
 }
