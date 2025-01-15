@@ -20,7 +20,8 @@
     "prepare": "husky install",
     "prettier": "prettier . --write",
     "format:changed": "git diff --name-only --diff-filter=d HEAD | grep -e 'src.*\\.[jt]sx\\?$' -e 'src.*\\.json$' -e 'src.*\\.css$' -e 'src.*\\.md$' | xargs prettier -u --write",
-    "test": "vitest"
+    "test": "vitest",
+    "test-ci": "vitest --run"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
