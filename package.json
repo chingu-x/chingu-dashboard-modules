@@ -9,6 +9,8 @@
     "dist"
   ],
   "license": "GPL-3.0",
+  "keywords": [],
+  "author": "",
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc",
