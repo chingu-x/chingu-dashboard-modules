@@ -12,10 +12,8 @@
   "keywords": [],
   "author": "",
   "scripts": {
-    "dev": "vite",
     "build": "vite build && tsc",
     "lint": "eslint",
-    "preview": "vite preview",
     "prepublishOnly": "pnpm build",
     "prepare": "husky install",
     "prettier": "prettier . --write",
