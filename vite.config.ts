@@ -1,4 +1,4 @@
-import { defineConfig } from "vitest/config";
+import { defineConfig } from "vite";
 import path from "path";
 
 export default defineConfig({
@@ -9,10 +9,5 @@ export default defineConfig({
       formats: ["es"],
       fileName: "index",
     },
-  },
-  test: {
-    globals: true,
-    environment: "node",
-    include: ["src/**/*.{test,spec}.{ts,js}"],
   },
 });

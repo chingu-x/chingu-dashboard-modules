@@ -56,6 +56,7 @@ export default [
       "**/*.config.js",
       "generate-exports.js",
       "vite.config.ts",
+      "vitest.config.ts",
       "**/*.test.ts",
     ],
   },
