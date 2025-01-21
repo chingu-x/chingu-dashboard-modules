@@ -1,3 +1,10 @@
+## [0.0.4](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.0.3...v0.0.4) (2025-01-21)
+
+
+### Bug Fixes
+
+* use proper token in actions workflow ([5f7742f](https://github.com/chingu-x/chingu-dashboard-modules/commit/5f7742f6e3ccfd7fb86ad3964b283863b5a68786))
+
 ## [0.0.3](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.0.2...v0.0.3) (2025-01-15)
 
 ### Bug Fixes
