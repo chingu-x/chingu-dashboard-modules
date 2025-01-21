@@ -33,4 +33,4 @@ jobs:
         run: pnpm semantic-release --dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.MODULES_NPM_TOKEN }}
