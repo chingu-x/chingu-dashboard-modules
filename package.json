@@ -75,6 +75,10 @@
     "./types": {
       "import": "./dist/types/index.js",
       "types": "./dist/types/types/index.d.ts"
+    },
+    "./user": {
+      "import": "./dist/user/index.js",
+      "types": "./dist/types/user/index.d.ts"
     }
   },
   "dependencies": {
