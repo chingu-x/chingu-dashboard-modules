@@ -4,16 +4,16 @@ export { default as UserUrls } from "./application/constants/userUrls";
 export { GetChinguMemberStatusUsecase } from "./application/usecases/getChinguMemberStatusUsecase";
 export { GetUserUsecase } from "./application/usecases/getUserUsecase";
 export { transformDateToUserTimezone } from "./application/utils/dateTransform";
-export type { GetUserRequestDto } from "./application/dtos/request.dtos";
-export type {
+export { GetUserRequestDto } from "./application/dtos/request.dtos";
+export {
   GetUserResponseDto,
   GetChinguMemberStatusResponseDto,
 } from "./application/dtos/response.dto";
-export type {
+export {
   User,
   VoyageTeamMember,
   VoyageRole,
   VoyageStatus,
 } from "./application/types/index";
-export type { UserClientPort } from "./ports/primary/userClientPort";
-export type { UserApiPort } from "./ports/secondary/userApiPort";
+export { UserClientPort } from "./ports/primary/userClientPort";
+export { UserApiPort } from "./ports/secondary/userApiPort";

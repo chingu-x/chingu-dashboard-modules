@@ -1,6 +1,6 @@
 import { injectable } from "tsyringe";
-import { type GetUserRequestDto } from "@/user/application/dtos/request.dtos";
-import { type GetChinguMemberStatusResponseDto } from "@/user/application/dtos/response.dto";
+import { GetUserRequestDto } from "@/user/application/dtos/request.dtos";
+import { GetChinguMemberStatusResponseDto } from "@/user/application/dtos/response.dto";
 
 @injectable()
 export class GetChinguMemberStatusUsecase {
@@ -10,7 +10,7 @@ export class GetChinguMemberStatusUsecase {
       return false;
     }
     return data.some(
-      (member) => member.voyageTeam.voyage.status.name === "Active",
+      (member) => member.voyageTeam.voyage.status.name === "Active"
     );
   }
 }

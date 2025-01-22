@@ -2,12 +2,12 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { GetUserUsecase } from "@/user/application/usecases/getUserUsecase";
 import { GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChinguMemberStatusUsecase";
-import { type UserClientPort } from "@/user/ports/primary/userClientPort";
-import type {
+import { UserClientPort } from "@/user/ports/primary/userClientPort";
+import {
   GetChinguMemberStatusResponseDto,
   GetUserResponseDto,
 } from "@/user/application/dtos/response.dto";
-import { type GetUserRequestDto } from "@/user/application/dtos/request.dtos";
+import { GetUserRequestDto } from "@/user/application/dtos/request.dtos";
 
 @injectable()
 export class UserClientAdapter implements UserClientPort {
@@ -16,7 +16,7 @@ export class UserClientAdapter implements UserClientPort {
     private readonly getUserUsecase: GetUserUsecase,
 
     @inject(TYPES.GetChinguMemberStatusUsecase)
-    private readonly getChinguMemberStatusUsecase: GetChinguMemberStatusUsecase,
+    private readonly getChinguMemberStatusUsecase: GetChinguMemberStatusUsecase
   ) {}
 
   async getUser(): Promise<GetUserResponseDto> {
@@ -24,7 +24,7 @@ export class UserClientAdapter implements UserClientPort {
   }
 
   getChinguMemberStatus(
-    user: GetUserRequestDto,
+    user: GetUserRequestDto
   ): GetChinguMemberStatusResponseDto {
     return this.getChinguMemberStatusUsecase.execute(user);
   }

@@ -7,6 +7,6 @@ import type {
 export interface UserClientPort {
   getUser: () => Promise<GetUserResponseDto>;
   getChinguMemberStatus: (
-    user: GetUserRequestDto,
+    user: GetUserRequestDto
   ) => GetChinguMemberStatusResponseDto;
 }

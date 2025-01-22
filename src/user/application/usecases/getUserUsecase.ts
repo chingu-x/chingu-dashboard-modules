@@ -1,14 +1,14 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { transformDateToUserTimezone } from "@/user/application/utils/dateTransform";
-import { type UserApiPort } from "@/user/ports/secondary/userApiPort";
-import { type GetUserResponseDto } from "@/user/application/dtos/response.dto";
+import { UserApiPort } from "@/user/ports/secondary/userApiPort";
+import { GetUserResponseDto } from "@/user/application/dtos/response.dto";
 
 @injectable()
 export class GetUserUsecase {
   constructor(
     @inject(TYPES.UserApiPort)
-    private readonly userApi: UserApiPort,
+    private readonly userApi: UserApiPort
   ) {}
 
   async execute(): Promise<GetUserResponseDto> {
@@ -18,7 +18,7 @@ export class GetUserUsecase {
       ...data,
       currentDateInUserTimezone: transformDateToUserTimezone(
         currentDate,
-        data.timezone,
+        data.timezone
       ),
     };
 

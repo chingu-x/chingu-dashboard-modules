@@ -3,14 +3,14 @@ import { TYPES } from "@/types";
 import { LogoutUsecase } from "@/auth/application/usecases/logoutUsecase";
 import { RequestResetPasswordUsecase } from "@/auth/application/usecases/requestResetPasswordUsecase";
 import { ResetPasswordUsecase } from "@/auth/application/usecases/resetPasswordUsecase";
-import { type AuthClientPort } from "@/auth/ports/primary/authClientPort";
-import { type LoginUsecase } from "@/auth/application/usecases/loginUsecase";
-import type {
+import { AuthClientPort } from "@/auth/ports/primary/authClientPort";
+import { LoginUsecase } from "@/auth/application/usecases/loginUsecase";
+import {
   LoginRequestDto,
   RequestResetPasswordDto,
   ResetPasswordDto,
 } from "@/auth/application/dtos/request.dto";
-import type {
+import {
   LoginResponseDto,
   LogoutResponseDto,
 } from "@/auth/application/dtos/response.dto";
@@ -28,7 +28,7 @@ export class AuthClientAdapter implements AuthClientPort {
     private readonly requestResetPasswordUsecase: RequestResetPasswordUsecase,
 
     @inject(TYPES.ResetPasswordUsecase)
-    private readonly resetPasswordUsecase: ResetPasswordUsecase,
+    private readonly resetPasswordUsecase: ResetPasswordUsecase
   ) {}
 
   async login({ email, password }: LoginRequestDto): Promise<LoginResponseDto> {
