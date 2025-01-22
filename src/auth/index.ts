@@ -1,10 +1,10 @@
-export { AuthClientAdapter } from "./adapters/primary/authClientAdapter";
-export { AuthApiAdapter } from "./adapters/secondary/authApiAdapter";
+export type { AuthClientAdapter } from "./adapters/primary/authClientAdapter";
+export type { AuthApiAdapter } from "./adapters/secondary/authApiAdapter";
 export { default as AuthUrls } from "./application/constants/authUrls";
-export { LoginUsecase } from "./application/usecases/loginUsecase";
-export { LogoutUsecase } from "./application/usecases/logoutUsecase";
-export { RequestResetPasswordUsecase } from "./application/usecases/requestResetPasswordUsecase";
-export { ResetPasswordUsecase } from "./application/usecases/resetPasswordUsecase";
+export type { LoginUsecase } from "./application/usecases/loginUsecase";
+export type { LogoutUsecase } from "./application/usecases/logoutUsecase";
+export type { RequestResetPasswordUsecase } from "./application/usecases/requestResetPasswordUsecase";
+export type { ResetPasswordUsecase } from "./application/usecases/resetPasswordUsecase";
 export type {
   LoginRequestDto,
   RequestResetPasswordDto,
