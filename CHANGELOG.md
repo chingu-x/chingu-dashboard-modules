@@ -1,3 +1,10 @@
+## [0.3.2](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.1...v0.3.2) (2025-01-22)
+
+
+### Bug Fixes
+
+* add path alias resolve to vite config ([839b838](https://github.com/chingu-x/chingu-dashboard-modules/commit/839b83886bab7dade5485fb0077df773c56f5ee6))
+
 ## [0.3.1](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.0...v0.3.1) (2025-01-22)
 
 
