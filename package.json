@@ -1,7 +1,7 @@
 {
   "name": "@chingu-x/modules",
   "description": "Module with all of the business logic in Chingu dashboard projects",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "type": "module",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
