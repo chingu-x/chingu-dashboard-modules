@@ -12,6 +12,14 @@ const exportsObject = {
     import: "./dist/index.js",
     types: "./dist/types/index.d.ts",
   },
+  "./di-types": {
+    import: "./dist/types.js",
+    types: "./dist/types/types.d.ts",
+  },
+  "./resolver": {
+    import: "./dist/resolver.js",
+    types: "./dist/types/resolver.d.ts",
+  },
 };
 
 components.forEach((component) => {

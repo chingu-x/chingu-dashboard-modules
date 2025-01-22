@@ -49,6 +49,10 @@
       "import": "./dist/index.js",
       "types": "./dist/types/index.d.ts"
     },
+    "./modules": {
+      "import": "./dist/modules/index.js",
+      "types": "./dist/types/modules/index.d.ts"
+    },
     "./test": {
       "import": "./dist/test/index.js",
       "types": "./dist/types/test/index.d.ts"
