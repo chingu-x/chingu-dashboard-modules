@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.1.0...v0.1.1) (2025-01-22)
+
+
+### Bug Fixes
+
+* lint ([e576b40](https://github.com/chingu-x/chingu-dashboard-modules/commit/e576b40af825fb6342b1826a375ccc8d3174ae43))
+
 # [0.1.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.0.4...v0.1.0) (2025-01-22)
 
 
