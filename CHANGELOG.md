@@ -1,3 +1,10 @@
+## [0.3.10](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.9...v0.3.10) (2025-01-22)
+
+
+### Bug Fixes
+
+* barrel exports ([1d81d55](https://github.com/chingu-x/chingu-dashboard-modules/commit/1d81d55a5e759667662f6e04368bbb7d68e8fd1a))
+
 ## [0.3.9](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.8...v0.3.9) (2025-01-22)
 
 
