@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.0...v0.3.1) (2025-01-22)
+
+
+### Bug Fixes
+
+* test ([ab0c990](https://github.com/chingu-x/chingu-dashboard-modules/commit/ab0c990405270c92e77407b3228baab45b8cecea))
+
 # [0.3.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.2.0...v0.3.0) (2025-01-22)
 
 
