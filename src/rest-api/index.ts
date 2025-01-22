@@ -1,8 +1,8 @@
 export { AxiosAdapter } from "./adapters/secondary/AxiosAdapter";
-export {
+export type {
   GetParams,
   PostParams,
   PatchParams,
   DeleteParams,
 } from "./application/entities/restApiParams";
-export { RestApiPort } from "./ports/secondary/restApiPort";
+export type { RestApiPort } from "./ports/secondary/restApiPort";
