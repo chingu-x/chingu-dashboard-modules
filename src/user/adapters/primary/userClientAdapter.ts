@@ -7,7 +7,7 @@ import type {
 } from "../../application/dtos/response.dto";
 import { GetUserUsecase } from "../../application/usecases/getUserUsecase";
 import { type GetUserRequestDto } from "../../application/dtos/request.dtos";
-import { GetChinguMemberStatusUsecase } from "../../application/usecases/getChinguMemberStatusUsecase";
+import { GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChinguMemberStatusUsecase";
 
 @injectable()
 export class UserClientAdapter implements UserClientPort {
