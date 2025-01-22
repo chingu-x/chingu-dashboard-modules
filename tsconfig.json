@@ -11,7 +11,7 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "strict": true,
-    "verbatimModuleSyntax": true,
+    // "verbatimModuleSyntax": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
