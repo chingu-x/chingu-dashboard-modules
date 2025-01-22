@@ -39,12 +39,12 @@ export default [
       ],
       "no-console": "error",
       "import/order": 2,
-      // "no-relative-import-paths/no-relative-import-paths": [
-      //   "error",
-      //   {
-      //     allowSameFolder: true,
-      //   },
-      // ],
+      "no-relative-import-paths/no-relative-import-paths": [
+        "error",
+        {
+          allowSameFolder: true,
+        },
+      ],
       "no-nested-ternary": 2,
       "@typescript-eslint/consistent-type-imports": [
         "error",
