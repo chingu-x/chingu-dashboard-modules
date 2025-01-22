@@ -1,3 +1,10 @@
+# [0.1.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.0.4...v0.1.0) (2025-01-22)
+
+
+### Features
+
+* setup auth module ([965b437](https://github.com/chingu-x/chingu-dashboard-modules/commit/965b437da1c127dde87f3e6ed27b12996a4bfc8f))
+
 ## [0.0.4](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.0.3...v0.0.4) (2025-01-21)
 
 
