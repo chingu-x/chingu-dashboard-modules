@@ -1,5 +1,5 @@
 import { inject, injectable } from "tsyringe";
-import { TYPES } from "../../../../types";
+import { TYPES } from "../../../types";
 import { type AuthApiPort } from "../../ports/secondary/authApiPort";
 import { type RestApiPort } from "../../../rest-api/ports/secondary/restApiPort";
 import type {
@@ -17,7 +17,7 @@ import AuthUrls from "../../application/constants/authUrls";
 export class AuthApiAdapter implements AuthApiPort {
   constructor(
     @inject(TYPES.RestApiPort)
-    private readonly apiClient: RestApiPort,
+    private readonly apiClient: RestApiPort
   ) {}
 
   async login({ email, password }: LoginRequestDto): Promise<LoginResponseDto> {

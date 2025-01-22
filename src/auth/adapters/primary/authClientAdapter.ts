@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
 import { type ResetPasswordUsecase } from "../../application/usecases/resetPasswordUsecase";
 import { type AuthClientPort } from "../../ports/primary/authClientPort";
-import { TYPES } from "../../../../types";
+import { TYPES } from "../../../types";
 import { type LoginUsecase } from "../../application/usecases/loginUsecase";
 import { type LogoutUsecase } from "../../application/usecases/logoutUsecase";
 import { type RequestResetPasswordUsecase } from "../../application/usecases/requestResetPasswordUsecase";
@@ -28,7 +28,7 @@ export class AuthClientAdapter implements AuthClientPort {
     private readonly requestResetPasswordUsecase: RequestResetPasswordUsecase,
 
     @inject(TYPES.ResetPasswordUsecase)
-    private readonly resetPasswordUsecase: ResetPasswordUsecase,
+    private readonly resetPasswordUsecase: ResetPasswordUsecase
   ) {}
 
   async login({ email, password }: LoginRequestDto): Promise<LoginResponseDto> {

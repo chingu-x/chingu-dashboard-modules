@@ -1,14 +1,14 @@
 import { inject, injectable } from "tsyringe";
-import { TYPES } from "../../../../types";
+import { TYPES } from "../../../types";
 import { type AuthApiPort } from "../../ports/secondary/authApiPort";
-import { type LoginRequestDto } from "../../application/dtos/request.dto";
-import { type LoginResponseDto } from "../../application/dtos/response.dto";
+import { type LoginRequestDto } from "../dtos/request.dto";
+import { type LoginResponseDto } from "../dtos/response.dto";
 
 @injectable()
 export class LoginUsecase {
   constructor(
     @inject(TYPES.AuthApiPort)
-    private readonly authApi: AuthApiPort,
+    private readonly authApi: AuthApiPort
   ) {}
 
   async execute(props: LoginRequestDto): Promise<LoginResponseDto> {
