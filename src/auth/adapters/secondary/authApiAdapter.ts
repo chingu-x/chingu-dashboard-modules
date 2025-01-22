@@ -1,5 +1,6 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
+import AuthUrls from "@/auth/application/constants/authUrls";
 import { type AuthApiPort } from "@/auth/ports/secondary/authApiPort";
 import { type RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import type {
@@ -11,7 +12,6 @@ import type {
   LogoutResponseDto,
   LoginResponseDto,
 } from "@/auth/application/dtos/response.dto";
-import AuthUrls from "@/auth/application/constants/authUrls";
 
 @injectable()
 export class AuthApiAdapter implements AuthApiPort {

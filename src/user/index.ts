@@ -1,6 +1,9 @@
 export { UserClientAdapter } from "./adapters/primary/userClientAdapter";
 export { UserApiAdapter } from "./adapters/secondary/userApiAdapter";
 export { default as UserUrls } from "./application/constants/userUrls";
+export { GetChinguMemberStatusUsecase } from "./application/usecases/getChinguMemberStatusUsecase";
+export { GetUserUsecase } from "./application/usecases/getUserUsecase";
+export { transformDateToUserTimezone } from "./application/utils/dateTransform";
 export type { GetUserRequestDto } from "./application/dtos/request.dtos";
 export type {
   GetUserResponseDto,
@@ -12,8 +15,5 @@ export type {
   VoyageRole,
   VoyageStatus,
 } from "./application/types/index";
-export { GetChinguMemberStatusUsecase } from "./application/usecases/getChinguMemberStatusUsecase";
-export { GetUserUsecase } from "./application/usecases/getUserUsecase";
-export { transformDateToUserTimezone } from "./application/utils/dateTransform";
 export type { UserClientPort } from "./ports/primary/userClientPort";
 export type { UserApiPort } from "./ports/secondary/userApiPort";

@@ -1,13 +1,13 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
+import { GetUserUsecase } from "@/user/application/usecases/getUserUsecase";
+import { GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChinguMemberStatusUsecase";
 import { type UserClientPort } from "@/user/ports/primary/userClientPort";
 import type {
   GetChinguMemberStatusResponseDto,
   GetUserResponseDto,
 } from "@/user/application/dtos/response.dto";
-import { GetUserUsecase } from "@/user/application/usecases/getUserUsecase";
 import { type GetUserRequestDto } from "@/user/application/dtos/request.dtos";
-import { GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChinguMemberStatusUsecase";
 
 @injectable()
 export class UserClientAdapter implements UserClientPort {
