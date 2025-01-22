@@ -1,8 +1,8 @@
 import { inject, injectable } from "tsyringe";
-import { TYPES } from "src/types";
-import { type UserApiPort } from "src/user/ports/secondary/userApiPort";
-import { type GetUserResponseDto } from "src/user/application/dtos/response.dto";
-import { transformDateToUserTimezone } from "src/user/application/utils/dateTransform";
+import { TYPES } from "@/types";
+import { type UserApiPort } from "@/user/ports/secondary/userApiPort";
+import { type GetUserResponseDto } from "@/user/application/dtos/response.dto";
+import { transformDateToUserTimezone } from "@/user/application/utils/dateTransform";
 
 @injectable()
 export class GetUserUsecase {

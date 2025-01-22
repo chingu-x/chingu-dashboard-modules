@@ -1,4 +1,4 @@
-import { type User } from "src/user/application/types";
+import { type User } from "@/user/application/types";
 
 export type GetUserResponseDto = User;
 

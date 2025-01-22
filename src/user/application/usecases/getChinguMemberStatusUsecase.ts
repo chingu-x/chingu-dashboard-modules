@@ -1,6 +1,6 @@
 import { injectable } from "tsyringe";
-import { type GetUserRequestDto } from "src/user/application/dtos/request.dtos";
-import { type GetChinguMemberStatusResponseDto } from "src/user/application/dtos/response.dto";
+import { type GetUserRequestDto } from "@/user/application/dtos/request.dtos";
+import { type GetChinguMemberStatusResponseDto } from "@/user/application/dtos/response.dto";
 
 @injectable()
 export class GetChinguMemberStatusUsecase {
