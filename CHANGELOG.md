@@ -1,3 +1,10 @@
+## [0.3.4](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.3...v0.3.4) (2025-01-22)
+
+
+### Bug Fixes
+
+* update package json ([6fd70f5](https://github.com/chingu-x/chingu-dashboard-modules/commit/6fd70f5357531a85d5df5d63c5f9fccaee076ebe))
+
 ## [0.3.3](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.2...v0.3.3) (2025-01-22)
 
 
