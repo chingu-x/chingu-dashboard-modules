@@ -1,3 +1,10 @@
+## [0.3.5](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.4...v0.3.5) (2025-01-22)
+
+
+### Bug Fixes
+
+* enforce type imports ([4b36806](https://github.com/chingu-x/chingu-dashboard-modules/commit/4b36806ed9b26ac040695fa170e57c3234d6f790))
+
 ## [0.3.4](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.3...v0.3.4) (2025-01-22)
 
 
