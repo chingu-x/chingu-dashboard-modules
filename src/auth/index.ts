@@ -5,14 +5,14 @@ export { LoginUsecase } from "./application/usecases/loginUsecase";
 export { LogoutUsecase } from "./application/usecases/logoutUsecase";
 export { RequestResetPasswordUsecase } from "./application/usecases/requestResetPasswordUsecase";
 export { ResetPasswordUsecase } from "./application/usecases/resetPasswordUsecase";
-export {
+export type {
   LoginRequestDto,
   RequestResetPasswordDto,
   ResetPasswordDto,
 } from "./application/dtos/request.dto";
-export {
+export type {
   LoginResponseDto,
   LogoutResponseDto,
 } from "./application/dtos/response.dto";
-export { AuthClientPort } from "./ports/primary/authClientPort";
-export { AuthApiPort } from "./ports/secondary/authApiPort";
+export type { AuthClientPort } from "./ports/primary/authClientPort";
+export type { AuthApiPort } from "./ports/secondary/authApiPort";
