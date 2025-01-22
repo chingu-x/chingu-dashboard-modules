@@ -1,3 +1,10 @@
+## [0.3.11](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.10...v0.3.11) (2025-01-22)
+
+
+### Bug Fixes
+
+* add type to import ([77c03d9](https://github.com/chingu-x/chingu-dashboard-modules/commit/77c03d9fee905d1c53a3eacddf5bb92e040a8963))
+
 ## [0.3.10](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.9...v0.3.10) (2025-01-22)
 
 
