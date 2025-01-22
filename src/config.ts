@@ -1,0 +1,41 @@
+import { container } from "tsyringe";
+import { TYPES } from "./types";
+import { AxiosAdapter } from "./modules/rest-api/adapters/secondary/AxiosAdapter";
+import { AuthApiAdapter } from "./modules/auth/adapters/secondary/authApiAdapter";
+import { LoginUsecase } from "./modules/auth/application/usecases/loginUsecase";
+import { LogoutUsecase } from "./modules/auth/application/usecases/logoutUsecase";
+import { RequestResetPasswordUsecase } from "./modules/auth/application/usecases/requestResetPasswordUsecase";
+import { ResetPasswordUsecase } from "./modules/auth/application/usecases/resetPasswordUsecase";
+import { AuthClientAdapter } from "./modules/auth/adapters/primary/authClientAdapter";
+
+container.register(TYPES.RestApiPort, { useClass: AxiosAdapter });
+container.register(TYPES.AuthApiPort, { useClass: AuthApiAdapter });
+// container.register(TYPES.UserApiPort, { useClass: UserApiAdapter });
+container.register(TYPES.LoginUsecase, { useClass: LoginUsecase });
+container.register(TYPES.LogoutUsecase, { useClass: LogoutUsecase });
+container.register(TYPES.RequestResetPasswordUsecase, {
+  useClass: RequestResetPasswordUsecase,
+});
+container.register(TYPES.ResetPasswordUsecase, {
+  useClass: ResetPasswordUsecase,
+});
+container.register(TYPES.AuthClientAdapter, { useClass: AuthClientAdapter });
+// container.register(TYPES.GetUserUsecase, { useClass: GetUserUsecase });
+// container.register(TYPES.GetChinguMemberStatusUsecase, {
+//   useClass: GetChinguMemberStatusUsecase,
+// });
+// container.register(TYPES.UserClientAdapter, { useClass: UserClientAdapter });
+// container.register(TYPES.VoyageTeamClientAdapter, {
+//   useClass: VoyageTeamClientAdapter,
+// });
+// container.register(TYPES.GetCurrentVoyageTeamUsecase, {
+//   useClass: GetCurrentVoyageTeamUsecase,
+// });
+// container.register(TYPES.GetCurrentVoyageTeamIdUsecase, {
+//   useClass: GetCurrentVoyageTeamIdUsecase,
+// });
+// container.register(TYPES.HasVoyageStartedUsecase, {
+//   useClass: HasVoyageStartedUsecase,
+// });
+
+export default container;
