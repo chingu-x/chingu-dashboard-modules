@@ -10,7 +10,7 @@ export class GetChinguMemberStatusUsecase {
       return false;
     }
     return data.some(
-      (member) => member.voyageTeam.voyage.status.name === "Active"
+      (member) => member.voyageTeam.voyage.status.name === "Active",
     );
   }
 }

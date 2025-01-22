@@ -9,7 +9,7 @@ import { GetUserResponseDto } from "@/user/application/dtos/response.dto";
 export class UserApiAdapter implements UserApiPort {
   constructor(
     @inject(TYPES.RestApiPort)
-    private readonly apiClient: RestApiPort
+    private readonly apiClient: RestApiPort,
   ) {}
 
   async getUser(): Promise<GetUserResponseDto> {

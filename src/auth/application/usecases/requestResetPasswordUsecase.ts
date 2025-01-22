@@ -7,7 +7,7 @@ import { RequestResetPasswordDto } from "@/auth/application/dtos/request.dto";
 export class RequestResetPasswordUsecase {
   constructor(
     @inject(TYPES.AuthApiPort)
-    private readonly authApi: AuthApiPort
+    private readonly authApi: AuthApiPort,
   ) {}
 
   async execute(props: RequestResetPasswordDto): Promise<void> {

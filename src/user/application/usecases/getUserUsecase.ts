@@ -8,7 +8,7 @@ import { GetUserResponseDto } from "@/user/application/dtos/response.dto";
 export class GetUserUsecase {
   constructor(
     @inject(TYPES.UserApiPort)
-    private readonly userApi: UserApiPort
+    private readonly userApi: UserApiPort,
   ) {}
 
   async execute(): Promise<GetUserResponseDto> {
@@ -18,7 +18,7 @@ export class GetUserUsecase {
       ...data,
       currentDateInUserTimezone: transformDateToUserTimezone(
         currentDate,
-        data.timezone
+        data.timezone,
       ),
     };
 

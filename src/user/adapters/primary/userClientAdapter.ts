@@ -16,7 +16,7 @@ export class UserClientAdapter implements UserClientPort {
     private readonly getUserUsecase: GetUserUsecase,
 
     @inject(TYPES.GetChinguMemberStatusUsecase)
-    private readonly getChinguMemberStatusUsecase: GetChinguMemberStatusUsecase
+    private readonly getChinguMemberStatusUsecase: GetChinguMemberStatusUsecase,
   ) {}
 
   async getUser(): Promise<GetUserResponseDto> {
@@ -24,7 +24,7 @@ export class UserClientAdapter implements UserClientPort {
   }
 
   getChinguMemberStatus(
-    user: GetUserRequestDto
+    user: GetUserRequestDto,
   ): GetChinguMemberStatusResponseDto {
     return this.getChinguMemberStatusUsecase.execute(user);
   }
