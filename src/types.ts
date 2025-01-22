@@ -20,7 +20,7 @@ export const TYPES = {
 
   /* Adapters */
   AuthClientAdapter: Symbol.for(
-    "AuthClientAdapter"
+    "AuthClientAdapter",
   ) as InjectionToken<AuthClientAdapter>,
   // UserClientAdapter: Symbol.for(
   //   "UserClientAdapter"
@@ -39,10 +39,10 @@ export const TYPES = {
   //   "GetChinguMemberStatusUsecase"
   // ) as InjectionToken<GetChinguMemberStatusUsecase>,
   RequestResetPasswordUsecase: Symbol.for(
-    "RequestResetPasswordUsecase"
+    "RequestResetPasswordUsecase",
   ) as InjectionToken<RequestResetPasswordUsecase>,
   ResetPasswordUsecase: Symbol.for(
-    "ResetPasswordUsecase"
+    "ResetPasswordUsecase",
   ) as InjectionToken<ResetPasswordUsecase>,
   // GetCurrentVoyageTeamUsecase: Symbol.for(
   //   "GetCurrentVoyageTeamUsecase"
