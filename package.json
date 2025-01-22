@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "",
   "scripts": {
-    "build": "vite build && tsc --emitDeclarationOnly && tsc-alias",
+    "build": "vite build && tsc && tsc-alias",
     "lint": "eslint",
     "prepublishOnly": "pnpm build",
     "prepare": "husky install",
