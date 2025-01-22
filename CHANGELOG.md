@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.2.0...v0.3.0) (2025-01-22)
+
+
+### Features
+
+* add user module ([730476d](https://github.com/chingu-x/chingu-dashboard-modules/commit/730476d4b9aa9d82b31515217d20538a27df18da))
+
 # [0.2.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.1.2...v0.2.0) (2025-01-22)
 
 
