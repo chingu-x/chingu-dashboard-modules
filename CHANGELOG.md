@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.2...v0.3.3) (2025-01-22)
+
+
+### Bug Fixes
+
+* update config for resolving path alias in package ([12538fe](https://github.com/chingu-x/chingu-dashboard-modules/commit/12538fe31d9e2d9b7ba66414350a8483de923e67))
+
 ## [0.3.2](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.1...v0.3.2) (2025-01-22)
 
 
