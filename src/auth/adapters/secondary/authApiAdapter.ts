@@ -17,7 +17,7 @@ import AuthUrls from "../../application/constants/authUrls";
 export class AuthApiAdapter implements AuthApiPort {
   constructor(
     @inject(TYPES.RestApiPort)
-    private readonly apiClient: RestApiPort
+    private readonly apiClient: RestApiPort,
   ) {}
 
   async login({ email, password }: LoginRequestDto): Promise<LoginResponseDto> {
