@@ -21,8 +21,13 @@ export class AxiosAdapter implements RestApiPort {
   }> = [];
 
   constructor() {
+    const clientType = process.env.NEXT_PUBLIC_CLIENT_TYPE || "react";
+    const baseURL =
+      clientType === "nextjs"
+        ? `${process.env.NEXT_PUBLIC_API_URL}`
+        : `${process.env.NEXT_PUBLIC_API_URL}`;
     this.axiosInstance = axios.create({
-      baseURL: `${process.env.NEXT_PUBLIC_API_URL}`,
+      baseURL,
       headers: {
         "Content-Type": "application/json",
       },
@@ -58,7 +63,7 @@ export class AxiosAdapter implements RestApiPort {
 
       try {
         await axios.post(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/v1/auth/refresh`,
+          `${this.axiosInstance.defaults.baseURL}/api/v1/auth/refresh`,
           {},
           { withCredentials: true },
         );
