@@ -3,6 +3,7 @@ import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import eslintPluginPrettier from "eslint-plugin-prettier";
 import importPlugin from "eslint-plugin-import";
+import noImportRelative from "eslint-plugin-no-relative-import-paths";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
@@ -25,6 +26,7 @@ export default [
     plugins: {
       prettier: eslintPluginPrettier,
       import: importPlugin,
+      "no-relative-import-paths": noImportRelative,
     },
     rules: {
       "prettier/prettier": "error",
@@ -37,6 +39,12 @@ export default [
       ],
       "no-console": "error",
       "import/order": 2,
+      "no-relative-import-paths/no-relative-import-paths": [
+        "error",
+        {
+          allowSameFolder: true,
+        },
+      ],
       "no-nested-ternary": 2,
       "@typescript-eslint/consistent-type-imports": [
         "error",

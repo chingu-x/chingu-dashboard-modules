@@ -1,9 +1,9 @@
 import { inject, injectable } from "tsyringe";
-import { TYPES } from "../../../types";
-import { type RestApiPort } from "../../../rest-api/ports/secondary/restApiPort";
-import { type UserApiPort } from "../../ports/secondary/userApiPort";
-import { type GetUserResponseDto } from "../../application/dtos/response.dto";
-import UserUrls from "../../application/constants/userUrls";
+import { TYPES } from "src/types";
+import { type RestApiPort } from "src/rest-api/ports/secondary/restApiPort";
+import { type UserApiPort } from "src/user/ports/secondary/userApiPort";
+import { type GetUserResponseDto } from "src/user/application/dtos/response.dto";
+import UserUrls from "src/user/application/constants/userUrls";
 
 @injectable()
 export class UserApiAdapter implements UserApiPort {

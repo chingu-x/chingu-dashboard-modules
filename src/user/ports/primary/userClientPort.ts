@@ -1,8 +1,8 @@
-import { type GetUserRequestDto } from "../../application/dtos/request.dtos";
+import { type GetUserRequestDto } from "src/user/application/dtos/request.dtos";
 import type {
   GetChinguMemberStatusResponseDto,
   GetUserResponseDto,
-} from "../../application/dtos/response.dto";
+} from "src/user/application/dtos/response.dto";
 
 export interface UserClientPort {
   getUser: () => Promise<GetUserResponseDto>;

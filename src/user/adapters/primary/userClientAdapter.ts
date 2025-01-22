@@ -1,12 +1,12 @@
 import { inject, injectable } from "tsyringe";
-import { TYPES } from "../../../types";
-import { type UserClientPort } from "../../ports/primary/userClientPort";
+import { TYPES } from "src/types";
+import { type UserClientPort } from "src/user/ports/primary/userClientPort";
 import type {
   GetChinguMemberStatusResponseDto,
   GetUserResponseDto,
-} from "../../application/dtos/response.dto";
-import { GetUserUsecase } from "../../application/usecases/getUserUsecase";
-import { type GetUserRequestDto } from "../../application/dtos/request.dtos";
+} from "src/user/application/dtos/response.dto";
+import { GetUserUsecase } from "src/user/application/usecases/getUserUsecase";
+import { type GetUserRequestDto } from "src/user/application/dtos/request.dtos";
 import { GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChinguMemberStatusUsecase";
 
 @injectable()
