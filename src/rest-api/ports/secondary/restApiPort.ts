@@ -3,7 +3,7 @@ import type {
   GetParams,
   PatchParams,
   PostParams,
-} from "@/rest-api/application/entities/restApiParams";
+} from "../../application/entities/restApiParams";
 
 export interface RestApiPort {
   get: <X>(params: GetParams) => Promise<X>;

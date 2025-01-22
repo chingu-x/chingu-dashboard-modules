@@ -1,17 +1,17 @@
 import { inject, injectable } from "tsyringe";
-import { TYPES } from "@/types";
-import AuthUrls from "@/auth/application/constants/authUrls";
-import { AuthApiPort } from "@/auth/ports/secondary/authApiPort";
-import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
-import {
+import { TYPES } from "../../../types";
+import { type AuthApiPort } from "../../ports/secondary/authApiPort";
+import { type RestApiPort } from "../../../rest-api/ports/secondary/restApiPort";
+import type {
   RequestResetPasswordDto,
   LoginRequestDto,
   ResetPasswordDto,
-} from "@/auth/application/dtos/request.dto";
-import {
+} from "../../application/dtos/request.dto";
+import type {
   LogoutResponseDto,
   LoginResponseDto,
-} from "@/auth/application/dtos/response.dto";
+} from "../../application/dtos/response.dto";
+import AuthUrls from "../../application/constants/authUrls";
 
 @injectable()
 export class AuthApiAdapter implements AuthApiPort {

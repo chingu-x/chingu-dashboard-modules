@@ -1,5 +1,5 @@
-import { type User } from "@/user/application/types";
+// import { type User } from "@/user/application/types";
 
-export type GetUserResponseDto = User;
+// export type GetUserResponseDto = User;
 
-export type GetChinguMemberStatusResponseDto = boolean;
+// export type GetChinguMemberStatusResponseDto = boolean;

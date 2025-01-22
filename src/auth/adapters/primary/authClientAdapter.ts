@@ -1,19 +1,19 @@
 import { inject, injectable } from "tsyringe";
-import { TYPES } from "@/types";
-import { LogoutUsecase } from "@/auth/application/usecases/logoutUsecase";
-import { RequestResetPasswordUsecase } from "@/auth/application/usecases/requestResetPasswordUsecase";
-import { ResetPasswordUsecase } from "@/auth/application/usecases/resetPasswordUsecase";
-import { AuthClientPort } from "@/auth/ports/primary/authClientPort";
-import { LoginUsecase } from "@/auth/application/usecases/loginUsecase";
-import {
+import { type ResetPasswordUsecase } from "../../application/usecases/resetPasswordUsecase";
+import { type AuthClientPort } from "../../ports/primary/authClientPort";
+import { TYPES } from "../../../types";
+import { type LoginUsecase } from "../../application/usecases/loginUsecase";
+import { type LogoutUsecase } from "../../application/usecases/logoutUsecase";
+import { type RequestResetPasswordUsecase } from "../../application/usecases/requestResetPasswordUsecase";
+import type {
   LoginRequestDto,
   RequestResetPasswordDto,
   ResetPasswordDto,
-} from "@/auth/application/dtos/request.dto";
-import {
+} from "../../application/dtos/request.dto";
+import type {
   LoginResponseDto,
   LogoutResponseDto,
-} from "@/auth/application/dtos/response.dto";
+} from "../../application/dtos/response.dto";
 
 @injectable()
 export class AuthClientAdapter implements AuthClientPort {

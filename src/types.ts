@@ -8,16 +8,12 @@ import type {
   RequestResetPasswordUsecase,
   ResetPasswordUsecase,
 } from "./auth";
-import { type UserApiPort } from "./user/ports/secondary/userApiPort";
-import { type UserClientAdapter } from "./user/adapters/primary/userClientAdapter";
-import { type GetUserUsecase } from "./user/application/usecases/getUserUsecase";
-import { type GetChinguMemberStatusUsecase } from "./user/application/usecases/getChinguMemberStatusUsecase";
 
 export const TYPES = {
   /* Ports */
   RestApiPort: Symbol.for("RestApiPort") as InjectionToken<RestApiPort>,
   AuthApiPort: Symbol.for("AuthApiPort") as InjectionToken<AuthApiPort>,
-  UserApiPort: Symbol.for("UserApiPort") as InjectionToken<UserApiPort>,
+  // UserApiPort: Symbol.for("UserApiPort") as InjectionToken<UserApiPort>,
   // VoyageTeamClientPort: Symbol.for(
   //   "VoyageTeamClientPort"
   // ) as InjectionToken<VoyageTeamClientPort>,
@@ -26,9 +22,9 @@ export const TYPES = {
   AuthClientAdapter: Symbol.for(
     "AuthClientAdapter",
   ) as InjectionToken<AuthClientAdapter>,
-  UserClientAdapter: Symbol.for(
-    "UserClientAdapter",
-  ) as InjectionToken<UserClientAdapter>,
+  // UserClientAdapter: Symbol.for(
+  //   "UserClientAdapter"
+  // ) as InjectionToken<UserClientAdapter>,
   // VoyageTeamClientAdapter: Symbol.for(
   //   "VoyageTeamClientAdapter"
   // ) as InjectionToken<VoyageTeamClientAdapter>,
@@ -36,12 +32,12 @@ export const TYPES = {
   /* UseCases */
   LoginUsecase: Symbol.for("LoginUsecase") as InjectionToken<LoginUsecase>,
   LogoutUsecase: Symbol.for("LogoutUsecase") as InjectionToken<LogoutUsecase>,
-  GetUserUsecase: Symbol.for(
-    "GetUserUsecase",
-  ) as InjectionToken<GetUserUsecase>,
-  GetChinguMemberStatusUsecase: Symbol.for(
-    "GetChinguMemberStatusUsecase",
-  ) as InjectionToken<GetChinguMemberStatusUsecase>,
+  // GetUserUsecase: Symbol.for(
+  //   "GetUserUsecase"
+  // ) as InjectionToken<GetUserUsecase>,
+  // GetChinguMemberStatusUsecase: Symbol.for(
+  //   "GetChinguMemberStatusUsecase"
+  // ) as InjectionToken<GetChinguMemberStatusUsecase>,
   RequestResetPasswordUsecase: Symbol.for(
     "RequestResetPasswordUsecase",
   ) as InjectionToken<RequestResetPasswordUsecase>,
