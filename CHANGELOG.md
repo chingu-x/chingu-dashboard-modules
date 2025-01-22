@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.1.2...v0.2.0) (2025-01-22)
+
+
+### Features
+
+* adjust base url based on client ([7188a79](https://github.com/chingu-x/chingu-dashboard-modules/commit/7188a7905dc4a7d6c5d3aaa1ec8d4fcc34bf9171))
+
 ## [0.1.2](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.1.1...v0.1.2) (2025-01-22)
 
 
