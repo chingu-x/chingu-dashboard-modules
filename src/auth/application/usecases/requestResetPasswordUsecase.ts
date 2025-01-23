@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
-import { TYPES } from "../../../types";
-import { type AuthApiPort } from "../../ports/secondary/authApiPort";
-import { type RequestResetPasswordDto } from "../dtos/request.dto";
+import { TYPES } from "@/types";
+import { AuthApiPort } from "@/auth/ports/secondary/authApiPort";
+import { RequestResetPasswordDto } from "@/auth/application/dtos/request.dto";
 
 @injectable()
 export class RequestResetPasswordUsecase {

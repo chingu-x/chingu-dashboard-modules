@@ -10,4 +10,9 @@ export default defineConfig({
       fileName: "index",
     },
   },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
 });

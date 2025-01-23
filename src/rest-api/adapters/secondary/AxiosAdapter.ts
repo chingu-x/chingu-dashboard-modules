@@ -4,13 +4,13 @@ import axios, {
   type AxiosRequestConfig,
   type AxiosResponse,
 } from "axios";
-import { type RestApiPort } from "../../ports/secondary/restApiPort";
+import { type RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import type {
   DeleteParams,
   GetParams,
   PatchParams,
   PostParams,
-} from "../../application/entities/restApiParams";
+} from "@/rest-api/application/entities/restApiParams";
 
 export class AxiosAdapter implements RestApiPort {
   private axiosInstance: AxiosInstance;

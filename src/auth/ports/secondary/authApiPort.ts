@@ -2,11 +2,11 @@ import type {
   RequestResetPasswordDto,
   LoginRequestDto,
   ResetPasswordDto,
-} from "../../application/dtos/request.dto";
+} from "@/auth/application/dtos/request.dto";
 import type {
   LogoutResponseDto,
   LoginResponseDto,
-} from "../../application/dtos/response.dto";
+} from "@/auth/application/dtos/response.dto";
 
 export interface AuthApiPort {
   login: ({ email, password }: LoginRequestDto) => Promise<LoginResponseDto>;
