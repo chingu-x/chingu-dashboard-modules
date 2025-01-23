@@ -7,11 +7,11 @@ import {
   LoginRequestDto,
   ResetPasswordDto,
 } from "../../application/dtos/request.dto";
+import AuthUrls from "../../application/constants/authUrls";
 import {
   LogoutResponseDto,
   LoginResponseDto,
-} from "../../application/dtos/response.dto";
-import AuthUrls from "../../application/constants/authUrls";
+} from "@/auth/application/dtos/response.dto";
 
 @injectable()
 export class AuthApiAdapter implements AuthApiPort {

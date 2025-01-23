@@ -13,7 +13,7 @@ import {
 import {
   LoginResponseDto,
   LogoutResponseDto,
-} from "../../application/dtos/response.dto";
+} from "@/auth/application/dtos/response.dto";
 
 @injectable()
 export class AuthClientAdapter implements AuthClientPort {
