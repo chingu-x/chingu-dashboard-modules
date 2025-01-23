@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.4.0...v0.4.1) (2025-01-23)
+
+
+### Bug Fixes
+
+* add barrel export ([859bad2](https://github.com/chingu-x/chingu-dashboard-modules/commit/859bad2c1555a9243201a64014a54018604bb219))
+
 # [0.4.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.16...v0.4.0) (2025-01-23)
 
 
