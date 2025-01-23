@@ -70,10 +70,16 @@
     "./test": {
       "import": "./dist/test/index.js",
       "types": "./dist/test/index.d.ts"
+    },
+    "./user": {
+      "import": "./dist/user/index.js",
+      "types": "./dist/user/index.d.ts"
     }
   },
   "dependencies": {
     "axios": "^1.7.9",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
     "dotenv": "^16.4.7",
     "reflect-metadata": "^0.2.2",
     "tsyringe": "^4.8.0"
