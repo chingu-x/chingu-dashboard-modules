@@ -1,3 +1,152 @@
+## [0.3.16](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.15...v0.3.16) (2025-01-23)
+
+
+### Bug Fixes
+
+* rollback ([b0f9557](https://github.com/chingu-x/chingu-dashboard-modules/commit/b0f9557e49d8ed9c89fe4fe4531ba87bfdb62f51))
+
+## [0.3.15](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.14...v0.3.15) (2025-01-22)
+
+
+### Bug Fixes
+
+* :sob: ([63ac049](https://github.com/chingu-x/chingu-dashboard-modules/commit/63ac049d9586707c6f270067fe6938121545c697))
+
+## [0.3.14](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.13...v0.3.14) (2025-01-22)
+
+
+### Bug Fixes
+
+* :sob: ([f17f160](https://github.com/chingu-x/chingu-dashboard-modules/commit/f17f16015881b23828cf737b14bf8aa42706e6cc))
+
+## [0.3.13](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.12...v0.3.13) (2025-01-22)
+
+
+### Bug Fixes
+
+* imports ([05f2281](https://github.com/chingu-x/chingu-dashboard-modules/commit/05f2281b859028dc57003a1ad985dc07d2e603ac))
+
+## [0.3.12](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.11...v0.3.12) (2025-01-22)
+
+
+### Bug Fixes
+
+* imports ([218e2f3](https://github.com/chingu-x/chingu-dashboard-modules/commit/218e2f3961c1da01e345b864dcd4e6c834d24b12))
+
+## [0.3.11](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.10...v0.3.11) (2025-01-22)
+
+
+### Bug Fixes
+
+* add type to import ([77c03d9](https://github.com/chingu-x/chingu-dashboard-modules/commit/77c03d9fee905d1c53a3eacddf5bb92e040a8963))
+
+## [0.3.10](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.9...v0.3.10) (2025-01-22)
+
+
+### Bug Fixes
+
+* barrel exports ([1d81d55](https://github.com/chingu-x/chingu-dashboard-modules/commit/1d81d55a5e759667662f6e04368bbb7d68e8fd1a))
+
+## [0.3.9](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.8...v0.3.9) (2025-01-22)
+
+
+### Bug Fixes
+
+* imports ([08ee8bc](https://github.com/chingu-x/chingu-dashboard-modules/commit/08ee8bcee2442d9e3517e0d2de8367caf2f8a07a))
+* lint ([0c1cfd2](https://github.com/chingu-x/chingu-dashboard-modules/commit/0c1cfd281f3fa9e1b7e3911fd7a3957f96c2556e))
+
+## [0.3.8](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.7...v0.3.8) (2025-01-22)
+
+
+### Bug Fixes
+
+* reorder imports ([a796723](https://github.com/chingu-x/chingu-dashboard-modules/commit/a796723730ffb3e528b632066a18ca4163662007))
+
+## [0.3.7](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.6...v0.3.7) (2025-01-22)
+
+
+### Bug Fixes
+
+* temp fix ([9cc5370](https://github.com/chingu-x/chingu-dashboard-modules/commit/9cc537084f168745483c0a166774fe389d56f355))
+
+## [0.3.6](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.5...v0.3.6) (2025-01-22)
+
+
+### Bug Fixes
+
+* absolute imports ([41a8309](https://github.com/chingu-x/chingu-dashboard-modules/commit/41a83099c46691eb38a20825f2c0a958e24d5fa0))
+
+## [0.3.5](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.4...v0.3.5) (2025-01-22)
+
+
+### Bug Fixes
+
+* enforce type imports ([4b36806](https://github.com/chingu-x/chingu-dashboard-modules/commit/4b36806ed9b26ac040695fa170e57c3234d6f790))
+
+## [0.3.4](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.3...v0.3.4) (2025-01-22)
+
+
+### Bug Fixes
+
+* update package json ([6fd70f5](https://github.com/chingu-x/chingu-dashboard-modules/commit/6fd70f5357531a85d5df5d63c5f9fccaee076ebe))
+
+## [0.3.3](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.2...v0.3.3) (2025-01-22)
+
+
+### Bug Fixes
+
+* update config for resolving path alias in package ([12538fe](https://github.com/chingu-x/chingu-dashboard-modules/commit/12538fe31d9e2d9b7ba66414350a8483de923e67))
+
+## [0.3.2](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.1...v0.3.2) (2025-01-22)
+
+
+### Bug Fixes
+
+* add path alias resolve to vite config ([839b838](https://github.com/chingu-x/chingu-dashboard-modules/commit/839b83886bab7dade5485fb0077df773c56f5ee6))
+
+## [0.3.1](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.0...v0.3.1) (2025-01-22)
+
+
+### Bug Fixes
+
+* test ([ab0c990](https://github.com/chingu-x/chingu-dashboard-modules/commit/ab0c990405270c92e77407b3228baab45b8cecea))
+
+# [0.3.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.2.0...v0.3.0) (2025-01-22)
+
+
+### Features
+
+* add user module ([730476d](https://github.com/chingu-x/chingu-dashboard-modules/commit/730476d4b9aa9d82b31515217d20538a27df18da))
+
+# [0.2.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.1.2...v0.2.0) (2025-01-22)
+
+
+### Features
+
+* adjust base url based on client ([7188a79](https://github.com/chingu-x/chingu-dashboard-modules/commit/7188a7905dc4a7d6c5d3aaa1ec8d4fcc34bf9171))
+
+## [0.1.2](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.1.1...v0.1.2) (2025-01-22)
+
+
+### Bug Fixes
+
+* lint ([04b8282](https://github.com/chingu-x/chingu-dashboard-modules/commit/04b82823407cdaaf060a42b51fc07261d67aa41c))
+* resolve types ([0da3e1a](https://github.com/chingu-x/chingu-dashboard-modules/commit/0da3e1a700285c152a648df030c9cea1186b5cb9))
+
+## [0.1.1](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.1.0...v0.1.1) (2025-01-22)
+
+
+### Bug Fixes
+
+* lint ([e576b40](https://github.com/chingu-x/chingu-dashboard-modules/commit/e576b40af825fb6342b1826a375ccc8d3174ae43))
+
+# [0.1.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.0.4...v0.1.0) (2025-01-22)
+
+
+### Features
+
+* setup auth module ([965b437](https://github.com/chingu-x/chingu-dashboard-modules/commit/965b437da1c127dde87f3e6ed27b12996a4bfc8f))
+
 ## [0.0.4](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.0.3...v0.0.4) (2025-01-21)
 
 

@@ -12,12 +12,20 @@ const exportsObject = {
     import: "./dist/index.js",
     types: "./dist/types/index.d.ts",
   },
+  "./di-types": {
+    import: "./dist/types.js",
+    types: "./dist/types.d.ts",
+  },
+  "./resolver": {
+    import: "./dist/resolver.js",
+    types: "./dist/resolver.d.ts",
+  },
 };
 
 components.forEach((component) => {
   exportsObject[`./${component}`] = {
     import: `./dist/${component}/index.js`,
-    types: `./dist/types/${component}/index.d.ts`,
+    types: `./dist/${component}/index.d.ts`,
   };
 });
 
