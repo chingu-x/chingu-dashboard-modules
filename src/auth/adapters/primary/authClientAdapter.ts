@@ -1,15 +1,15 @@
 import { inject, injectable } from "tsyringe";
-import { ResetPasswordUsecase } from "../../application/usecases/resetPasswordUsecase";
-import { AuthClientPort } from "../../ports/primary/authClientPort";
-import { TYPES } from "../../../types";
-import { LoginUsecase } from "../../application/usecases/loginUsecase";
-import { LogoutUsecase } from "../../application/usecases/logoutUsecase";
-import { RequestResetPasswordUsecase } from "../../application/usecases/requestResetPasswordUsecase";
+import { ResetPasswordUsecase } from "@/auth/application/usecases/resetPasswordUsecase";
+import { AuthClientPort } from "@/auth/ports/primary/authClientPort";
+import { TYPES } from "@/types";
+import { LoginUsecase } from "@/auth/application/usecases/loginUsecase";
+import { LogoutUsecase } from "@/auth/application/usecases/logoutUsecase";
+import { RequestResetPasswordUsecase } from "@/auth/application/usecases/requestResetPasswordUsecase";
 import {
   LoginRequestDto,
   RequestResetPasswordDto,
   ResetPasswordDto,
-} from "../../application/dtos/request.dto";
+} from "@/auth/application/dtos/request.dto";
 import {
   LoginResponseDto,
   LogoutResponseDto,

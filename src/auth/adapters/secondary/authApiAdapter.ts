@@ -1,13 +1,13 @@
 import { inject, injectable } from "tsyringe";
-import { TYPES } from "../../../types";
-import { AuthApiPort } from "../../ports/secondary/authApiPort";
-import { RestApiPort } from "../../../rest-api/ports/secondary/restApiPort";
+import { TYPES } from "@/types";
+import { AuthApiPort } from "@/auth/ports/secondary/authApiPort";
+import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
   RequestResetPasswordDto,
   LoginRequestDto,
   ResetPasswordDto,
-} from "../../application/dtos/request.dto";
-import AuthUrls from "../../application/constants/authUrls";
+} from "@/auth/application/dtos/request.dto";
+import AuthUrls from "@/auth/application/constants/authUrls";
 import {
   LogoutResponseDto,
   LoginResponseDto,
