@@ -1,3 +1,11 @@
+# [0.4.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.16...v0.4.0) (2025-01-23)
+
+
+### Features
+
+* setup path alias ([da74f3f](https://github.com/chingu-x/chingu-dashboard-modules/commit/da74f3f2465945e16c028f2306e67aae8c1f2f30))
+* support for absolute imports ([46ea2da](https://github.com/chingu-x/chingu-dashboard-modules/commit/46ea2dafd76a8ea6cc48f3d90a9c1c2b6815f405))
+
 ## [0.3.16](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.3.15...v0.3.16) (2025-01-23)
 
 
