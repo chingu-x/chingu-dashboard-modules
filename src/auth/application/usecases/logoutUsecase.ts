@@ -7,7 +7,7 @@ import { LogoutResponseDto } from "../dtos/response.dto";
 export class LogoutUsecase {
   constructor(
     @inject(TYPES.AuthApiPort)
-    private readonly authApi: AuthApiPort
+    private readonly authApi: AuthApiPort,
   ) {}
 
   async execute(): Promise<LogoutResponseDto> {

@@ -28,7 +28,7 @@ export class AuthClientAdapter implements AuthClientPort {
     private readonly requestResetPasswordUsecase: RequestResetPasswordUsecase,
 
     @inject(TYPES.ResetPasswordUsecase)
-    private readonly resetPasswordUsecase: ResetPasswordUsecase
+    private readonly resetPasswordUsecase: ResetPasswordUsecase,
   ) {}
 
   async login({ email, password }: LoginRequestDto): Promise<LoginResponseDto> {

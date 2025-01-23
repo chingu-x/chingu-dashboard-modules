@@ -8,7 +8,7 @@ import { LoginResponseDto } from "../dtos/response.dto";
 export class LoginUsecase {
   constructor(
     @inject(TYPES.AuthApiPort)
-    private readonly authApi: AuthApiPort
+    private readonly authApi: AuthApiPort,
   ) {}
 
   async execute(props: LoginRequestDto): Promise<LoginResponseDto> {
