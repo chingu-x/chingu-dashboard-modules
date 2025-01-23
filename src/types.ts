@@ -1,5 +1,5 @@
 import type { InjectionToken } from "tsyringe";
-import type { RestApiPort } from "./rest-api";
+import type { RestApiPort } from "./rest-api/ports/secondary/restApiPort";
 import type {
   AuthApiPort,
   AuthClientAdapter,
