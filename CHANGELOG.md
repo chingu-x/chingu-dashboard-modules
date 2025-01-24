@@ -1,3 +1,11 @@
+# [0.6.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.5.0...v0.6.0) (2025-01-24)
+
+
+### Features
+
+* refactor di config ([0f4aaba](https://github.com/chingu-x/chingu-dashboard-modules/commit/0f4aabadd6c723c5be1ed5a3fcd4d2df3110e736))
+* split up di configuration into separate files ([9c6ab2b](https://github.com/chingu-x/chingu-dashboard-modules/commit/9c6ab2bba690c251051f9c08e4487dd6ddc73620))
+
 # [0.5.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.4.1...v0.5.0) (2025-01-24)
 
 
