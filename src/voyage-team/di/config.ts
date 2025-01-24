@@ -6,9 +6,14 @@ import { GetCurrentVoyageTeamIdUsecase } from "@/voyage-team/application/usecase
 import { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases/hasVoyageStartedUsecase";
 
 export const registerVoyageTeamDependencies = () => {
+  // ports
+
+  // adapters
   container.register(VOYAGE_TEAM_TYPES.VoyageTeamClientAdapter, {
     useClass: VoyageTeamClientAdapter,
   });
+
+  // usecases
   container.register(VOYAGE_TEAM_TYPES.GetCurrentVoyageTeamUsecase, {
     useClass: GetCurrentVoyageTeamUsecase,
   });

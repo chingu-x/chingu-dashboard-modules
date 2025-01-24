@@ -5,10 +5,15 @@ import { type GetUserUsecase } from "@/user/application/usecases/getUserUsecase"
 import { type GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChinguMemberStatusUsecase";
 
 export const USER_TYPES = {
+  // ports
   UserApiPort: Symbol.for("UserApiPort") as InjectionToken<UserApiPort>,
+
+  // adapters
   UserClientAdapter: Symbol.for(
     "UserClientAdapter",
   ) as InjectionToken<UserClientAdapter>,
+
+  // usecases
   GetUserUsecase: Symbol.for(
     "GetUserUsecase",
   ) as InjectionToken<GetUserUsecase>,

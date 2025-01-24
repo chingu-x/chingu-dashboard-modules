@@ -6,10 +6,15 @@ import { GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChi
 import { GetUserUsecase } from "@/user/application/usecases/getUserUsecase";
 
 export const registerUserDependencies = () => {
+  // ports
   container.register(USER_TYPES.UserApiPort, { useClass: UserApiAdapter });
+
+  // adapters
   container.register(USER_TYPES.UserClientAdapter, {
     useClass: UserClientAdapter,
   });
+
+  // usecases
   container.register(USER_TYPES.GetChinguMemberStatusUsecase, {
     useClass: GetChinguMemberStatusUsecase,
   });
