@@ -24,6 +24,10 @@ const exportsObject = {
     import: "./dist/resolver.js",
     types: "./dist/resolver.d.ts",
   },
+  "./config": {
+    import: "./dist/config.js",
+    types: "./dist/config.d.ts",
+  },
 };
 
 components.forEach((component) => {

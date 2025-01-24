@@ -26,7 +26,7 @@ export class GetUserUsecase {
   }
 }
 
-// refactor below code to separate module when ready
+// refactor below code to separate module (sprints) when ready
 
 const currentDate =
   process.env.NODE_ENV === "development"
