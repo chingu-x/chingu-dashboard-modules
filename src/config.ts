@@ -11,6 +11,10 @@ import { UserApiAdapter } from "./user/adapters/secondary/userApiAdapter";
 import { GetUserUsecase } from "./user/application/usecases/getUserUsecase";
 import { GetChinguMemberStatusUsecase } from "./user/application/usecases/getChinguMemberStatusUsecase";
 import { UserClientAdapter } from "./user/adapters/primary/userClientAdapter";
+import { VoyageTeamClientAdapter } from "./voyage-team/adapters/primary/voyageTeamClientAdapter";
+import { GetCurrentVoyageTeamUsecase } from "./voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
+import { GetCurrentVoyageTeamIdUsecase } from "./voyage-team/application/usecases/getCurrentVoyageTeamIdUsecase";
+import { HasVoyageStartedUsecase } from "./voyage-team/application/usecases/hasVoyageStartedUsecase";
 
 container.register(TYPES.RestApiPort, { useClass: AxiosAdapter });
 container.register(TYPES.AuthApiPort, { useClass: AuthApiAdapter });
@@ -29,17 +33,17 @@ container.register(TYPES.GetChinguMemberStatusUsecase, {
   useClass: GetChinguMemberStatusUsecase,
 });
 container.register(TYPES.UserClientAdapter, { useClass: UserClientAdapter });
-// container.register(TYPES.VoyageTeamClientAdapter, {
-//   useClass: VoyageTeamClientAdapter,
-// });
-// container.register(TYPES.GetCurrentVoyageTeamUsecase, {
-//   useClass: GetCurrentVoyageTeamUsecase,
-// });
-// container.register(TYPES.GetCurrentVoyageTeamIdUsecase, {
-//   useClass: GetCurrentVoyageTeamIdUsecase,
-// });
-// container.register(TYPES.HasVoyageStartedUsecase, {
-//   useClass: HasVoyageStartedUsecase,
-// });
+container.register(TYPES.VoyageTeamClientAdapter, {
+  useClass: VoyageTeamClientAdapter,
+});
+container.register(TYPES.GetCurrentVoyageTeamUsecase, {
+  useClass: GetCurrentVoyageTeamUsecase,
+});
+container.register(TYPES.GetCurrentVoyageTeamIdUsecase, {
+  useClass: GetCurrentVoyageTeamIdUsecase,
+});
+container.register(TYPES.HasVoyageStartedUsecase, {
+  useClass: HasVoyageStartedUsecase,
+});
 
 export default container;

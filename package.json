@@ -59,13 +59,13 @@
       "import": "./dist/resolver.js",
       "types": "./dist/resolver.d.ts"
     },
+    "./config": {
+      "import": "./dist/config.js",
+      "types": "./dist/config.d.ts"
+    },
     "./auth": {
       "import": "./dist/auth/index.js",
       "types": "./dist/auth/index.d.ts"
-    },
-    "./rest-api": {
-      "import": "./dist/rest-api/index.js",
-      "types": "./dist/rest-api/index.d.ts"
     },
     "./test": {
       "import": "./dist/test/index.js",
@@ -74,6 +74,10 @@
     "./user": {
       "import": "./dist/user/index.js",
       "types": "./dist/user/index.d.ts"
+    },
+    "./voyage-team": {
+      "import": "./dist/voyage-team/index.js",
+      "types": "./dist/voyage-team/index.d.ts"
     }
   },
   "dependencies": {
