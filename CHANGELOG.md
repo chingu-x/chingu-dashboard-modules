@@ -1,3 +1,15 @@
+# [0.5.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.4.1...v0.5.0) (2025-01-24)
+
+
+### Bug Fixes
+
+* add export for config ([6f1a772](https://github.com/chingu-x/chingu-dashboard-modules/commit/6f1a772b03a0644cccb36604fcc07d6a4f629414))
+
+
+### Features
+
+* voyage-team-module ([fde88bb](https://github.com/chingu-x/chingu-dashboard-modules/commit/fde88bbc272638c4a2c0132a1afe6eb3ab1000c6))
+
 ## [0.4.1](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.4.0...v0.4.1) (2025-01-23)
 
 
