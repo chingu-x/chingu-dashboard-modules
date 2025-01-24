@@ -6,7 +6,3 @@ export {
   GetChinguMemberStatusResponseDto,
 } from "./application/dtos/response.dto";
 export { User } from "./application/types/index";
-export { GetChinguMemberStatusUsecase } from "./application/usecases/getChinguMemberStatusUsecase";
-export { GetUserUsecase } from "./application/usecases/getUserUsecase";
-export { UserClientPort } from "./ports/primary/userClientPort";
-export { UserApiPort } from "./ports/secondary/userApiPort";
