@@ -63,10 +63,6 @@
       "import": "./dist/auth/index.js",
       "types": "./dist/auth/index.d.ts"
     },
-    "./rest-api": {
-      "import": "./dist/rest-api/index.js",
-      "types": "./dist/rest-api/index.d.ts"
-    },
     "./test": {
       "import": "./dist/test/index.js",
       "types": "./dist/test/index.d.ts"

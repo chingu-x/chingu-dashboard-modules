@@ -2,9 +2,13 @@ import fs from "fs";
 import path from "path";
 
 const distPath = "./dist";
+const excludeFolders = ["rest-api"]; // Add the names of folders you want to exclude
 
 const components = fs.readdirSync(distPath).filter((file) => {
-  return fs.statSync(path.join(distPath, file)).isDirectory();
+  return (
+    fs.statSync(path.join(distPath, file)).isDirectory() &&
+    !excludeFolders.includes(file)
+  );
 });
 
 const exportsObject = {
