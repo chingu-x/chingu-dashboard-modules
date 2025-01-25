@@ -1,5 +1,4 @@
 export { UserClientAdapter } from "./adapters/primary/userClientAdapter";
-export { UserApiAdapter } from "./adapters/secondary/userApiAdapter";
 export { GetUserRequestDto } from "./application/dtos/request.dtos";
 export {
   GetUserResponseDto,

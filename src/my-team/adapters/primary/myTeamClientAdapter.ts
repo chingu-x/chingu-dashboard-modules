@@ -1,6 +1,16 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { MyTeamClientPort } from "@/my-team/ports/primary/myTeamClientPort";
+import {
+  EditHoursRequestDto,
+  GetMyTeamClientRequestDto,
+} from "@/my-team/application/dtos/request.dto";
+import {
+  EditHoursResponseDto,
+  GetMyTeamResponseDto,
+} from "@/my-team/application/dtos/response.dto";
+import { GetMyTeamUsecase } from "@/my-team/application/usecases/getMyTeamUsecase";
+import { EditHoursUsecase } from "@/my-team/application/usecases/editHoursUsecase";
 
 @injectable()
 export class MyTeamClientAdapter implements MyTeamClientPort {
@@ -15,7 +25,7 @@ export class MyTeamClientAdapter implements MyTeamClientPort {
   async getMyTeam({
     teamId,
     user,
-  }: GetMyTeamRequestDto): Promise<GetMyTeamResponseDto> {
+  }: GetMyTeamClientRequestDto): Promise<GetMyTeamResponseDto> {
     return await this.getMyTeamUsecase.execute({ teamId, user });
   }
 
