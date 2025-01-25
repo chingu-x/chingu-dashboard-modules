@@ -18,8 +18,10 @@ export class GetMyTeamUsecase {
     teamId,
     user,
   }: GetMyTeamClientRequestDto): Promise<GetMyTeamResponseDto> {
+    const numberTeamId = Number(teamId);
+
     const data = await this.myTeamApi.getMyTeam({
-      teamId,
+      teamId: numberTeamId,
     });
 
     updateDirectoryWithCurrentTime(data);

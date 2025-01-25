@@ -6,10 +6,10 @@ export interface GetMyTeamClientRequestDto {
 }
 
 export interface GetMyTeamApiRequestDto {
-  teamId: string;
+  teamId: number;
 }
 
 export interface EditHoursRequestDto {
-  teamId: string;
+  teamId: number;
   hrPerSprint: number;
 }

@@ -23,7 +23,7 @@ export class MyTeamApiAdapter implements MyTeamApiPort {
     teamId,
   }: GetMyTeamApiRequestDto): Promise<GetMyTeamResponseDto> {
     return await this.apiClient.get({
-      url: MyTeamUrls.getMyTeam(teamId),
+      url: MyTeamUrls.getMyTeam(teamId.toString()),
     });
   }
 
@@ -32,7 +32,7 @@ export class MyTeamApiAdapter implements MyTeamApiPort {
     hrPerSprint,
   }: EditHoursRequestDto): Promise<EditHoursResponseDto> {
     return await this.apiClient.patch({
-      url: MyTeamUrls.editHours(teamId),
+      url: MyTeamUrls.editHours(teamId.toString()),
       payload: { hrPerSprint },
     });
   }
