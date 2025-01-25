@@ -1,5 +1,8 @@
 export interface MyTeamApiPort {
-  getMyTeam: () => Promise<GetMyTeamResponseDto>;
+  getMyTeam: ({
+    teamId,
+    user,
+  }: GetMyTeamRequestDto) => Promise<GetMyTeamResponseDto>;
   editHours: ({
     teamId,
     hrPerSprint,

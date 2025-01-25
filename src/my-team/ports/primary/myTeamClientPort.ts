@@ -1,6 +1,4 @@
 export interface MyTeamClientPort {
-  logout: () => Promise<GetMyTeamResponseDto>;
-  requestResetPassword: (
-    props: EditHoursRequestDto,
-  ) => Promise<EditHoursResponseDto>;
+  getMyTeam: (props: GetMyTeamRequestDto) => Promise<GetMyTeamResponseDto>;
+  editHours: (props: EditHoursRequestDto) => Promise<EditHoursResponseDto>;
 }
