@@ -1,6 +1,6 @@
 import { type GetUserRequestDto } from "@/user/application/dtos/request.dtos";
 import type {
-  GetUserVoyageTeamIdResponseDto,
+  GetVoyageTeamIdResponseDto,
   GetUserVoyageTeamResponseDto,
   HasVoyageStartedResponseDto,
 } from "@/voyage-team/application/dtos/response.dto";
@@ -10,9 +10,9 @@ export interface VoyageTeamClientPort {
   getUserVoyageTeam: (
     user: GetUserRequestDto,
   ) => GetUserVoyageTeamResponseDto | undefined;
-  getUserVoyageTeamId: (
+  getVoyageTeamId: (
     user: GetUserRequestDto,
-  ) => GetUserVoyageTeamIdResponseDto | undefined;
+  ) => GetVoyageTeamIdResponseDto | undefined;
   hasVoyageStarted: ({
     isAuthenticated,
     user,

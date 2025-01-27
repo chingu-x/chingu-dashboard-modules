@@ -1,3 +1,5 @@
+// returns true / false whether user is in a current voyage
+
 import { injectable } from "tsyringe";
 import { GetChinguMemberStatusResponseDto } from "@/user/application/dtos/response.dto";
 import { GetUserRequestDto } from "@/user/application/dtos/request.dtos";

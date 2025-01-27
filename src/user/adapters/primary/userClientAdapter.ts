@@ -23,6 +23,7 @@ export class UserClientAdapter implements UserClientPort {
     return await this.getUserUsecase.execute();
   }
 
+  // returns true / false whether user is in a current voyage
   getChinguMemberStatus(
     user: GetUserRequestDto,
   ): GetChinguMemberStatusResponseDto {
