@@ -1,9 +1,10 @@
 import type { InjectionToken } from "tsyringe";
 import type { VoyageTeamClientPort } from "@/voyage-team/ports/primary/voyageTeamClientPort";
 import type { VoyageTeamClientAdapter } from "@/voyage-team/adapters/primary/voyageTeamClientAdapter";
-import type { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
-import type { GetCurrentVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamIdUsecase";
+import type { GetUserVoyageTeamUsecase } from "@/voyage-team/application/usecases/getUserVoyageTeamUsecase";
+import type { GetUserVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getUserVoyageTeamIdUsecase";
 import type { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases/hasVoyageStartedUsecase";
+import type { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/isCurrentVoyageTeamUseCase";
 
 export const VOYAGE_TEAM_TYPES = {
   VoyageTeamClientPort: Symbol.for(
@@ -12,13 +13,16 @@ export const VOYAGE_TEAM_TYPES = {
   VoyageTeamClientAdapter: Symbol.for(
     "VoyageTeamClientAdapter",
   ) as InjectionToken<VoyageTeamClientAdapter>,
-  GetCurrentVoyageTeamUsecase: Symbol.for(
-    "GetCurrentVoyageTeamUsecase",
-  ) as InjectionToken<GetCurrentVoyageTeamUsecase>,
-  GetCurrentVoyageTeamIdUsecase: Symbol.for(
-    "GetCurrentVoyageTeamIdUsecase",
-  ) as InjectionToken<GetCurrentVoyageTeamIdUsecase>,
+  GetUserVoyageTeamUsecase: Symbol.for(
+    "GetUserVoyageTeamUsecase",
+  ) as InjectionToken<GetUserVoyageTeamUsecase>,
+  GetUserVoyageTeamIdUsecase: Symbol.for(
+    "GetUserVoyageTeamIdUsecase",
+  ) as InjectionToken<GetUserVoyageTeamIdUsecase>,
   HasVoyageStartedUsecase: Symbol.for(
     "HasVoyageStartedUsecase",
   ) as InjectionToken<HasVoyageStartedUsecase>,
+  IsCurrentVoyageTeamUsecase: Symbol.for(
+    "IsCurrentVoyageTeamUsecase",
+  ) as InjectionToken<IsCurrentVoyageTeamUsecase>,
 };

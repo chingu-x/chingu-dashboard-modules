@@ -1,22 +1,28 @@
-import { type VoyageTeamMember } from "@/voyage-team/application/dtos/response.dto";
+import { type UserVoyageTeamMember } from "@/voyage-team/application/types";
+
+enum Roles {
+  voyager,
+  admin,
+}
 
 export interface User {
   id: string;
   firstName: string;
   lastName: string;
-  countryCode: string;
+  roles: Roles[];
+  avatar: string;
   oAuthProfiles: {
     provider: {
-      name: providerType;
+      name: ProviderType;
     };
     providerUsername: string;
   }[];
   email: string;
+  countryCode: string;
   timezone: string;
-  avatar: string;
-  voyageTeamMembers: VoyageTeamMember[];
+  voyageTeamMembers: UserVoyageTeamMember[];
   sprintCheckIn: number[];
   currentDateInUserTimezone: Date | null;
 }
 
-type providerType = "discord";
+export type ProviderType = "discord";

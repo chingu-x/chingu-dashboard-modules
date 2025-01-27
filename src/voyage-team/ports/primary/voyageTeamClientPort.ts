@@ -1,18 +1,18 @@
 import { type GetUserRequestDto } from "@/user/application/dtos/request.dtos";
 import type {
-  GetCurrentVoyageTeamIdResponseDto,
-  GetCurrentVoyageTeamResponseDto,
+  GetUserVoyageTeamIdResponseDto,
+  GetUserVoyageTeamResponseDto,
   HasVoyageStartedResponseDto,
 } from "@/voyage-team/application/dtos/response.dto";
 import { type HasVoyageStartedRequestDto } from "@/voyage-team/application/dtos/request.dto";
 
 export interface VoyageTeamClientPort {
-  getCurrentVoyageTeam: (
+  getUserVoyageTeam: (
     user: GetUserRequestDto,
-  ) => GetCurrentVoyageTeamResponseDto | undefined;
-  getCurrentVoyageTeamId: (
+  ) => GetUserVoyageTeamResponseDto | undefined;
+  getUserVoyageTeamId: (
     user: GetUserRequestDto,
-  ) => GetCurrentVoyageTeamIdResponseDto | undefined;
+  ) => GetUserVoyageTeamIdResponseDto | undefined;
   hasVoyageStarted: ({
     isAuthenticated,
     user,
