@@ -1,3 +1,3 @@
-import type { Sprints } from "@/sprints/application/types";
+import type { VoyageSprint } from "@/sprints/application/types";
 
-export type FetchSprintsResponseDto = Sprints;
+export type FetchSprintsResponseDto = VoyageSprint;

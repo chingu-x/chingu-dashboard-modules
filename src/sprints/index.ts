@@ -4,4 +4,10 @@ export {
   FetchSprintsApiRequestDto,
 } from "./application/dtos/request.dto";
 export { FetchSprintsResponseDto } from "./application/dtos/response.dto";
-export { Sprints, Meeting, Section, Agenda } from "./application/types";
+export {
+  VoyageSprint,
+  Sprint,
+  Meeting,
+  Section,
+  Agenda,
+} from "./application/types";

@@ -1,4 +1,4 @@
-export interface Sprints {
+export interface VoyageSprint {
   id: number;
   number: string;
   soloProjectDeadline: string;
@@ -6,14 +6,16 @@ export interface Sprints {
   showcasePublishDate: string;
   startDate: string;
   endDate: string;
-  sprints: {
-    id: number;
-    number: number;
-    startDate: string;
-    endDate: string;
-    teamMeetings: number[];
-    teamMeetingsData?: Meeting[];
-  }[];
+  sprints: Sprint[];
+}
+
+export interface Sprint {
+  id: number;
+  number: number;
+  startDate: string;
+  endDate: string;
+  teamMeetings: number[];
+  teamMeetingsData?: Meeting[];
 }
 
 export interface Meeting {
