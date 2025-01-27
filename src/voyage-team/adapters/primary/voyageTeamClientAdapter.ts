@@ -6,11 +6,16 @@ import {
   GetUserVoyageTeamIdResponseDto,
   GetUserVoyageTeamResponseDto,
   HasVoyageStartedResponseDto,
+  IsCurrentVoyageTeamResponseDto,
 } from "@/voyage-team/application/dtos/response.dto";
 import { GetUserVoyageTeamUsecase } from "@/voyage-team/application/usecases/getUserVoyageTeamUsecase";
 import { GetUserVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getUserVoyageTeamIdUsecase";
-import { HasVoyageStartedRequestDto } from "@/voyage-team/application/dtos/request.dto";
+import {
+  HasVoyageStartedRequestDto,
+  IsCurrentVoyageTeamClientRequestDto,
+} from "@/voyage-team/application/dtos/request.dto";
 import { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases/hasVoyageStartedUsecase";
+import { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/isCurrentVoyageTeamUseCase";
 
 @injectable()
 export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
@@ -23,6 +28,8 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
 
     @inject(TYPES.HasVoyageStartedUsecase)
     private readonly hasVoyageStartedUsecase: HasVoyageStartedUsecase,
+    @inject(TYPES.IsCurrentVoyageTeamUsecase)
+    private readonly isCurrentVoyageTeamUsecase: IsCurrentVoyageTeamUsecase,
   ) {}
 
   getUserVoyageTeam(
@@ -43,5 +50,13 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
     user,
   }: HasVoyageStartedRequestDto): HasVoyageStartedResponseDto {
     return this.hasVoyageStartedUsecase.execute({ isAuthenticated, user });
+  }
+
+  isCurrentVoyageTeam({
+    user,
+    teamId,
+  }: IsCurrentVoyageTeamClientRequestDto): IsCurrentVoyageTeamResponseDto {
+    const voyageTeamId = this.getUserVoyageTeamId(user);
+    return this.isCurrentVoyageTeamUsecase.execute({ teamId, voyageTeamId });
   }
 }

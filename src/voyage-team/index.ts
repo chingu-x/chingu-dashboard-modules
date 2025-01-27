@@ -2,11 +2,14 @@ export { VoyageTeamClientAdapter } from "./adapters/primary/voyageTeamClientAdap
 export {
   GetUserVoyageTeamIdRequestDto,
   HasVoyageStartedRequestDto,
+  IsCurrentVoyageTeamClientRequestDto,
+  IsCurrentVoyageTeamApiRequestDto,
 } from "./application/dtos/request.dto";
 export {
   GetUserVoyageTeamResponseDto,
   GetUserVoyageTeamIdResponseDto,
   HasVoyageStartedResponseDto,
+  IsCurrentVoyageTeamResponseDto,
 } from "./application/dtos/response.dto";
 export {
   UserVoyageTeamMember,

@@ -4,4 +4,4 @@ export {
   GetUserResponseDto,
   GetChinguMemberStatusResponseDto,
 } from "./application/dtos/response.dto";
-export { User } from "./application/types/index";
+export { User, ProviderType } from "./application/types/index";

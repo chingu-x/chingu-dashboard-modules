@@ -13,7 +13,7 @@ export interface User {
   avatar: string;
   oAuthProfiles: {
     provider: {
-      name: providerType;
+      name: ProviderType;
     };
     providerUsername: string;
   }[];
@@ -25,4 +25,4 @@ export interface User {
   currentDateInUserTimezone: Date | null;
 }
 
-type providerType = "discord";
+export type ProviderType = "discord";
