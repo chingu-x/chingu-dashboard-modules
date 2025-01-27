@@ -5,6 +5,7 @@ import { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/
 import { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";
 import { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases/hasVoyageStartedUsecase";
 import { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/isCurrentVoyageTeamUseCase";
+import { GetCurrentVoyageUserIdUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageUserIdUsecase";
 
 export const registerVoyageTeamDependencies = () => {
   // ports
@@ -20,6 +21,9 @@ export const registerVoyageTeamDependencies = () => {
   });
   container.register(VOYAGE_TEAM_TYPES.GetVoyageTeamIdUsecase, {
     useClass: GetVoyageTeamIdUsecase,
+  });
+  container.register(VOYAGE_TEAM_TYPES.GetCurrentVoyageUserIdUsecase, {
+    useClass: GetCurrentVoyageUserIdUsecase,
   });
   container.register(VOYAGE_TEAM_TYPES.HasVoyageStartedUsecase, {
     useClass: HasVoyageStartedUsecase,

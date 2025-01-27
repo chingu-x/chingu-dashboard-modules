@@ -5,6 +5,7 @@ import type { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usec
 import type { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";
 import type { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases/hasVoyageStartedUsecase";
 import type { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/isCurrentVoyageTeamUseCase";
+import type { GetCurrentVoyageUserIdUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageUserIdUsecase";
 
 export const VOYAGE_TEAM_TYPES = {
   VoyageTeamClientPort: Symbol.for(
@@ -19,6 +20,9 @@ export const VOYAGE_TEAM_TYPES = {
   GetVoyageTeamIdUsecase: Symbol.for(
     "GetVoyageTeamIdUsecase",
   ) as InjectionToken<GetVoyageTeamIdUsecase>,
+  GetCurrentVoyageUserIdUsecase: Symbol.for(
+    "GetCurrentVoyageUserIdUsecase",
+  ) as InjectionToken<GetCurrentVoyageUserIdUsecase>,
   HasVoyageStartedUsecase: Symbol.for(
     "HasVoyageStartedUsecase",
   ) as InjectionToken<HasVoyageStartedUsecase>,

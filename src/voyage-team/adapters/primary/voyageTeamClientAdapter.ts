@@ -7,6 +7,7 @@ import {
   GetCurrentVoyageTeamResponseDto,
   HasVoyageStartedResponseDto,
   IsCurrentVoyageTeamResponseDto,
+  GetCurrentVoyageUserIdResponseDto,
 } from "@/voyage-team/application/dtos/response.dto";
 import { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
 import { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";
@@ -16,6 +17,7 @@ import {
 } from "@/voyage-team/application/dtos/request.dto";
 import { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases/hasVoyageStartedUsecase";
 import { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/isCurrentVoyageTeamUseCase";
+import { GetCurrentVoyageUserIdUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageUserIdUsecase";
 
 @injectable()
 export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
@@ -26,8 +28,12 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
     @inject(TYPES.GetVoyageTeamIdUsecase)
     private readonly getVoyageTeamIdUsecase: GetVoyageTeamIdUsecase,
 
+    @inject(TYPES.GetCurrentVoyageUserIdUsecase)
+    private readonly getCurrentVoyageUserIdUsecase: GetCurrentVoyageUserIdUsecase,
+
     @inject(TYPES.HasVoyageStartedUsecase)
     private readonly hasVoyageStartedUsecase: HasVoyageStartedUsecase,
+
     @inject(TYPES.IsCurrentVoyageTeamUsecase)
     private readonly isCurrentVoyageTeamUsecase: IsCurrentVoyageTeamUsecase,
   ) {}
@@ -45,6 +51,14 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   ): GetVoyageTeamIdResponseDto | undefined {
     const userVoyageTeam = this.getCurrentVoyageTeam(user);
     return this.getVoyageTeamIdUsecase.execute(userVoyageTeam);
+  }
+
+  // get the user's id in the current voyage
+  getCurrentVoyageUserId(
+    user: GetUserRequestDto,
+  ): GetCurrentVoyageUserIdResponseDto | undefined {
+    const userVoyageTeam = this.getCurrentVoyageTeam(user);
+    return this.getCurrentVoyageUserIdUsecase.execute(userVoyageTeam);
   }
 
   hasVoyageStarted({

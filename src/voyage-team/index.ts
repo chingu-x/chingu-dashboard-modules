@@ -8,6 +8,7 @@ export {
 export {
   GetCurrentVoyageTeamResponseDto,
   GetVoyageTeamIdResponseDto,
+  GetCurrentVoyageUserIdResponseDto,
   HasVoyageStartedResponseDto,
   IsCurrentVoyageTeamResponseDto,
 } from "./application/dtos/response.dto";
