@@ -6,7 +6,7 @@ export {
   IsCurrentVoyageTeamApiRequestDto,
 } from "./application/dtos/request.dto";
 export {
-  GetUserVoyageTeamResponseDto,
+  GetCurrentVoyageTeamResponseDto,
   GetVoyageTeamIdResponseDto,
   HasVoyageStartedResponseDto,
   IsCurrentVoyageTeamResponseDto,

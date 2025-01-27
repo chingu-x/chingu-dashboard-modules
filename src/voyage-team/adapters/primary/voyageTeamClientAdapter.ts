@@ -4,11 +4,11 @@ import { VoyageTeamClientPort } from "@/voyage-team/ports/primary/voyageTeamClie
 import { GetUserRequestDto } from "@/user/application/dtos/request.dtos";
 import {
   GetVoyageTeamIdResponseDto,
-  GetUserVoyageTeamResponseDto,
+  GetCurrentVoyageTeamResponseDto,
   HasVoyageStartedResponseDto,
   IsCurrentVoyageTeamResponseDto,
 } from "@/voyage-team/application/dtos/response.dto";
-import { GetUserVoyageTeamUsecase } from "@/voyage-team/application/usecases/getUserVoyageTeamUsecase";
+import { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
 import { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";
 import {
   HasVoyageStartedRequestDto,
@@ -20,8 +20,8 @@ import { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/i
 @injectable()
 export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   constructor(
-    @inject(TYPES.GetUserVoyageTeamUsecase)
-    private readonly getUserVoyageTeamUsecase: GetUserVoyageTeamUsecase,
+    @inject(TYPES.GetCurrentVoyageTeamUsecase)
+    private readonly getCurrentVoyageTeamUsecase: GetCurrentVoyageTeamUsecase,
 
     @inject(TYPES.GetVoyageTeamIdUsecase)
     private readonly getVoyageTeamIdUsecase: GetVoyageTeamIdUsecase,
@@ -32,17 +32,18 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
     private readonly isCurrentVoyageTeamUsecase: IsCurrentVoyageTeamUsecase,
   ) {}
 
-  getUserVoyageTeam(
+  // gets the current voyage team
+  getCurrentVoyageTeam(
     user: GetUserRequestDto,
-  ): GetUserVoyageTeamResponseDto | undefined {
-    return this.getUserVoyageTeamUsecase.execute(user);
+  ): GetCurrentVoyageTeamResponseDto | undefined {
+    return this.getCurrentVoyageTeamUsecase.execute(user);
   }
 
   // Get the ID of the voyage team in current voyage
   getVoyageTeamId(
     user: GetUserRequestDto,
   ): GetVoyageTeamIdResponseDto | undefined {
-    const userVoyageTeam = this.getUserVoyageTeam(user);
+    const userVoyageTeam = this.getCurrentVoyageTeam(user);
     return this.getVoyageTeamIdUsecase.execute(userVoyageTeam);
   }
 

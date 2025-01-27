@@ -1,7 +1,7 @@
 import { container } from "tsyringe";
 import { VOYAGE_TEAM_TYPES } from "./types";
 import { VoyageTeamClientAdapter } from "@/voyage-team/adapters/primary/voyageTeamClientAdapter";
-import { GetUserVoyageTeamUsecase } from "@/voyage-team/application/usecases/getUserVoyageTeamUsecase";
+import { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
 import { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";
 import { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases/hasVoyageStartedUsecase";
 import { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/isCurrentVoyageTeamUseCase";
@@ -15,8 +15,8 @@ export const registerVoyageTeamDependencies = () => {
   });
 
   // usecases
-  container.register(VOYAGE_TEAM_TYPES.GetUserVoyageTeamUsecase, {
-    useClass: GetUserVoyageTeamUsecase,
+  container.register(VOYAGE_TEAM_TYPES.GetCurrentVoyageTeamUsecase, {
+    useClass: GetCurrentVoyageTeamUsecase,
   });
   container.register(VOYAGE_TEAM_TYPES.GetVoyageTeamIdUsecase, {
     useClass: GetVoyageTeamIdUsecase,
