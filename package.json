@@ -71,6 +71,10 @@
       "import": "./dist/my-team/index.js",
       "types": "./dist/my-team/index.d.ts"
     },
+    "./sprints": {
+      "import": "./dist/sprints/index.js",
+      "types": "./dist/sprints/index.d.ts"
+    },
     "./test": {
       "import": "./dist/test/index.js",
       "types": "./dist/test/index.d.ts"
