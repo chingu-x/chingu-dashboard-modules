@@ -5,12 +5,12 @@ import { moveElementToFirst } from "@/my-team/application/utils/moveElementToFir
 import { GetMyTeamClientRequestDto } from "@/my-team/application/dtos/request.dto";
 import { GetMyTeamResponseDto } from "@/my-team/application/dtos/response.dto";
 import { CurrentVoyageTeamMember } from "@/voyage-team/application/types";
-import { MyTeam_TYPES } from "@/my-team/di/types";
+import { My_TEAM_TYPES } from "@/my-team/di/types";
 
 @injectable()
 export class GetMyTeamUsecase {
   constructor(
-    @inject(MyTeam_TYPES.MyTeamApiPort)
+    @inject(My_TEAM_TYPES.MyTeamApiPort)
     private readonly myTeamApi: MyTeamApiPort,
   ) {}
 

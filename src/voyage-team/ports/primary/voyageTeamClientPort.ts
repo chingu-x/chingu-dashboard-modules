@@ -9,19 +9,18 @@ import { type HasVoyageStartedRequestDto } from "@/voyage-team/application/dtos/
 
 export interface VoyageTeamClientPort {
   getCurrentVoyageTeam: (
-    user: GetUserRequestDto,
+    props: GetUserRequestDto,
   ) => GetCurrentVoyageTeamResponseDto | undefined;
 
   getVoyageTeamId: (
-    user: GetUserRequestDto,
+    props: GetUserRequestDto,
   ) => GetVoyageTeamIdResponseDto | undefined;
 
   getCurrentVoyageUserId: (
-    user: GetUserRequestDto,
+    props: GetUserRequestDto,
   ) => GetCurrentVoyageUserIdResponseDto | undefined;
 
-  hasVoyageStarted: ({
-    isAuthenticated,
-    user,
-  }: HasVoyageStartedRequestDto) => HasVoyageStartedResponseDto;
+  hasVoyageStarted: (
+    props: HasVoyageStartedRequestDto,
+  ) => HasVoyageStartedResponseDto;
 }

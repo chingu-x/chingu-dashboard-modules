@@ -7,8 +7,8 @@ import { GetVoyageTeamIdRequestDto } from "@/voyage-team/application/dtos/reques
 @injectable()
 export class GetVoyageTeamIdUsecase {
   execute(
-    userVoyageTeam: GetVoyageTeamIdRequestDto | undefined,
+    props: GetVoyageTeamIdRequestDto | undefined,
   ): GetVoyageTeamIdResponseDto | undefined {
-    return userVoyageTeam?.voyageTeamId.toString();
+    return props?.voyageTeamId.toString();
   }
 }

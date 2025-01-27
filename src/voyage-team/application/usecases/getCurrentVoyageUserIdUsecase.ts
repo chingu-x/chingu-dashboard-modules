@@ -7,8 +7,8 @@ import { GetCurrentVoyageUserIdResponseDto } from "@/voyage-team/application/dto
 @injectable()
 export class GetCurrentVoyageUserIdUsecase {
   execute(
-    userVoyageTeam: GetVoyageTeamIdRequestDto | undefined,
+    props: GetVoyageTeamIdRequestDto | undefined,
   ): GetCurrentVoyageUserIdResponseDto | undefined {
-    return userVoyageTeam?.id;
+    return props?.id;
   }
 }

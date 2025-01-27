@@ -4,7 +4,7 @@ import type { MyTeamClientAdapter } from "@/my-team/adapters/primary/myTeamClien
 import type { GetMyTeamUsecase } from "@/my-team/application/usecases/getMyTeamUsecase";
 import type { EditHoursUsecase } from "@/my-team/application/usecases/editHoursUsecase";
 
-export const MyTeam_TYPES = {
+export const My_TEAM_TYPES = {
   // ports
   MyTeamApiPort: Symbol.for("MyTeamApiPort") as InjectionToken<MyTeamApiPort>,
 

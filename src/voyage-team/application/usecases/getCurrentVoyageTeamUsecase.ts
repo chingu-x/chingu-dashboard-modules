@@ -7,9 +7,9 @@ import { GetCurrentVoyageTeamResponseDto } from "@/voyage-team/application/dtos/
 @injectable()
 export class GetCurrentVoyageTeamUsecase {
   execute(
-    user: GetUserRequestDto,
+    props: GetUserRequestDto,
   ): GetCurrentVoyageTeamResponseDto | undefined {
-    return user.voyageTeamMembers.find(
+    return props.voyageTeamMembers.find(
       (voyage) => voyage.voyageTeam.voyage.status.name === "Active",
     );
   }
