@@ -2,8 +2,12 @@ export { SprintsClientAdapter } from "./adapters/primary/sprintsClientAdapter";
 export {
   FetchSprintsClientRequestDto,
   FetchSprintsApiRequestDto,
+  GetCurrentSprintRequestDto,
 } from "./application/dtos/request.dto";
-export { FetchSprintsResponseDto } from "./application/dtos/response.dto";
+export {
+  FetchSprintsResponseDto,
+  GetCurrentSprintResponseDto,
+} from "./application/dtos/response.dto";
 export {
   VoyageSprint,
   Sprint,
