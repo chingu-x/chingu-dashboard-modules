@@ -4,6 +4,7 @@ import type { SprintsClientAdapter } from "@/sprints/adapters/primary/sprintsCli
 import type { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprintsUsecase";
 import type { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
 import type { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsecase";
+import type { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/getSprintCheckinStatusUsecase";
 
 export const SPRINTS_TYPES = {
   // ports
@@ -28,4 +29,8 @@ export const SPRINTS_TYPES = {
   GetMeetingUsecase: Symbol.for(
     "GetMeetingUsecase",
   ) as InjectionToken<GetMeetingUsecase>,
+
+  GetSprintCheckinStatusUsecase: Symbol.for(
+    "GetSprintCheckinStatusUsecase",
+  ) as InjectionToken<GetSprintCheckinStatusUsecase>,
 };
