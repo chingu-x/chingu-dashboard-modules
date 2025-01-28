@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { VoyageTeamClientPort } from "@/voyage-team/ports/primary/voyageTeamClientPort";
-import { GetUserRequestDto } from "@/user/application/dtos/request.dtos";
+import { FetchUserRequestDto } from "@/user/application/dtos/request.dtos";
 import {
   GetVoyageTeamIdResponseDto,
   GetCurrentVoyageTeamResponseDto,
@@ -45,14 +45,14 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
 
   // gets the current voyage team
   getCurrentVoyageTeam(
-    user: GetUserRequestDto,
+    user: FetchUserRequestDto,
   ): GetCurrentVoyageTeamResponseDto | undefined {
     return this.getCurrentVoyageTeamUsecase.execute(user);
   }
 
   // Get the ID of the voyage team in current voyage
   getVoyageTeamId(
-    user: GetUserRequestDto,
+    user: FetchUserRequestDto,
   ): GetVoyageTeamIdResponseDto | undefined {
     const userVoyageTeam = this.getCurrentVoyageTeam(user);
     return this.getVoyageTeamIdUsecase.execute(userVoyageTeam);
@@ -60,7 +60,7 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
 
   // get the user's id in the current voyage
   getCurrentVoyageUserId(
-    user: GetUserRequestDto,
+    user: FetchUserRequestDto,
   ): GetCurrentVoyageUserIdResponseDto | undefined {
     const userVoyageTeam = this.getCurrentVoyageTeam(user);
     return this.getCurrentVoyageUserIdUsecase.execute(userVoyageTeam);
@@ -83,7 +83,7 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   }
 
   getVoyageProjectSubmissionStatus(
-    user: GetUserRequestDto,
+    user: FetchUserRequestDto,
   ): GetVoyageProjectSubmissionStatusResponseDto | undefined {
     const currentVoyageTeam = this.getCurrentVoyageTeam(user);
 

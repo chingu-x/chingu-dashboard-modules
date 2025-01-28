@@ -1,7 +1,7 @@
 import type { InjectionToken } from "tsyringe";
 import { type UserApiPort } from "@/user/ports/secondary/userApiPort";
 import { type UserClientAdapter } from "@/user/adapters/primary/userClientAdapter";
-import { type GetUserUsecase } from "@/user/application/usecases/getUserUsecase";
+import { type FetchUserUsecase } from "@/user/application/usecases/fetchUserUsecase";
 import { type GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChinguMemberStatusUsecase";
 
 export const USER_TYPES = {
@@ -14,9 +14,9 @@ export const USER_TYPES = {
   ) as InjectionToken<UserClientAdapter>,
 
   // usecases
-  GetUserUsecase: Symbol.for(
-    "GetUserUsecase",
-  ) as InjectionToken<GetUserUsecase>,
+  FetchUserUsecase: Symbol.for(
+    "FetchUserUsecase",
+  ) as InjectionToken<FetchUserUsecase>,
   GetChinguMemberStatusUsecase: Symbol.for(
     "GetChinguMemberStatusUsecase",
   ) as InjectionToken<GetChinguMemberStatusUsecase>,

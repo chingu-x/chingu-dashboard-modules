@@ -1,12 +1,17 @@
 import type {
   GetChinguMemberStatusResponseDto,
-  GetUserResponseDto,
+  FetchUserResponseDto,
 } from "@/user/application/dtos/response.dto";
-import { type GetUserRequestDto } from "@/user/application/dtos/request.dtos";
+import type {
+  FetchCurrentUserClientRequesstDto,
+  FetchUserRequestDto,
+} from "@/user/application/dtos/request.dtos";
 
 export interface UserClientPort {
-  getUser: () => Promise<GetUserResponseDto>;
+  fetchUser: (
+    props: FetchCurrentUserClientRequesstDto,
+  ) => Promise<FetchUserResponseDto>;
   getChinguMemberStatus: (
-    user: GetUserRequestDto,
+    props: FetchUserRequestDto,
   ) => GetChinguMemberStatusResponseDto;
 }

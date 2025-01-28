@@ -1,4 +1,4 @@
-import { type GetUserRequestDto } from "@/user/application/dtos/request.dtos";
+import { type FetchUserRequestDto } from "@/user/application/dtos/request.dtos";
 import type {
   GetVoyageTeamIdResponseDto,
   GetCurrentVoyageTeamResponseDto,
@@ -10,15 +10,15 @@ import { type HasVoyageStartedRequestDto } from "@/voyage-team/application/dtos/
 
 export interface VoyageTeamClientPort {
   getCurrentVoyageTeam: (
-    props: GetUserRequestDto,
+    props: FetchUserRequestDto,
   ) => GetCurrentVoyageTeamResponseDto | undefined;
 
   getVoyageTeamId: (
-    props: GetUserRequestDto,
+    props: FetchUserRequestDto,
   ) => GetVoyageTeamIdResponseDto | undefined;
 
   getCurrentVoyageUserId: (
-    props: GetUserRequestDto,
+    props: FetchUserRequestDto,
   ) => GetCurrentVoyageUserIdResponseDto | undefined;
 
   hasVoyageStarted: (
@@ -26,6 +26,6 @@ export interface VoyageTeamClientPort {
   ) => HasVoyageStartedResponseDto;
 
   getVoyageProjectSubmissionStatus: (
-    props: GetUserRequestDto,
+    props: FetchUserRequestDto,
   ) => GetVoyageProjectSubmissionStatusResponseDto | undefined;
 }

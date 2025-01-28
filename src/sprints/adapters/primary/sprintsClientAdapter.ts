@@ -19,7 +19,7 @@ export class SprintsClientAdapter implements SprintsClientPort {
     private readonly fetchSprintsUsecase: FetchSprintsUsecase,
 
     @inject(TYPES.GetCurrentSprintUsecase)
-    private readonly getCurrentSprintUsecase: GetCurrentSprintUsecase
+    private readonly getCurrentSprintUsecase: GetCurrentSprintUsecase,
   ) {}
 
   // gets the current voyage team
@@ -35,4 +35,9 @@ export class SprintsClientAdapter implements SprintsClientPort {
   }: GetCurrentSprintRequestDto): GetCurrentSprintResponseDto | undefined {
     return this.getCurrentSprintUsecase.execute({ sprints, currentDate });
   }
+
+  // getMeeting({
+  //   sprints,
+  //   sprintNumber,
+  // }: GetMeetingRequestDto): GetMeetingResponseDto {}
 }

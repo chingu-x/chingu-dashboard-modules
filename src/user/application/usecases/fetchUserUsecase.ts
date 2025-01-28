@@ -1,18 +1,21 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { UserApiPort } from "@/user/ports/secondary/userApiPort";
-import { GetUserResponseDto } from "@/user/application/dtos/response.dto";
+import { FetchUserResponseDto } from "@/user/application/dtos/response.dto";
 import { transformDateToUserTimezone } from "@/user/application/utils/dateTransform";
+import { FetchCurrentUserClientRequesstDto } from "@/user/application/dtos/request.dtos";
 
 @injectable()
-export class GetUserUsecase {
+export class FetchUserUsecase {
   constructor(
     @inject(TYPES.UserApiPort)
     private readonly userApi: UserApiPort,
   ) {}
 
-  async execute(): Promise<GetUserResponseDto> {
-    const data = await this.userApi.getUser();
+  async execute({
+    currentDate,
+  }: FetchCurrentUserClientRequesstDto): Promise<FetchUserResponseDto> {
+    const data = await this.userApi.fetchUser();
 
     const userWithDate = {
       ...data,
@@ -25,10 +28,3 @@ export class GetUserUsecase {
     return userWithDate;
   }
 }
-
-// refactor below code to separate module (sprints) when ready
-
-const currentDate =
-  process.env.NODE_ENV === "development"
-    ? new Date(2024, 5, 1, 12)
-    : new Date();

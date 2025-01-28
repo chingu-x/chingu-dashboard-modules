@@ -1,3 +1,6 @@
 import type { User } from "@/user/application/types";
 
-export type GetUserRequestDto = User;
+export interface FetchCurrentUserClientRequesstDto {
+  currentDate: Date;
+}
+export type FetchUserRequestDto = User;
