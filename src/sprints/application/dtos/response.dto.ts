@@ -7,3 +7,4 @@ import type {
 export type FetchSprintsResponseDto = VoyageSprint;
 export type GetCurrentSprintResponseDto = Sprint;
 export type GetMeetingResponseDto = Meeting;
+export type GetSprintCheckinStatusResponseDto = boolean;

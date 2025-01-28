@@ -12,6 +12,7 @@ import {
   FetchSprintsResponseDto,
   GetCurrentSprintResponseDto,
   GetMeetingResponseDto,
+  GetSprintCheckinStatusResponseDto,
 } from "@/sprints/application/dtos/response.dto";
 import { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
 import { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsecase";
@@ -53,5 +54,5 @@ export class SprintsClientAdapter implements SprintsClientPort {
   getSprintCheckinStatus({
     user,
     sprintNum,
-  }: GetSprintCheckinStatusRequestDto) {}
+  }: GetSprintCheckinStatusRequestDto): GetSprintCheckinStatusResponseDto {}
 }
