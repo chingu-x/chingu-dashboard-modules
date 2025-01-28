@@ -5,12 +5,15 @@ import { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprints
 import {
   FetchSprintsClientRequestDto,
   GetCurrentSprintRequestDto,
+  GetMeetingRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import {
   FetchSprintsResponseDto,
   GetCurrentSprintResponseDto,
+  GetMeetingResponseDto,
 } from "@/sprints/application/dtos/response.dto";
 import { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
+import { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsecase";
 
 @injectable()
 export class SprintsClientAdapter implements SprintsClientPort {
@@ -20,6 +23,9 @@ export class SprintsClientAdapter implements SprintsClientPort {
 
     @inject(TYPES.GetCurrentSprintUsecase)
     private readonly getCurrentSprintUsecase: GetCurrentSprintUsecase,
+
+    @inject(TYPES.GetMeetingUsecase)
+    private readonly getMeetingUsecase: GetMeetingUsecase,
   ) {}
 
   // gets the current voyage team
@@ -36,8 +42,10 @@ export class SprintsClientAdapter implements SprintsClientPort {
     return this.getCurrentSprintUsecase.execute({ sprints, currentDate });
   }
 
-  // getMeeting({
-  //   sprints,
-  //   sprintNumber,
-  // }: GetMeetingRequestDto): GetMeetingResponseDto {}
+  getMeeting({
+    sprints,
+    sprintNumber,
+  }: GetMeetingRequestDto): GetMeetingResponseDto | null {
+    return this.getMeetingUsecase.execute({ sprints, sprintNumber });
+  }
 }

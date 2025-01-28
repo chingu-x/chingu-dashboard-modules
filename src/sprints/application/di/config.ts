@@ -4,6 +4,7 @@ import { SprintsApiAdapter } from "@/sprints/adapters/secondary/sprintsApiAdapte
 import { SprintsClientAdapter } from "@/sprints/adapters/primary/sprintsClientAdapter";
 import { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprintsUsecase";
 import { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
+import { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsecase";
 
 export const registerSprintsDependencies = () => {
   // ports
@@ -20,7 +21,12 @@ export const registerSprintsDependencies = () => {
   container.register(SPRINTS_TYPES.FetchSprintsUsecase, {
     useClass: FetchSprintsUsecase,
   });
+
   container.register(SPRINTS_TYPES.GetCurrentSprintUsecase, {
     useClass: GetCurrentSprintUsecase,
+  });
+
+  container.register(SPRINTS_TYPES.GetMeetingUsecase, {
+    useClass: GetMeetingUsecase,
   });
 };

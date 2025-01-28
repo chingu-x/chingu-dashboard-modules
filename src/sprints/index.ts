@@ -3,10 +3,12 @@ export {
   FetchSprintsClientRequestDto,
   FetchSprintsApiRequestDto,
   GetCurrentSprintRequestDto,
+  GetMeetingRequestDto,
 } from "./application/dtos/request.dto";
 export {
   FetchSprintsResponseDto,
   GetCurrentSprintResponseDto,
+  GetMeetingResponseDto,
 } from "./application/dtos/response.dto";
 export {
   VoyageSprint,

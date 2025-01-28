@@ -12,3 +12,8 @@ export interface GetCurrentSprintRequestDto {
   sprints: Sprint[];
   currentDate: Date;
 }
+
+export interface GetMeetingRequestDto {
+  sprints: Sprint[];
+  sprintNumber: number;
+}
