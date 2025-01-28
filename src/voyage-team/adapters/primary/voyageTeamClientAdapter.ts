@@ -8,6 +8,7 @@ import {
   HasVoyageStartedResponseDto,
   IsCurrentVoyageTeamResponseDto,
   GetCurrentVoyageUserIdResponseDto,
+  GetVoyageProjectSubmissionStatusResponseDto,
 } from "@/voyage-team/application/dtos/response.dto";
 import { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
 import { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";
@@ -18,6 +19,7 @@ import {
 import { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases/hasVoyageStartedUsecase";
 import { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/isCurrentVoyageTeamUseCase";
 import { GetCurrentVoyageUserIdUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageUserIdUsecase";
+import { GetVoyageProjectSubmissionStatusUsecase } from "@/voyage-team/application/usecases/getVoyageProjectSubmissionStatusUsecase";
 
 @injectable()
 export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
@@ -36,6 +38,9 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
 
     @inject(TYPES.IsCurrentVoyageTeamUsecase)
     private readonly isCurrentVoyageTeamUsecase: IsCurrentVoyageTeamUsecase,
+
+    @inject(TYPES.GetVoyageProjectSubmissionStatusUsecase)
+    private readonly getVoyageProjectSubmissionStatusUsecase: GetVoyageProjectSubmissionStatusUsecase,
   ) {}
 
   // gets the current voyage team
@@ -73,7 +78,17 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
     user,
     teamId,
   }: IsCurrentVoyageTeamClientRequestDto): IsCurrentVoyageTeamResponseDto {
-    const voyageTeamId = this.getVoyageTeamId(user);
+    const voyageTeamId = this.getVoyageTeamId(user)!;
     return this.isCurrentVoyageTeamUsecase.execute({ teamId, voyageTeamId });
+  }
+
+  getVoyageProjectSubmissionStatus(
+    user: GetUserRequestDto,
+  ): GetVoyageProjectSubmissionStatusResponseDto | undefined {
+    const currentVoyageTeam = this.getCurrentVoyageTeam(user);
+
+    return this.getVoyageProjectSubmissionStatusUsecase.execute(
+      currentVoyageTeam,
+    );
   }
 }
