@@ -27,7 +27,7 @@ export class SprintsClientAdapter implements SprintsClientPort {
     private readonly getCurrentSprintUsecase: GetCurrentSprintUsecase,
 
     @inject(TYPES.GetMeetingUsecase)
-    private readonly getMeetingUsecase: GetMeetingUsecase
+    private readonly getMeetingUsecase: GetMeetingUsecase,
   ) {}
 
   // gets the current voyage team
