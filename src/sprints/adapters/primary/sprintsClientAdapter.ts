@@ -16,6 +16,7 @@ import {
 } from "@/sprints/application/dtos/response.dto";
 import { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
 import { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsecase";
+import { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/getSprintCheckinStatusUsecase";
 
 @injectable()
 export class SprintsClientAdapter implements SprintsClientPort {
