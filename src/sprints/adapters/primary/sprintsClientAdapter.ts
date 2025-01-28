@@ -6,6 +6,7 @@ import {
   FetchSprintsClientRequestDto,
   GetCurrentSprintRequestDto,
   GetMeetingRequestDto,
+  GetSprintCheckinStatusRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import {
   FetchSprintsResponseDto,
@@ -25,7 +26,7 @@ export class SprintsClientAdapter implements SprintsClientPort {
     private readonly getCurrentSprintUsecase: GetCurrentSprintUsecase,
 
     @inject(TYPES.GetMeetingUsecase)
-    private readonly getMeetingUsecase: GetMeetingUsecase,
+    private readonly getMeetingUsecase: GetMeetingUsecase
   ) {}
 
   // gets the current voyage team
@@ -48,4 +49,9 @@ export class SprintsClientAdapter implements SprintsClientPort {
   }: GetMeetingRequestDto): GetMeetingResponseDto | null {
     return this.getMeetingUsecase.execute({ sprints, sprintNumber });
   }
+
+  getSprintCheckinStatus({
+    user,
+    sprintNum,
+  }: GetSprintCheckinStatusRequestDto) {}
 }
