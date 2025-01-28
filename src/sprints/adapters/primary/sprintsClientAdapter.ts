@@ -28,6 +28,9 @@ export class SprintsClientAdapter implements SprintsClientPort {
 
     @inject(TYPES.GetMeetingUsecase)
     private readonly getMeetingUsecase: GetMeetingUsecase,
+
+    @inject(TYPES.GetSprintCheckinStatusUsecase)
+    private readonly getSprintCheckinStatusUsecase: GetSprintCheckinStatusUsecase
   ) {}
 
   // gets the current voyage team
@@ -54,5 +57,7 @@ export class SprintsClientAdapter implements SprintsClientPort {
   getSprintCheckinStatus({
     user,
     sprintNum,
-  }: GetSprintCheckinStatusRequestDto): GetSprintCheckinStatusResponseDto {}
+  }: GetSprintCheckinStatusRequestDto): GetSprintCheckinStatusResponseDto {
+    return this.getSprintCheckinStatusUsecase.execute({ user, sprintNum });
+  }
 }
