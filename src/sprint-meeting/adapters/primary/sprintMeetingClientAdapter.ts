@@ -1,6 +1,8 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { SprintMeetingClientPort } from "@/sprint-meeting/ports/primary/sprintMeetingClientPort";
+import { FetchMeetingRequestDto } from "@/sprint-meeting/application/dtos/request.dto";
+import { FetchMeetingResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
 
 @injectable()
 export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
@@ -11,10 +13,6 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     @inject(TYPES.FetchMeetingUsecase)
     private readonly fetchMeetingUsecase: FetchMeetingUsecase
   ) {}
-
-  async login({ email, password }: LoginRequestDto): Promise<LoginResponseDto> {
-    return await this.loginUsecase.execute({ email, password });
-  }
 
   async fetchMeeting({
     sprintNumber,

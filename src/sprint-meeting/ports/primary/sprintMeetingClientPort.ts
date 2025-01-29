@@ -1,6 +1,8 @@
+import type { FetchMeetingRequestDto } from "@/sprint-meeting/application/dtos/request.dto";
+import type { FetchMeetingResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
+
 export interface SprintMeetingClientPort {
-  login: (props: LoginRequestDto) => Promise<LoginResponseDto>;
-  logout: () => Promise<LogoutResponseDto>;
-  requestResetPassword: (props: RequestResetPasswordDto) => Promise<void>;
-  resetPassword: (props: ResetPasswordDto) => Promise<void>;
+  fetchMeeting: (
+    props: FetchMeetingRequestDto
+  ) => Promise<FetchMeetingResponseDto>;
 }
