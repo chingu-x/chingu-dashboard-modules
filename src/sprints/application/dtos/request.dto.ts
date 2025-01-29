@@ -23,3 +23,9 @@ export interface GetSprintCheckinStatusRequestDto {
   user: User;
   sprintNum: number;
 }
+
+export interface IsCurrentSprintClientRequestDto {
+  currentDate: Date;
+  sprints: Sprint[];
+  sprintNumber: number;
+}
