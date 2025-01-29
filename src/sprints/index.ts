@@ -12,10 +12,4 @@ export {
   GetMeetingResponseDto,
   GetSprintCheckinStatusResponseDto,
 } from "./application/dtos/response.dto";
-export {
-  VoyageSprint,
-  Sprint,
-  Meeting,
-  Section,
-  Agenda,
-} from "./application/types";
+export { VoyageSprint, Sprint } from "./application/types";
