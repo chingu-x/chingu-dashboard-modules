@@ -1,6 +1,8 @@
+import type { FetchMeetingRequestDto } from "@/sprint-meeting/application/dtos/request.dto";
+import type { FetchMeetingResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
+
 export interface SprintMeetingApiPort {
-  login: ({ email, password }: LoginRequestDto) => Promise<LoginResponseDto>;
-  logout: () => Promise<LogoutResponseDto>;
-  requestResetPassword: ({ email }: RequestResetPasswordDto) => Promise<void>;
-  resetPassword: ({ password, token }: ResetPasswordDto) => Promise<void>;
+  fetchMeeting: ({
+    meetingId,
+  }: FetchMeetingRequestDto) => Promise<FetchMeetingResponseDto>;
 }
