@@ -1,9 +1,8 @@
+import type { Sprint } from "@/sprints/application/types";
+
 export interface Meeting {
   id: number;
-  sprint?: {
-    id: number;
-    number: number;
-  };
+  sprint?: Sprint;
   title?: string;
   description?: string;
   dateTime?: string;
