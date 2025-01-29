@@ -2,6 +2,7 @@ import type { InjectionToken } from "tsyringe";
 import type { SprintMeetingApiPort } from "@/sprint-meeting/ports/secondary/sprintMeetingApiPort";
 import type { SprintMeetingClientAdapter } from "@/sprint-meeting/adapters/primary/sprintMeetingClientAdapter";
 import type { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetchMeetingUsecase";
+import type { GetCurrentSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingId";
 
 export const SPRINT_MEETING_TYPES = {
   // ports
@@ -18,4 +19,8 @@ export const SPRINT_MEETING_TYPES = {
   FetchMeetingUsecase: Symbol.for(
     "FetchMeetingUsecase",
   ) as InjectionToken<FetchMeetingUsecase>,
+
+  GetCurrentSprintMeetingIdUsecase: Symbol.for(
+    "GetCurrentSprintMeetingIdUsecase",
+  ) as InjectionToken<GetCurrentSprintMeetingIdUsecase>,
 };

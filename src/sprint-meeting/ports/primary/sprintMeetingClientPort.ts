@@ -9,10 +9,10 @@ import type {
 
 export interface SprintMeetingClientPort {
   fetchMeeting: (
-    props: FetchMeetingRequestDto
+    props: FetchMeetingRequestDto,
   ) => Promise<FetchMeetingResponseDto>;
 
   getCurrentSprintMeetingId: (
-    props: GetCurrentSprintMeetingIdRequesDto
+    props: GetCurrentSprintMeetingIdRequesDto,
   ) => GetCurrentSprintMeetingIdResponseDto;
 }
