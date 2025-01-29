@@ -1,6 +1,6 @@
 import { container } from "tsyringe";
-import { IsCurrentSprintUsecase } from "src/sprints/application/usecases/isCurrentSprintUsecase";
 import { SPRINTS_TYPES } from "./types";
+import { IsCurrentSprintUsecase } from "@/sprints/application/usecases/isCurrentSprintUsecase";
 import { SprintsApiAdapter } from "@/sprints/adapters/secondary/sprintsApiAdapter";
 import { SprintsClientAdapter } from "@/sprints/adapters/primary/sprintsClientAdapter";
 import { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprintsUsecase";
