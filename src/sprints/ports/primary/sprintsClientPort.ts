@@ -3,7 +3,7 @@ import type {
   GetCurrentSprintRequestDto,
   GetMeetingRequestDto,
   GetSprintCheckinStatusRequestDto,
-  IsCurrentSprintClientRequestDto,
+  IsCurrentSprintRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import type {
   FetchSprintsResponseDto,
@@ -25,6 +25,6 @@ export interface SprintsClientPort {
     props: GetSprintCheckinStatusRequestDto,
   ) => GetSprintCheckinStatusResponseDto;
   isCurrentSprint: (
-    props: IsCurrentSprintClientRequestDto,
+    props: IsCurrentSprintRequestDto,
   ) => IsCurrentSprintResponseDto;
 }
