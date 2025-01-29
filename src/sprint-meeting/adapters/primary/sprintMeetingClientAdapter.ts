@@ -3,6 +3,7 @@ import { TYPES } from "@/types";
 import { SprintMeetingClientPort } from "@/sprint-meeting/ports/primary/sprintMeetingClientPort";
 import { FetchMeetingRequestDto } from "@/sprint-meeting/application/dtos/request.dto";
 import { FetchMeetingResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
+import { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetchMeetingUsecase";
 
 @injectable()
 export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
