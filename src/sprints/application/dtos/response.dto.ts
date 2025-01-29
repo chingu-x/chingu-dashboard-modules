@@ -6,3 +6,4 @@ export type GetCurrentSprintResponseDto = Sprint;
 export type GetMeetingResponseDto = Meeting;
 export type GetSprintCheckinStatusResponseDto = boolean;
 export type IsCurrentSprintResponseDto = boolean;
+export type IsVoyageProjestSubmissionAllowedResponseDto = boolean;
