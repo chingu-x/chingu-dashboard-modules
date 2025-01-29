@@ -3,6 +3,6 @@ import type { FetchMeetingResponseDto } from "@/sprint-meeting/application/dtos/
 
 export interface SprintMeetingClientPort {
   fetchMeeting: (
-    props: FetchMeetingRequestDto
+    props: FetchMeetingRequestDto,
   ) => Promise<FetchMeetingResponseDto>;
 }

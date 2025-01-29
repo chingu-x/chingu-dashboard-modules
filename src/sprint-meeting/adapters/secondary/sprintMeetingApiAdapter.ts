@@ -10,7 +10,7 @@ import SprintMeetingUrls from "@/sprint-meeting/application/constants/sprintMeet
 export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
   constructor(
     @inject(TYPES.RestApiPort)
-    private readonly apiClient: RestApiPort
+    private readonly apiClient: RestApiPort,
   ) {}
 
   async fetchMeeting({

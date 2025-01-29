@@ -8,11 +8,11 @@ import { FetchMeetingResponseDto } from "@/sprint-meeting/application/dtos/respo
 export class FetchMeetingUsecase {
   constructor(
     @inject(SPRINT_MEETING_TYPES.SprintMeetingApiPort)
-    private readonly sprintMeetingApi: SprintMeetingApiPort
+    private readonly sprintMeetingApi: SprintMeetingApiPort,
   ) {}
 
   async execute(
-    props: FetchMeetingRequestDto
+    props: FetchMeetingRequestDto,
   ): Promise<FetchMeetingResponseDto> {
     return await this.sprintMeetingApi.fetchMeeting({ ...props });
   }

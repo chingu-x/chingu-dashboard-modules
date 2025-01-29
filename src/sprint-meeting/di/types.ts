@@ -6,16 +6,16 @@ import type { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/
 export const SPRINT_MEETING_TYPES = {
   // ports
   SprintMeetingApiPort: Symbol.for(
-    "SprintMeetingApiPort"
+    "SprintMeetingApiPort",
   ) as InjectionToken<SprintMeetingApiPort>,
 
   // adapters
   SprintMeetingClientAdapter: Symbol.for(
-    "SprintMeetingClientAdapter"
+    "SprintMeetingClientAdapter",
   ) as InjectionToken<SprintMeetingClientAdapter>,
 
   // usecases
   FetchMeetingUsecase: Symbol.for(
-    "FetchMeetingUsecase"
+    "FetchMeetingUsecase",
   ) as InjectionToken<FetchMeetingUsecase>,
 };

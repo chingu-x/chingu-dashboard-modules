@@ -9,7 +9,7 @@ import type {
 
 export interface MyTeamClientPort {
   getMyTeam: (
-    props: GetMyTeamClientRequestDto
+    props: GetMyTeamClientRequestDto,
   ) => Promise<GetMyTeamResponseDto>;
   editHours: (props: EditHoursRequestDto) => Promise<EditHoursResponseDto>;
 }

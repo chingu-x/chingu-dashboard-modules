@@ -9,7 +9,7 @@ import { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetch
 export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
   constructor(
     @inject(TYPES.FetchMeetingUsecase)
-    private readonly fetchMeetingUsecase: FetchMeetingUsecase
+    private readonly fetchMeetingUsecase: FetchMeetingUsecase,
   ) {}
 
   async fetchMeeting({
