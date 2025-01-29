@@ -1,13 +1,13 @@
 import { injectable } from "tsyringe";
+import { IsCurrentSprintApiRequestDto } from "@/sprints/application/dtos/request.dto";
+import { IsCurrentSprintResponseDto } from "@/sprints/application/dtos/response.dto";
 
 @injectable()
 export class IsCurrentSprintUsecase {
   execute({
-    user,
-    sprintNum,
+    number,
+    sprintNumber,
   }: IsCurrentSprintApiRequestDto): IsCurrentSprintResponseDto {
-    return Boolean(
-      user.sprintCheckIn.find((sprintNumber) => sprintNumber === sprintNum)
-    );
+    return number === sprintNumber;
   }
 }
