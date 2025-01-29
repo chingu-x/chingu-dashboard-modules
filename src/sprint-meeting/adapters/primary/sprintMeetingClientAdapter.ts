@@ -8,9 +8,6 @@ import { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetch
 @injectable()
 export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
   constructor(
-    @inject(TYPES.LoginUsecase)
-    private readonly loginUsecase: LoginUsecase,
-
     @inject(TYPES.FetchMeetingUsecase)
     private readonly fetchMeetingUsecase: FetchMeetingUsecase
   ) {}
