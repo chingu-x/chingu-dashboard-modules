@@ -17,8 +17,8 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     @inject(TYPES.FetchMeetingUsecase)
     private readonly fetchMeetingUsecase: FetchMeetingUsecase,
 
-    @inject(TYPES.GetCurrentSprintMeetingUsecase)
-    private readonly getCurrentSprintMeetingUsecase: GetCurrentSprintMeetingUsecase
+    @inject(TYPES.GetCurrentSprintMeetingIdUsecase)
+    private readonly getCurrentSprintMeetingIdUsecase: GetCurrentSprintMeetingIdUsecase
   ) {}
 
   async fetchMeeting({
@@ -30,6 +30,6 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
   getCurrentSprintMeetingId({
     sprints,
   }: GetCurrentSprintMeetingIdRequesDto): GetCurrentSprintMeetingIdResponseDto {
-    return this.getCurrentSprintMeetingUsecase.execute({ sprints });
+    return this.getCurrentSprintMeetingIdUsecase.execute({ sprints });
   }
 }

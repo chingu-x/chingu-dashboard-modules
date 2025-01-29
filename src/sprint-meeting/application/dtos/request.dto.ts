@@ -1,9 +1,9 @@
-import type { VoyageSprint } from "@/sprints/application/types";
+import type { Sprint } from "@/sprints/application/types";
 
 export interface FetchMeetingRequestDto {
   meetingId: number;
 }
 
 export interface GetCurrentSprintMeetingIdRequesDto {
-  sprints: VoyageSprint;
+  sprints: Sprint[];
 }
