@@ -5,7 +5,8 @@ export {
   GetCurrentSprintRequestDto,
   GetMeetingRequestDto,
   GetSprintCheckinStatusRequestDto,
-  IsCurrentSprintClientRequestDto,
+  IsCurrentSprintRequestDto,
+  IsVoyageProjestSubmissionAllowedRequestDto,
 } from "./application/dtos/request.dto";
 export {
   FetchSprintsResponseDto,
@@ -13,5 +14,6 @@ export {
   GetMeetingResponseDto,
   GetSprintCheckinStatusResponseDto,
   IsCurrentSprintResponseDto,
+  IsVoyageProjestSubmissionAllowedResponseDto,
 } from "./application/dtos/response.dto";
 export { VoyageSprint, Sprint } from "./application/types";
