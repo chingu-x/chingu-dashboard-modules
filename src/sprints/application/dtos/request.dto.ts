@@ -29,3 +29,8 @@ export interface IsCurrentSprintClientRequestDto {
   sprints: Sprint[];
   sprintNumber: number;
 }
+
+export interface IsCurrentSprintApiRequestDto {
+  number: number;
+  sprintNumber: number;
+}
