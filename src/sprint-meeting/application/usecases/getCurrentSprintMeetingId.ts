@@ -1,13 +1,14 @@
 import { injectable } from "tsyringe";
-import { GetCurrentSprintMeetingIdRequesDto } from "../dtos/request.dto";
-import { GetCurrentSprintMeetingIdResponseDto } from "../dtos/response.dto";
+import { GetCurrentSprintMeetingIdRequesDto } from "@/sprint-meeting/application/dtos/request.dto";
+import { GetCurrentSprintMeetingIdResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
 
 @injectable()
 export class GetCurrentSprintMeetingIdUsecase {
-  async execute({
+  execute({
     sprints,
+    sprintNumber,
   }: GetCurrentSprintMeetingIdRequesDto): GetCurrentSprintMeetingIdResponseDto {
-    return sprints.find((sprint) => sprint.number === sprintNumber)!
+    return sprints.find((sprint) => sprint.number.toString() === sprintNumber)!
       .teamMeetings[0];
   }
 }
