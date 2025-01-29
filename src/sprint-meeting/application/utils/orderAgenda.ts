@@ -1,5 +1,10 @@
-import type { Agenda, Meeting } from "@/sprint-meeting/application/types";
+import type { Meeting } from "@/sprint-meeting/application/types";
 
-export function orderAgenda({ agendas }: Meeting): Agenda[] {
-  return agendas!.sort((a, b) => a.updatedAt.localeCompare(b.updatedAt));
+export function orderAgenda(meeting: Meeting): Meeting {
+  return {
+    ...meeting,
+    agendas: meeting.agendas?.sort((a, b) =>
+      a.updatedAt.localeCompare(b.updatedAt),
+    ),
+  };
 }
