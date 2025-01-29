@@ -19,7 +19,7 @@ export class MyTeamClientAdapter implements MyTeamClientPort {
     private readonly getMyTeamUsecase: GetMyTeamUsecase,
 
     @inject(TYPES.EditHoursUsecase)
-    private readonly editHoursUsecase: EditHoursUsecase,
+    private readonly editHoursUsecase: EditHoursUsecase
   ) {}
 
   async getMyTeam({
