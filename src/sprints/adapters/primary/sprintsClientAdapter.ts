@@ -37,7 +37,10 @@ export class SprintsClientAdapter implements SprintsClientPort {
     private readonly getSprintCheckinStatusUsecase: GetSprintCheckinStatusUsecase,
 
     @inject(TYPES.IsCurrentSprintUsecase)
-    private readonly isCurrentSprintUsecase: IsCurrentSprintUsecase
+    private readonly isCurrentSprintUsecase: IsCurrentSprintUsecase,
+
+    @inject(TYPES.IsVoyageProjestSubmissionAllowedUsecase)
+    private readonly isVoyageProjestSubmissionAllowedUsecase: IsVoyageProjestSubmissionAllowedUsecase
   ) {}
 
   // gets the current voyage team
@@ -78,5 +81,11 @@ export class SprintsClientAdapter implements SprintsClientPort {
     });
   }
 
-  isVoyageProjestSubmissionAllowed({ sprintNumber }) {]};
+  isVoyageProjestSubmissionAllowed({
+    sprintNumber,
+  }: IsVoyageProjestSubmissionAllowedRequestDto): IsVoyageProjestSubmissionAllowedResponseDto {
+    return this.isVoyageProjestSubmissionAllowedUsecase.execute({
+      sprintNumber,
+    });
+  }
 }

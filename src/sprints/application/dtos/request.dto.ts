@@ -28,3 +28,7 @@ export interface IsCurrentSprintRequestDto {
   sprintNumber: string;
   currentSprintNumber: number;
 }
+
+export interface IsVoyageProjestSubmissionAllowedRequestDto {
+  sprintNumber: string;
+}
