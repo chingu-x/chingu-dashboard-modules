@@ -10,6 +10,7 @@ import {
   GetCurrentSprintMeetingIdResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 import { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetchMeetingUsecase";
+import { GetCurrentSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingId";
 
 @injectable()
 export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
