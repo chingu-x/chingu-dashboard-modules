@@ -6,6 +6,7 @@ import type { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSp
 import type { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
 import type { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsecase";
 import type { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/getSprintCheckinStatusUsecase";
+import type { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/isVoyageProjestSubmissionAllowedUsecase";
 
 export const SPRINTS_TYPES = {
   // ports
@@ -38,4 +39,8 @@ export const SPRINTS_TYPES = {
   IsCurrentSprintUsecase: Symbol.for(
     "IsCurrentSprintUsecase",
   ) as InjectionToken<IsCurrentSprintUsecase>,
+
+  IsVoyageProjestSubmissionAllowedUsecase: Symbol.for(
+    "IsVoyageProjestSubmissionAllowedUsecase",
+  ) as InjectionToken<IsVoyageProjestSubmissionAllowedUsecase>,
 };

@@ -17,24 +17,24 @@ import type {
 
 export interface SprintsClientPort {
   fetchSprints: (
-    props: FetchSprintsClientRequestDto
+    props: FetchSprintsClientRequestDto,
   ) => Promise<FetchSprintsResponseDto>;
 
   getCurrentSprint: (
-    props: GetCurrentSprintRequestDto
+    props: GetCurrentSprintRequestDto,
   ) => GetCurrentSprintResponseDto | undefined;
 
   getMeeting: (props: GetMeetingRequestDto) => GetMeetingResponseDto | null;
 
   getSprintCheckinStatus: (
-    props: GetSprintCheckinStatusRequestDto
+    props: GetSprintCheckinStatusRequestDto,
   ) => GetSprintCheckinStatusResponseDto;
 
   isCurrentSprint: (
-    props: IsCurrentSprintRequestDto
+    props: IsCurrentSprintRequestDto,
   ) => IsCurrentSprintResponseDto;
 
   isVoyageProjestSubmissionAllowed: (
-    props: IsVoyageProjestSubmissionAllowedRequestDto
+    props: IsVoyageProjestSubmissionAllowedRequestDto,
   ) => IsVoyageProjestSubmissionAllowedResponseDto;
 }

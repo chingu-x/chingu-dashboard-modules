@@ -7,6 +7,7 @@ import { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprints
 import { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
 import { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsecase";
 import { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/getSprintCheckinStatusUsecase";
+import { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/isVoyageProjestSubmissionAllowedUsecase";
 
 export const registerSprintsDependencies = () => {
   // ports
@@ -38,5 +39,9 @@ export const registerSprintsDependencies = () => {
 
   container.register(SPRINTS_TYPES.IsCurrentSprintUsecase, {
     useClass: IsCurrentSprintUsecase,
+  });
+
+  container.register(SPRINTS_TYPES.IsVoyageProjestSubmissionAllowedUsecase, {
+    useClass: IsVoyageProjestSubmissionAllowedUsecase,
   });
 };
