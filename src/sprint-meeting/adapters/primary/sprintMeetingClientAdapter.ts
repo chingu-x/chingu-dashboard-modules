@@ -23,7 +23,7 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
   getCurrentSprintMeetingId({
     sprints,
-  }: GetCurrentSprintMeetingRequesDto): GetCurrentSprintMeetingResponseDto {
+  }: GetCurrentSprintMeetingIdRequesDto): GetCurrentSprintMeetingIdResponseDto {
     return this.getCurrentSprintMeetingUsecase.execute({ sprints });
   }
 }

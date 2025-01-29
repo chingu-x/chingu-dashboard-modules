@@ -4,6 +4,6 @@ export interface FetchMeetingRequestDto {
   meetingId: number;
 }
 
-export interface GetCurrentSprintMeetingRequesDto {
+export interface GetCurrentSprintMeetingIdRequesDto {
   sprints: VoyageSprint;
 }
