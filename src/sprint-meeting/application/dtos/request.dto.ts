@@ -6,5 +6,5 @@ export interface FetchMeetingRequestDto {
 
 export interface GetCurrentSprintMeetingIdRequesDto {
   sprints: Sprint[];
-  sprintNumber: string;
+  sprintNumber: number;
 }

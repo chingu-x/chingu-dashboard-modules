@@ -8,7 +8,7 @@ export class GetCurrentSprintMeetingIdUsecase {
     sprints,
     sprintNumber,
   }: GetCurrentSprintMeetingIdRequesDto): GetCurrentSprintMeetingIdResponseDto {
-    return sprints.find((sprint) => sprint.number.toString() === sprintNumber)!
+    return sprints.find((sprint) => sprint.number === sprintNumber)!
       .teamMeetings[0];
   }
 }
