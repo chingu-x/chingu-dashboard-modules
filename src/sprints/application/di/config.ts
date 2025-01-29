@@ -1,4 +1,5 @@
 import { container } from "tsyringe";
+import { IsCurrentSprintUsecase } from "src/sprints/application/usecases/isCurrentSprintUsecase";
 import { SPRINTS_TYPES } from "./types";
 import { SprintsApiAdapter } from "@/sprints/adapters/secondary/sprintsApiAdapter";
 import { SprintsClientAdapter } from "@/sprints/adapters/primary/sprintsClientAdapter";
@@ -33,5 +34,9 @@ export const registerSprintsDependencies = () => {
 
   container.register(SPRINTS_TYPES.GetSprintCheckinStatusUsecase, {
     useClass: GetSprintCheckinStatusUsecase,
+  });
+
+  container.register(SPRINTS_TYPES.IsCurrentSprintUsecase, {
+    useClass: IsCurrentSprintUsecase,
   });
 };

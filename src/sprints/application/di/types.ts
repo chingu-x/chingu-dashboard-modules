@@ -1,4 +1,5 @@
 import type { InjectionToken } from "tsyringe";
+import type { IsCurrentSprintUsecase } from "src/sprints/application/usecases/isCurrentSprintUsecase";
 import type { SprintsApiPort } from "@/sprints/ports/secondary/sprintsApiPort";
 import type { SprintsClientAdapter } from "@/sprints/adapters/primary/sprintsClientAdapter";
 import type { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprintsUsecase";
@@ -33,4 +34,8 @@ export const SPRINTS_TYPES = {
   GetSprintCheckinStatusUsecase: Symbol.for(
     "GetSprintCheckinStatusUsecase",
   ) as InjectionToken<GetSprintCheckinStatusUsecase>,
+
+  IsCurrentSprintUsecase: Symbol.for(
+    "IsCurrentSprintUsecase",
+  ) as InjectionToken<IsCurrentSprintUsecase>,
 };

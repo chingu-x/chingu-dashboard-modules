@@ -19,6 +19,7 @@ import {
 import { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
 import { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsecase";
 import { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/getSprintCheckinStatusUsecase";
+import { IsCurrentSprintUsecase } from "@/sprints/application/usecases/isCurrentSprintUsecase";
 
 @injectable()
 export class SprintsClientAdapter implements SprintsClientPort {
@@ -36,7 +37,7 @@ export class SprintsClientAdapter implements SprintsClientPort {
     private readonly getSprintCheckinStatusUsecase: GetSprintCheckinStatusUsecase,
 
     @inject(TYPES.IsCurrentSprintUsecase)
-    private readonly isCurrentSprintUsecase: IsCurrentSprintUsecase
+    private readonly isCurrentSprintUsecase: IsCurrentSprintUsecase,
   ) {}
 
   // gets the current voyage team
