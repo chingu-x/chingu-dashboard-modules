@@ -4,6 +4,7 @@ import type {
   GetMeetingRequestDto,
   GetSprintCheckinStatusRequestDto,
   IsCurrentSprintRequestDto,
+  IsVoyageProjestSubmissionAllowedRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import type {
   FetchSprintsResponseDto,
@@ -11,20 +12,29 @@ import type {
   GetMeetingResponseDto,
   GetSprintCheckinStatusResponseDto,
   IsCurrentSprintResponseDto,
+  IsVoyageProjestSubmissionAllowedResponseDto,
 } from "@/sprints/application/dtos/response.dto";
 
 export interface SprintsClientPort {
   fetchSprints: (
-    props: FetchSprintsClientRequestDto,
+    props: FetchSprintsClientRequestDto
   ) => Promise<FetchSprintsResponseDto>;
+
   getCurrentSprint: (
-    props: GetCurrentSprintRequestDto,
+    props: GetCurrentSprintRequestDto
   ) => GetCurrentSprintResponseDto | undefined;
+
   getMeeting: (props: GetMeetingRequestDto) => GetMeetingResponseDto | null;
+
   getSprintCheckinStatus: (
-    props: GetSprintCheckinStatusRequestDto,
+    props: GetSprintCheckinStatusRequestDto
   ) => GetSprintCheckinStatusResponseDto;
+
   isCurrentSprint: (
-    props: IsCurrentSprintRequestDto,
+    props: IsCurrentSprintRequestDto
   ) => IsCurrentSprintResponseDto;
+
+  isVoyageProjestSubmissionAllowed: (
+    props: IsVoyageProjestSubmissionAllowedRequestDto
+  ) => IsVoyageProjestSubmissionAllowedResponseDto;
 }
