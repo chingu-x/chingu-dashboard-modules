@@ -9,6 +9,7 @@ import {
   IsCurrentVoyageTeamResponseDto,
   GetCurrentVoyageUserIdResponseDto,
   GetVoyageProjectSubmissionStatusResponseDto,
+  GetVoyageMemberRolesResponseDto,
 } from "@/voyage-team/application/dtos/response.dto";
 import { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
 import { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";

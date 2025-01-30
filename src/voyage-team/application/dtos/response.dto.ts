@@ -6,3 +6,7 @@ export type GetCurrentVoyageUserIdResponseDto = number;
 export type HasVoyageStartedResponseDto = boolean;
 export type IsCurrentVoyageTeamResponseDto = boolean;
 export type GetVoyageProjectSubmissionStatusResponseDto = boolean;
+export interface GetVoyageMemberRolesResponseDto {
+  hasScrumMaster: boolean;
+  hasProductOwner: boolean;
+}
