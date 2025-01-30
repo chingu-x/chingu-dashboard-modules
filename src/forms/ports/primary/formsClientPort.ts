@@ -9,10 +9,10 @@ import type {
 
 export interface FormsClientPort {
   fetchFormQuestions: (
-    props: FetchFormQuestionsRequestDto
+    props: FetchFormQuestionsRequestDto,
   ) => Promise<FetchFormQuestionsResponseDto>;
 
   getWeeklyCheckinForm: (
-    props: GetWeeklyCheckinFormRequestDto
+    props: GetWeeklyCheckinFormRequestDto,
   ) => GetWeeklyCheckinFormResponseDto;
 }
