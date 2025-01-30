@@ -22,3 +22,8 @@ export interface IsCurrentVoyageTeamApiRequestDto {
 export interface GetVoyageMemberRolesRequestDto {
   voyageTeam: MyTeam;
 }
+
+export interface GetCurrentUserVoyageRoleClientRequestDto {
+  user: User;
+  voyageTeam: MyTeam;
+}
