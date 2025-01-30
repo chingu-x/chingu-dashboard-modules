@@ -3,6 +3,7 @@ import { TYPES } from "@/types";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import { FetchFormQuestionsRequestDto } from "@/forms/application/dtos/request.dto";
 import { FetchFormQuestionsResponseDto } from "@/forms/application/dtos/response.dto";
+import FormsUrls from "@/forms/application/constants/formsUrls";
 
 @injectable()
 export class FormsApiAdapter implements FormsApiPort {
@@ -14,9 +15,8 @@ export class FormsApiAdapter implements FormsApiPort {
   async fetchFormQuestions({
     formId,
   }: FetchFormQuestionsRequestDto): Promise<FetchFormQuestionsResponseDto> {
-    return await this.apiClient.post({
-      url: AuthUrls.login(),
-      payload: { email, password },
+    return await this.apiClient.get({
+      url: FormsUrls.fetchFormQuestions(formId),
     });
   }
 }

@@ -1,5 +1,5 @@
 const FormsUrls = {
-  fetchFormQuestions(formId: string) {
+  fetchFormQuestions(formId: number) {
     return `/api/v1/forms/${formId}`;
   },
 } as const;
