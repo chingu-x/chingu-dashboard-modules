@@ -6,6 +6,7 @@ export {
   IsCurrentVoyageTeamApiRequestDto,
   GetVoyageMemberRolesRequestDto,
   GetCurrentUserVoyageRoleClientRequestDto,
+  GetCurrentUserVoyageRoleApiRequestDto,
 } from "./application/dtos/request.dto";
 export {
   GetCurrentVoyageTeamResponseDto,
