@@ -11,38 +11,38 @@ import type { GetVoyageMemberRolesUsecase } from "@/voyage-team/application/usec
 
 export const VOYAGE_TEAM_TYPES = {
   VoyageTeamClientPort: Symbol.for(
-    "VoyageTeamClientPort"
+    "VoyageTeamClientPort",
   ) as InjectionToken<VoyageTeamClientPort>,
 
   VoyageTeamClientAdapter: Symbol.for(
-    "VoyageTeamClientAdapter"
+    "VoyageTeamClientAdapter",
   ) as InjectionToken<VoyageTeamClientAdapter>,
 
   GetCurrentVoyageTeamUsecase: Symbol.for(
-    "GetCurrentVoyageTeamUsecase"
+    "GetCurrentVoyageTeamUsecase",
   ) as InjectionToken<GetCurrentVoyageTeamUsecase>,
 
   GetVoyageTeamIdUsecase: Symbol.for(
-    "GetVoyageTeamIdUsecase"
+    "GetVoyageTeamIdUsecase",
   ) as InjectionToken<GetVoyageTeamIdUsecase>,
 
   GetCurrentVoyageUserIdUsecase: Symbol.for(
-    "GetCurrentVoyageUserIdUsecase"
+    "GetCurrentVoyageUserIdUsecase",
   ) as InjectionToken<GetCurrentVoyageUserIdUsecase>,
 
   HasVoyageStartedUsecase: Symbol.for(
-    "HasVoyageStartedUsecase"
+    "HasVoyageStartedUsecase",
   ) as InjectionToken<HasVoyageStartedUsecase>,
 
   IsCurrentVoyageTeamUsecase: Symbol.for(
-    "IsCurrentVoyageTeamUsecase"
+    "IsCurrentVoyageTeamUsecase",
   ) as InjectionToken<IsCurrentVoyageTeamUsecase>,
 
   GetVoyageProjectSubmissionStatusUsecase: Symbol.for(
-    "GetVoyageProjectSubmissionStatusUsecase"
+    "GetVoyageProjectSubmissionStatusUsecase",
   ) as InjectionToken<GetVoyageProjectSubmissionStatusUsecase>,
 
   GetVoyageMemberRolesUsecase: Symbol.for(
-    "GetVoyageMemberRolesUsecase"
+    "GetVoyageMemberRolesUsecase",
   ) as InjectionToken<GetVoyageMemberRolesUsecase>,
 };

@@ -22,6 +22,7 @@ import { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases/hasV
 import { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/isCurrentVoyageTeamUseCase";
 import { GetCurrentVoyageUserIdUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageUserIdUsecase";
 import { GetVoyageProjectSubmissionStatusUsecase } from "@/voyage-team/application/usecases/getVoyageProjectSubmissionStatusUsecase";
+import { GetVoyageMemberRolesUsecase } from "@/voyage-team/application/usecases/getVoyageMemberRolesUsecase";
 
 @injectable()
 export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
@@ -45,19 +46,19 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
     private readonly getVoyageProjectSubmissionStatusUsecase: GetVoyageProjectSubmissionStatusUsecase,
 
     @inject(TYPES.GetVoyageMemberRolesUsecase)
-    private readonly getVoyageMemberRolesUsecase: GetVoyageMemberRolesUsecase
+    private readonly getVoyageMemberRolesUsecase: GetVoyageMemberRolesUsecase,
   ) {}
 
   // gets the current voyage team
   getCurrentVoyageTeam(
-    user: FetchUserRequestDto
+    user: FetchUserRequestDto,
   ): GetCurrentVoyageTeamResponseDto | undefined {
     return this.getCurrentVoyageTeamUsecase.execute(user);
   }
 
   // Get the ID of the voyage team in current voyage
   getVoyageTeamId(
-    user: FetchUserRequestDto
+    user: FetchUserRequestDto,
   ): GetVoyageTeamIdResponseDto | undefined {
     const userVoyageTeam = this.getCurrentVoyageTeam(user);
     return this.getVoyageTeamIdUsecase.execute(userVoyageTeam);
@@ -65,7 +66,7 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
 
   // get the user's id in the current voyage
   getCurrentVoyageUserId(
-    user: FetchUserRequestDto
+    user: FetchUserRequestDto,
   ): GetCurrentVoyageUserIdResponseDto | undefined {
     const userVoyageTeam = this.getCurrentVoyageTeam(user);
     return this.getCurrentVoyageUserIdUsecase.execute(userVoyageTeam);
@@ -88,12 +89,12 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   }
 
   getVoyageProjectSubmissionStatus(
-    user: FetchUserRequestDto
+    user: FetchUserRequestDto,
   ): GetVoyageProjectSubmissionStatusResponseDto | undefined {
     const currentVoyageTeam = this.getCurrentVoyageTeam(user);
 
     return this.getVoyageProjectSubmissionStatusUsecase.execute(
-      currentVoyageTeam
+      currentVoyageTeam,
     );
   }
 

@@ -10,14 +10,14 @@ export class GetVoyageMemberRolesUsecase {
   }: GetVoyageMemberRolesRequestDto): GetVoyageMemberRolesResponseDto {
     const hasScrumMaster = Boolean(
       voyageTeam.voyageTeamMembers.find(
-        (member) => member.voyageRole.name === UserRole.scrumMaster.toString()
-      )
+        (member) => member.voyageRole.name === UserRole.scrumMaster.toString(),
+      ),
     );
 
     const hasProductOwner = Boolean(
       voyageTeam.voyageTeamMembers.find(
-        (member) => member.voyageRole.name === UserRole.productOwner.toString()
-      )
+        (member) => member.voyageRole.name === UserRole.productOwner.toString(),
+      ),
     );
 
     return {

@@ -42,7 +42,7 @@ export const registerVoyageTeamDependencies = () => {
     VOYAGE_TEAM_TYPES.GetVoyageProjectSubmissionStatusUsecase,
     {
       useClass: GetVoyageProjectSubmissionStatusUsecase,
-    }
+    },
   );
 
   container.register(VOYAGE_TEAM_TYPES.GetVoyageMemberRolesUsecase, {
