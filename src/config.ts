@@ -6,6 +6,7 @@ import { registerVoyageTeamDependencies } from "./voyage-team/di/config";
 import { registerMyTeamDependencies } from "./my-team/di/config";
 import { registerSprintsDependencies } from "./sprints/application/di/config";
 import { registerSprintMeetingDependencies } from "./sprint-meeting/di/config";
+import { registerFormsDependencies } from "./forms/di/config";
 
 export const registerDependencies = () => {
   registerRestApiDependencies();
@@ -15,6 +16,7 @@ export const registerDependencies = () => {
   registerMyTeamDependencies();
   registerSprintsDependencies();
   registerSprintMeetingDependencies();
+  registerFormsDependencies();
 };
 
 registerDependencies();
