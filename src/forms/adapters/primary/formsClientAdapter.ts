@@ -10,11 +10,20 @@ export class FormsClientAdapter implements FormsClientPort {
   constructor(
     @inject(TYPES.FetchFormQuestionsUsecase)
     private readonly fetchFormQuestionsUsecase: FetchFormQuestionsUsecase,
+
+    @inject(TYPES.GetWeeklyCheckinFormUsecase)
+    private readonly getWeeklyCheckinFormUsecase: GetWeeklyCheckinFormUsecase
   ) {}
 
   async fetchFormQuestions({
     formId,
   }: FetchFormQuestionsRequestDto): Promise<FetchFormQuestionsResponseDto> {
     return await this.fetchFormQuestionsUsecase.execute({ formId });
+  }
+
+  getWeeklyCheckinForm({
+    voyageTeamRoles,
+  }: GetWeeklyCheckinFormRequestDto): GetWeeklyCheckinFormResponseDto {
+    return this.getWeeklyCheckinFormUsecase.execute({ voyageTeamRoles });
   }
 }
