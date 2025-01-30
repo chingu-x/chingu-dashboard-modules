@@ -30,5 +30,5 @@ export interface GetCurrentUserVoyageRoleClientRequestDto {
 
 export interface GetCurrentUserVoyageRoleApiRequestDto {
   voyageTeam: MyTeam;
-  voyageMemberId: number;
+  voyageMemberId: number | undefined;
 }
