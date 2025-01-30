@@ -113,7 +113,9 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   getCurrentUserVoyageRole({
     user,
     voyageTeam,
-  }: GetCurrentUserVoyageRoleClientRequestDto): GetCurrentUserVoyageRoleResponseDto {
+  }: GetCurrentUserVoyageRoleClientRequestDto):
+    | GetCurrentUserVoyageRoleResponseDto
+    | undefined {
     const voyageMemberId = this.getCurrentVoyageUserId(user);
 
     return this.getCurrentUserVoyageRoleUsecase.execute({

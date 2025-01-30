@@ -7,7 +7,9 @@ export class GetCurrentUserVoyageRoleUsecase {
   execute({
     voyageTeam,
     voyageMemberId,
-  }: GetCurrentUserVoyageRoleApiRequestDto): GetCurrentUserVoyageRoleResponseDto {
+  }: GetCurrentUserVoyageRoleApiRequestDto):
+    | GetCurrentUserVoyageRoleResponseDto
+    | undefined {
     return voyageTeam.voyageTeamMembers.find(
       (member) => member.id === voyageMemberId
     )?.voyageRole.name;
