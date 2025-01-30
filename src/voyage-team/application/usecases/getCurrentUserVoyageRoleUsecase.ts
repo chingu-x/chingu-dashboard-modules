@@ -4,11 +4,12 @@ import { GetCurrentUserVoyageRoleApiRequestDto } from "@/voyage-team/application
 
 @injectable()
 export class GetCurrentUserVoyageRoleUsecase {
-  execute(
-    props: GetCurrentUserVoyageRoleApiRequestDto
-  ): GetCurrentUserVoyageRoleResponseDto {
-    return props.voyageTeamMembers.find(
-      (voyage) => voyage.voyageTeam.voyage.status.name === "Active"
-    );
+  execute({
+    voyageTeam,
+    voyageMemberId,
+  }: GetCurrentUserVoyageRoleApiRequestDto): GetCurrentUserVoyageRoleResponseDto {
+    return voyageTeam.voyageTeamMembers.find(
+      (member) => member.id === voyageMemberId
+    )?.voyageRole.name;
   }
 }
