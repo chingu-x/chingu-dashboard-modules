@@ -10,4 +10,7 @@ export interface GetVoyageMemberRolesResponseDto {
   hasScrumMaster: boolean;
   hasProductOwner: boolean;
 }
-export type GetCurrentUserVoyageRoleResponseDto = string;
+export interface GetCurrentUserVoyageRoleResponseDto {
+  isScrumMaster: boolean;
+  isProductOwner: boolean;
+}
