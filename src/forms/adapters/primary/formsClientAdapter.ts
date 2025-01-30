@@ -1,4 +1,6 @@
 import { inject, injectable } from "tsyringe";
+import { FetchFormQuestionsRequestDto } from "@/forms/application/dtos/request.dto";
+import { FetchFormQuestionsResponseDto } from "@/forms/application/dtos/response.dto";
 
 @injectable()
 export class FormsClientAdapter implements FormsClientPort {
