@@ -14,6 +14,7 @@ import {
 import { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
 import { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";
 import {
+  GetCurrentUserVoyageRoleClientRequestDto,
   GetVoyageMemberRolesRequestDto,
   HasVoyageStartedRequestDto,
   IsCurrentVoyageTeamClientRequestDto,
