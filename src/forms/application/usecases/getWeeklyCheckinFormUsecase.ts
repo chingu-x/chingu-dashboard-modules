@@ -4,11 +4,8 @@ import { GetWeeklyCheckinFormResponseDto } from "@/forms/application/dtos/respon
 
 @injectable()
 export class GetWeeklyCheckinFormUsecase {
-  execute(
-    props: GetWeeklyCheckinFormRequestDto
-  ): GetWeeklyCheckinFormResponseDto {
-    return this.formsApi.fetchFormQuestions({
-      ...props,
-    });
-  }
+  async execute({
+    voyageTeamRoles,
+    currentUserVoyageRole,
+  }: GetWeeklyCheckinFormRequestDto): Promise<GetWeeklyCheckinFormResponseDto> {}
 }
