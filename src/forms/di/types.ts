@@ -9,11 +9,11 @@ export const FORMS_TYPES = {
 
   // adapters
   FormsClientAdapter: Symbol.for(
-    "FormsClientAdapter"
+    "FormsClientAdapter",
   ) as InjectionToken<FormsClientAdapter>,
 
   // usecases
   FetchFormQuestionsUsecase: Symbol.for(
-    "FetchFormQuestionsUsecase"
+    "FetchFormQuestionsUsecase",
   ) as InjectionToken<FetchFormQuestionsUsecase>,
 };

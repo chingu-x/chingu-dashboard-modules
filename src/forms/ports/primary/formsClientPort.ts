@@ -3,6 +3,6 @@ import type { FetchFormQuestionsResponseDto } from "@/forms/application/dtos/res
 
 export interface FormsClientPort {
   fetchFormQuestions: (
-    props: FetchFormQuestionsRequestDto
+    props: FetchFormQuestionsRequestDto,
   ) => Promise<FetchFormQuestionsResponseDto>;
 }

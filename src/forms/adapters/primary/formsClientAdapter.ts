@@ -1,4 +1,5 @@
 import { inject, injectable } from "tsyringe";
+import { TYPES } from "@/types";
 import { FetchFormQuestionsRequestDto } from "@/forms/application/dtos/request.dto";
 import { FetchFormQuestionsResponseDto } from "@/forms/application/dtos/response.dto";
 import { FormsClientPort } from "@/forms/ports/primary/formsClientPort";
@@ -8,7 +9,7 @@ import { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFor
 export class FormsClientAdapter implements FormsClientPort {
   constructor(
     @inject(TYPES.FetchFormQuestionsUsecase)
-    private readonly fetchFormQuestionsUsecase: FetchFormQuestionsUsecase
+    private readonly fetchFormQuestionsUsecase: FetchFormQuestionsUsecase,
   ) {}
 
   async fetchFormQuestions({
