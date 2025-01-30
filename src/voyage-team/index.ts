@@ -15,6 +15,7 @@ export {
   IsCurrentVoyageTeamResponseDto,
   GetVoyageProjectSubmissionStatusResponseDto,
   GetVoyageMemberRolesResponseDto,
+  GetCurrentUserVoyageRoleResponseDto,
 } from "./application/dtos/response.dto";
 export {
   UserVoyageTeamMember,
