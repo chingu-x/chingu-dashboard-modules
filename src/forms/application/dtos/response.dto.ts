@@ -6,3 +6,5 @@ export interface FetchFormQuestionsResponseDto {
   description: string;
   questions: Question[];
 }
+
+export type GetWeeklyCheckinFormResponseDto = FetchFormQuestionsResponseDto;
