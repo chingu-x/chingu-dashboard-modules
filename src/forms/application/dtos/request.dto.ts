@@ -8,5 +8,8 @@ export interface GetWeeklyCheckinFormRequestDto {
     hasScrumMaster: boolean;
     hasProductOwner: boolean;
   };
-  currentUserVoyageRole: boolean;
+  currentUserVoyageRole: {
+    isScrumMaster: boolean;
+    isProductOwner: boolean;
+  };
 }
