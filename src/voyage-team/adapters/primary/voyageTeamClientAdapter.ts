@@ -13,6 +13,7 @@ import {
 import { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
 import { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";
 import {
+  GetVoyageMemberRolesRequestDto,
   HasVoyageStartedRequestDto,
   IsCurrentVoyageTeamClientRequestDto,
 } from "@/voyage-team/application/dtos/request.dto";
@@ -98,7 +99,7 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   // gets voyage roles from the members in the current voyage team
   getVoyageMemberRoles({
     voyageTeam,
-  }: getVoyageMemberRolesRequestDto): getVoyageMemberRolesResponseDto {
+  }: GetVoyageMemberRolesRequestDto): GetVoyageMemberRolesResponseDto {
     return this.getVoyageMemberRolesUsecase.execute({ voyageTeam });
   }
 }
