@@ -3,6 +3,8 @@ export interface FetchFormQuestionsRequestDto {
 }
 
 export interface GetWeeklyCheckinFormRequestDto {
-  hasScrumMaster: boolean;
-  hasProductOwner: boolean;
+  voyageTeamRoles: {
+    hasScrumMaster: boolean;
+    hasProductOwner: boolean;
+  };
 }
