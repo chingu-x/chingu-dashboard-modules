@@ -11,7 +11,7 @@ export class GetCurrentUserVoyageRoleUsecase {
     | GetCurrentUserVoyageRoleResponseDto
     | undefined {
     return voyageTeam.voyageTeamMembers.find(
-      (member) => member.id === voyageMemberId
+      (member) => member.id === voyageMemberId,
     )?.voyageRole.name;
   }
 }

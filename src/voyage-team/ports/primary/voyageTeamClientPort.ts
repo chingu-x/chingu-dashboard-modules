@@ -16,30 +16,30 @@ import type {
 
 export interface VoyageTeamClientPort {
   getCurrentVoyageTeam: (
-    props: FetchUserRequestDto
+    props: FetchUserRequestDto,
   ) => GetCurrentVoyageTeamResponseDto | undefined;
 
   getVoyageTeamId: (
-    props: FetchUserRequestDto
+    props: FetchUserRequestDto,
   ) => GetVoyageTeamIdResponseDto | undefined;
 
   getCurrentVoyageUserId: (
-    props: FetchUserRequestDto
+    props: FetchUserRequestDto,
   ) => GetCurrentVoyageUserIdResponseDto | undefined;
 
   hasVoyageStarted: (
-    props: HasVoyageStartedRequestDto
+    props: HasVoyageStartedRequestDto,
   ) => HasVoyageStartedResponseDto;
 
   getVoyageProjectSubmissionStatus: (
-    props: FetchUserRequestDto
+    props: FetchUserRequestDto,
   ) => GetVoyageProjectSubmissionStatusResponseDto | undefined;
 
   getVoyageMemberRoles: (
-    props: GetVoyageMemberRolesRequestDto
+    props: GetVoyageMemberRolesRequestDto,
   ) => GetVoyageMemberRolesResponseDto;
 
   getCurrentUserVoyageRole: (
-    props: GetCurrentUserVoyageRoleClientRequestDto
+    props: GetCurrentUserVoyageRoleClientRequestDto,
   ) => GetCurrentUserVoyageRoleResponseDto | undefined;
 }
