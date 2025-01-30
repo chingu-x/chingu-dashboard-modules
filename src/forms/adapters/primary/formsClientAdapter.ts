@@ -10,6 +10,7 @@ import {
 } from "@/forms/application/dtos/response.dto";
 import { FormsClientPort } from "@/forms/ports/primary/formsClientPort";
 import { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFormQuestionsUsecase";
+import { GetWeeklyCheckinFormUsecase } from "@/forms/application/usecases/getWeeklyCheckinFormUsecase";
 
 @injectable()
 export class FormsClientAdapter implements FormsClientPort {
@@ -28,7 +29,6 @@ export class FormsClientAdapter implements FormsClientPort {
   }
 
   async getWeeklyCheckinForm({
-    formId,
     voyageTeamRoles,
     currentUserVoyageRole,
   }: GetWeeklyCheckinFormRequestDto): Promise<GetWeeklyCheckinFormResponseDto> {

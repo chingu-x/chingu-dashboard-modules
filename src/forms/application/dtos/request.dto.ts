@@ -3,7 +3,6 @@ export interface FetchFormQuestionsRequestDto {
 }
 
 export interface GetWeeklyCheckinFormRequestDto {
-  formId: number;
   voyageTeamRoles: {
     hasScrumMaster: boolean;
     hasProductOwner: boolean;
