@@ -7,30 +7,42 @@ import type { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases
 import type { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/isCurrentVoyageTeamUseCase";
 import type { GetCurrentVoyageUserIdUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageUserIdUsecase";
 import type { GetVoyageProjectSubmissionStatusUsecase } from "@/voyage-team/application/usecases/getVoyageProjectSubmissionStatusUsecase";
+import type { GetVoyageMemberRolesUsecase } from "@/voyage-team/application/usecases/getVoyageMemberRolesUsecase";
 
 export const VOYAGE_TEAM_TYPES = {
   VoyageTeamClientPort: Symbol.for(
-    "VoyageTeamClientPort",
+    "VoyageTeamClientPort"
   ) as InjectionToken<VoyageTeamClientPort>,
+
   VoyageTeamClientAdapter: Symbol.for(
-    "VoyageTeamClientAdapter",
+    "VoyageTeamClientAdapter"
   ) as InjectionToken<VoyageTeamClientAdapter>,
+
   GetCurrentVoyageTeamUsecase: Symbol.for(
-    "GetCurrentVoyageTeamUsecase",
+    "GetCurrentVoyageTeamUsecase"
   ) as InjectionToken<GetCurrentVoyageTeamUsecase>,
+
   GetVoyageTeamIdUsecase: Symbol.for(
-    "GetVoyageTeamIdUsecase",
+    "GetVoyageTeamIdUsecase"
   ) as InjectionToken<GetVoyageTeamIdUsecase>,
+
   GetCurrentVoyageUserIdUsecase: Symbol.for(
-    "GetCurrentVoyageUserIdUsecase",
+    "GetCurrentVoyageUserIdUsecase"
   ) as InjectionToken<GetCurrentVoyageUserIdUsecase>,
+
   HasVoyageStartedUsecase: Symbol.for(
-    "HasVoyageStartedUsecase",
+    "HasVoyageStartedUsecase"
   ) as InjectionToken<HasVoyageStartedUsecase>,
+
   IsCurrentVoyageTeamUsecase: Symbol.for(
-    "IsCurrentVoyageTeamUsecase",
+    "IsCurrentVoyageTeamUsecase"
   ) as InjectionToken<IsCurrentVoyageTeamUsecase>,
+
   GetVoyageProjectSubmissionStatusUsecase: Symbol.for(
-    "GetVoyageProjectSubmissionStatusUsecase",
+    "GetVoyageProjectSubmissionStatusUsecase"
   ) as InjectionToken<GetVoyageProjectSubmissionStatusUsecase>,
+
+  GetVoyageMemberRolesUsecase: Symbol.for(
+    "GetVoyageMemberRolesUsecase"
+  ) as InjectionToken<GetVoyageMemberRolesUsecase>,
 };
