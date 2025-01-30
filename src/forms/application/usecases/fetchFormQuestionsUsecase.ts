@@ -4,7 +4,7 @@ import { FetchFormQuestionsRequestDto } from "@/forms/application/dtos/request.d
 import { FetchFormQuestionsResponseDto } from "@/forms/application/dtos/response.dto";
 
 @injectable()
-export class LoginUsecase {
+export class FetchFormQuestionsUsecase {
   constructor(
     @inject(TYPES.FormsApiPort)
     private readonly formsApi: FormsApiPort
