@@ -3,7 +3,7 @@ import { TYPES } from "@/types";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
   FetchFormQuestionsRequestDto,
-  SubmitWeeklyCheckinFormRequestDto,
+  SubmitWeeklyCheckinFormApiRequestDto,
 } from "@/forms/application/dtos/request.dto";
 import {
   FetchFormQuestionsResponseDto,
@@ -31,7 +31,7 @@ export class FormsApiAdapter implements FormsApiPort {
     voyageTeamMemberId,
     sprintId,
     responses,
-  }: SubmitWeeklyCheckinFormRequestDto): Promise<SubmitWeeklyCheckinFormResponseDto> {
+  }: SubmitWeeklyCheckinFormApiRequestDto): Promise<SubmitWeeklyCheckinFormResponseDto> {
     return await this.apiClient.post({
       url: FormsUrls.submitWeeklyCheckinForm(),
       payload: { voyageTeamMemberId, sprintId, responses },

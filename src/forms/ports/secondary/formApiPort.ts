@@ -1,6 +1,6 @@
 import type {
   FetchFormQuestionsRequestDto,
-  SubmitWeeklyCheckinFormRequestDto,
+  SubmitWeeklyCheckinFormApiRequestDto,
 } from "@/forms/application/dtos/request.dto";
 import type {
   FetchFormQuestionsResponseDto,
@@ -16,5 +16,5 @@ export interface FormsApiPort {
     voyageTeamMemberId,
     sprintId,
     responses,
-  }: SubmitWeeklyCheckinFormRequestDto) => Promise<SubmitWeeklyCheckinFormResponseDto>;
+  }: SubmitWeeklyCheckinFormApiRequestDto) => Promise<SubmitWeeklyCheckinFormResponseDto>;
 }
