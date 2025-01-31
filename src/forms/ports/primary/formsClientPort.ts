@@ -1,8 +1,18 @@
-import type { FetchWeeklyCheckinFormClientRequestDto } from "@/forms/application/dtos/request.dto";
-import type { FetchWeeklyCheckinFormResponseDto } from "@/forms/application/dtos/response.dto";
+import type {
+  FetchWeeklyCheckinFormClientRequestDto,
+  SubmitWeeklyCheckinFormRequestDto,
+} from "@/forms/application/dtos/request.dto";
+import type {
+  FetchWeeklyCheckinFormResponseDto,
+  SubmitWeeklyCheckinFormResponseDto,
+} from "@/forms/application/dtos/response.dto";
 
 export interface FormsClientPort {
   fetchWeeklyCheckinForm: (
-    props: FetchWeeklyCheckinFormClientRequestDto,
+    props: FetchWeeklyCheckinFormClientRequestDto
   ) => Promise<FetchWeeklyCheckinFormResponseDto>;
+
+  submitWeeklyCheckinForm: (
+    props: SubmitWeeklyCheckinFormRequestDto
+  ) => Promise<SubmitWeeklyCheckinFormResponseDto>;
 }

@@ -46,7 +46,7 @@ export class FormsClientAdapter implements FormsClientPort {
     voyageTeamMemberId,
     sprintId,
     responses,
-  }: SubmitWeeklyCheckinFormRequestDto): SubmitWeeklyCheckinFormResponseDto {
+  }: SubmitWeeklyCheckinFormRequestDto): Promise<SubmitWeeklyCheckinFormResponseDto> {
     return await this.submitWeeklyCheckinFormUsecase.execute({
       voyageTeamMemberId,
       sprintId,
