@@ -19,7 +19,7 @@ export class FormsClientAdapter implements FormsClientPort {
     private readonly fetchFormQuestionsUsecase: FetchFormQuestionsUsecase,
 
     @inject(TYPES.GetWeeklyCheckinFormUsecase)
-    private readonly getWeeklyCheckinFormUsecase: GetWeeklyCheckinFormUsecase,
+    private readonly getWeeklyCheckinFormUsecase: GetWeeklyCheckinFormUsecase
   ) {}
 
   private async fetchFormQuestions({
@@ -32,10 +32,8 @@ export class FormsClientAdapter implements FormsClientPort {
     voyageTeamRoles,
     currentUserVoyageRole,
   }: GetWeeklyCheckinFormClientRequestDto): Promise<GetWeeklyCheckinFormResponseDto> {
-    const fetchFormQuestions = this.fetchFormQuestions;
-
     return await this.getWeeklyCheckinFormUsecase.execute({
-      fetchFormQuestions,
+      fetchFormQuestions: this.fetchFormQuestions.bind(this),
       voyageTeamRoles,
       currentUserVoyageRole,
     });
