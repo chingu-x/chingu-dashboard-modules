@@ -2,8 +2,12 @@ export { FormsClientAdapter } from "./adapters/primary/formsClientAdapter";
 export {
   FetchFormQuestionsRequestDto,
   FetchWeeklyCheckinFormClientRequestDto,
+  SubmitWeeklyCheckinFormRequestDto,
 } from "./application/dtos/request.dto";
-export { FetchFormQuestionsResponseDto } from "./application/dtos/response.dto";
+export {
+  FetchFormQuestionsResponseDto,
+  SubmitWeeklyCheckinFormResponseDto,
+} from "./application/dtos/response.dto";
 export {
   Forms,
   NotesQuestions,
