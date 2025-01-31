@@ -1,6 +1,6 @@
 import type {
   FetchWeeklyCheckinFormClientRequestDto,
-  SubmitWeeklyCheckinFormRequestDto,
+  SubmitWeeklyCheckinFormClientRequestDto,
 } from "@/forms/application/dtos/request.dto";
 import type {
   FetchWeeklyCheckinFormResponseDto,
@@ -13,6 +13,6 @@ export interface FormsClientPort {
   ) => Promise<FetchWeeklyCheckinFormResponseDto>;
 
   submitWeeklyCheckinForm: (
-    props: SubmitWeeklyCheckinFormRequestDto
+    props: SubmitWeeklyCheckinFormClientRequestDto
   ) => Promise<SubmitWeeklyCheckinFormResponseDto>;
 }

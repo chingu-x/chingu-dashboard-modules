@@ -1,4 +1,8 @@
 import type { FetchFormQuestionsResponseDto } from "./response.dto";
+import type {
+  CreateFormResponseBody,
+  Question,
+} from "@/forms/application/types";
 
 export interface FetchFormQuestionsRequestDto {
   formId: number;
@@ -22,7 +26,14 @@ export interface FetchWeeklyCheckinFormApiRequestDto
   }: FetchFormQuestionsRequestDto) => Promise<FetchFormQuestionsResponseDto>;
 }
 
-export interface SubmitWeeklyCheckinFormRequestDto {
+export interface SubmitWeeklyCheckinFormClientRequestDto {
+  voyageTeamMemberId: number;
+  sprintId: number;
+  data: Pick<CreateFormResponseBody, "data">;
+  questions: Question[];
+}
+
+export interface SubmitWeeklyCheckinFormApiRequestDto {
   voyageTeamMemberId: number;
   sprintId: number;
   responses: {

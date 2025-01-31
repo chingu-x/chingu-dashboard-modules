@@ -3,10 +3,12 @@ import { TYPES } from "@/types";
 import {
   FetchFormQuestionsRequestDto,
   FetchWeeklyCheckinFormClientRequestDto,
+  SubmitWeeklyCheckinFormClientRequestDto,
 } from "@/forms/application/dtos/request.dto";
 import {
   FetchFormQuestionsResponseDto,
   FetchWeeklyCheckinFormResponseDto,
+  SubmitWeeklyCheckinFormResponseDto,
 } from "@/forms/application/dtos/response.dto";
 import { FormsClientPort } from "@/forms/ports/primary/formsClientPort";
 import { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFormQuestionsUsecase";
@@ -45,12 +47,14 @@ export class FormsClientAdapter implements FormsClientPort {
   async submitWeeklyCheckinForm({
     voyageTeamMemberId,
     sprintId,
-    responses,
-  }: SubmitWeeklyCheckinFormRequestDto): Promise<SubmitWeeklyCheckinFormResponseDto> {
+    data,
+    questions,
+  }: SubmitWeeklyCheckinFormClientRequestDto): Promise<SubmitWeeklyCheckinFormResponseDto> {
     return await this.submitWeeklyCheckinFormUsecase.execute({
       voyageTeamMemberId,
       sprintId,
-      responses,
+      data,
+      questions,
     });
   }
 }

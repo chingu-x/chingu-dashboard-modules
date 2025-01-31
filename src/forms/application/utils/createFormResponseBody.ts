@@ -1,11 +1,4 @@
-import type { Question } from "@/forms/application/types";
-
-interface CreateFormResponseBody {
-  data: {
-    [x: string]: (string | string[]) & (string | string[] | undefined);
-  };
-  questions: Question[];
-}
+import type { CreateFormResponseBody } from "@/forms/application/types";
 
 export function createFormResponseBody({
   data,

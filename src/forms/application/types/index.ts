@@ -81,3 +81,10 @@ export interface FormQuestions {
   description: string;
   questions: Question[];
 }
+
+export interface CreateFormResponseBody {
+  data: {
+    [x: string]: (string | string[]) & (string | string[] | undefined);
+  };
+  questions: Question[];
+}
