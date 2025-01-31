@@ -21,3 +21,15 @@ export interface FetchWeeklyCheckinFormApiRequestDto
     formId,
   }: FetchFormQuestionsRequestDto) => Promise<FetchFormQuestionsResponseDto>;
 }
+
+export interface SubmitWeeklyCheckinFormRequestDto {
+  voyageTeamMemberId: number;
+  sprintId: number;
+  responses: {
+    questionId: number;
+    text?: string;
+    optionChoiceId?: number;
+    boolean?: boolean;
+    numeric?: number;
+  }[];
+}

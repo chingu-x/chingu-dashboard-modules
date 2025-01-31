@@ -19,7 +19,10 @@ export class FormsClientAdapter implements FormsClientPort {
     private readonly fetchFormQuestionsUsecase: FetchFormQuestionsUsecase,
 
     @inject(TYPES.FetchWeeklyCheckinFormUsecase)
-    private readonly fetchWeeklyCheckinFormUsecase: FetchWeeklyCheckinFormUsecase
+    private readonly fetchWeeklyCheckinFormUsecase: FetchWeeklyCheckinFormUsecase,
+
+    @inject(TYPES.SubmitWeeklyCheckinFormUsecase)
+    private readonly submitWeeklyCheckinFormUsecase: SubmitWeeklyCheckinFormUsecase
   ) {}
 
   private async fetchFormQuestions({
@@ -36,6 +39,18 @@ export class FormsClientAdapter implements FormsClientPort {
       fetchFormQuestions: this.fetchFormQuestions.bind(this),
       voyageTeamRoles,
       currentUserVoyageRole,
+    });
+  }
+
+  async submitWeeklyCheckinForm({
+    voyageTeamMemberId,
+    sprintId,
+    responses,
+  }: SubmitWeeklyCheckinFormRequestDto): SubmitWeeklyCheckinFormResponseDto {
+    return await this.submitWeeklyCheckinFormUsecase.execute({
+      voyageTeamMemberId,
+      sprintId,
+      responses,
     });
   }
 }
