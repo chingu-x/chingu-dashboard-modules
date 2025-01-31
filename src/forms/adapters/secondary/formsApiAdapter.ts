@@ -1,8 +1,14 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
-import { FetchFormQuestionsRequestDto } from "@/forms/application/dtos/request.dto";
-import { FetchFormQuestionsResponseDto } from "@/forms/application/dtos/response.dto";
+import {
+  FetchFormQuestionsRequestDto,
+  SubmitWeeklyCheckinFormRequestDto,
+} from "@/forms/application/dtos/request.dto";
+import {
+  FetchFormQuestionsResponseDto,
+  SubmitWeeklyCheckinFormResponseDto,
+} from "@/forms/application/dtos/response.dto";
 import FormsUrls from "@/forms/application/constants/formsUrls";
 import { FormsApiPort } from "@/forms/ports/secondary/formApiPort";
 
@@ -10,7 +16,7 @@ import { FormsApiPort } from "@/forms/ports/secondary/formApiPort";
 export class FormsApiAdapter implements FormsApiPort {
   constructor(
     @inject(TYPES.RestApiPort)
-    private readonly apiClient: RestApiPort,
+    private readonly apiClient: RestApiPort
   ) {}
 
   async fetchFormQuestions({
@@ -18,6 +24,17 @@ export class FormsApiAdapter implements FormsApiPort {
   }: FetchFormQuestionsRequestDto): Promise<FetchFormQuestionsResponseDto> {
     return await this.apiClient.get({
       url: FormsUrls.fetchFormQuestions(formId),
+    });
+  }
+
+  async submitWeeklyCheckinForm({
+    voyageTeamMemberId,
+    sprintId,
+    responses,
+  }: SubmitWeeklyCheckinFormRequestDto): Promise<SubmitWeeklyCheckinFormResponseDto> {
+    return await this.apiClient.post({
+      url: FormsUrls.submitWeeklyCheckinForm(),
+      payload: { voyageTeamMemberId, sprintId, responses },
     });
   }
 }
