@@ -1,7 +1,7 @@
 import { injectable } from "tsyringe";
 import { GetWeeklyCheckinFormApiRequestDto } from "@/forms/application/dtos/request.dto";
 import { GetWeeklyCheckinFormResponseDto } from "@/forms/application/dtos/response.dto";
-import { Forms, Question } from "@/forms/application/types";
+import { Forms } from "@/forms/application/types";
 
 @injectable()
 export class GetWeeklyCheckinFormUsecase {
@@ -10,11 +10,11 @@ export class GetWeeklyCheckinFormUsecase {
     voyageTeamRoles,
     currentUserVoyageRole,
   }: GetWeeklyCheckinFormApiRequestDto): Promise<GetWeeklyCheckinFormResponseDto> {
-    let questions = [] as Question[];
-
     const checkinForm = await fetchFormQuestions({
       formId: Forms.checkIn,
     });
+
+    let questions = [...(checkinForm.questions || [])];
 
     if (
       voyageTeamRoles.hasProductOwner &&
@@ -46,7 +46,7 @@ export class GetWeeklyCheckinFormUsecase {
 
     return {
       ...checkinForm,
-      ...questions,
+      questions,
     };
   }
 }
