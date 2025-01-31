@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import {
   FetchFormQuestionsRequestDto,
-  GetWeeklyCheckinFormRequestDto,
+  GetWeeklyCheckinFormClientRequestDto,
 } from "@/forms/application/dtos/request.dto";
 import {
   FetchFormQuestionsResponseDto,
@@ -31,8 +31,11 @@ export class FormsClientAdapter implements FormsClientPort {
   async getWeeklyCheckinForm({
     voyageTeamRoles,
     currentUserVoyageRole,
-  }: GetWeeklyCheckinFormRequestDto): Promise<GetWeeklyCheckinFormResponseDto> {
+  }: GetWeeklyCheckinFormClientRequestDto): Promise<GetWeeklyCheckinFormResponseDto> {
+    const fetchFormQuestions = this.fetchFormQuestions;
+
     return await this.getWeeklyCheckinFormUsecase.execute({
+      fetchFormQuestions,
       voyageTeamRoles,
       currentUserVoyageRole,
     });

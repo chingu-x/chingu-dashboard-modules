@@ -1,8 +1,10 @@
+import type { FetchFormQuestionsResponseDto } from "./response.dto";
+
 export interface FetchFormQuestionsRequestDto {
   formId: number;
 }
 
-export interface GetWeeklyCheckinFormRequestDto {
+export interface GetWeeklyCheckinFormClientRequestDto {
   voyageTeamRoles: {
     hasScrumMaster: boolean;
     hasProductOwner: boolean;
@@ -11,4 +13,11 @@ export interface GetWeeklyCheckinFormRequestDto {
     isScrumMaster: boolean;
     isProductOwner: boolean;
   };
+}
+
+export interface GetWeeklyCheckinFormApiRequestDto
+  extends GetWeeklyCheckinFormClientRequestDto {
+  fetchFormQuestions: ({
+    formId,
+  }: FetchFormQuestionsRequestDto) => Promise<FetchFormQuestionsResponseDto>;
 }

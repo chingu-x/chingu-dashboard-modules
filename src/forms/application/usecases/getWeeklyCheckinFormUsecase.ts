@@ -1,20 +1,18 @@
 import { injectable } from "tsyringe";
-import { GetWeeklyCheckinFormRequestDto } from "@/forms/application/dtos/request.dto";
+import { GetWeeklyCheckinFormApiRequestDto } from "@/forms/application/dtos/request.dto";
 import { GetWeeklyCheckinFormResponseDto } from "@/forms/application/dtos/response.dto";
-import { FormsClientPort } from "@/forms/ports/primary/formsClientPort";
 import { Forms, Question } from "@/forms/application/types";
 
 @injectable()
 export class GetWeeklyCheckinFormUsecase {
-  constructor(private readonly formsClient: FormsClientPort) {}
-
   async execute({
+    fetchFormQuestions,
     voyageTeamRoles,
     currentUserVoyageRole,
-  }: GetWeeklyCheckinFormRequestDto): Promise<GetWeeklyCheckinFormResponseDto> {
+  }: GetWeeklyCheckinFormApiRequestDto): Promise<GetWeeklyCheckinFormResponseDto> {
     let questions = [] as Question[];
 
-    const checkinForm = await this.formsClient.fetchFormQuestions({
+    const checkinForm = await fetchFormQuestions({
       formId: Forms.checkIn,
     });
 
@@ -22,7 +20,7 @@ export class GetWeeklyCheckinFormUsecase {
       voyageTeamRoles.hasProductOwner &&
       !currentUserVoyageRole.isProductOwner
     ) {
-      const POForm = await this.formsClient.fetchFormQuestions({
+      const POForm = await fetchFormQuestions({
         formId: Forms.checkinPO,
       });
 
@@ -35,7 +33,7 @@ export class GetWeeklyCheckinFormUsecase {
       voyageTeamRoles.hasScrumMaster &&
       !currentUserVoyageRole.isScrumMaster
     ) {
-      const SMForm = await this.formsClient.fetchFormQuestions({
+      const SMForm = await fetchFormQuestions({
         formId: Forms.checkinSM,
       });
 
