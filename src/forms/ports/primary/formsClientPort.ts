@@ -3,6 +3,6 @@ import type { GetWeeklyCheckinFormResponseDto } from "@/forms/application/dtos/r
 
 export interface FormsClientPort {
   getWeeklyCheckinForm: (
-    props: GetWeeklyCheckinFormClientRequestDto
+    props: GetWeeklyCheckinFormClientRequestDto,
   ) => Promise<GetWeeklyCheckinFormResponseDto>;
 }

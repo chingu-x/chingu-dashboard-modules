@@ -12,7 +12,7 @@ export class GetCurrentUserVoyageRoleUsecase {
     | GetCurrentUserVoyageRoleResponseDto
     | undefined {
     const userRole = voyageTeam.voyageTeamMembers.find(
-      (member) => member.id === voyageMemberId
+      (member) => member.id === voyageMemberId,
     )?.voyageRole.name;
 
     const isScrumMaster = userRole === UserRole.scrumMaster.toString();

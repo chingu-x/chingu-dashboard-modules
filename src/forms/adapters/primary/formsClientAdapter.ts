@@ -19,7 +19,7 @@ export class FormsClientAdapter implements FormsClientPort {
     private readonly fetchFormQuestionsUsecase: FetchFormQuestionsUsecase,
 
     @inject(TYPES.GetWeeklyCheckinFormUsecase)
-    private readonly getWeeklyCheckinFormUsecase: GetWeeklyCheckinFormUsecase
+    private readonly getWeeklyCheckinFormUsecase: GetWeeklyCheckinFormUsecase,
   ) {}
 
   private async fetchFormQuestions({
