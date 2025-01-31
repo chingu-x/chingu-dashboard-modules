@@ -1,8 +1,9 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { FormsApiPort } from "@/forms/ports/secondary/formApiPort";
-import { SubmitWeeklyCheckinFormRequestDto } from "@/forms/application/dtos/request.dto";
+import { SubmitWeeklyCheckinFormClientRequestDto } from "@/forms/application/dtos/request.dto";
 import { SubmitWeeklyCheckinFormResponseDto } from "@/forms/application/dtos/response.dto";
+import { createFormResponseBody } from "@/forms/application/utils/createFormResponseBody";
 
 @injectable()
 export class SubmitWeeklyCheckinFormUsecase {
@@ -14,10 +15,15 @@ export class SubmitWeeklyCheckinFormUsecase {
   async execute({
     voyageTeamMemberId,
     sprintId,
-    responses,
-  }: SubmitWeeklyCheckinFormRequestDto): Promise<SubmitWeeklyCheckinFormResponseDto> {
-    return await this.formsApi.fetchFormQuestions({
-      ...props,
+    data,
+    questions,
+  }: SubmitWeeklyCheckinFormClientRequestDto): Promise<SubmitWeeklyCheckinFormResponseDto> {
+    const responses = createFormResponseBody({ data, questions });
+
+    return await this.formsApi.submitWeeklyCheckinForm({
+      voyageTeamMemberId,
+      sprintId,
+      responses,
     });
   }
 }

@@ -29,7 +29,7 @@ export interface FetchWeeklyCheckinFormApiRequestDto
 export interface SubmitWeeklyCheckinFormClientRequestDto {
   voyageTeamMemberId: number;
   sprintId: number;
-  data: Pick<CreateFormResponseBody, "data">;
+  data: CreateFormResponseBody["data"];
   questions: Question[];
 }
 
