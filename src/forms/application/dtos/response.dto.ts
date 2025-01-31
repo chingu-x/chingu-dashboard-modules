@@ -1,10 +1,5 @@
-import type { Question } from "@/forms/application/types";
+import type { FormQuestions } from "@/forms/application/types";
 
-export interface FetchFormQuestionsResponseDto {
-  id: number;
-  title: string;
-  description: string;
-  questions: Question[];
-}
+export type FetchFormQuestionsResponseDto = FormQuestions;
 
 export type GetWeeklyCheckinFormResponseDto = FetchFormQuestionsResponseDto;

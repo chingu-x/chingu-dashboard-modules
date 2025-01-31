@@ -74,3 +74,10 @@ export interface TeamMemberForCheckbox {
   firstName: string;
   lastName: string;
 }
+
+export interface FormQuestions {
+  id: number;
+  title: string;
+  description: string;
+  questions: Question[];
+}
