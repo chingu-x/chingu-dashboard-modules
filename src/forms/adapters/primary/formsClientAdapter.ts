@@ -13,6 +13,7 @@ import {
 import { FormsClientPort } from "@/forms/ports/primary/formsClientPort";
 import { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFormQuestionsUsecase";
 import { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetchWeeklyCheckinFormUsecase";
+import { SubmitWeeklyCheckinFormUsecase } from "@/forms/application/usecases/submitWeeklyCheckinFormUsecase";
 
 @injectable()
 export class FormsClientAdapter implements FormsClientPort {
@@ -24,7 +25,7 @@ export class FormsClientAdapter implements FormsClientPort {
     private readonly fetchWeeklyCheckinFormUsecase: FetchWeeklyCheckinFormUsecase,
 
     @inject(TYPES.SubmitWeeklyCheckinFormUsecase)
-    private readonly submitWeeklyCheckinFormUsecase: SubmitWeeklyCheckinFormUsecase
+    private readonly submitWeeklyCheckinFormUsecase: SubmitWeeklyCheckinFormUsecase,
   ) {}
 
   private async fetchFormQuestions({

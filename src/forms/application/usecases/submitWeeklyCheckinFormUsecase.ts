@@ -9,7 +9,7 @@ import { createFormResponseBody } from "@/forms/application/utils/createFormResp
 export class SubmitWeeklyCheckinFormUsecase {
   constructor(
     @inject(TYPES.FormsApiPort)
-    private readonly formsApi: FormsApiPort
+    private readonly formsApi: FormsApiPort,
   ) {}
 
   async execute({

@@ -2,7 +2,7 @@ export { FormsClientAdapter } from "./adapters/primary/formsClientAdapter";
 export {
   FetchFormQuestionsRequestDto,
   FetchWeeklyCheckinFormClientRequestDto,
-  SubmitWeeklyCheckinFormRequestDto,
+  SubmitWeeklyCheckinFormClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   FetchFormQuestionsResponseDto,
@@ -19,4 +19,5 @@ export {
   Question,
   TeamMemberForCheckbox,
   FormQuestions,
+  CreateFormResponseBody,
 } from "./application/types";

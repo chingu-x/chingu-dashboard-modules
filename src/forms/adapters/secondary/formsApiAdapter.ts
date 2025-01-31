@@ -16,7 +16,7 @@ import { FormsApiPort } from "@/forms/ports/secondary/formApiPort";
 export class FormsApiAdapter implements FormsApiPort {
   constructor(
     @inject(TYPES.RestApiPort)
-    private readonly apiClient: RestApiPort
+    private readonly apiClient: RestApiPort,
   ) {}
 
   async fetchFormQuestions({

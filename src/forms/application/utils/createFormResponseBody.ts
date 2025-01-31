@@ -19,8 +19,8 @@ export function createFormResponseBody({
       (question) =>
         question.id === Number(key) ||
         question.subQuestions.find(
-          (subQuestion) => subQuestion.id === Number(key)
-        )
+          (subQuestion) => subQuestion.id === Number(key),
+        ),
     );
 
     if (question && question.inputType.name === "boolean") {
