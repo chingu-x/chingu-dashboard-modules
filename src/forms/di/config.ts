@@ -3,7 +3,7 @@ import { FORMS_TYPES } from "./types";
 import { FormsApiAdapter } from "@/forms/adapters/secondary/formsApiAdapter";
 import { FormsClientAdapter } from "@/forms/adapters/primary/formsClientAdapter";
 import { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFormQuestionsUsecase";
-import { GetWeeklyCheckinFormUsecase } from "@/forms/application/usecases/getWeeklyCheckinFormUsecase";
+import { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetchWeeklyCheckinFormUsecase";
 
 export const registerFormsDependencies = () => {
   // ports
@@ -19,7 +19,7 @@ export const registerFormsDependencies = () => {
     useClass: FetchFormQuestionsUsecase,
   });
 
-  container.register(FORMS_TYPES.GetWeeklyCheckinFormUsecase, {
-    useClass: GetWeeklyCheckinFormUsecase,
+  container.register(FORMS_TYPES.FetchWeeklyCheckinFormUsecase, {
+    useClass: FetchWeeklyCheckinFormUsecase,
   });
 };

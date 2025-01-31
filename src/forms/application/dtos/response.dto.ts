@@ -2,4 +2,4 @@ import type { FormQuestions } from "@/forms/application/types";
 
 export type FetchFormQuestionsResponseDto = FormQuestions;
 
-export type GetWeeklyCheckinFormResponseDto = FetchFormQuestionsResponseDto;
+export type FetchWeeklyCheckinFormResponseDto = FetchFormQuestionsResponseDto;

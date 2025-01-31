@@ -1,15 +1,15 @@
 import { injectable } from "tsyringe";
-import { GetWeeklyCheckinFormApiRequestDto } from "@/forms/application/dtos/request.dto";
-import { GetWeeklyCheckinFormResponseDto } from "@/forms/application/dtos/response.dto";
+import { FetchWeeklyCheckinFormApiRequestDto } from "@/forms/application/dtos/request.dto";
+import { FetchWeeklyCheckinFormResponseDto } from "@/forms/application/dtos/response.dto";
 import { Forms } from "@/forms/application/types";
 
 @injectable()
-export class GetWeeklyCheckinFormUsecase {
+export class FetchWeeklyCheckinFormUsecase {
   async execute({
     fetchFormQuestions,
     voyageTeamRoles,
     currentUserVoyageRole,
-  }: GetWeeklyCheckinFormApiRequestDto): Promise<GetWeeklyCheckinFormResponseDto> {
+  }: FetchWeeklyCheckinFormApiRequestDto): Promise<FetchWeeklyCheckinFormResponseDto> {
     const checkinForm = await fetchFormQuestions({
       formId: Forms.checkIn,
     });

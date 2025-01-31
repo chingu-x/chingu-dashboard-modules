@@ -4,7 +4,7 @@ export interface FetchFormQuestionsRequestDto {
   formId: number;
 }
 
-export interface GetWeeklyCheckinFormClientRequestDto {
+export interface FetchWeeklyCheckinFormClientRequestDto {
   voyageTeamRoles: {
     hasScrumMaster: boolean;
     hasProductOwner: boolean;
@@ -15,8 +15,8 @@ export interface GetWeeklyCheckinFormClientRequestDto {
   };
 }
 
-export interface GetWeeklyCheckinFormApiRequestDto
-  extends GetWeeklyCheckinFormClientRequestDto {
+export interface FetchWeeklyCheckinFormApiRequestDto
+  extends FetchWeeklyCheckinFormClientRequestDto {
   fetchFormQuestions: ({
     formId,
   }: FetchFormQuestionsRequestDto) => Promise<FetchFormQuestionsResponseDto>;

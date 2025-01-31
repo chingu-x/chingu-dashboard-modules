@@ -2,15 +2,15 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import {
   FetchFormQuestionsRequestDto,
-  GetWeeklyCheckinFormClientRequestDto,
+  FetchWeeklyCheckinFormClientRequestDto,
 } from "@/forms/application/dtos/request.dto";
 import {
   FetchFormQuestionsResponseDto,
-  GetWeeklyCheckinFormResponseDto,
+  FetchWeeklyCheckinFormResponseDto,
 } from "@/forms/application/dtos/response.dto";
 import { FormsClientPort } from "@/forms/ports/primary/formsClientPort";
 import { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFormQuestionsUsecase";
-import { GetWeeklyCheckinFormUsecase } from "@/forms/application/usecases/getWeeklyCheckinFormUsecase";
+import { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetchWeeklyCheckinFormUsecase";
 
 @injectable()
 export class FormsClientAdapter implements FormsClientPort {
@@ -18,8 +18,8 @@ export class FormsClientAdapter implements FormsClientPort {
     @inject(TYPES.FetchFormQuestionsUsecase)
     private readonly fetchFormQuestionsUsecase: FetchFormQuestionsUsecase,
 
-    @inject(TYPES.GetWeeklyCheckinFormUsecase)
-    private readonly getWeeklyCheckinFormUsecase: GetWeeklyCheckinFormUsecase
+    @inject(TYPES.FetchWeeklyCheckinFormUsecase)
+    private readonly fetchWeeklyCheckinFormUsecase: FetchWeeklyCheckinFormUsecase
   ) {}
 
   private async fetchFormQuestions({
@@ -28,11 +28,11 @@ export class FormsClientAdapter implements FormsClientPort {
     return await this.fetchFormQuestionsUsecase.execute({ formId });
   }
 
-  async getWeeklyCheckinForm({
+  async fetchWeeklyCheckinForm({
     voyageTeamRoles,
     currentUserVoyageRole,
-  }: GetWeeklyCheckinFormClientRequestDto): Promise<GetWeeklyCheckinFormResponseDto> {
-    return await this.getWeeklyCheckinFormUsecase.execute({
+  }: FetchWeeklyCheckinFormClientRequestDto): Promise<FetchWeeklyCheckinFormResponseDto> {
+    return await this.fetchWeeklyCheckinFormUsecase.execute({
       fetchFormQuestions: this.fetchFormQuestions.bind(this),
       voyageTeamRoles,
       currentUserVoyageRole,

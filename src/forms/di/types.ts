@@ -2,7 +2,7 @@ import type { InjectionToken } from "tsyringe";
 import type { FormsApiPort } from "@/forms/ports/secondary/formApiPort";
 import type { FormsClientAdapter } from "@/forms/adapters/primary/formsClientAdapter";
 import type { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFormQuestionsUsecase";
-import type { GetWeeklyCheckinFormUsecase } from "@/forms/application/usecases/getWeeklyCheckinFormUsecase";
+import type { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetchWeeklyCheckinFormUsecase";
 
 export const FORMS_TYPES = {
   // ports
@@ -10,15 +10,15 @@ export const FORMS_TYPES = {
 
   // adapters
   FormsClientAdapter: Symbol.for(
-    "FormsClientAdapter",
+    "FormsClientAdapter"
   ) as InjectionToken<FormsClientAdapter>,
 
   // usecases
   FetchFormQuestionsUsecase: Symbol.for(
-    "FetchFormQuestionsUsecase",
+    "FetchFormQuestionsUsecase"
   ) as InjectionToken<FetchFormQuestionsUsecase>,
 
-  GetWeeklyCheckinFormUsecase: Symbol.for(
-    "GetWeeklyCheckinFormUsecase",
-  ) as InjectionToken<GetWeeklyCheckinFormUsecase>,
+  FetchWeeklyCheckinFormUsecase: Symbol.for(
+    "FetchWeeklyCheckinFormUsecase"
+  ) as InjectionToken<FetchWeeklyCheckinFormUsecase>,
 };
