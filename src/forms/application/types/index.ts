@@ -88,3 +88,12 @@ export interface CreateFormResponseBody {
   };
   questions: Question[];
 }
+
+export interface FormResponses {
+  questionId: number;
+  optionChoiceId?: number;
+  text?: string;
+  boolean?: boolean;
+  numeric?: number;
+  responseGroupId?: number;
+}

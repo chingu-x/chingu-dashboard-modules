@@ -1,6 +1,7 @@
 import type { FetchFormQuestionsResponseDto } from "./response.dto";
 import type {
   CreateFormResponseBody,
+  FormResponses,
   Question,
 } from "@/forms/application/types";
 
@@ -42,17 +43,16 @@ export interface SubmitWeeklyCheckinFormClientRequestDto {
 export interface SubmitWeeklyCheckinFormApiRequestDto {
   voyageTeamMemberId: number;
   sprintId: number;
-  responses: {
-    questionId: number;
-    text?: string;
-    optionChoiceId?: number;
-    boolean?: boolean;
-    numeric?: number;
-  }[];
+  responses: FormResponses[];
 }
 
 export interface SubmitVoyageProjectFormClientRequestDto {
   voyageTeamMemberId: number;
   data: CreateFormResponseBody["data"];
   questions: Question[];
+}
+
+export interface SubmitVoyageProjectFormApiRequestDto {
+  voyageTeamMemberId: number;
+  responses: FormResponses[];
 }

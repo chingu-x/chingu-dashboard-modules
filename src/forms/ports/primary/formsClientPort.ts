@@ -22,7 +22,7 @@ export interface FormsClientPort {
   fetchSubmitVoyageProjectForm: () => Promise<FetchSubmitVoyageProjectFormResponseDto>;
 
   submitVoyageProjectForm: ({
-    voyageTeamId,
+    voyageTeamMemberId,
     data,
     questions,
   }: SubmitVoyageProjectFormClientRequestDto) => Promise<SubmitVoyageProjectFormResponseDto>;
