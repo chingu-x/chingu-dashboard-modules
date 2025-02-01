@@ -7,6 +7,7 @@ export {
 export {
   FetchFormQuestionsResponseDto,
   SubmitWeeklyCheckinFormResponseDto,
+  FetchSubmitVoyageProjectFormResponseDto,
 } from "./application/dtos/response.dto";
 export {
   Forms,
