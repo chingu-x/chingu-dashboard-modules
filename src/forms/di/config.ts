@@ -6,6 +6,7 @@ import { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFor
 import { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetchWeeklyCheckinFormUsecase";
 import { SubmitWeeklyCheckinFormUsecase } from "@/forms/application/usecases/submitWeeklyCheckinFormUsecase";
 import { FetchSubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/fetchSubmitVoyageProjectFormUsecase";
+import { SubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/submitVoyageProjectFormUsecase";
 
 export const registerFormsDependencies = () => {
   // ports
@@ -31,5 +32,9 @@ export const registerFormsDependencies = () => {
 
   container.register(FORMS_TYPES.FetchSubmitVoyageProjectFormUsecase, {
     useClass: FetchSubmitVoyageProjectFormUsecase,
+  });
+
+  container.register(FORMS_TYPES.SubmitVoyageProjectFormUsecase, {
+    useClass: SubmitVoyageProjectFormUsecase,
   });
 };

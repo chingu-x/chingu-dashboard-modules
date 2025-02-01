@@ -5,6 +5,7 @@ import type { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fet
 import type { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetchWeeklyCheckinFormUsecase";
 import type { SubmitWeeklyCheckinFormUsecase } from "@/forms/application/usecases/submitWeeklyCheckinFormUsecase";
 import type { FetchSubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/fetchSubmitVoyageProjectFormUsecase";
+import type { SubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/submitVoyageProjectFormUsecase";
 
 export const FORMS_TYPES = {
   // ports
@@ -31,4 +32,8 @@ export const FORMS_TYPES = {
   FetchSubmitVoyageProjectFormUsecase: Symbol.for(
     "FetchSubmitVoyageProjectFormUsecase",
   ) as InjectionToken<FetchSubmitVoyageProjectFormUsecase>,
+
+  SubmitVoyageProjectFormUsecase: Symbol.for(
+    "SubmitVoyageProjectFormUsecase",
+  ) as InjectionToken<SubmitVoyageProjectFormUsecase>,
 };
