@@ -49,12 +49,6 @@ export class FormsClientAdapter implements FormsClientPort {
     });
   }
 
-  async fetchSubmitVoyageProjectForm(): Promise<FetchSubmitVoyageProjectFormResponseDto> {
-    return await this.fetchSubmitVoyageProjectFormUsecase.execute({
-      fetchformQuestion: this.fetchFormQuestions.bind(this),
-    });
-  }
-
   async submitWeeklyCheckinForm({
     voyageTeamMemberId,
     sprintId,
@@ -66,6 +60,12 @@ export class FormsClientAdapter implements FormsClientPort {
       sprintId,
       data,
       questions,
+    });
+  }
+
+  async fetchSubmitVoyageProjectForm(): Promise<FetchSubmitVoyageProjectFormResponseDto> {
+    return await this.fetchSubmitVoyageProjectFormUsecase.execute({
+      fetchformQuestion: this.fetchFormQuestions.bind(this),
     });
   }
 }
