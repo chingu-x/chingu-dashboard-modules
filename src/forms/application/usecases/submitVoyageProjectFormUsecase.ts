@@ -19,7 +19,7 @@ export class SubmitVoyageProjectFormUsecase {
   }: SubmitVoyageProjectFormClientRequestDto): Promise<SubmitVoyageProjectFormResponseDto> {
     const responses = createFormResponseBody({ data, questions });
 
-    return await this.formsApi.submitWeeklyCheckinForm({
+    return await this.formsApi.submitVoyageProjectForm({
       voyageTeamMemberId,
       responses,
     });
