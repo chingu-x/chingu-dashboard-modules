@@ -30,7 +30,7 @@ export class FormsClientAdapter implements FormsClientPort {
     private readonly submitWeeklyCheckinFormUsecase: SubmitWeeklyCheckinFormUsecase,
 
     @inject(TYPES.FetchSubmitVoyageProjectFormUsecase)
-    private readonly fetchSubmitVoyageProjectFormUsecase: FetchSubmitVoyageProjectFormUsecase
+    private readonly fetchSubmitVoyageProjectFormUsecase: FetchSubmitVoyageProjectFormUsecase,
   ) {}
 
   private async fetchFormQuestions({
