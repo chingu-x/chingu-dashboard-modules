@@ -3,11 +3,13 @@ export {
   FetchFormQuestionsRequestDto,
   FetchWeeklyCheckinFormClientRequestDto,
   SubmitWeeklyCheckinFormClientRequestDto,
+  SubmitVoyageProjectFormClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   FetchFormQuestionsResponseDto,
   SubmitWeeklyCheckinFormResponseDto,
   FetchSubmitVoyageProjectFormResponseDto,
+  SubmitVoyageProjectFormResponseDto,
 } from "./application/dtos/response.dto";
 export {
   Forms,
