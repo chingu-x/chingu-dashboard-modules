@@ -3,16 +3,19 @@ import type {
   SubmitWeeklyCheckinFormClientRequestDto,
 } from "@/forms/application/dtos/request.dto";
 import type {
+  FetchSubmitVoyageProjectFormResponseDto,
   FetchWeeklyCheckinFormResponseDto,
   SubmitWeeklyCheckinFormResponseDto,
 } from "@/forms/application/dtos/response.dto";
 
 export interface FormsClientPort {
   fetchWeeklyCheckinForm: (
-    props: FetchWeeklyCheckinFormClientRequestDto,
+    props: FetchWeeklyCheckinFormClientRequestDto
   ) => Promise<FetchWeeklyCheckinFormResponseDto>;
 
+  fetchSubmitVoyageProjectForm: () => Promise<FetchSubmitVoyageProjectFormResponseDto>;
+
   submitWeeklyCheckinForm: (
-    props: SubmitWeeklyCheckinFormClientRequestDto,
+    props: SubmitWeeklyCheckinFormClientRequestDto
   ) => Promise<SubmitWeeklyCheckinFormResponseDto>;
 }

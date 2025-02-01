@@ -7,6 +7,7 @@ import {
 } from "@/forms/application/dtos/request.dto";
 import {
   FetchFormQuestionsResponseDto,
+  FetchSubmitVoyageProjectFormResponseDto,
   FetchWeeklyCheckinFormResponseDto,
   SubmitWeeklyCheckinFormResponseDto,
 } from "@/forms/application/dtos/response.dto";
@@ -48,7 +49,7 @@ export class FormsClientAdapter implements FormsClientPort {
     });
   }
 
-  async fetchSubmitVoyageProjectForm(): Promise<FetchSubmitVoyageProjectFormRequestDto> {
+  async fetchSubmitVoyageProjectForm(): Promise<FetchSubmitVoyageProjectFormResponseDto> {
     return await this.fetchSubmitVoyageProjectFormUsecase.execute({
       fetchformQuestion: this.fetchFormQuestions.bind(this),
     });
