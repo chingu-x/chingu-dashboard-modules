@@ -31,6 +31,9 @@ export class FormsClientAdapter implements FormsClientPort {
 
     @inject(TYPES.FetchSubmitVoyageProjectFormUsecase)
     private readonly fetchSubmitVoyageProjectFormUsecase: FetchSubmitVoyageProjectFormUsecase,
+
+    @inject(TYPES.SubmitVoyageProjectFormUsecase)
+    private readonly submitVoyageProjectFormUsecase: SubmitVoyageProjectFormUsecase,
   ) {}
 
   private async fetchFormQuestions({
@@ -67,6 +70,18 @@ export class FormsClientAdapter implements FormsClientPort {
   async fetchSubmitVoyageProjectForm(): Promise<FetchSubmitVoyageProjectFormResponseDto> {
     return await this.fetchSubmitVoyageProjectFormUsecase.execute({
       fetchFormQuestions: this.fetchFormQuestions.bind(this),
+    });
+  }
+
+  async submitVoyageProjectForm({
+    voyageTeamId,
+    data,
+    questions,
+  }: SubmitVoyageProjectFormClientRequestDto): SubmitVoyageProjectFormResponseDto {
+    return await this.submitVoyageProjectFormUsecase.execute({
+      voyageTeamId,
+      data,
+      questions,
     });
   }
 }
