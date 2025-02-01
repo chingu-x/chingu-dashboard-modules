@@ -43,7 +43,7 @@ export class SprintsClientAdapter implements SprintsClientPort {
     private readonly isCurrentSprintUsecase: IsCurrentSprintUsecase,
 
     @inject(TYPES.IsVoyageProjestSubmissionAllowedUsecase)
-    private readonly isVoyageProjestSubmissionAllowedUsecase: IsVoyageProjestSubmissionAllowedUsecase
+    private readonly isVoyageProjestSubmissionAllowedUsecase: IsVoyageProjestSubmissionAllowedUsecase,
   ) {}
 
   // gets the current voyage team

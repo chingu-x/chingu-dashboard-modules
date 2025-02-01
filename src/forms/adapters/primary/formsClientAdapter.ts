@@ -15,6 +15,7 @@ import { FormsClientPort } from "@/forms/ports/primary/formsClientPort";
 import { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFormQuestionsUsecase";
 import { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetchWeeklyCheckinFormUsecase";
 import { SubmitWeeklyCheckinFormUsecase } from "@/forms/application/usecases/submitWeeklyCheckinFormUsecase";
+import { FetchSubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/fetchSubmitVoyageProjectFormUsecase";
 
 @injectable()
 export class FormsClientAdapter implements FormsClientPort {
@@ -65,7 +66,7 @@ export class FormsClientAdapter implements FormsClientPort {
 
   async fetchSubmitVoyageProjectForm(): Promise<FetchSubmitVoyageProjectFormResponseDto> {
     return await this.fetchSubmitVoyageProjectFormUsecase.execute({
-      fetchformQuestion: this.fetchFormQuestions.bind(this),
+      fetchFormQuestions: this.fetchFormQuestions.bind(this),
     });
   }
 }

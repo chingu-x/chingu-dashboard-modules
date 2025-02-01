@@ -9,7 +9,7 @@ export class GetSprintCheckinStatusUsecase {
     sprintId,
   }: GetSprintCheckinStatusRequestDto): GetSprintCheckinStatusResponseDto {
     return Boolean(
-      user.sprintCheckIn.find((sprintNumber) => sprintNumber === sprintId)
+      user.sprintCheckIn.find((sprintNumber) => sprintNumber === sprintId),
     );
   }
 }
