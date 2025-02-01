@@ -7,7 +7,9 @@ export type FetchSubmitVoyageProjectFormResponseDto =
   FetchFormQuestionsResponseDto;
 
 export interface SubmitWeeklyCheckinFormResponseDto {
+  createdAt: Date;
   id: number;
-  sprintId: number;
   responseGroupId: number;
+  sprintId: number;
+  voyageTeamMemberId: number;
 }
