@@ -10,6 +10,7 @@ import {
   FetchFormQuestionsResponseDto,
   FetchSubmitVoyageProjectFormResponseDto,
   FetchWeeklyCheckinFormResponseDto,
+  SubmitVoyageProjectFormResponseDto,
   SubmitWeeklyCheckinFormResponseDto,
 } from "@/forms/application/dtos/response.dto";
 import { FormsClientPort } from "@/forms/ports/primary/formsClientPort";
@@ -33,8 +34,8 @@ export class FormsClientAdapter implements FormsClientPort {
     @inject(TYPES.FetchSubmitVoyageProjectFormUsecase)
     private readonly fetchSubmitVoyageProjectFormUsecase: FetchSubmitVoyageProjectFormUsecase,
 
-    // @inject(TYPES.SubmitVoyageProjectFormUsecase)
-    // private readonly submitVoyageProjectFormUsecase: SubmitVoyageProjectFormUsecase,
+    @inject(TYPES.SubmitVoyageProjectFormUsecase)
+    private readonly submitVoyageProjectFormUsecase: SubmitVoyageProjectFormUsecase,
   ) {}
 
   private async fetchFormQuestions({
@@ -74,15 +75,15 @@ export class FormsClientAdapter implements FormsClientPort {
     });
   }
 
-  // async submitVoyageProjectForm({
-  //   voyageTeamId,
-  //   data,
-  //   questions,
-  // }: SubmitVoyageProjectFormClientRequestDto): SubmitVoyageProjectFormResponseDto {
-  //   return await this.submitVoyageProjectFormUsecase.execute({
-  //     voyageTeamId,
-  //     data,
-  //     questions,
-  //   });
-  // }
+  async submitVoyageProjectForm({
+    voyageTeamId,
+    data,
+    questions,
+  }: SubmitVoyageProjectFormClientRequestDto): Promise<SubmitVoyageProjectFormResponseDto> {
+    return await this.submitVoyageProjectFormUsecase.execute({
+      voyageTeamId,
+      data,
+      questions,
+    });
+  }
 }

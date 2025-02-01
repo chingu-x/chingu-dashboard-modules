@@ -13,3 +13,6 @@ export interface SubmitWeeklyCheckinFormResponseDto {
   sprintId: number;
   voyageTeamMemberId: number;
 }
+
+export type SubmitVoyageProjectFormResponseDto =
+  SubmitWeeklyCheckinFormResponseDto;
