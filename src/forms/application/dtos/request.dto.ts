@@ -52,7 +52,7 @@ export interface SubmitWeeklyCheckinFormApiRequestDto {
 }
 
 export interface SubmitVoyageProjectFormClientRequestDto {
-  voyageTeamId: number;
+  voyageTeamMemberId: number;
   data: CreateFormResponseBody["data"];
   questions: Question[];
 }
