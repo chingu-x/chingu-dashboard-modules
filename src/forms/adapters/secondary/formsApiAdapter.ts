@@ -44,6 +44,9 @@ export class FormsApiAdapter implements FormsApiPort {
     voyageTeamMemberId,
     responses,
   }: SubmitVoyageProjectFormApiRequestDto): Promise<SubmitVoyageProjectFormResponseDto> {
-    return await
+    return await this.apiClient.post({
+      url: FormsUrls.submitVoyageProjectForm(),
+      payload: { voyageTeamMemberId, responses },
+    });
   }
 }
