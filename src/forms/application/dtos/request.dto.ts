@@ -50,3 +50,9 @@ export interface SubmitWeeklyCheckinFormApiRequestDto {
     numeric?: number;
   }[];
 }
+
+export interface SubmitVoyageProjectFormClientRequestDto {
+  voyageTeamId: number;
+  data: CreateFormResponseBody["data"];
+  questions: Question[];
+}

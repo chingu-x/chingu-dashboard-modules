@@ -3,6 +3,7 @@ import { TYPES } from "@/types";
 import {
   FetchFormQuestionsRequestDto,
   FetchWeeklyCheckinFormClientRequestDto,
+  SubmitVoyageProjectFormClientRequestDto,
   SubmitWeeklyCheckinFormClientRequestDto,
 } from "@/forms/application/dtos/request.dto";
 import {
