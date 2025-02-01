@@ -6,10 +6,10 @@ import { GetSprintCheckinStatusResponseDto } from "@/sprints/application/dtos/re
 export class GetSprintCheckinStatusUsecase {
   execute({
     user,
-    sprintNum,
+    sprintId,
   }: GetSprintCheckinStatusRequestDto): GetSprintCheckinStatusResponseDto {
     return Boolean(
-      user.sprintCheckIn.find((sprintNumber) => sprintNumber === sprintNum),
+      user.sprintCheckIn.find((sprintNumber) => sprintNumber === sprintId)
     );
   }
 }

@@ -21,7 +21,7 @@ export interface GetMeetingRequestDto {
 
 export interface GetSprintCheckinStatusRequestDto {
   user: User;
-  sprintNum: number;
+  sprintId: number;
 }
 
 export interface IsCurrentSprintRequestDto {
