@@ -14,5 +14,7 @@ export interface SubmitWeeklyCheckinFormResponseDto {
   voyageTeamMemberId: number;
 }
 
-export type SubmitVoyageProjectFormResponseDto =
-  SubmitWeeklyCheckinFormResponseDto;
+export type SubmitVoyageProjectFormResponseDto = Omit<
+  SubmitWeeklyCheckinFormResponseDto,
+  "sprintId"
+>;
