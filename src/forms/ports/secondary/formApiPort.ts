@@ -21,7 +21,7 @@ export interface FormsApiPort {
   }: SubmitWeeklyCheckinFormApiRequestDto) => Promise<SubmitWeeklyCheckinFormResponseDto>;
 
   submitVoyageProjectForm: ({
-    voyageTeamMemberId,
+    voyageTeamId,
     responses,
   }: SubmitVoyageProjectFormApiRequestDto) => Promise<SubmitVoyageProjectFormResponseDto>;
 }

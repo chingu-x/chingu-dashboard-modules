@@ -13,14 +13,14 @@ export class SubmitVoyageProjectFormUsecase {
   ) {}
 
   async execute({
-    voyageTeamMemberId,
+    voyageTeamId,
     data,
     questions,
   }: SubmitVoyageProjectFormClientRequestDto): Promise<SubmitVoyageProjectFormResponseDto> {
     const responses = createFormResponseBody({ data, questions });
 
     return await this.formsApi.submitVoyageProjectForm({
-      voyageTeamMemberId,
+      voyageTeamId,
       responses,
     });
   }

@@ -47,12 +47,12 @@ export interface SubmitWeeklyCheckinFormApiRequestDto {
 }
 
 export interface SubmitVoyageProjectFormClientRequestDto {
-  voyageTeamMemberId: number;
+  voyageTeamId: number;
   data: CreateFormResponseBody["data"];
   questions: Question[];
 }
 
 export interface SubmitVoyageProjectFormApiRequestDto {
-  voyageTeamMemberId: number;
+  voyageTeamId: number;
   responses: FormResponses[];
 }

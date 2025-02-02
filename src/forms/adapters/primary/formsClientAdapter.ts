@@ -77,12 +77,12 @@ export class FormsClientAdapter implements FormsClientPort {
   }
 
   async submitVoyageProjectForm({
-    voyageTeamMemberId,
+    voyageTeamId,
     data,
     questions,
   }: SubmitVoyageProjectFormClientRequestDto): Promise<SubmitVoyageProjectFormResponseDto> {
     return await this.submitVoyageProjectFormUsecase.execute({
-      voyageTeamMemberId,
+      voyageTeamId,
       data,
       questions,
     });

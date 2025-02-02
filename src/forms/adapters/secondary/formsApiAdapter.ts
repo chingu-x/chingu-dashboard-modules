@@ -41,12 +41,12 @@ export class FormsApiAdapter implements FormsApiPort {
   }
 
   async submitVoyageProjectForm({
-    voyageTeamMemberId,
+    voyageTeamId,
     responses,
   }: SubmitVoyageProjectFormApiRequestDto): Promise<SubmitVoyageProjectFormResponseDto> {
     return await this.apiClient.post({
       url: FormsUrls.submitVoyageProjectForm(),
-      payload: { voyageTeamMemberId, responses },
+      payload: { voyageTeamId, responses },
     });
   }
 }
