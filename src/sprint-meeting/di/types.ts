@@ -4,6 +4,7 @@ import type { SprintMeetingClientAdapter } from "@/sprint-meeting/adapters/prima
 import type { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetchMeetingUsecase";
 import type { GetCurrentSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingId";
 import type { GetCurrentSprintMeetingUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingUsecase";
+import type { AddMeetingUsecase } from "@/sprint-meeting/application/usecases/addMeetingUsecase";
 
 export const SPRINT_MEETING_TYPES = {
   // ports
@@ -28,4 +29,8 @@ export const SPRINT_MEETING_TYPES = {
   GetCurrentSprintMeetingUsecase: Symbol.for(
     "GetCurrentSprintMeetingUsecase",
   ) as InjectionToken<GetCurrentSprintMeetingUsecase>,
+
+  AddMeetingUsecase: Symbol.for(
+    "AddMeetingUsecase",
+  ) as InjectionToken<AddMeetingUsecase>,
 };

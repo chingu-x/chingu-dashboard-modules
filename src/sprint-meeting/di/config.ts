@@ -5,6 +5,7 @@ import { SprintMeetingClientAdapter } from "@/sprint-meeting/adapters/primary/sp
 import { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetchMeetingUsecase";
 import { GetCurrentSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingId";
 import { GetCurrentSprintMeetingUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingUsecase";
+import { AddMeetingUsecase } from "@/sprint-meeting/application/usecases/addMeetingUsecase";
 
 export const registerSprintMeetingDependencies = () => {
   // ports
@@ -28,5 +29,9 @@ export const registerSprintMeetingDependencies = () => {
 
   container.register(SPRINT_MEETING_TYPES.GetCurrentSprintMeetingUsecase, {
     useClass: GetCurrentSprintMeetingUsecase,
+  });
+
+  container.register(SPRINT_MEETING_TYPES.AddMeetingUsecase, {
+    useClass: AddMeetingUsecase,
   });
 };
