@@ -23,13 +23,14 @@ export class AddMeetingUsecase {
       timeZone: timezone,
     });
 
-    let newData: Omit<MeetingFormData, "dateTime">;
+    let newData: Omit<MeetingFormData, "dateTime" | "meetingLink"> & {
+      meetingLink?: string;
+    };
 
-    if (data.meetingLink) {
+    if (data.meetingLink === "") {
       newData = {
         description: data.description,
         title: data.title,
-        meetingLink: "",
       };
     } else {
       newData = {

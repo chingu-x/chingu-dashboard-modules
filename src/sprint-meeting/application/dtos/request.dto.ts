@@ -28,5 +28,5 @@ export interface AddMeetingApiRequestDto {
   title: string;
   description: string;
   dateTime: string;
-  meetingLink: string;
+  meetingLink?: string;
 }
