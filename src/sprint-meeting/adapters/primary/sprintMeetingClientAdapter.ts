@@ -64,7 +64,7 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     data,
     teamId,
     sprintNumber,
-  }: AddMeetingClientRequestDto): AddMeetingClientResponseDto {
+  }: AddMeetingClientRequestDto): AddMeetingResponseDto {
     return await this.addMeetingUsecase.execute({ data, teamId, sprintNumber });
   }
 }
