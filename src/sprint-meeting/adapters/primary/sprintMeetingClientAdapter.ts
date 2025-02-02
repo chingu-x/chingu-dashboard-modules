@@ -2,6 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { SprintMeetingClientPort } from "@/sprint-meeting/ports/primary/sprintMeetingClientPort";
 import {
+  AddMeetingClientRequestDto,
   FetchMeetingRequestDto,
   GetCurrentSprintMeetingIdRequesDto,
   GetCurrentSprintMeetingRequestDto,
@@ -26,6 +27,9 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
     @inject(TYPES.GetCurrentSprintMeetingUsecase)
     private readonly getCurrentSprintMeetingUsecase: GetCurrentSprintMeetingUsecase,
+
+    @inject(TYPES.AddMeetingUsecase)
+    private readonly addMeetingUsecase: AddMeetingUsecase,
   ) {}
 
   async fetchMeeting({
@@ -56,5 +60,11 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     });
   }
 
-  async addMeeting({ data, teamId, sprintNumber });
+  async addMeeting({
+    data,
+    teamId,
+    sprintNumber,
+  }: AddMeetingClientRequestDto): AddMeetingClientResponseDto {
+    return await this.addMeetingUsecase.execute({ data, teamId, sprintNumber });
+  }
 }
