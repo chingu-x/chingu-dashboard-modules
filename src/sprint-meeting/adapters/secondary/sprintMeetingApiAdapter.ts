@@ -36,7 +36,7 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
     meetingLink,
   }: AddMeetingApiRequestDto): Promise<AddMeetingResponseDto> {
     return await this.apiClient.post({
-      url: SprintMeetingUrls.addMeeting(teamId, sprintNumber),
+      url: SprintMeetingUrls.addMeeting(sprintNumber, teamId),
       payload: { title, description, dateTime, meetingLink },
     });
   }
