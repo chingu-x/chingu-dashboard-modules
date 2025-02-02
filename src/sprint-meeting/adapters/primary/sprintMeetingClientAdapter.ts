@@ -55,4 +55,6 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
       meetingId,
     });
   }
+
+  async addMeeting({ data, teamId, sprintNumber });
 }

@@ -37,4 +37,8 @@ export interface SprintsClientPort {
   isVoyageProjestSubmissionAllowed: (
     props: IsVoyageProjestSubmissionAllowedRequestDto,
   ) => IsVoyageProjestSubmissionAllowedResponseDto;
+
+  // convertStringToDate: (
+  //   props:
+  // )
 }

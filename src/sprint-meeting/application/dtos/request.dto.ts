@@ -13,3 +13,14 @@ export interface GetCurrentSprintMeetingRequestDto {
   sprints: Sprint[];
   meetingId: string;
 }
+
+export interface AddMeetingClientRequestDto {
+  data: {
+    title: string;
+    description: string;
+    dateTime: Date;
+    meetingLink: string;
+  };
+  teamId: string;
+  sprintNumber: string;
+}
