@@ -45,5 +45,7 @@ export class AddMeetingUsecase {
       teamId,
       sprintNumber,
     };
+
+    return await this.sprintMeetingApi.addMeeting(payload);
   }
 }
