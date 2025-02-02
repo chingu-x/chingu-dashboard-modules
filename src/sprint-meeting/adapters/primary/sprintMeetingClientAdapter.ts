@@ -8,6 +8,7 @@ import {
   GetCurrentSprintMeetingRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import {
+  AddMeetingResponseDto,
   FetchMeetingResponseDto,
   GetCurrentSprintMeetingIdResponseDto,
   GetCurrentSprintMeetingResponseDto,
@@ -64,7 +65,7 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     data,
     teamId,
     sprintNumber,
-  }: AddMeetingClientRequestDto): AddMeetingResponseDto {
+  }: AddMeetingClientRequestDto): Promise<AddMeetingResponseDto> {
     return await this.addMeetingUsecase.execute({ data, teamId, sprintNumber });
   }
 }
