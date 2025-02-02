@@ -3,6 +3,7 @@ import { TYPES } from "@/types";
 import { SprintsClientPort } from "@/sprints/ports/primary/sprintsClientPort";
 import { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprintsUsecase";
 import {
+  ConvertStringToDateRequestDto,
   FetchSprintsClientRequestDto,
   GetCurrentSprintRequestDto,
   GetMeetingRequestDto,
@@ -90,5 +91,12 @@ export class SprintsClientAdapter implements SprintsClientPort {
     return this.isVoyageProjestSubmissionAllowedUsecase.execute({
       sprintNumber,
     });
+  }
+
+  convertStringToDate({
+    dateTime,
+    timezone,
+  }: ConvertStringToDateRequestDto): ConvertStringToDateResponseDto {
+    return this.convertStringToDate({ dateTime, timezone });
   }
 }

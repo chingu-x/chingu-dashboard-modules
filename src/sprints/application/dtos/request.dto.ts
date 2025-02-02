@@ -1,3 +1,4 @@
+import type { ConvertStringToDateProps } from "@/sprints/application/utils/convertStringToDate";
 import type { Sprint } from "@/sprints/application/types";
 import type { User } from "@/user/application/types";
 
@@ -32,3 +33,5 @@ export interface IsCurrentSprintRequestDto {
 export interface IsVoyageProjestSubmissionAllowedRequestDto {
   sprintNumber: string;
 }
+
+export type ConvertStringToDateRequestDto = ConvertStringToDateProps;
