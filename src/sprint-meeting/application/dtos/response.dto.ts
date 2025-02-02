@@ -5,10 +5,14 @@ export type GetCurrentSprintMeetingIdResponseDto = number;
 export type GetCurrentSprintMeetingResponseDto = Meeting;
 
 export interface AddMeetingResponseDto {
-  id: number;
-  title: string;
-  description: string;
+  createdAt: string;
   dateTime: string;
-  meetingLink: string;
-  notes: string;
+  description: string;
+  id: number;
+  meetingLink?: string;
+  notes?: string;
+  sprintId: number;
+  title: string;
+  updatedAt: string;
+  voyageTeamId: string;
 }
