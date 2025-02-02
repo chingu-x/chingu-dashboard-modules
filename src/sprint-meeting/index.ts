@@ -11,4 +11,9 @@ export {
   GetCurrentSprintMeetingResponseDto,
   AddMeetingResponseDto,
 } from "./application/dtos/response.dto";
-export { Meeting, Section, Agenda } from "./application/types/index";
+export {
+  Meeting,
+  Section,
+  Agenda,
+  MeetingFormData,
+} from "./application/types/index";

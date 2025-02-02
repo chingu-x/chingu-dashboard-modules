@@ -33,3 +33,10 @@ export interface Agenda {
   status: boolean;
   updatedAt: string;
 }
+
+export interface MeetingFormData {
+  title: string;
+  description: string;
+  dateTime: Date;
+  meetingLink: string;
+}

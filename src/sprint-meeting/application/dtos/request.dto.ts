@@ -1,4 +1,5 @@
 import type { Sprint } from "@/sprints/application/types";
+import type { MeetingFormData } from "@/sprint-meeting/application/types";
 
 export interface FetchMeetingRequestDto {
   meetingId: number;
@@ -15,12 +16,8 @@ export interface GetCurrentSprintMeetingRequestDto {
 }
 
 export interface AddMeetingClientRequestDto {
-  data: {
-    title: string;
-    description: string;
-    dateTime: Date;
-    meetingLink: string;
-  };
+  data: MeetingFormData;
   teamId: string;
   sprintNumber: string;
+  timezone: string;
 }
