@@ -3,6 +3,7 @@ import type { SprintMeetingApiPort } from "@/sprint-meeting/ports/secondary/spri
 import type { SprintMeetingClientAdapter } from "@/sprint-meeting/adapters/primary/sprintMeetingClientAdapter";
 import type { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetchMeetingUsecase";
 import type { GetCurrentSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingId";
+import type { GetCurrentSprintMeetingUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingUsecase";
 
 export const SPRINT_MEETING_TYPES = {
   // ports
@@ -23,4 +24,8 @@ export const SPRINT_MEETING_TYPES = {
   GetCurrentSprintMeetingIdUsecase: Symbol.for(
     "GetCurrentSprintMeetingIdUsecase",
   ) as InjectionToken<GetCurrentSprintMeetingIdUsecase>,
+
+  GetCurrentSprintMeetingUsecase: Symbol.for(
+    "GetCurrentSprintMeetingUsecase",
+  ) as InjectionToken<GetCurrentSprintMeetingUsecase>,
 };
