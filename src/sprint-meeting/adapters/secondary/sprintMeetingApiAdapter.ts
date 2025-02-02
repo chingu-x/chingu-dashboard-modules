@@ -2,8 +2,14 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { SprintMeetingApiPort } from "@/sprint-meeting/ports/secondary/sprintMeetingApiPort";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
-import { FetchMeetingResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
-import { FetchMeetingRequestDto } from "@/sprint-meeting/application/dtos/request.dto";
+import {
+  AddMeetingResponseDto,
+  FetchMeetingResponseDto,
+} from "@/sprint-meeting/application/dtos/response.dto";
+import {
+  AddMeetingApiRequestDto,
+  FetchMeetingRequestDto,
+} from "@/sprint-meeting/application/dtos/request.dto";
 import SprintMeetingUrls from "@/sprint-meeting/application/constants/sprintMeetingUrls";
 
 @injectable()
@@ -18,6 +24,20 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
   }: FetchMeetingRequestDto): Promise<FetchMeetingResponseDto> {
     return await this.apiClient.get({
       url: SprintMeetingUrls.fetchMeeting(meetingId.toString()),
+    });
+  }
+
+  async addMeeting({
+    teamId,
+    sprintNumber,
+    title,
+    description,
+    dateTime,
+    meetingLink,
+  }: AddMeetingApiRequestDto): Promise<AddMeetingResponseDto> {
+    return await this.apiClient.post({
+      url: SprintMeetingUrls.addMeeting(teamId, sprintNumber),
+      payload: { title, description, dateTime, meetingLink },
     });
   }
 }
