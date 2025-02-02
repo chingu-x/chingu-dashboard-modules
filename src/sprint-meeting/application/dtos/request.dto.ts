@@ -21,3 +21,12 @@ export interface AddMeetingClientRequestDto {
   sprintNumber: string;
   timezone: string;
 }
+
+export interface AddMeetingApiRequestDto {
+  teamId: string;
+  sprintNumber: string;
+  title: string;
+  description: string;
+  dateTime: string;
+  meetingLink: string;
+}
