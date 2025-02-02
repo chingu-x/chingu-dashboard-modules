@@ -15,4 +15,8 @@ export interface SprintMeetingClientPort {
   getCurrentSprintMeetingId: (
     props: GetCurrentSprintMeetingIdRequesDto,
   ) => GetCurrentSprintMeetingIdResponseDto;
+
+  getCurrentSprintMeeting: (
+    props: GetCurrentSprintMeetingRequestDto,
+  ) => GetCurrentSprintMeetingResponseDto;
 }
