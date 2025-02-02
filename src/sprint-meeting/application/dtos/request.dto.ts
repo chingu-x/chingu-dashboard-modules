@@ -8,3 +8,8 @@ export interface GetCurrentSprintMeetingIdRequesDto {
   sprints: Sprint[];
   sprintNumber: number;
 }
+
+export interface GetCurrentSprintMeetingRequestDto {
+  sprints: Sprint[];
+  meetingId: number;
+}
