@@ -1,16 +1,22 @@
 import type {
-  RequestResetPasswordDto,
-  LoginRequestDto,
-  ResetPasswordDto,
+  LoginClientRequestDto,
+  RequestResetPasswordClientRequestDto,
+  ResetPasswordClientRequestDto,
 } from "@/auth/application/dtos/request.dto";
 import type {
   LogoutResponseDto,
   LoginResponseDto,
+  RequestResetPasswordResponseDto,
+  ResetPasswordResponseDto,
 } from "@/auth/application/dtos/response.dto";
 
 export interface AuthClientPort {
-  login: (props: LoginRequestDto) => Promise<LoginResponseDto>;
+  login: (props: LoginClientRequestDto) => Promise<LoginResponseDto>;
   logout: () => Promise<LogoutResponseDto>;
-  requestResetPassword: (props: RequestResetPasswordDto) => Promise<void>;
-  resetPassword: (props: ResetPasswordDto) => Promise<void>;
+  requestResetPassword: (
+    props: RequestResetPasswordClientRequestDto,
+  ) => Promise<RequestResetPasswordResponseDto>;
+  resetPassword: (
+    props: ResetPasswordClientRequestDto,
+  ) => Promise<ResetPasswordResponseDto>;
 }

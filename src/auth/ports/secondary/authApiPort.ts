@@ -1,16 +1,23 @@
 import type {
-  RequestResetPasswordDto,
-  LoginRequestDto,
-  ResetPasswordDto,
+  LoginApiRequestDto,
+  RequestResetPasswordApiRequestDto,
+  ResetPasswordApiRequestDto,
 } from "@/auth/application/dtos/request.dto";
 import type {
   LogoutResponseDto,
   LoginResponseDto,
+  RequestResetPasswordResponseDto,
+  ResetPasswordResponseDto,
 } from "@/auth/application/dtos/response.dto";
 
 export interface AuthApiPort {
-  login: ({ email, password }: LoginRequestDto) => Promise<LoginResponseDto>;
+  login: ({ email, password }: LoginApiRequestDto) => Promise<LoginResponseDto>;
   logout: () => Promise<LogoutResponseDto>;
-  requestResetPassword: ({ email }: RequestResetPasswordDto) => Promise<void>;
-  resetPassword: ({ password, token }: ResetPasswordDto) => Promise<void>;
+  requestResetPassword: ({
+    email,
+  }: RequestResetPasswordApiRequestDto) => Promise<RequestResetPasswordResponseDto>;
+  resetPassword: ({
+    password,
+    token,
+  }: ResetPasswordApiRequestDto) => Promise<ResetPasswordResponseDto>;
 }

@@ -1,7 +1,8 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { AuthApiPort } from "@/auth/ports/secondary/authApiPort";
-import { ResetPasswordDto } from "@/auth/application/dtos/request.dto";
+import { ResetPasswordUsecaseDto } from "@/auth/application/dtos/usecase.dto";
+import { ResetPasswordResponseDto } from "@/auth/application/dtos/response.dto";
 
 @injectable()
 export class ResetPasswordUsecase {
@@ -10,7 +11,9 @@ export class ResetPasswordUsecase {
     private readonly authApi: AuthApiPort,
   ) {}
 
-  async execute(props: ResetPasswordDto): Promise<void> {
+  async execute(
+    props: ResetPasswordUsecaseDto,
+  ): Promise<ResetPasswordResponseDto> {
     return await this.authApi.resetPassword({ ...props });
   }
 }
