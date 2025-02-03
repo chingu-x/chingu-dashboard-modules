@@ -1,6 +1,5 @@
 import { inject, injectable } from "tsyringe";
 import { MyTeamApiPort } from "@/my-team/ports/secondary/myTeamApiPort";
-import { updateDirectoryWithCurrentTime } from "@/my-team/application/utils/updateDirectoryWithCurrentTime";
 import { moveElementToFirst } from "@/my-team/application/utils/moveElementToFirst";
 import { GetMyTeamClientRequestDto } from "@/my-team/application/dtos/request.dto";
 import { GetMyTeamResponseDto } from "@/my-team/application/dtos/response.dto";

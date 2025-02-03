@@ -31,7 +31,9 @@ export class MyTeamClientAdapter implements MyTeamClientPort {
     user,
   }: GetMyTeamClientRequestDto): Promise<GetMyTeamResponseDto> {
     const data = await this.getMyTeamUsecase.execute({ teamId, user });
-    return this.updateDirectoryWithCurrentTimeUsecase.execute({ data });
+    return this.updateDirectoryWithCurrentTimeUsecase.execute({
+      data,
+    }) as unknown as Promise<GetMyTeamResponseDto>;
   }
 
   async editHours({

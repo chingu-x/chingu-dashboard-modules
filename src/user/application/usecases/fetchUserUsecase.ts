@@ -3,7 +3,7 @@ import { TYPES } from "@/types";
 import { UserApiPort } from "@/user/ports/secondary/userApiPort";
 import { FetchUserResponseDto } from "@/user/application/dtos/response.dto";
 import { transformDateToUserTimezone } from "@/timezone/application/utils/dateTransform";
-import { FetchCurrentUserClientRequesstDto } from "@/user/application/dtos/request.dtos";
+import { FetchCurrentUserClientRequestDto } from "@/user/application/dtos/request.dtos";
 
 @injectable()
 export class FetchUserUsecase {
@@ -14,7 +14,7 @@ export class FetchUserUsecase {
 
   async execute({
     currentDate,
-  }: FetchCurrentUserClientRequesstDto): Promise<FetchUserResponseDto> {
+  }: FetchCurrentUserClientRequestDto): Promise<FetchUserResponseDto> {
     const data = await this.userApi.fetchUser();
 
     const userWithDate = {
