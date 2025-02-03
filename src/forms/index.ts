@@ -1,6 +1,5 @@
 export { FormsClientAdapter } from "./adapters/primary/formsClientAdapter";
 export {
-  FetchFormQuestionsRequestDto,
   FetchWeeklyCheckinFormClientRequestDto,
   SubmitWeeklyCheckinFormClientRequestDto,
   SubmitVoyageProjectFormClientRequestDto,

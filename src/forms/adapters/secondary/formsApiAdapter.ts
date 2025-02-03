@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
-  FetchFormQuestionsRequestDto,
+  FetchFormQuestionsApiRequestDto,
   SubmitVoyageProjectFormApiRequestDto,
   SubmitWeeklyCheckinFormApiRequestDto,
 } from "@/forms/application/dtos/request.dto";
@@ -23,7 +23,7 @@ export class FormsApiAdapter implements FormsApiPort {
 
   async fetchFormQuestions({
     formId,
-  }: FetchFormQuestionsRequestDto): Promise<FetchFormQuestionsResponseDto> {
+  }: FetchFormQuestionsApiRequestDto): Promise<FetchFormQuestionsResponseDto> {
     return await this.apiClient.get({
       url: FormsUrls.fetchFormQuestions(formId),
     });

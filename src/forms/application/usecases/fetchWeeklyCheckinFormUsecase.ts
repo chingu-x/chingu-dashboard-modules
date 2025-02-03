@@ -1,7 +1,7 @@
 import { injectable } from "tsyringe";
-import { FetchWeeklyCheckinFormApiRequestDto } from "@/forms/application/dtos/request.dto";
 import { FetchWeeklyCheckinFormResponseDto } from "@/forms/application/dtos/response.dto";
 import { Forms } from "@/forms/application/types";
+import { FetchWeeklyCheckinFormUsecaseDto } from "@/forms/application/dtos/usecase.dto";
 
 @injectable()
 export class FetchWeeklyCheckinFormUsecase {
@@ -9,7 +9,7 @@ export class FetchWeeklyCheckinFormUsecase {
     fetchFormQuestions,
     voyageTeamRoles,
     currentUserVoyageRole,
-  }: FetchWeeklyCheckinFormApiRequestDto): Promise<FetchWeeklyCheckinFormResponseDto> {
+  }: FetchWeeklyCheckinFormUsecaseDto): Promise<FetchWeeklyCheckinFormResponseDto> {
     const checkinForm = await fetchFormQuestions({
       formId: Forms.checkIn,
     });

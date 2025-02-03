@@ -5,9 +5,12 @@ import type {
   Question,
 } from "@/forms/application/types";
 
-export interface FetchFormQuestionsRequestDto {
+export interface FetchFormQuestionsClientRequestDto {
   formId: number;
 }
+
+export type FetchFormQuestionsApiRequestDto =
+  FetchFormQuestionsClientRequestDto;
 
 export interface FetchWeeklyCheckinFormClientRequestDto {
   voyageTeamRoles: {
@@ -24,13 +27,13 @@ export interface FetchWeeklyCheckinFormApiRequestDto
   extends FetchWeeklyCheckinFormClientRequestDto {
   fetchFormQuestions: ({
     formId,
-  }: FetchFormQuestionsRequestDto) => Promise<FetchFormQuestionsResponseDto>;
+  }: FetchFormQuestionsClientRequestDto) => Promise<FetchFormQuestionsResponseDto>;
 }
 
 export interface FetchSubmitVoyageProjectFormApiRequestDto {
   fetchFormQuestions: ({
     formId,
-  }: FetchFormQuestionsRequestDto) => Promise<FetchFormQuestionsResponseDto>;
+  }: FetchFormQuestionsClientRequestDto) => Promise<FetchFormQuestionsResponseDto>;
 }
 
 export interface SubmitWeeklyCheckinFormClientRequestDto {

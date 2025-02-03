@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import {
-  FetchFormQuestionsRequestDto,
+  FetchFormQuestionsClientRequestDto,
   FetchWeeklyCheckinFormClientRequestDto,
   SubmitVoyageProjectFormClientRequestDto,
   SubmitWeeklyCheckinFormClientRequestDto,
@@ -41,7 +41,7 @@ export class FormsClientAdapter implements FormsClientPort {
 
   private async fetchFormQuestions({
     formId,
-  }: FetchFormQuestionsRequestDto): Promise<FetchFormQuestionsResponseDto> {
+  }: FetchFormQuestionsClientRequestDto): Promise<FetchFormQuestionsResponseDto> {
     return await this.fetchFormQuestionsUsecase.execute({ formId });
   }
 
