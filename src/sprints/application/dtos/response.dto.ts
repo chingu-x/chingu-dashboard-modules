@@ -7,4 +7,3 @@ export type GetMeetingResponseDto = Meeting;
 export type GetSprintCheckinStatusResponseDto = boolean;
 export type IsCurrentSprintResponseDto = boolean;
 export type IsVoyageProjestSubmissionAllowedResponseDto = boolean;
-export type ConvertStringToDateResponseDto = Date;

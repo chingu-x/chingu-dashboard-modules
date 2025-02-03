@@ -1,6 +1,6 @@
 export { UserClientAdapter } from "./adapters/primary/userClientAdapter";
 export {
-  FetchCurrentUserClientRequesstDto,
+  FetchCurrentUserClientRequestDto,
   FetchUserRequestDto,
 } from "./application/dtos/request.dtos";
 export {

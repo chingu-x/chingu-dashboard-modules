@@ -7,7 +7,7 @@ import {
 } from "@/user/application/dtos/response.dto";
 import { FetchUserUsecase } from "@/user/application/usecases/fetchUserUsecase";
 import {
-  FetchCurrentUserClientRequesstDto,
+  FetchCurrentUserClientRequestDto,
   FetchUserRequestDto,
 } from "@/user/application/dtos/request.dtos";
 import { GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChinguMemberStatusUsecase";
@@ -24,7 +24,7 @@ export class UserClientAdapter implements UserClientPort {
 
   async fetchUser({
     currentDate,
-  }: FetchCurrentUserClientRequesstDto): Promise<FetchUserResponseDto> {
+  }: FetchCurrentUserClientRequestDto): Promise<FetchUserResponseDto> {
     return await this.fetchUserUsecase.execute({ currentDate });
   }
 

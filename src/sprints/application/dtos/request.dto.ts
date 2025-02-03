@@ -33,5 +33,3 @@ export interface IsCurrentSprintRequestDto {
 export interface IsVoyageProjestSubmissionAllowedRequestDto {
   sprintNumber: string;
 }
-
-export type ConvertStringToDateRequestDto = ConvertStringToDateProps;
