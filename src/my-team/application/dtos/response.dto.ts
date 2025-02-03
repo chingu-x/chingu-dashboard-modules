@@ -8,6 +8,6 @@ export interface EditHoursResponseDto {
   voyageTeamId: number;
   voyageRoleId: number;
   statusId: number;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string;
+  updatedAt: string;
 }
