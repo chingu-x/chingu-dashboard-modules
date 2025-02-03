@@ -24,8 +24,6 @@ export class GetMyTeamUsecase {
       teamId: numberTeamId,
     });
 
-    updateDirectoryWithCurrentTime(data);
-
     const teamMembers: CurrentVoyageTeamMember[] = data.voyageTeamMembers;
     const userDiscordId = user?.oAuthProfiles.find(
       (profile) => profile.provider.name === "discord",
