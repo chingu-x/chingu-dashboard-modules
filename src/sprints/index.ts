@@ -17,4 +17,4 @@ export {
   IsVoyageProjestSubmissionAllowedResponseDto,
 } from "./application/dtos/response.dto";
 export { VoyageSprint, Sprint } from "./application/types";
-export { ConvertStringToDateProps } from "./application/utils/convertStringToDate";
+export { ConvertStringToDateProps } from "../timezone/application/utils/convertStringToDate";

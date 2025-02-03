@@ -1,4 +1,4 @@
-import type { ConvertStringToDateProps } from "@/sprints/application/utils/convertStringToDate";
+import type { ConvertStringToDateProps } from "@/timezone/application/utils/convertStringToDate";
 import type { Sprint } from "@/sprints/application/types";
 import type { User } from "@/user/application/types";
 
