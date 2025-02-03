@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { MyTeamClientPort } from "@/my-team/ports/primary/myTeamClientPort";
 import {
-  EditHoursRequestDto,
+  EditHoursClientRequestDto,
   GetMyTeamClientRequestDto,
 } from "@/my-team/application/dtos/request.dto";
 import {
@@ -31,15 +31,18 @@ export class MyTeamClientAdapter implements MyTeamClientPort {
     user,
   }: GetMyTeamClientRequestDto): Promise<GetMyTeamResponseDto> {
     const data = await this.getMyTeamUsecase.execute({ teamId, user });
-    return this.updateDirectoryWithCurrentTimeUsecase.execute({
+
+    this.updateDirectoryWithCurrentTimeUsecase.execute({
       data,
-    }) as unknown as Promise<GetMyTeamResponseDto>;
+    });
+
+    return data;
   }
 
   async editHours({
     teamId,
     hrPerSprint,
-  }: EditHoursRequestDto): Promise<EditHoursResponseDto> {
+  }: EditHoursClientRequestDto): Promise<EditHoursResponseDto> {
     return await this.editHoursUsecase.execute({ teamId, hrPerSprint });
   }
 }

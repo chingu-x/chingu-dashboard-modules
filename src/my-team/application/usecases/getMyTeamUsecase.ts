@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
 import { MyTeamApiPort } from "@/my-team/ports/secondary/myTeamApiPort";
 import { moveElementToFirst } from "@/my-team/application/utils/moveElementToFirst";
-import { GetMyTeamClientRequestDto } from "@/my-team/application/dtos/request.dto";
+import { GetMyTeamUsecaseDto } from "@/my-team/application/dtos/usecase.dto";
 import { GetMyTeamResponseDto } from "@/my-team/application/dtos/response.dto";
 import { CurrentVoyageTeamMember } from "@/voyage-team/application/types";
 import { My_TEAM_TYPES } from "@/my-team/di/types";
@@ -16,7 +16,7 @@ export class GetMyTeamUsecase {
   async execute({
     teamId,
     user,
-  }: GetMyTeamClientRequestDto): Promise<GetMyTeamResponseDto> {
+  }: GetMyTeamUsecaseDto): Promise<GetMyTeamResponseDto> {
     const numberTeamId = Number(teamId);
 
     const data = await this.myTeamApi.getMyTeam({

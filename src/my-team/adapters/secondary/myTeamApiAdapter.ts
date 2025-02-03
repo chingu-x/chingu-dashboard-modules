@@ -3,7 +3,7 @@ import { TYPES } from "@/types";
 import { MyTeamApiPort } from "@/my-team/ports/secondary/myTeamApiPort";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
-  EditHoursRequestDto,
+  EditHoursApiRequestDto,
   GetMyTeamApiRequestDto,
 } from "@/my-team/application/dtos/request.dto";
 import {
@@ -30,7 +30,7 @@ export class MyTeamApiAdapter implements MyTeamApiPort {
   async editHours({
     teamId,
     hrPerSprint,
-  }: EditHoursRequestDto): Promise<EditHoursResponseDto> {
+  }: EditHoursApiRequestDto): Promise<EditHoursResponseDto> {
     return await this.apiClient.patch({
       url: MyTeamUrls.editHours(teamId.toString()),
       payload: { hrPerSprint },

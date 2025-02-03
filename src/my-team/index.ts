@@ -2,7 +2,7 @@ export { MyTeamClientAdapter } from "./adapters/primary/myTeamClientAdapter";
 export {
   GetMyTeamClientRequestDto,
   GetMyTeamApiRequestDto,
-  EditHoursRequestDto,
+  EditHoursClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   GetMyTeamResponseDto,

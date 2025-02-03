@@ -9,7 +9,9 @@ export interface GetMyTeamApiRequestDto {
   teamId: number;
 }
 
-export interface EditHoursRequestDto {
+export interface EditHoursClientRequestDto {
   teamId: number;
   hrPerSprint: number;
 }
+
+export type EditHoursApiRequestDto = EditHoursClientRequestDto;
