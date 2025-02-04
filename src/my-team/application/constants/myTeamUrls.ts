@@ -1,8 +1,16 @@
+interface GetMyTeamProps {
+  teamId: number;
+}
+
+interface EditHoursProps {
+  teamId: number;
+}
+
 const MyTeamUrls = {
-  getMyTeam(teamId: string) {
+  getMyTeam({ teamId }: GetMyTeamProps) {
     return `/api/v1/teams/${teamId}`;
   },
-  editHours(teamId: string) {
+  editHours({ teamId }: EditHoursProps) {
     return `/api/v1/teams/${teamId}/members`;
   },
 } as const;
