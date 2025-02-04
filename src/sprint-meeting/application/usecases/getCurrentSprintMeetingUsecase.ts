@@ -5,15 +5,11 @@ import { GetCurrentSprintMeetingResponseDto } from "@/sprint-meeting/application
 @injectable()
 export class GetCurrentSprintMeetingUsecase {
   execute({
-    sprints,
+    meeting,
     meetingId,
   }: GetCurrentSprintMeetingUsecaseDto):
     | GetCurrentSprintMeetingResponseDto
     | undefined {
-    return sprints.find(
-      (sprint) =>
-        sprint.teamMeetingsData &&
-        sprint.teamMeetingsData[0].id === Number(meetingId),
-    );
+    return meeting.find((meeting) => meeting.id === Number(meetingId));
   }
 }

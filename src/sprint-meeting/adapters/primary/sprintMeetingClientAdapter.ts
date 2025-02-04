@@ -51,13 +51,13 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
   }
 
   getCurrentSprintMeeting({
-    sprints,
+    meeting,
     meetingId,
   }: GetCurrentSprintMeetingClientRequestDto):
     | GetCurrentSprintMeetingResponseDto
     | undefined {
     return this.getCurrentSprintMeetingUsecase.execute({
-      sprints,
+      meeting,
       meetingId,
     });
   }
