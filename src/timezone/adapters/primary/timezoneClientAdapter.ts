@@ -12,6 +12,7 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
     private readonly getMeetingLongDateTimeFormatUsecase: GetMeetingLongDateTimeFormatUsecase,
   ) {}
 
+  // returns date in this format as a date: October 10, 2024 12:00 AM in the user's timezone
   getMeetingLongDateTimeFormat({
     meetingDateTime,
     timezone,
