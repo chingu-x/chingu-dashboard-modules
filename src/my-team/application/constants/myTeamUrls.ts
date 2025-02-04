@@ -1,9 +1,9 @@
 interface GetMyTeamUrlProps {
-  teamId: number;
+  teamId: string;
 }
 
 interface EditHoursUrlProps {
-  teamId: number;
+  teamId: string;
 }
 
 const MyTeamUrls = {

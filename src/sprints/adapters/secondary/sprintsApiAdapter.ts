@@ -17,7 +17,7 @@ export class SprintsApiAdapter implements SprintsApiPort {
     teamId,
   }: FetchSprintsApiRequestDto): Promise<FetchSprintsResponseDto> {
     return await this.apiClient.get({
-      url: SprintsUrls.fetchSprints(teamId.toString()),
+      url: SprintsUrls.fetchSprints({ teamId }),
     });
   }
 }

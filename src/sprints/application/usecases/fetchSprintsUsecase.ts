@@ -14,8 +14,6 @@ export class FetchSprintsUsecase {
   async execute({
     teamId,
   }: FetchSprintsUsecaseDto): Promise<FetchSprintsResponseDto> {
-    const numberTeamId = Number(teamId);
-
-    return await this.sprintsApi.fetchSprints({ teamId: numberTeamId });
+    return await this.sprintsApi.fetchSprints({ teamId });
   }
 }

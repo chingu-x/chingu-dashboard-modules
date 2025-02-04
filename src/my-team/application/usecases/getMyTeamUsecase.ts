@@ -17,10 +17,8 @@ export class GetMyTeamUsecase {
     teamId,
     user,
   }: GetMyTeamUsecaseDto): Promise<GetMyTeamResponseDto> {
-    const numberTeamId = Number(teamId);
-
     const data = await this.myTeamApi.getMyTeam({
-      teamId: numberTeamId,
+      teamId,
     });
 
     const teamMembers: CurrentVoyageTeamMember[] = data.voyageTeamMembers;

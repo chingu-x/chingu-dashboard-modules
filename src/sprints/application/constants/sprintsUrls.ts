@@ -1,5 +1,9 @@
+interface FetchSprintsUrlProps {
+  teamId: string;
+}
+
 const SprintsUrls = {
-  fetchSprints(teamId: string) {
+  fetchSprints({ teamId }: FetchSprintsUrlProps) {
     return `api/v1/voyages/sprints/teams/${teamId}`;
   },
 } as const;

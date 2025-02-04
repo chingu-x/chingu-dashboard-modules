@@ -6,7 +6,7 @@ export interface FetchSprintsClientRequestDto {
 }
 
 export interface FetchSprintsApiRequestDto {
-  teamId: number;
+  teamId: string;
 }
 
 export interface GetCurrentSprintClientRequestDto {
