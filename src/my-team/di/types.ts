@@ -8,11 +8,6 @@ export const My_TEAM_TYPES = {
   // ports
   MyTeamApiPort: Symbol.for("MyTeamApiPort") as InjectionToken<MyTeamApiPort>,
 
-  // adapters
-  MyTeamClientAdapter: Symbol.for(
-    "MyTeamClientAdapter",
-  ) as InjectionToken<MyTeamClientAdapter>,
-
   // usecases
   GetMyTeamUsecase: Symbol.for(
     "GetMyTeamUsecase",
@@ -20,4 +15,9 @@ export const My_TEAM_TYPES = {
   EditHoursUsecase: Symbol.for(
     "EditHoursUsecase",
   ) as InjectionToken<EditHoursUsecase>,
+
+  // adapters
+  MyTeamClientAdapter: Symbol.for(
+    "MyTeamClientAdapter",
+  ) as InjectionToken<MyTeamClientAdapter>,
 };

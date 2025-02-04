@@ -8,11 +8,6 @@ export const USER_TYPES = {
   // ports
   UserApiPort: Symbol.for("UserApiPort") as InjectionToken<UserApiPort>,
 
-  // adapters
-  UserClientAdapter: Symbol.for(
-    "UserClientAdapter",
-  ) as InjectionToken<UserClientAdapter>,
-
   // usecases
   FetchUserUsecase: Symbol.for(
     "FetchUserUsecase",
@@ -20,4 +15,9 @@ export const USER_TYPES = {
   GetChinguMemberStatusUsecase: Symbol.for(
     "GetChinguMemberStatusUsecase",
   ) as InjectionToken<GetChinguMemberStatusUsecase>,
+
+  // adapters
+  UserClientAdapter: Symbol.for(
+    "UserClientAdapter",
+  ) as InjectionToken<UserClientAdapter>,
 };

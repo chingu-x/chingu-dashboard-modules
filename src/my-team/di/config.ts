@@ -11,16 +11,16 @@ export const registerMyTeamDependencies = () => {
     useClass: MyTeamApiAdapter,
   });
 
-  // adapters
-  container.register(My_TEAM_TYPES.MyTeamClientAdapter, {
-    useClass: MyTeamClientAdapter,
-  });
-
   // usecases
   container.register(My_TEAM_TYPES.GetMyTeamUsecase, {
     useClass: GetMyTeamUsecase,
   });
   container.register(My_TEAM_TYPES.EditHoursUsecase, {
     useClass: EditHoursUsecase,
+  });
+
+  // adapters
+  container.register(My_TEAM_TYPES.MyTeamClientAdapter, {
+    useClass: MyTeamClientAdapter,
   });
 };

@@ -1,5 +1,4 @@
 import type { InjectionToken } from "tsyringe";
-import type { VoyageTeamClientPort } from "@/voyage-team/ports/primary/voyageTeamClientPort";
 import type { VoyageTeamClientAdapter } from "@/voyage-team/adapters/primary/voyageTeamClientAdapter";
 import type { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
 import type { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";
@@ -11,14 +10,9 @@ import type { GetVoyageMemberRolesUsecase } from "@/voyage-team/application/usec
 import type { GetCurrentUserVoyageRoleUsecase } from "@/voyage-team/application/usecases/getCurrentUserVoyageRoleUsecase";
 
 export const VOYAGE_TEAM_TYPES = {
-  VoyageTeamClientPort: Symbol.for(
-    "VoyageTeamClientPort",
-  ) as InjectionToken<VoyageTeamClientPort>,
+  // ports
 
-  VoyageTeamClientAdapter: Symbol.for(
-    "VoyageTeamClientAdapter",
-  ) as InjectionToken<VoyageTeamClientAdapter>,
-
+  // usecases
   GetCurrentVoyageTeamUsecase: Symbol.for(
     "GetCurrentVoyageTeamUsecase",
   ) as InjectionToken<GetCurrentVoyageTeamUsecase>,
@@ -50,4 +44,9 @@ export const VOYAGE_TEAM_TYPES = {
   GetCurrentUserVoyageRoleUsecase: Symbol.for(
     "GetCurrentUserVoyageRoleUsecase",
   ) as InjectionToken<GetCurrentUserVoyageRoleUsecase>,
+
+  // adapters
+  VoyageTeamClientAdapter: Symbol.for(
+    "VoyageTeamClientAdapter",
+  ) as InjectionToken<VoyageTeamClientAdapter>,
 };

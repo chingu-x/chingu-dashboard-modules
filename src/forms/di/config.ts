@@ -12,11 +12,6 @@ export const registerFormsDependencies = () => {
   // ports
   container.register(FORMS_TYPES.FormsApiPort, { useClass: FormsApiAdapter });
 
-  // adapters
-  container.register(FORMS_TYPES.FormsClientAdapter, {
-    useClass: FormsClientAdapter,
-  });
-
   // usecases
   container.register(FORMS_TYPES.FetchFormQuestionsUsecase, {
     useClass: FetchFormQuestionsUsecase,
@@ -36,5 +31,10 @@ export const registerFormsDependencies = () => {
 
   container.register(FORMS_TYPES.SubmitVoyageProjectFormUsecase, {
     useClass: SubmitVoyageProjectFormUsecase,
+  });
+
+  // adapters
+  container.register(FORMS_TYPES.FormsClientAdapter, {
+    useClass: FormsClientAdapter,
   });
 };

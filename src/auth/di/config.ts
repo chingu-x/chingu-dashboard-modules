@@ -11,11 +11,6 @@ export const registerAuthDependencies = () => {
   // ports
   container.register(AUTH_TYPES.AuthApiPort, { useClass: AuthApiAdapter });
 
-  // adapters
-  container.register(AUTH_TYPES.AuthClientAdapter, {
-    useClass: AuthClientAdapter,
-  });
-
   // usecases
   container.register(AUTH_TYPES.LoginUsecase, { useClass: LoginUsecase });
   container.register(AUTH_TYPES.LogoutUsecase, { useClass: LogoutUsecase });
@@ -24,5 +19,10 @@ export const registerAuthDependencies = () => {
   });
   container.register(AUTH_TYPES.ResetPasswordUsecase, {
     useClass: ResetPasswordUsecase,
+  });
+
+  // adapters
+  container.register(AUTH_TYPES.AuthClientAdapter, {
+    useClass: AuthClientAdapter,
   });
 };

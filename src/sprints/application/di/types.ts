@@ -14,11 +14,6 @@ export const SPRINTS_TYPES = {
     "SprintsApiPort",
   ) as InjectionToken<SprintsApiPort>,
 
-  // adapters
-  SprintsClientAdapter: Symbol.for(
-    "SprintsClientAdapter",
-  ) as InjectionToken<SprintsClientAdapter>,
-
   // usecases
   FetchSprintsUsecase: Symbol.for(
     "FetchSprintsUsecase",
@@ -43,4 +38,9 @@ export const SPRINTS_TYPES = {
   IsVoyageProjestSubmissionAllowedUsecase: Symbol.for(
     "IsVoyageProjestSubmissionAllowedUsecase",
   ) as InjectionToken<IsVoyageProjestSubmissionAllowedUsecase>,
+
+  // adapters
+  SprintsClientAdapter: Symbol.for(
+    "SprintsClientAdapter",
+  ) as InjectionToken<SprintsClientAdapter>,
 };

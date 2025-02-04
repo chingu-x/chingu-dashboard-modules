@@ -11,11 +11,6 @@ export const FORMS_TYPES = {
   // ports
   FormsApiPort: Symbol.for("FormsApiPort") as InjectionToken<FormsApiPort>,
 
-  // adapters
-  FormsClientAdapter: Symbol.for(
-    "FormsClientAdapter",
-  ) as InjectionToken<FormsClientAdapter>,
-
   // usecases
   FetchFormQuestionsUsecase: Symbol.for(
     "FetchFormQuestionsUsecase",
@@ -36,4 +31,9 @@ export const FORMS_TYPES = {
   SubmitVoyageProjectFormUsecase: Symbol.for(
     "SubmitVoyageProjectFormUsecase",
   ) as InjectionToken<SubmitVoyageProjectFormUsecase>,
+
+  // adapters
+  FormsClientAdapter: Symbol.for(
+    "FormsClientAdapter",
+  ) as InjectionToken<FormsClientAdapter>,
 };

@@ -15,11 +15,6 @@ export const registerSprintsDependencies = () => {
     useClass: SprintsApiAdapter,
   });
 
-  // adapters
-  container.register(SPRINTS_TYPES.SprintsClientAdapter, {
-    useClass: SprintsClientAdapter,
-  });
-
   // usecases
   container.register(SPRINTS_TYPES.FetchSprintsUsecase, {
     useClass: FetchSprintsUsecase,
@@ -43,5 +38,10 @@ export const registerSprintsDependencies = () => {
 
   container.register(SPRINTS_TYPES.IsVoyageProjestSubmissionAllowedUsecase, {
     useClass: IsVoyageProjestSubmissionAllowedUsecase,
+  });
+
+  // adapters
+  container.register(SPRINTS_TYPES.SprintsClientAdapter, {
+    useClass: SprintsClientAdapter,
   });
 };

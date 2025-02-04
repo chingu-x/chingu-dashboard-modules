@@ -12,11 +12,6 @@ export const SPRINT_MEETING_TYPES = {
     "SprintMeetingApiPort",
   ) as InjectionToken<SprintMeetingApiPort>,
 
-  // adapters
-  SprintMeetingClientAdapter: Symbol.for(
-    "SprintMeetingClientAdapter",
-  ) as InjectionToken<SprintMeetingClientAdapter>,
-
   // usecases
   FetchMeetingUsecase: Symbol.for(
     "FetchMeetingUsecase",
@@ -33,4 +28,9 @@ export const SPRINT_MEETING_TYPES = {
   AddMeetingUsecase: Symbol.for(
     "AddMeetingUsecase",
   ) as InjectionToken<AddMeetingUsecase>,
+
+  // adapters
+  SprintMeetingClientAdapter: Symbol.for(
+    "SprintMeetingClientAdapter",
+  ) as InjectionToken<SprintMeetingClientAdapter>,
 };

@@ -13,11 +13,6 @@ import { GetCurrentUserVoyageRoleUsecase } from "@/voyage-team/application/useca
 export const registerVoyageTeamDependencies = () => {
   // ports
 
-  // adapters
-  container.register(VOYAGE_TEAM_TYPES.VoyageTeamClientAdapter, {
-    useClass: VoyageTeamClientAdapter,
-  });
-
   // usecases
   container.register(VOYAGE_TEAM_TYPES.GetCurrentVoyageTeamUsecase, {
     useClass: GetCurrentVoyageTeamUsecase,
@@ -52,5 +47,10 @@ export const registerVoyageTeamDependencies = () => {
 
   container.register(VOYAGE_TEAM_TYPES.GetCurrentUserVoyageRoleUsecase, {
     useClass: GetCurrentUserVoyageRoleUsecase,
+  });
+
+  // adapters
+  container.register(VOYAGE_TEAM_TYPES.VoyageTeamClientAdapter, {
+    useClass: VoyageTeamClientAdapter,
   });
 };

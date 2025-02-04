@@ -9,16 +9,16 @@ export const registerUserDependencies = () => {
   // ports
   container.register(USER_TYPES.UserApiPort, { useClass: UserApiAdapter });
 
-  // adapters
-  container.register(USER_TYPES.UserClientAdapter, {
-    useClass: UserClientAdapter,
-  });
-
   // usecases
   container.register(USER_TYPES.GetChinguMemberStatusUsecase, {
     useClass: GetChinguMemberStatusUsecase,
   });
   container.register(USER_TYPES.FetchUserUsecase, {
     useClass: FetchUserUsecase,
+  });
+
+  // adapters
+  container.register(USER_TYPES.UserClientAdapter, {
+    useClass: UserClientAdapter,
   });
 };

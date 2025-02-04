@@ -10,11 +10,6 @@ export const AUTH_TYPES = {
   // ports
   AuthApiPort: Symbol.for("AuthApiPort") as InjectionToken<AuthApiPort>,
 
-  // adapters
-  AuthClientAdapter: Symbol.for(
-    "AuthClientAdapter",
-  ) as InjectionToken<AuthClientAdapter>,
-
   // usecases
   LoginUsecase: Symbol.for("LoginUsecase") as InjectionToken<LoginUsecase>,
   LogoutUsecase: Symbol.for("LogoutUsecase") as InjectionToken<LogoutUsecase>,
@@ -24,4 +19,9 @@ export const AUTH_TYPES = {
   ResetPasswordUsecase: Symbol.for(
     "ResetPasswordUsecase",
   ) as InjectionToken<ResetPasswordUsecase>,
+
+  // adapters
+  AuthClientAdapter: Symbol.for(
+    "AuthClientAdapter",
+  ) as InjectionToken<AuthClientAdapter>,
 };

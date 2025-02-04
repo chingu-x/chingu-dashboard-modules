@@ -13,11 +13,6 @@ export const registerSprintMeetingDependencies = () => {
     useClass: SprintMeetingApiAdapter,
   });
 
-  // adapters
-  container.register(SPRINT_MEETING_TYPES.SprintMeetingClientAdapter, {
-    useClass: SprintMeetingClientAdapter,
-  });
-
   // usecases
   container.register(SPRINT_MEETING_TYPES.FetchMeetingUsecase, {
     useClass: FetchMeetingUsecase,
@@ -33,5 +28,10 @@ export const registerSprintMeetingDependencies = () => {
 
   container.register(SPRINT_MEETING_TYPES.AddMeetingUsecase, {
     useClass: AddMeetingUsecase,
+  });
+
+  // adapters
+  container.register(SPRINT_MEETING_TYPES.SprintMeetingClientAdapter, {
+    useClass: SprintMeetingClientAdapter,
   });
 };
