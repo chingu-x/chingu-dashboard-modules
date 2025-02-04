@@ -25,7 +25,7 @@ export class FormsApiAdapter implements FormsApiPort {
     formId,
   }: FetchFormQuestionsApiRequestDto): Promise<FetchFormQuestionsResponseDto> {
     return await this.apiClient.get({
-      url: FormsUrls.fetchFormQuestions(formId),
+      url: FormsUrls.fetchFormQuestions({ formId }),
     });
   }
 
