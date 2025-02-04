@@ -1,4 +1,4 @@
-import { type FetchUserRequestDto } from "@/user/application/dtos/request.dtos";
+import { type FetchUserRequestDto } from "@/user/application/dtos/request.dto";
 import type {
   GetVoyageTeamIdResponseDto,
   GetCurrentVoyageTeamResponseDto,

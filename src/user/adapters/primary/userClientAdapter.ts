@@ -8,8 +8,8 @@ import {
 import { FetchUserUsecase } from "@/user/application/usecases/fetchUserUsecase";
 import {
   FetchCurrentUserClientRequestDto,
-  FetchUserRequestDto,
-} from "@/user/application/dtos/request.dtos";
+  GetChinguMemberStatusClientRequestDto,
+} from "@/user/application/dtos/request.dto";
 import { GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChinguMemberStatusUsecase";
 
 @injectable()
@@ -29,9 +29,9 @@ export class UserClientAdapter implements UserClientPort {
   }
 
   // returns true / false whether user is in a current voyage
-  getChinguMemberStatus(
-    user: FetchUserRequestDto,
-  ): GetChinguMemberStatusResponseDto {
-    return this.getChinguMemberStatusUsecase.execute(user);
+  getChinguMemberStatus({
+    user,
+  }: GetChinguMemberStatusClientRequestDto): GetChinguMemberStatusResponseDto {
+    return this.getChinguMemberStatusUsecase.execute({ user });
   }
 }

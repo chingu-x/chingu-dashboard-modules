@@ -2,11 +2,13 @@
 
 import { injectable } from "tsyringe";
 import { GetChinguMemberStatusResponseDto } from "@/user/application/dtos/response.dto";
-import { FetchUserRequestDto } from "@/user/application/dtos/request.dtos";
+import { GetChinguMemberStatusUsecaseDto } from "@/user/application/dtos/usecase.dto";
 
 @injectable()
 export class GetChinguMemberStatusUsecase {
-  execute(user: FetchUserRequestDto): GetChinguMemberStatusResponseDto {
+  execute({
+    user,
+  }: GetChinguMemberStatusUsecaseDto): GetChinguMemberStatusResponseDto {
     const data = user.voyageTeamMembers;
     if (data.length === 0) {
       return false;

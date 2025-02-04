@@ -1,7 +1,7 @@
 // gets the current voyage team
 
 import { injectable } from "tsyringe";
-import { FetchUserRequestDto } from "@/user/application/dtos/request.dtos";
+import { FetchUserRequestDto } from "@/user/application/dtos/request.dto";
 import { GetCurrentVoyageTeamResponseDto } from "@/voyage-team/application/dtos/response.dto";
 
 @injectable()

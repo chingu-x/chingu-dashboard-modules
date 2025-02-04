@@ -4,14 +4,14 @@ import type {
 } from "@/user/application/dtos/response.dto";
 import type {
   FetchCurrentUserClientRequestDto,
-  FetchUserRequestDto,
-} from "@/user/application/dtos/request.dtos";
+  GetChinguMemberStatusClientRequestDto,
+} from "@/user/application/dtos/request.dto";
 
 export interface UserClientPort {
   fetchUser: (
     props: FetchCurrentUserClientRequestDto,
   ) => Promise<FetchUserResponseDto>;
   getChinguMemberStatus: (
-    props: FetchUserRequestDto,
+    props: GetChinguMemberStatusClientRequestDto,
   ) => GetChinguMemberStatusResponseDto;
 }

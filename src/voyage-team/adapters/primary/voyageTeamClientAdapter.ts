@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { VoyageTeamClientPort } from "@/voyage-team/ports/primary/voyageTeamClientPort";
-import { FetchUserRequestDto } from "@/user/application/dtos/request.dtos";
+import { FetchUserRequestDto } from "@/user/application/dtos/request.dto";
 import {
   GetVoyageTeamIdResponseDto,
   GetCurrentVoyageTeamResponseDto,
