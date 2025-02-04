@@ -37,6 +37,6 @@ export interface Agenda {
 export interface MeetingFormData {
   title: string;
   description: string;
-  dateTime: string;
+  dateTime: Date;
   meetingLink: string;
 }
