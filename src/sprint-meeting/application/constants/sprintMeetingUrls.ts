@@ -1,8 +1,17 @@
+interface FetchMeetingUrlProps {
+  meetingId: number;
+}
+
+interface AddMeetingUrlProps {
+  sprintNumber: string;
+  teamId: string;
+}
+
 const SprintMeetingUrls = {
-  fetchMeeting(meetingId: string) {
+  fetchMeeting({ meetingId }: FetchMeetingUrlProps) {
     return `/api/v1/voyages/sprints/meetings/${meetingId}`;
   },
-  addMeeting(sprintNumber: string, teamId: string) {
+  addMeeting({ sprintNumber, teamId }: AddMeetingUrlProps) {
     return `/api/v1/voyages/sprints/${sprintNumber}/teams/${teamId}/meetings`;
   },
 } as const;

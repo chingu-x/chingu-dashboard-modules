@@ -23,7 +23,7 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
     meetingId,
   }: FetchMeetingApiRequestDto): Promise<FetchMeetingResponseDto> {
     return await this.apiClient.get({
-      url: SprintMeetingUrls.fetchMeeting(meetingId.toString()),
+      url: SprintMeetingUrls.fetchMeeting({ meetingId }),
     });
   }
 
@@ -36,7 +36,7 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
     meetingLink,
   }: AddMeetingApiRequestDto): Promise<AddMeetingResponseDto> {
     return await this.apiClient.post({
-      url: SprintMeetingUrls.addMeeting(sprintNumber, teamId),
+      url: SprintMeetingUrls.addMeeting({ sprintNumber, teamId }),
       payload: { title, description, dateTime, meetingLink },
     });
   }

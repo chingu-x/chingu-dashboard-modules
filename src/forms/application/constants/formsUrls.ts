@@ -1,9 +1,9 @@
-interface FetchFormQuestionsProps {
+interface FetchFormQuestionsUrlProps {
   formId: number;
 }
 
 const FormsUrls = {
-  fetchFormQuestions({ formId }: FetchFormQuestionsProps) {
+  fetchFormQuestions({ formId }: FetchFormQuestionsUrlProps) {
     return `/api/v1/forms/${formId}`;
   },
   submitWeeklyCheckinForm() {
