@@ -8,7 +8,7 @@ import {
 } from "@/sprint-meeting/application/dtos/response.dto";
 import {
   AddMeetingApiRequestDto,
-  FetchMeetingRequestDto,
+  FetchMeetingApiRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import SprintMeetingUrls from "@/sprint-meeting/application/constants/sprintMeetingUrls";
 
@@ -21,7 +21,7 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
 
   async fetchMeeting({
     meetingId,
-  }: FetchMeetingRequestDto): Promise<FetchMeetingResponseDto> {
+  }: FetchMeetingApiRequestDto): Promise<FetchMeetingResponseDto> {
     return await this.apiClient.get({
       url: SprintMeetingUrls.fetchMeeting(meetingId.toString()),
     });

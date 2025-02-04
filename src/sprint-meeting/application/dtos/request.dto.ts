@@ -1,16 +1,16 @@
 import type { Sprint } from "@/sprints/application/types";
 import type { MeetingFormData } from "@/sprint-meeting/application/types";
 
-export interface FetchMeetingRequestDto {
+export interface FetchMeetingClientRequestDto {
   meetingId: number;
 }
 
-export interface GetCurrentSprintMeetingIdRequesDto {
+export interface GetCurrentSprintMeetingIdClientRequesDto {
   sprints: Sprint[];
   sprintNumber: number;
 }
 
-export interface GetCurrentSprintMeetingRequestDto {
+export interface GetCurrentSprintMeetingClientRequestDto {
   sprints: Sprint[];
   meetingId: string;
 }
@@ -21,6 +21,8 @@ export interface AddMeetingClientRequestDto {
   sprintNumber: string;
   timezone: string;
 }
+
+export type FetchMeetingApiRequestDto = FetchMeetingClientRequestDto;
 
 export interface AddMeetingApiRequestDto {
   teamId: string;

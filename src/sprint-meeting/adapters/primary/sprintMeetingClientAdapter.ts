@@ -3,9 +3,9 @@ import { TYPES } from "@/types";
 import { SprintMeetingClientPort } from "@/sprint-meeting/ports/primary/sprintMeetingClientPort";
 import {
   AddMeetingClientRequestDto,
-  FetchMeetingRequestDto,
-  GetCurrentSprintMeetingIdRequesDto,
-  GetCurrentSprintMeetingRequestDto,
+  FetchMeetingClientRequestDto,
+  GetCurrentSprintMeetingIdClientRequesDto,
+  GetCurrentSprintMeetingClientRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import {
   AddMeetingResponseDto,
@@ -36,14 +36,14 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
   async fetchMeeting({
     meetingId,
-  }: FetchMeetingRequestDto): Promise<FetchMeetingResponseDto> {
+  }: FetchMeetingClientRequestDto): Promise<FetchMeetingResponseDto> {
     return await this.fetchMeetingUsecase.execute({ meetingId });
   }
 
   getCurrentSprintMeetingId({
     sprints,
     sprintNumber,
-  }: GetCurrentSprintMeetingIdRequesDto): GetCurrentSprintMeetingIdResponseDto {
+  }: GetCurrentSprintMeetingIdClientRequesDto): GetCurrentSprintMeetingIdResponseDto {
     return this.getCurrentSprintMeetingIdUsecase.execute({
       sprints,
       sprintNumber,
@@ -53,7 +53,7 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
   getCurrentSprintMeeting({
     sprints,
     meetingId,
-  }: GetCurrentSprintMeetingRequestDto):
+  }: GetCurrentSprintMeetingClientRequestDto):
     | GetCurrentSprintMeetingResponseDto
     | undefined {
     return this.getCurrentSprintMeetingUsecase.execute({

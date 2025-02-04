@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { format } from "date-fns-tz";
 import { SPRINT_MEETING_TYPES } from "@/sprint-meeting/di/types";
 import { SprintMeetingApiPort } from "@/sprint-meeting/ports/secondary/sprintMeetingApiPort";
-import { AddMeetingClientRequestDto } from "@/sprint-meeting/application/dtos/request.dto";
+import { AddMeetingUsecaseDto } from "@/sprint-meeting/application/dtos/usecase.dto";
 import { AddMeetingResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
 import { MeetingFormData } from "@/sprint-meeting/application/types";
 
@@ -18,7 +18,7 @@ export class AddMeetingUsecase {
     teamId,
     sprintNumber,
     timezone,
-  }: AddMeetingClientRequestDto): Promise<AddMeetingResponseDto> {
+  }: AddMeetingUsecaseDto): Promise<AddMeetingResponseDto> {
     // TODO: move to timezone module
     const dateTime = format(data.dateTime, "yyyy-MM-dd HH:mm:ssXXX", {
       timeZone: timezone,

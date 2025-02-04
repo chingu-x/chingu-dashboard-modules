@@ -1,9 +1,10 @@
 export { SprintMeetingClientAdapter } from "./adapters/primary/sprintMeetingClientAdapter";
 export {
-  FetchMeetingRequestDto,
-  GetCurrentSprintMeetingIdRequesDto,
-  GetCurrentSprintMeetingRequestDto,
+  FetchMeetingClientRequestDto,
+  GetCurrentSprintMeetingIdClientRequesDto,
+  GetCurrentSprintMeetingClientRequestDto,
   AddMeetingClientRequestDto,
+  FetchMeetingApiRequestDto,
 } from "./application/dtos/request.dto";
 export {
   FetchMeetingResponseDto,

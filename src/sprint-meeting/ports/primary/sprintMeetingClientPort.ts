@@ -1,8 +1,8 @@
 import type {
   AddMeetingClientRequestDto,
-  FetchMeetingRequestDto,
-  GetCurrentSprintMeetingIdRequesDto,
-  GetCurrentSprintMeetingRequestDto,
+  FetchMeetingClientRequestDto,
+  GetCurrentSprintMeetingIdClientRequesDto,
+  GetCurrentSprintMeetingClientRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
   AddMeetingResponseDto,
@@ -13,15 +13,15 @@ import type {
 
 export interface SprintMeetingClientPort {
   fetchMeeting: (
-    props: FetchMeetingRequestDto,
+    props: FetchMeetingClientRequestDto,
   ) => Promise<FetchMeetingResponseDto>;
 
   getCurrentSprintMeetingId: (
-    props: GetCurrentSprintMeetingIdRequesDto,
+    props: GetCurrentSprintMeetingIdClientRequesDto,
   ) => GetCurrentSprintMeetingIdResponseDto;
 
   getCurrentSprintMeeting: (
-    props: GetCurrentSprintMeetingRequestDto,
+    props: GetCurrentSprintMeetingClientRequestDto,
   ) => GetCurrentSprintMeetingResponseDto | undefined;
 
   addMeeting: (
