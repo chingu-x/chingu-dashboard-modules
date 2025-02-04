@@ -2,11 +2,11 @@ export { SprintsClientAdapter } from "./adapters/primary/sprintsClientAdapter";
 export {
   FetchSprintsClientRequestDto,
   FetchSprintsApiRequestDto,
-  GetCurrentSprintRequestDto,
-  GetMeetingRequestDto,
-  GetSprintCheckinStatusRequestDto,
-  IsCurrentSprintRequestDto,
-  IsVoyageProjestSubmissionAllowedRequestDto,
+  GetCurrentSprintClientRequestDto,
+  GetMeetingClientRequestDto,
+  GetSprintCheckinStatusClientRequestDto,
+  IsCurrentSprintClientRequestDto,
+  IsVoyageProjestSubmissionAllowedClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   FetchSprintsResponseDto,

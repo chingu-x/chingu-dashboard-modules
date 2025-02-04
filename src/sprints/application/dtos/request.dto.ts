@@ -9,26 +9,26 @@ export interface FetchSprintsApiRequestDto {
   teamId: number;
 }
 
-export interface GetCurrentSprintRequestDto {
+export interface GetCurrentSprintClientRequestDto {
   sprints: Sprint[];
   currentDate: Date;
 }
 
-export interface GetMeetingRequestDto {
+export interface GetMeetingClientRequestDto {
   sprints: Sprint[];
   sprintNumber: number;
 }
 
-export interface GetSprintCheckinStatusRequestDto {
+export interface GetSprintCheckinStatusClientRequestDto {
   user: User;
   sprintId: number;
 }
 
-export interface IsCurrentSprintRequestDto {
+export interface IsCurrentSprintClientRequestDto {
   sprintNumber: string;
   currentSprintNumber: number;
 }
 
-export interface IsVoyageProjestSubmissionAllowedRequestDto {
+export interface IsVoyageProjestSubmissionAllowedClientRequestDto {
   sprintNumber: string;
 }

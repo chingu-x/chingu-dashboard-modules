@@ -1,5 +1,5 @@
 import { injectable } from "tsyringe";
-import { IsCurrentSprintRequestDto } from "@/sprints/application/dtos/request.dto";
+import { IsCurrentSprintUsecaseDto } from "@/sprints/application/dtos/usecase.dto";
 import { IsCurrentSprintResponseDto } from "@/sprints/application/dtos/response.dto";
 
 @injectable()
@@ -7,7 +7,7 @@ export class IsCurrentSprintUsecase {
   execute({
     sprintNumber,
     currentSprintNumber,
-  }: IsCurrentSprintRequestDto): IsCurrentSprintResponseDto {
+  }: IsCurrentSprintUsecaseDto): IsCurrentSprintResponseDto {
     return sprintNumber === currentSprintNumber.toString();
   }
 }

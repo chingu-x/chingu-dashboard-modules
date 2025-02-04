@@ -5,11 +5,11 @@ import { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprints
 import {
   // ConvertStringToDateRequestDto,
   FetchSprintsClientRequestDto,
-  GetCurrentSprintRequestDto,
-  GetMeetingRequestDto,
-  GetSprintCheckinStatusRequestDto,
-  IsCurrentSprintRequestDto,
-  IsVoyageProjestSubmissionAllowedRequestDto,
+  GetCurrentSprintClientRequestDto,
+  GetMeetingClientRequestDto,
+  GetSprintCheckinStatusClientRequestDto,
+  IsCurrentSprintClientRequestDto,
+  IsVoyageProjestSubmissionAllowedClientRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import {
   // ConvertStringToDateResponseDto,
@@ -58,28 +58,30 @@ export class SprintsClientAdapter implements SprintsClientPort {
   getCurrentSprint({
     currentDate,
     sprints,
-  }: GetCurrentSprintRequestDto): GetCurrentSprintResponseDto | undefined {
+  }: GetCurrentSprintClientRequestDto):
+    | GetCurrentSprintResponseDto
+    | undefined {
     return this.getCurrentSprintUsecase.execute({ sprints, currentDate });
   }
 
   getMeeting({
     sprints,
     sprintNumber,
-  }: GetMeetingRequestDto): GetMeetingResponseDto | null {
+  }: GetMeetingClientRequestDto): GetMeetingResponseDto | null {
     return this.getMeetingUsecase.execute({ sprints, sprintNumber });
   }
 
   getSprintCheckinStatus({
     user,
     sprintId,
-  }: GetSprintCheckinStatusRequestDto): GetSprintCheckinStatusResponseDto {
+  }: GetSprintCheckinStatusClientRequestDto): GetSprintCheckinStatusResponseDto {
     return this.getSprintCheckinStatusUsecase.execute({ user, sprintId });
   }
 
   isCurrentSprint({
     sprintNumber,
     currentSprintNumber,
-  }: IsCurrentSprintRequestDto): IsCurrentSprintResponseDto {
+  }: IsCurrentSprintClientRequestDto): IsCurrentSprintResponseDto {
     return this.isCurrentSprintUsecase.execute({
       sprintNumber,
       currentSprintNumber,
@@ -88,7 +90,7 @@ export class SprintsClientAdapter implements SprintsClientPort {
 
   isVoyageProjestSubmissionAllowed({
     sprintNumber,
-  }: IsVoyageProjestSubmissionAllowedRequestDto): IsVoyageProjestSubmissionAllowedResponseDto {
+  }: IsVoyageProjestSubmissionAllowedClientRequestDto): IsVoyageProjestSubmissionAllowedResponseDto {
     return this.isVoyageProjestSubmissionAllowedUsecase.execute({
       sprintNumber,
     });
