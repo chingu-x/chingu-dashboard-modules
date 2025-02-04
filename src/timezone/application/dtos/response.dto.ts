@@ -1,1 +1,3 @@
-export type UpdateDirectoryWithCurrentTimeUsecaseResponseDto = void;
+export type UpdateDirectoryWithCurrentTimeResponseDto = void;
+
+export type GetMeetingLongDateTimeFormatResponseDto = Date;
