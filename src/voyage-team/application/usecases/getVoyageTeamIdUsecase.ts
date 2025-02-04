@@ -2,13 +2,13 @@
 
 import { injectable } from "tsyringe";
 import { GetVoyageTeamIdResponseDto } from "@/voyage-team/application/dtos/response.dto";
-import { GetVoyageTeamIdRequestDto } from "@/voyage-team/application/dtos/request.dto";
+import { GetVoyageTeamIdUsecaseDto } from "@/voyage-team/application/dtos/usecase.dto";
 
 @injectable()
 export class GetVoyageTeamIdUsecase {
-  execute(
-    props: GetVoyageTeamIdRequestDto | undefined,
-  ): GetVoyageTeamIdResponseDto | undefined {
-    return props?.voyageTeamId.toString();
+  execute({
+    userVoyageTeam,
+  }: GetVoyageTeamIdUsecaseDto): GetVoyageTeamIdResponseDto | undefined {
+    return userVoyageTeam?.voyageTeamId.toString();
   }
 }

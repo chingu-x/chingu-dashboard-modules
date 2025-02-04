@@ -1,14 +1,16 @@
 // get the user's id in the current voyage
 
 import { injectable } from "tsyringe";
-import { GetVoyageTeamIdRequestDto } from "@/voyage-team/application/dtos/request.dto";
+import { GetCurrentVoyageUserIdUsecaseDto } from "@/voyage-team/application/dtos/usecase.dto";
 import { GetCurrentVoyageUserIdResponseDto } from "@/voyage-team/application/dtos/response.dto";
 
 @injectable()
 export class GetCurrentVoyageUserIdUsecase {
-  execute(
-    props: GetVoyageTeamIdRequestDto | undefined,
-  ): GetCurrentVoyageUserIdResponseDto | undefined {
-    return props?.id;
+  execute({
+    userVoyageTeam,
+  }: GetCurrentVoyageUserIdUsecaseDto):
+    | GetCurrentVoyageUserIdResponseDto
+    | undefined {
+    return userVoyageTeam?.id;
   }
 }

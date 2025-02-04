@@ -1,5 +1,5 @@
 import { injectable } from "tsyringe";
-import { GetVoyageMemberRolesRequestDto } from "@/voyage-team/application/dtos/request.dto";
+import { GetVoyageMemberRolesUsecaseDto } from "@/voyage-team/application/dtos/usecase.dto";
 import { GetVoyageMemberRolesResponseDto } from "@/voyage-team/application/dtos/response.dto";
 import { UserRole } from "@/forms/application/types";
 
@@ -7,7 +7,7 @@ import { UserRole } from "@/forms/application/types";
 export class GetVoyageMemberRolesUsecase {
   execute({
     voyageTeam,
-  }: GetVoyageMemberRolesRequestDto): GetVoyageMemberRolesResponseDto {
+  }: GetVoyageMemberRolesUsecaseDto): GetVoyageMemberRolesResponseDto {
     const hasScrumMaster = Boolean(
       voyageTeam.voyageTeamMembers.find(
         (member) => member.voyageRole.name === UserRole.scrumMaster.toString(),

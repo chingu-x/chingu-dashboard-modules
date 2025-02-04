@@ -1,12 +1,14 @@
 import { injectable } from "tsyringe";
 import { GetVoyageProjectSubmissionStatusResponseDto } from "@/voyage-team/application/dtos/response.dto";
-import { GetVoyageProjectSubmissionStatusRequestDto } from "@/voyage-team/application/dtos/request.dto";
+import { GetVoyageProjectSubmissionStatusUsecaseDto } from "@/voyage-team/application/dtos/usecase.dto";
 
 @injectable()
 export class GetVoyageProjectSubmissionStatusUsecase {
-  execute(
-    props: GetVoyageProjectSubmissionStatusRequestDto | undefined,
-  ): GetVoyageProjectSubmissionStatusResponseDto | undefined {
-    return props?.voyageTeam.projectSubmitted;
+  execute({
+    currentVoyageTeam,
+  }: GetVoyageProjectSubmissionStatusUsecaseDto):
+    | GetVoyageProjectSubmissionStatusResponseDto
+    | undefined {
+    return currentVoyageTeam?.voyageTeam.projectSubmitted;
   }
 }

@@ -1,5 +1,5 @@
 import { inject, injectable } from "tsyringe";
-import { HasVoyageStartedRequestDto } from "@/voyage-team/application/dtos/request.dto";
+import { HasVoyageStartedUsecaseDto } from "@/voyage-team/application/dtos/usecase.dto";
 import { HasVoyageStartedResponseDto } from "@/voyage-team/application/dtos/response.dto";
 import { TYPES } from "@/types";
 import { GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChinguMemberStatusUsecase";
@@ -13,8 +13,8 @@ export class HasVoyageStartedUsecase {
   execute({
     isAuthenticated,
     user,
-  }: HasVoyageStartedRequestDto): HasVoyageStartedResponseDto {
-    const activeChingu = this.getChinguMemberStatusUsecase.execute(user);
+  }: HasVoyageStartedUsecaseDto): HasVoyageStartedResponseDto {
+    const activeChingu = this.getChinguMemberStatusUsecase.execute({ user });
     return isAuthenticated && activeChingu;
   }
 }

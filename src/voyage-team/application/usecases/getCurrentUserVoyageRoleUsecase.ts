@@ -1,6 +1,6 @@
 import { injectable } from "tsyringe";
 import { GetCurrentUserVoyageRoleResponseDto } from "@/voyage-team/application/dtos/response.dto";
-import { GetCurrentUserVoyageRoleApiRequestDto } from "@/voyage-team/application/dtos/request.dto";
+import { GetCurrentUserVoyageRoleUsecaseDto } from "@/voyage-team/application/dtos/usecase.dto";
 import { UserRole } from "@/forms/application/types";
 
 @injectable()
@@ -8,7 +8,7 @@ export class GetCurrentUserVoyageRoleUsecase {
   execute({
     voyageTeam,
     voyageMemberId,
-  }: GetCurrentUserVoyageRoleApiRequestDto):
+  }: GetCurrentUserVoyageRoleUsecaseDto):
     | GetCurrentUserVoyageRoleResponseDto
     | undefined {
     const userRole = voyageTeam.voyageTeamMembers.find(

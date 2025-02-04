@@ -1,12 +1,13 @@
 export { VoyageTeamClientAdapter } from "./adapters/primary/voyageTeamClientAdapter";
 export {
-  GetVoyageTeamIdRequestDto,
-  HasVoyageStartedRequestDto,
+  GetCurrentVoyageTeamClientRequestDto,
+  GetVoyageTeamIdClientRequestDto,
+  GetCurrentVoyageUserIdClientRequestDto,
+  HasVoyageStartedClientRequestDto,
+  GetVoyageProjectSubmissionStatusClientRequestDto,
+  GetVoyageMemberRolesClientRequestDto,
   IsCurrentVoyageTeamClientRequestDto,
-  IsCurrentVoyageTeamApiRequestDto,
-  GetVoyageMemberRolesRequestDto,
   GetCurrentUserVoyageRoleClientRequestDto,
-  GetCurrentUserVoyageRoleApiRequestDto,
 } from "./application/dtos/request.dto";
 export {
   GetCurrentVoyageTeamResponseDto,
