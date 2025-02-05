@@ -5,12 +5,14 @@ import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
+  DeleteAgendaTopicReponseDto,
   EditAgendaTopicResponseDto,
   FetchMeetingResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 import {
   AddAgendaTopicApiRequestDto,
   AddMeetingApiRequestDto,
+  DeleteAgendaTopicApiRequestDto,
   EditAgendaTopicApiRequestDto,
   FetchMeetingApiRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
@@ -65,6 +67,14 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
     return await this.apiClient.patch({
       url: SprintMeetingUrls.editAgendaTopic({ agendaId }),
       payload: { title, description, status },
+    });
+  }
+
+  async deleteAgendaTopic({
+    agendaId,
+  }: DeleteAgendaTopicApiRequestDto): Promise<DeleteAgendaTopicReponseDto> {
+    return await this.apiClient.delete({
+      url: SprintMeetingUrls.deleteAgendaTopic({ agendaId }),
     });
   }
 }
