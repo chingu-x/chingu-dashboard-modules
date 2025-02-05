@@ -32,6 +32,9 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
     @inject(TYPES.AddMeetingUsecase)
     private readonly addMeetingUsecase: AddMeetingUsecase,
+
+    @inject(TYPES.AddAgendaTopicUsecase)
+    private readonly addAgendaTopicUsecase: AddAgendaTopicUsecase,
   ) {}
 
   async fetchMeeting({
@@ -73,6 +76,20 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
       teamId,
       sprintNumber,
       timezone,
+    });
+  }
+
+  async addAgendaTopic({
+    meetingId,
+    sprintNumber,
+    title,
+    description,
+  }: AddAgendaTopicClientRequestDto): AddAgendaTopicClientResponseDto {
+    this.addAgendaTopicUsecase.execute({
+      meetingId,
+      sprintNumber,
+      title,
+      description,
     });
   }
 }
