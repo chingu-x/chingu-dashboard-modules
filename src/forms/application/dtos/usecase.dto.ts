@@ -1,21 +1,43 @@
+import type { FetchFormQuestionsClientRequestDto } from "./request.dto";
+import type { FetchFormQuestionsResponseDto } from "./response.dto";
 import type {
-  FetchFormQuestionsClientRequestDto,
-  FetchSubmitVoyageProjectFormApiRequestDto,
-  FetchWeeklyCheckinFormApiRequestDto,
-  SubmitVoyageProjectFormClientRequestDto,
-  SubmitWeeklyCheckinFormClientRequestDto,
-} from "./request.dto";
+  CreateFormResponseBody,
+  Question,
+} from "@/forms/application/types";
 
-export type FetchFormQuestionsUsecaseDto = FetchFormQuestionsClientRequestDto;
+export interface FetchFormQuestionsUsecaseDto {
+  formId: number;
+}
 
-export type FetchSubmitVoyageProjectFormUsecaseDto =
-  FetchSubmitVoyageProjectFormApiRequestDto;
+export interface FetchSubmitVoyageProjectFormUsecaseDto {
+  fetchFormQuestions: ({
+    formId,
+  }: FetchFormQuestionsClientRequestDto) => Promise<FetchFormQuestionsResponseDto>;
+}
 
-export type FetchWeeklyCheckinFormUsecaseDto =
-  FetchWeeklyCheckinFormApiRequestDto;
+export interface FetchWeeklyCheckinFormUsecaseDto {
+  fetchFormQuestions: ({
+    formId,
+  }: FetchFormQuestionsClientRequestDto) => Promise<FetchFormQuestionsResponseDto>;
+  voyageTeamRoles: {
+    hasScrumMaster: boolean;
+    hasProductOwner: boolean;
+  };
+  currentUserVoyageRole: {
+    isScrumMaster: boolean;
+    isProductOwner: boolean;
+  };
+}
 
-export type SubmitVoyageProjectFormUsecaseDto =
-  SubmitVoyageProjectFormClientRequestDto;
+export interface SubmitWeeklyCheckinFormUsecaseDto {
+  voyageTeamMemberId: number;
+  sprintId: number;
+  data: CreateFormResponseBody["data"];
+  questions: Question[];
+}
 
-export type SubmitWeeklyCheckinFormUsecaseDto =
-  SubmitWeeklyCheckinFormClientRequestDto;
+export interface SubmitVoyageProjectFormUsecaseDto {
+  voyageTeamId: number;
+  data: CreateFormResponseBody["data"];
+  questions: Question[];
+}

@@ -2,9 +2,8 @@ import type { FormQuestions } from "@/forms/application/types";
 
 export type FetchFormQuestionsResponseDto = FormQuestions;
 
-export type FetchWeeklyCheckinFormResponseDto = FetchFormQuestionsResponseDto;
-export type FetchSubmitVoyageProjectFormResponseDto =
-  FetchFormQuestionsResponseDto;
+export type FetchWeeklyCheckinFormResponseDto = FormQuestions;
+export type FetchSubmitVoyageProjectFormResponseDto = FormQuestions;
 
 export interface SubmitWeeklyCheckinFormResponseDto {
   createdAt: string;
@@ -14,7 +13,9 @@ export interface SubmitWeeklyCheckinFormResponseDto {
   voyageTeamMemberId: number;
 }
 
-export type SubmitVoyageProjectFormResponseDto = Omit<
-  SubmitWeeklyCheckinFormResponseDto,
-  "sprintId"
->;
+export interface SubmitVoyageProjectFormResponseDto {
+  createdAt: string;
+  id: number;
+  responseGroupId: number;
+  voyageTeamMemberId: number;
+}

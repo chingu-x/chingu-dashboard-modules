@@ -1,3 +1,4 @@
+// client
 export interface LoginClientRequestDto {
   email: string;
   password: string;
@@ -12,6 +13,7 @@ export interface ResetPasswordClientRequestDto {
   token: string;
 }
 
+// api
 export interface LoginApiRequestDto {
   email: string;
   password: string;
