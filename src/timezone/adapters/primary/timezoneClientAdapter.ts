@@ -10,6 +10,7 @@ import {
   GetMeetingLongDateTimeFormatResponseDto,
 } from "@/timezone/application/dtos/response.dto";
 import { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/getMeetingLongDateTimeFormatUsecase";
+import { GetMeetingDateUsecase } from "@/timezone/application/usecases/getMeetingDateUsecase";
 
 @injectable()
 export class TimezoneClientAdapter implements TimezoneClientPort {
@@ -17,7 +18,7 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
     @inject(TYPES.GetMeetingLongDateTimeFormatUsecase)
     private readonly getMeetingLongDateTimeFormatUsecase: GetMeetingLongDateTimeFormatUsecase,
 
-    @inject(TYPES.GetMeetingDatetUsecase)
+    @inject(TYPES.GetMeetingDateUsecase)
     private readonly getMeetingDateUsecase: GetMeetingDateUsecase,
   ) {}
 
