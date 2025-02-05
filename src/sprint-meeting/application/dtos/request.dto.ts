@@ -38,6 +38,10 @@ export interface EditAgendaTopicClientRequestDto {
   status: boolean;
 }
 
+export interface DeleteAgendaTopicClientRequestDto {
+  agendaId: string;
+}
+
 // api
 export interface FetchMeetingApiRequestDto {
   meetingId: number;
