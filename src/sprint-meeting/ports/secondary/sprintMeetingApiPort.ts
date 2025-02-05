@@ -1,6 +1,7 @@
 import type {
   AddAgendaTopicApiRequestDto,
   AddMeetingApiRequestDto,
+  EditAgendaTopicApiRequestDto,
   FetchMeetingApiRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
