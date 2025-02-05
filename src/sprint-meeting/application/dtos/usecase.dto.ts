@@ -23,3 +23,9 @@ export interface GetSprintMeetingUsecaseDto {
   meeting: Meeting[];
   meetingId: string;
 }
+
+export interface AddAgendaTopicUsecaseDto {
+  meetingId: string;
+  title: string;
+  description: string;
+}

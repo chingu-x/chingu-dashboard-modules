@@ -19,7 +19,6 @@ export class AddMeetingUsecase {
     sprintNumber,
     timezone,
   }: AddMeetingUsecaseDto): Promise<AddMeetingResponseDto> {
-    // TODO: move to timezone module
     const dateTime = format(data.dateTime, "yyyy-MM-dd HH:mm:ssXXX", {
       timeZone: timezone,
     });
