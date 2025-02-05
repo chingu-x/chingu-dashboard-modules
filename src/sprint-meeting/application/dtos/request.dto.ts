@@ -31,6 +31,13 @@ export interface AddAgendaTopicClientRequestDto {
   description: string;
 }
 
+export interface EditAgendaTopicClientRequestDto {
+  agendaId: string;
+  title: string;
+  description: string;
+  status: boolean;
+}
+
 // api
 export interface FetchMeetingApiRequestDto {
   meetingId: number;
