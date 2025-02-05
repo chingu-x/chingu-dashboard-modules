@@ -1,8 +1,11 @@
-import type {
-  EditHoursClientRequestDto,
-  GetMyTeamClientRequestDto,
-} from "./request.dto";
+import type { User } from "@/user/application/types";
 
-export type EditHoursUsecaseDto = EditHoursClientRequestDto;
+export interface GetMyTeamUsecaseDto {
+  teamId: string;
+  user: User;
+}
 
-export type GetMyTeamUsecaseDto = GetMyTeamClientRequestDto;
+export interface EditHoursUsecaseDto {
+  teamId: string;
+  hrPerSprint: number;
+}
