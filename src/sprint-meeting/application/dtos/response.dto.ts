@@ -23,3 +23,10 @@ export interface AddAgendaTopicResponseDto {
   description: string;
   status: boolean;
 }
+
+export interface EditAgendaTopicResponseDto {
+  id: number;
+  title: string;
+  description: string;
+  status: boolean;
+}
