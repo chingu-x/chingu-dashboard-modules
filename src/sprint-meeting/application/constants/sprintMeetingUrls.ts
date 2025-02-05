@@ -11,6 +11,10 @@ interface AddAgendaTopicUrlProps {
   meetingId: string;
 }
 
+interface EditAgendaTopicUrlProps {
+  agendaId: string;
+}
+
 const SprintMeetingUrls = {
   fetchMeeting({ meetingId }: FetchMeetingUrlProps) {
     return `/api/v1/voyages/sprints/meetings/${meetingId}`;
@@ -20,6 +24,9 @@ const SprintMeetingUrls = {
   },
   addAgendaTopic({ meetingId }: AddAgendaTopicUrlProps) {
     return `/api/v1/voyages/sprints/meetings/${meetingId}/agendas`;
+  },
+  editAgendaTopic({ agendaId }: EditAgendaTopicUrlProps) {
+    return `/api/v1/voyages/sprints/agendas/${agendaId}`;
   },
 } as const;
 
