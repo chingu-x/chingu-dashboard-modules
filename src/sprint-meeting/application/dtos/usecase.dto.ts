@@ -1,4 +1,3 @@
-import type { Sprint } from "@/sprints/application/types";
 import type {
   Meeting,
   MeetingFormData,
@@ -16,7 +15,7 @@ export interface FetchMeetingUsecaseDto {
 }
 
 export interface GetSprintMeetingIdUsecaseDto {
-  sprints: Sprint[];
+  meeting: Meeting[];
   sprintNumber: number;
 }
 

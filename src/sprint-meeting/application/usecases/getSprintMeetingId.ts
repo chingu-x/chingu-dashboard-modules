@@ -5,10 +5,10 @@ import { GetSprintMeetingIdResponseDto } from "@/sprint-meeting/application/dtos
 @injectable()
 export class GetSprintMeetingIdUsecase {
   execute({
-    sprints,
+    meeting,
     sprintNumber,
   }: GetSprintMeetingIdUsecaseDto): GetSprintMeetingIdResponseDto {
-    return sprints.find((sprint) => sprint.number === sprintNumber)!
-      .teamMeetings[0];
+    return meeting.find((meeting) => meeting.sprint?.number === sprintNumber)
+      ?.id;
   }
 }
