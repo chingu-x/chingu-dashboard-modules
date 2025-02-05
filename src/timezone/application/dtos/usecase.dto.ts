@@ -7,3 +7,8 @@ export interface UpdateDirectoryWithCurrentTimeUsecaseRequestDto {
 
 export type GetMeetingLongDateTimeFormatUsecaseDto =
   GetMeetingLongDateTimeFormatClientRequestDto;
+
+export interface GetMeetingDateUsecaseDto {
+  dateTime: string;
+  timezone: string;
+}
