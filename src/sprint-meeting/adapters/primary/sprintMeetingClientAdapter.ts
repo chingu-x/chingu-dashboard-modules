@@ -2,6 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { SprintMeetingClientPort } from "@/sprint-meeting/ports/primary/sprintMeetingClientPort";
 import {
+  AddAgendaTopicClientRequestDto,
   AddMeetingClientRequestDto,
   FetchMeetingClientRequestDto,
   GetSprintMeetingClientRequestDto,

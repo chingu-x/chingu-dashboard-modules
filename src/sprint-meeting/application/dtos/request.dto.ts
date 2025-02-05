@@ -25,6 +25,13 @@ export interface AddMeetingClientRequestDto {
   timezone: string;
 }
 
+export interface AddAgendaTopicClientRequestDto {
+  meetingId: string;
+  sprintNumber: string;
+  title: string;
+  description: string;
+}
+
 // api
 export interface FetchMeetingApiRequestDto {
   meetingId: number;
