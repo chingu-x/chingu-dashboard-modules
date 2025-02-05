@@ -4,6 +4,7 @@ import { TimezoneClientPort } from "@/timezone/ports/primary/timezoneClientPort"
 import {
   GetMeetingDateClientRequestDto,
   GetMeetingLongDateTimeFormatClientRequestDto,
+  GetMeetingTimeWithTZAbbreviationClientRequestDto,
 } from "@/timezone/application/dtos/request.dto";
 import {
   GetMeetingDateResponseDto,
