@@ -9,7 +9,7 @@ import {
   GetSprintMeetingIdClientRequesDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import {
-  AddAgendaTopicClientResponseDto,
+  AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
   FetchMeetingResponseDto,
   GetSprintMeetingIdResponseDto,
@@ -83,13 +83,11 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
   async addAgendaTopic({
     meetingId,
-    sprintNumber,
     title,
     description,
-  }: AddAgendaTopicClientRequestDto): Promise<AddAgendaTopicClientResponseDto> {
+  }: AddAgendaTopicClientRequestDto): Promise<AddAgendaTopicResponseDto> {
     return await this.addAgendaTopicUsecase.execute({
       meetingId,
-      sprintNumber,
       title,
       description,
     });

@@ -17,7 +17,7 @@ export interface AddMeetingResponseDto {
   voyageTeamId: string;
 }
 
-export interface AddAgendaTopicClientResponseDto {
+export interface AddAgendaTopicResponseDto {
   id: number;
   title: string;
   description: string;

@@ -27,7 +27,6 @@ export interface AddMeetingClientRequestDto {
 
 export interface AddAgendaTopicClientRequestDto {
   meetingId: string;
-  sprintNumber: string;
   title: string;
   description: string;
 }
@@ -47,8 +46,7 @@ export interface AddMeetingApiRequestDto {
 }
 
 export interface AddAgendaTopicApiRequestDto {
-  meetingId: number;
-  sprintNumber: number;
+  meetingId: string;
   title: string;
   description: string;
 }

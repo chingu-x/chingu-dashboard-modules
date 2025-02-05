@@ -40,4 +40,10 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
       payload: { title, description, dateTime, meetingLink },
     });
   }
+
+  async addAgendaTopic({
+    meetingId,
+    title,
+    description,
+  }: AddAgendaTopicApiRequestDto): Promise<AddAgendaTopicResponseDto> {}
 }

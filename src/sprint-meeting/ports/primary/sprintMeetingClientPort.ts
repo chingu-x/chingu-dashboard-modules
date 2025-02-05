@@ -6,7 +6,7 @@ import type {
   AddAgendaTopicClientRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
-  AddAgendaTopicClientResponseDto,
+  AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
   FetchMeetingResponseDto,
   GetSprintMeetingIdResponseDto,
@@ -32,5 +32,5 @@ export interface SprintMeetingClientPort {
 
   addAgendaTopic: (
     props: AddAgendaTopicClientRequestDto,
-  ) => AddAgendaTopicClientResponseDto;
+  ) => Promise<AddAgendaTopicResponseDto>;
 }
