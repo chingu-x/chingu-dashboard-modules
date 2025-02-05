@@ -11,6 +11,7 @@ export interface SprintMeetingApiPort {
   fetchMeeting: ({
     meetingId,
   }: FetchMeetingApiRequestDto) => Promise<FetchMeetingResponseDto>;
+  
   addMeeting: ({
     teamId,
     sprintNumber,
@@ -19,4 +20,11 @@ export interface SprintMeetingApiPort {
     dateTime,
     meetingLink,
   }: AddMeetingApiRequestDto) => Promise<AddMeetingResponseDto>;
+
+  addAgendaTopic: ({
+    meetingId;
+    sprintNumber;
+    title;
+    description;
+  }: AddAgendaTopicApiRequestDto) => Promise<AddAgendaTopicApiResponseDto>
 }
