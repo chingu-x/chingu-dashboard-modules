@@ -45,3 +45,10 @@ export interface AddMeetingApiRequestDto {
   dateTime: string;
   meetingLink?: string;
 }
+
+export interface AddAgendaTopicApiRequestDto {
+  meetingId: number;
+  sprintNumber: number;
+  title: string;
+  description: string;
+}
