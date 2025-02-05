@@ -37,4 +37,8 @@ export interface SprintMeetingApiPort {
     description,
     status,
   }: EditAgendaTopicApiRequestDto) => Promise<EditAgendaTopicResponseDto>;
+
+  deleteAgendaTopic: ({
+    agendaId,
+  }: DeleteAgendaTopicApiRequestDto) => Promise<DeleteAgendaTopicReponseDto>;
 }
