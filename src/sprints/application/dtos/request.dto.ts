@@ -1,11 +1,8 @@
 import type { Sprint } from "@/sprints/application/types";
 import type { User } from "@/user/application/types";
 
+// client
 export interface FetchSprintsClientRequestDto {
-  teamId: string;
-}
-
-export interface FetchSprintsApiRequestDto {
   teamId: string;
 }
 
@@ -31,4 +28,9 @@ export interface IsCurrentSprintClientRequestDto {
 
 export interface IsVoyageProjestSubmissionAllowedClientRequestDto {
   sprintNumber: string;
+}
+
+// api
+export interface FetchSprintsApiRequestDto {
+  teamId: string;
 }

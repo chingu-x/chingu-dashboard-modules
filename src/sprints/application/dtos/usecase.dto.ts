@@ -1,22 +1,30 @@
-import type {
-  FetchSprintsClientRequestDto,
-  GetCurrentSprintClientRequestDto,
-  GetMeetingClientRequestDto,
-  GetSprintCheckinStatusClientRequestDto,
-  IsCurrentSprintClientRequestDto,
-  IsVoyageProjestSubmissionAllowedClientRequestDto,
-} from "./request.dto";
+import type { User } from "@/user/application/types";
+import type { Sprint } from "@/sprints/application/types";
 
-export type FetchSprintsUsecaseDto = FetchSprintsClientRequestDto;
+export interface FetchSprintsUsecaseDto {
+  teamId: string;
+}
 
-export type GetCurrentSprintUsecaseDto = GetCurrentSprintClientRequestDto;
+export interface GetCurrentSprintUsecaseDto {
+  sprints: Sprint[];
+  currentDate: Date;
+}
 
-export type GetMeetingUsecaseDto = GetMeetingClientRequestDto;
+export interface GetMeetingUsecaseDto {
+  sprints: Sprint[];
+  sprintNumber: number;
+}
 
-export type GetSprintCheckinStatusUsecaseDto =
-  GetSprintCheckinStatusClientRequestDto;
+export interface GetSprintCheckinStatusUsecaseDto {
+  user: User;
+  sprintId: number;
+}
 
-export type IsCurrentSprintUsecaseDto = IsCurrentSprintClientRequestDto;
+export interface IsCurrentSprintUsecaseDto {
+  sprintNumber: string;
+  currentSprintNumber: number;
+}
 
-export type IsVoyageProjestSubmissionAllowedUsecaseDto =
-  IsVoyageProjestSubmissionAllowedClientRequestDto;
+export interface IsVoyageProjestSubmissionAllowedUsecaseDto {
+  sprintNumber: string;
+}
