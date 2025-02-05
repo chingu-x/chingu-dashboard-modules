@@ -5,11 +5,13 @@ import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
+  EditAgendaTopicResponseDto,
   FetchMeetingResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 import {
   AddAgendaTopicApiRequestDto,
   AddMeetingApiRequestDto,
+  EditAgendaTopicApiRequestDto,
   FetchMeetingApiRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import SprintMeetingUrls from "@/sprint-meeting/application/constants/sprintMeetingUrls";
@@ -51,6 +53,18 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
     return await this.apiClient.post({
       url: SprintMeetingUrls.addAgendaTopic({ meetingId }),
       payload: { title, description },
+    });
+  }
+
+  async editAgendaTopic({
+    agendaId,
+    title,
+    description,
+    status,
+  }: EditAgendaTopicApiRequestDto): Promise<EditAgendaTopicResponseDto> {
+    return await this.apiClient.patch({
+      url: SprintMeetingUrls.editAgendaTopic({ agendaId }),
+      payload: { title, description, status },
     });
   }
 }
