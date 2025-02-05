@@ -1,12 +1,14 @@
 import type {
   AddAgendaTopicApiRequestDto,
   AddMeetingApiRequestDto,
+  DeleteAgendaTopicApiRequestDto,
   EditAgendaTopicApiRequestDto,
   FetchMeetingApiRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
+  DeleteAgendaTopicReponseDto,
   EditAgendaTopicResponseDto,
   FetchMeetingResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";

@@ -68,3 +68,7 @@ export interface EditAgendaTopicApiRequestDto {
   description: string;
   status: boolean;
 }
+
+export interface DeleteAgendaTopicApiRequestDto {
+  agendaId: string;
+}
