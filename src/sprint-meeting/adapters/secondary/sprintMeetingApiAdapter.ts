@@ -3,10 +3,12 @@ import { TYPES } from "@/types";
 import { SprintMeetingApiPort } from "@/sprint-meeting/ports/secondary/sprintMeetingApiPort";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
+  AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
   FetchMeetingResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 import {
+  AddAgendaTopicApiRequestDto,
   AddMeetingApiRequestDto,
   FetchMeetingApiRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
@@ -45,5 +47,10 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
     meetingId,
     title,
     description,
-  }: AddAgendaTopicApiRequestDto): Promise<AddAgendaTopicResponseDto> {}
+  }: AddAgendaTopicApiRequestDto): Promise<AddAgendaTopicResponseDto> {
+    return await this.apiClient.post({
+      url: SprintMeetingUrls.addAgendaTopic({ meetingId }),
+      payload: { title, description },
+    });
+  }
 }
