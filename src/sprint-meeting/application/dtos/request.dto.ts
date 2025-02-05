@@ -57,3 +57,10 @@ export interface AddAgendaTopicApiRequestDto {
   title: string;
   description: string;
 }
+
+export interface EditAgendaTopicApiRequestDto {
+  agendaId: string;
+  title: string;
+  description: string;
+  status: boolean;
+}

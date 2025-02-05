@@ -6,6 +6,7 @@ import type {
 import type {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
+  EditAgendaTopicResponseDto,
   FetchMeetingResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 
@@ -28,4 +29,11 @@ export interface SprintMeetingApiPort {
     title,
     description,
   }: AddAgendaTopicApiRequestDto) => Promise<AddAgendaTopicResponseDto>;
+
+  editAgendaTopic: ({
+    agendaId,
+    title,
+    description,
+    status,
+  }: EditAgendaTopicApiRequestDto) => Promise<EditAgendaTopicResponseDto>;
 }
