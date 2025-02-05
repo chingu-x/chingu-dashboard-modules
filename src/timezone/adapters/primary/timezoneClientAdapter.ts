@@ -5,7 +5,10 @@ import {
   GetMeetingDateClientRequestDto,
   GetMeetingLongDateTimeFormatClientRequestDto,
 } from "@/timezone/application/dtos/request.dto";
-import { GetMeetingLongDateTimeFormatResponseDto } from "@/timezone/application/dtos/response.dto";
+import {
+  GetMeetingDateResponseDto,
+  GetMeetingLongDateTimeFormatResponseDto,
+} from "@/timezone/application/dtos/response.dto";
 import { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/getMeetingLongDateTimeFormatUsecase";
 
 @injectable()
