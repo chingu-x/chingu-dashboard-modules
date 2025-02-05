@@ -20,6 +20,9 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
 
     @inject(TYPES.GetMeetingDateUsecase)
     private readonly getMeetingDateUsecase: GetMeetingDateUsecase,
+
+    @inject(TYPES.GetMeetingTimeWithTZAbbreviationUsecase)
+    private readonly getMeetingTimeWithTZAbbreviationUsecase: GetMeetingTimeWithTZAbbreviationUsecase,
   ) {}
 
   // returns date in this format as a date: October 10, 2024 12:00 AM in the user's timezone
@@ -41,6 +44,16 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
     timezone,
   }: GetMeetingDateClientRequestDto): GetMeetingDateResponseDto {
     return this.getMeetingDateUsecase.execute({
+      dateTime,
+      timezone,
+    });
+  }
+
+  getMeetingTimeWithTZAbbreviation({
+    dateTime,
+    timezone,
+  }: GetMeetingTimeWithTZAbbreviationClientRequestDto): GetMeetingTimeWithTZAbbreviationResponseDto {
+    return this.getMeetingTimeWithTZAbbreviationUsecase.execute({
       dateTime,
       timezone,
     });
