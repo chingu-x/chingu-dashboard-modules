@@ -1,10 +1,12 @@
 import type {
   GetMeetingDateClientRequestDto,
   GetMeetingLongDateTimeFormatClientRequestDto,
+  GetMeetingTimeWithTZAbbreviationClientRequestDto,
 } from "@/timezone/application/dtos/request.dto";
 import type {
   GetMeetingDateResponseDto,
   GetMeetingLongDateTimeFormatResponseDto,
+  GetMeetingTimeWithTZAbbreviationResponseDto,
 } from "@/timezone/application/dtos/response.dto";
 
 export interface TimezoneClientPort {
@@ -15,4 +17,8 @@ export interface TimezoneClientPort {
   getMeetingDate: (
     props: GetMeetingDateClientRequestDto,
   ) => GetMeetingDateResponseDto;
+
+  getMeetingTimeWithTZAbbreviation: (
+    props: GetMeetingTimeWithTZAbbreviationClientRequestDto,
+  ) => GetMeetingTimeWithTZAbbreviationResponseDto;
 }
