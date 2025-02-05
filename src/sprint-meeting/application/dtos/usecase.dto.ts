@@ -29,3 +29,10 @@ export interface AddAgendaTopicUsecaseDto {
   title: string;
   description: string;
 }
+
+export interface EditAgendaTopicUsecaseDto {
+  agendaId: string;
+  title: string;
+  description: string;
+  status: boolean;
+}
