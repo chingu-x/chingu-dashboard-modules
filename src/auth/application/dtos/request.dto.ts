@@ -12,9 +12,16 @@ export interface ResetPasswordClientRequestDto {
   token: string;
 }
 
-export type LoginApiRequestDto = LoginClientRequestDto;
+export interface LoginApiRequestDto {
+  email: string;
+  password: string;
+}
 
-export type RequestResetPasswordApiRequestDto =
-  RequestResetPasswordClientRequestDto;
+export interface RequestResetPasswordApiRequestDto {
+  email: string;
+}
 
-export type ResetPasswordApiRequestDto = ResetPasswordClientRequestDto;
+export interface ResetPasswordApiRequestDto {
+  password: string;
+  token: string;
+}

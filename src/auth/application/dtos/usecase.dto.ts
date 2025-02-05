@@ -1,12 +1,13 @@
-import type {
-  LoginClientRequestDto,
-  RequestResetPasswordClientRequestDto,
-  ResetPasswordClientRequestDto,
-} from "./request.dto";
+export interface LoginUsecaseDto {
+  email: string;
+  password: string;
+}
 
-export type LoginUsecaseDto = LoginClientRequestDto;
+export interface RequestResetPasswordUsecaseDto {
+  email: string;
+}
 
-export type RequestResetPasswordUsecaseDto =
-  RequestResetPasswordClientRequestDto;
-
-export type ResetPasswordUsecaseDto = ResetPasswordClientRequestDto;
+export interface ResetPasswordUsecaseDto {
+  password: string;
+  token: string;
+}

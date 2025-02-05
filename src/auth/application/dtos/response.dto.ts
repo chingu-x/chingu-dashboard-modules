@@ -1,10 +1,10 @@
-interface AuthResponse {
+export interface LoginResponseDto {
   message: string;
 }
 
-export type LoginResponseDto = AuthResponse;
-
-export type LogoutResponseDto = AuthResponse;
+export interface LogoutResponseDto {
+  message: string;
+}
 
 export type RequestResetPasswordResponseDto = void;
 
