@@ -13,7 +13,7 @@ import {
 import {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
-  DeleteAgendaTopicReponseDto,
+  DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
   FetchMeetingResponseDto,
   GetSprintMeetingIdResponseDto,
@@ -25,6 +25,7 @@ import { GetSprintMeetingUsecase } from "@/sprint-meeting/application/usecases/g
 import { AddMeetingUsecase } from "@/sprint-meeting/application/usecases/addMeetingUsecase";
 import { AddAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/addAgendaTopicUsecase";
 import { EditAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/editAgendaTopicUsecase";
+import { DeleteAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/deleteAgendaTopicUsecase";
 
 @injectable()
 export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
@@ -121,7 +122,7 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
   async deleteAgendaTopic({
     agendaId,
-  }: DeleteAgendaTopicClientRequestDto): Promise<DeleteAgendaTopicReponseDto> {
+  }: DeleteAgendaTopicClientRequestDto): Promise<DeleteAgendaTopicResponseDto> {
     return await this.deleteAgendaTopicUsecase.execute({ agendaId });
   }
 }

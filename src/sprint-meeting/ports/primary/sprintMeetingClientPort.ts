@@ -10,7 +10,7 @@ import type {
 import type {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
-  DeleteAgendaTopicReponseDto,
+  DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
   FetchMeetingResponseDto,
   GetSprintMeetingIdResponseDto,
@@ -44,5 +44,5 @@ export interface SprintMeetingClientPort {
 
   deleteAgendaTopic: (
     props: DeleteAgendaTopicClientRequestDto,
-  ) => Promise<DeleteAgendaTopicReponseDto>;
+  ) => Promise<DeleteAgendaTopicResponseDto>;
 }

@@ -8,7 +8,7 @@ import type {
 import type {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
-  DeleteAgendaTopicReponseDto,
+  DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
   FetchMeetingResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
@@ -42,5 +42,5 @@ export interface SprintMeetingApiPort {
 
   deleteAgendaTopic: ({
     agendaId,
-  }: DeleteAgendaTopicApiRequestDto) => Promise<DeleteAgendaTopicReponseDto>;
+  }: DeleteAgendaTopicApiRequestDto) => Promise<DeleteAgendaTopicResponseDto>;
 }
