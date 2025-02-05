@@ -31,7 +31,7 @@ export interface EditAgendaTopicResponseDto {
   status: boolean;
 }
 
-export interface DeleteAgendaTopicReponseDto {
+export interface DeleteAgendaTopicResponseDto {
   id: number;
   title: string;
   description: string;

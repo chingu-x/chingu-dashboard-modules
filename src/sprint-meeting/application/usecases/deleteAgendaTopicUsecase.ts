@@ -1,6 +1,8 @@
 import { inject, injectable } from "tsyringe";
 import { SPRINT_MEETING_TYPES } from "@/sprint-meeting/di/types";
 import { SprintMeetingApiPort } from "@/sprint-meeting/ports/secondary/sprintMeetingApiPort";
+import { DeleteAgendaTopicUsecaseDto } from "@/sprint-meeting/application/dtos/usecase.dto";
+import { DeleteAgendaTopicResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
 
 @injectable()
 export class DeleteAgendaTopicUsecase {
@@ -11,15 +13,9 @@ export class DeleteAgendaTopicUsecase {
 
   async execute({
     agendaId,
-    title,
-    description,
-    status,
-  }: DeleteAgendaTopicUsecase): Promise<DeleteAgendaTopicResponseDto> {
-    return await this.sprintMeetingApi.editAgendaTopic({
+  }: DeleteAgendaTopicUsecaseDto): Promise<DeleteAgendaTopicResponseDto> {
+    return await this.sprintMeetingApi.deleteAgendaTopic({
       agendaId,
-      title,
-      description,
-      status,
     });
   }
 }
