@@ -16,3 +16,10 @@ export interface AddMeetingResponseDto {
   updatedAt: string;
   voyageTeamId: string;
 }
+
+export interface AddAgendaTopicClientResponseDto {
+  id: number;
+  title: string;
+  description: string;
+  status: boolean;
+}
