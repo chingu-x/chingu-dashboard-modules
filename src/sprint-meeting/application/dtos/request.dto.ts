@@ -9,12 +9,12 @@ export interface FetchMeetingClientRequestDto {
   meetingId: number;
 }
 
-export interface GetCurrentSprintMeetingIdClientRequesDto {
+export interface GetSprintMeetingIdClientRequesDto {
   sprints: Sprint[];
   sprintNumber: number;
 }
 
-export interface GetCurrentSprintMeetingClientRequestDto {
+export interface GetSprintMeetingClientRequestDto {
   meeting: Meeting[];
   meetingId: string;
 }

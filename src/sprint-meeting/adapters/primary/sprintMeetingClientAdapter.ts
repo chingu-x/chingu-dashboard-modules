@@ -4,18 +4,18 @@ import { SprintMeetingClientPort } from "@/sprint-meeting/ports/primary/sprintMe
 import {
   AddMeetingClientRequestDto,
   FetchMeetingClientRequestDto,
-  GetCurrentSprintMeetingIdClientRequesDto,
-  GetCurrentSprintMeetingClientRequestDto,
+  GetSprintMeetingClientRequestDto,
+  GetSprintMeetingIdClientRequesDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import {
   AddMeetingResponseDto,
   FetchMeetingResponseDto,
-  GetCurrentSprintMeetingIdResponseDto,
-  GetCurrentSprintMeetingResponseDto,
+  GetSprintMeetingIdResponseDto,
+  GetSprintMeetingResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 import { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetchMeetingUsecase";
-import { GetCurrentSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingId";
-import { GetCurrentSprintMeetingUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingUsecase";
+import { GetSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/getSprintMeetingId";
+import { GetSprintMeetingUsecase } from "@/sprint-meeting/application/usecases/getSprintMeetingUsecase";
 import { AddMeetingUsecase } from "@/sprint-meeting/application/usecases/addMeetingUsecase";
 
 @injectable()
@@ -24,11 +24,11 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     @inject(TYPES.FetchMeetingUsecase)
     private readonly fetchMeetingUsecase: FetchMeetingUsecase,
 
-    @inject(TYPES.GetCurrentSprintMeetingIdUsecase)
-    private readonly getCurrentSprintMeetingIdUsecase: GetCurrentSprintMeetingIdUsecase,
+    @inject(TYPES.GetSprintMeetingIdUsecase)
+    private readonly getSprintMeetingIdUsecase: GetSprintMeetingIdUsecase,
 
-    @inject(TYPES.GetCurrentSprintMeetingUsecase)
-    private readonly getCurrentSprintMeetingUsecase: GetCurrentSprintMeetingUsecase,
+    @inject(TYPES.GetSprintMeetingUsecase)
+    private readonly getSprintMeetingUsecase: GetSprintMeetingUsecase,
 
     @inject(TYPES.AddMeetingUsecase)
     private readonly addMeetingUsecase: AddMeetingUsecase,
@@ -40,23 +40,23 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     return await this.fetchMeetingUsecase.execute({ meetingId });
   }
 
-  getCurrentSprintMeetingId({
+  getSprintMeetingId({
     sprints,
     sprintNumber,
-  }: GetCurrentSprintMeetingIdClientRequesDto): GetCurrentSprintMeetingIdResponseDto {
-    return this.getCurrentSprintMeetingIdUsecase.execute({
+  }: GetSprintMeetingIdClientRequesDto): GetSprintMeetingIdResponseDto {
+    return this.getSprintMeetingIdUsecase.execute({
       sprints,
       sprintNumber,
     });
   }
 
-  getCurrentSprintMeeting({
+  getSprintMeeting({
     meeting,
     meetingId,
-  }: GetCurrentSprintMeetingClientRequestDto):
-    | GetCurrentSprintMeetingResponseDto
+  }: GetSprintMeetingClientRequestDto):
+    | GetSprintMeetingResponseDto
     | undefined {
-    return this.getCurrentSprintMeetingUsecase.execute({
+    return this.getSprintMeetingUsecase.execute({
       meeting,
       meetingId,
     });

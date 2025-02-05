@@ -1,8 +1,8 @@
 import type { Meeting } from "@/sprint-meeting/application/types";
 
 export type FetchMeetingResponseDto = Meeting;
-export type GetCurrentSprintMeetingIdResponseDto = number;
-export type GetCurrentSprintMeetingResponseDto = Meeting;
+export type GetSprintMeetingIdResponseDto = number;
+export type GetSprintMeetingResponseDto = Meeting;
 
 export interface AddMeetingResponseDto {
   createdAt: string;

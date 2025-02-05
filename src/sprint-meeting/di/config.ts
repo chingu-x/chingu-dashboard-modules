@@ -3,8 +3,8 @@ import { SPRINT_MEETING_TYPES } from "./types";
 import { SprintMeetingApiAdapter } from "@/sprint-meeting/adapters/secondary/sprintMeetingApiAdapter";
 import { SprintMeetingClientAdapter } from "@/sprint-meeting/adapters/primary/sprintMeetingClientAdapter";
 import { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetchMeetingUsecase";
-import { GetCurrentSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingId";
-import { GetCurrentSprintMeetingUsecase } from "@/sprint-meeting/application/usecases/getCurrentSprintMeetingUsecase";
+import { GetSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/getSprintMeetingId";
+import { GetSprintMeetingUsecase } from "@/sprint-meeting/application/usecases/getSprintMeetingUsecase";
 import { AddMeetingUsecase } from "@/sprint-meeting/application/usecases/addMeetingUsecase";
 
 export const registerSprintMeetingDependencies = () => {
@@ -18,12 +18,12 @@ export const registerSprintMeetingDependencies = () => {
     useClass: FetchMeetingUsecase,
   });
 
-  container.register(SPRINT_MEETING_TYPES.GetCurrentSprintMeetingIdUsecase, {
-    useClass: GetCurrentSprintMeetingIdUsecase,
+  container.register(SPRINT_MEETING_TYPES.GetSprintMeetingIdUsecase, {
+    useClass: GetSprintMeetingIdUsecase,
   });
 
-  container.register(SPRINT_MEETING_TYPES.GetCurrentSprintMeetingUsecase, {
-    useClass: GetCurrentSprintMeetingUsecase,
+  container.register(SPRINT_MEETING_TYPES.GetSprintMeetingUsecase, {
+    useClass: GetSprintMeetingUsecase,
   });
 
   container.register(SPRINT_MEETING_TYPES.AddMeetingUsecase, {

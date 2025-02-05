@@ -15,12 +15,12 @@ export interface FetchMeetingUsecaseDto {
   meetingId: number;
 }
 
-export interface GetCurrentSprintMeetingIdUsecaseDto {
+export interface GetSprintMeetingIdUsecaseDto {
   sprints: Sprint[];
   sprintNumber: number;
 }
 
-export interface GetCurrentSprintMeetingUsecaseDto {
+export interface GetSprintMeetingUsecaseDto {
   meeting: Meeting[];
   meetingId: string;
 }
