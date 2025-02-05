@@ -9,6 +9,7 @@ import {
 import {
   GetMeetingDateResponseDto,
   GetMeetingLongDateTimeFormatResponseDto,
+  GetMeetingTimeWithTZAbbreviationResponseDto,
 } from "@/timezone/application/dtos/response.dto";
 import { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/getMeetingLongDateTimeFormatUsecase";
 import { GetMeetingDateUsecase } from "@/timezone/application/usecases/getMeetingDateUsecase";
