@@ -1,6 +1,12 @@
 export { SprintMeetingClientAdapter } from "./adapters/primary/sprintMeetingClientAdapter";
-export { AddMeetingClientRequestDto } from "./application/dtos/request.dto";
-export { AddMeetingResponseDto } from "./application/dtos/response.dto";
+export {
+  AddMeetingClientRequestDto,
+  AddAgendaTopicClientRequestDto,
+} from "./application/dtos/request.dto";
+export {
+  AddMeetingResponseDto,
+  AddAgendaTopicResponseDto,
+} from "./application/dtos/response.dto";
 export {
   Meeting,
   Section,
