@@ -1,19 +1,20 @@
 import { injectable } from "tsyringe";
+import { format } from "date-fns-tz";
+import convertStringToDate from "@/timezone/application/utils/convertStringToDate";
+import { GetMeetingTimeWithTZAbbreviationUsecaseDto } from "@/timezone/application/dtos/usecase.dto";
+import { GetMeetingTimeWithTZAbbreviationResponseDto } from "@/timezone/application/dtos/response.dto";
 
+// returns meeting time with following format: 24:00 (GMT+10)
 @injectable()
 export class GetMeetingTimeWithTZAbbreviationUsecase {
   execute({
     dateTime,
     timezone,
-  }: GetMeetingDateUsecaseDto): GetMeetingDateResponseDto {
+  }: GetMeetingTimeWithTZAbbreviationUsecaseDto): GetMeetingTimeWithTZAbbreviationResponseDto {
     const dateTimeConvertedToDate = convertStringToDate({ dateTime, timezone });
 
-    if (isToday(dateTimeConvertedToDate)) return "today";
-    if (isTomorrow(dateTimeConvertedToDate)) return "tomorrow";
-    if (getMonth(dateTimeConvertedToDate) === 4) {
-      return format(dateTimeConvertedToDate, "MMM d");
-    }
-
-    return format(dateTimeConvertedToDate, "MMM. d");
+    return format(dateTimeConvertedToDate, "k:mm (zzz)", {
+      timeZone: timezone,
+    });
   }
 }

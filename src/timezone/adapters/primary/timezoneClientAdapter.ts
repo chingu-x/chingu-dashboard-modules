@@ -13,6 +13,7 @@ import {
 } from "@/timezone/application/dtos/response.dto";
 import { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/getMeetingLongDateTimeFormatUsecase";
 import { GetMeetingDateUsecase } from "@/timezone/application/usecases/getMeetingDateUsecase";
+import { GetMeetingTimeWithTZAbbreviationUsecase } from "@/timezone/application/usecases/getMeetingTimeWithTZAbbreviationUsecase";
 
 @injectable()
 export class TimezoneClientAdapter implements TimezoneClientPort {
@@ -51,6 +52,7 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
     });
   }
 
+  // returns meeting time with following format: 24:00 (GMT+10)
   getMeetingTimeWithTZAbbreviation({
     dateTime,
     timezone,
