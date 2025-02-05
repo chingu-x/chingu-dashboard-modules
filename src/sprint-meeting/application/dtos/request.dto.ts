@@ -4,6 +4,7 @@ import type {
   MeetingFormData,
 } from "@/sprint-meeting/application/types";
 
+// client
 export interface FetchMeetingClientRequestDto {
   meetingId: number;
 }
@@ -25,7 +26,10 @@ export interface AddMeetingClientRequestDto {
   timezone: string;
 }
 
-export type FetchMeetingApiRequestDto = FetchMeetingClientRequestDto;
+// api
+export interface FetchMeetingApiRequestDto {
+  meetingId: number;
+}
 
 export interface AddMeetingApiRequestDto {
   teamId: string;
