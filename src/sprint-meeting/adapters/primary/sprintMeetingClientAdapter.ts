@@ -4,6 +4,7 @@ import { SprintMeetingClientPort } from "@/sprint-meeting/ports/primary/sprintMe
 import {
   AddAgendaTopicClientRequestDto,
   AddMeetingClientRequestDto,
+  DeleteAgendaTopicClientRequestDto,
   EditAgendaTopicClientRequestDto,
   FetchMeetingClientRequestDto,
   GetSprintMeetingClientRequestDto,
@@ -12,6 +13,7 @@ import {
 import {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
+  DeleteAgendaTopicReponseDto,
   EditAgendaTopicResponseDto,
   FetchMeetingResponseDto,
   GetSprintMeetingIdResponseDto,
@@ -44,6 +46,9 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
     @inject(TYPES.EditAgendaTopicUsecase)
     private readonly editAgendaTopicUsecase: EditAgendaTopicUsecase,
+
+    @inject(TYPES.DeleteAgendaTopicUsecase)
+    private readonly deleteAgendaTopicUsecase: DeleteAgendaTopicUsecase,
   ) {}
 
   async fetchMeeting({
@@ -112,5 +117,11 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
       description,
       status,
     });
+  }
+
+  async deleteAgendaTopic({
+    agendaId,
+  }: DeleteAgendaTopicClientRequestDto): Promise<DeleteAgendaTopicReponseDto> {
+    return await this.deleteAgendaTopicUsecase.execute({ agendaId });
   }
 }
