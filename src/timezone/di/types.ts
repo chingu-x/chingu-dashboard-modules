@@ -3,6 +3,7 @@ import type { UpdateDirectoryWithCurrentTimeUsecase } from "@/timezone/applicati
 import type { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/getMeetingLongDateTimeFormatUsecase";
 import type { TimezoneClientAdapter } from "@/timezone/adapters/primary/timezoneClientAdapter";
 import type { GetMeetingDateUsecase } from "@/timezone/application/usecases/getMeetingDateUsecase";
+import type { GetMeetingTimeWithTZAbbreviationUsecase } from "@/timezone/application/usecases/getMeetingTimeWithTZAbbreviationUsecase";
 
 export const TIME_ZONE_TYPES = {
   // ports
@@ -19,6 +20,10 @@ export const TIME_ZONE_TYPES = {
   GetMeetingDateUsecase: Symbol.for(
     "GetMeetingDateUsecase",
   ) as InjectionToken<GetMeetingDateUsecase>,
+
+  GetMeetingTimeWithTZAbbreviationUsecase: Symbol.for(
+    "GetMeetingTimeWithTZAbbreviationUsecase",
+  ) as InjectionToken<GetMeetingTimeWithTZAbbreviationUsecase>,
 
   // adapters
   TimezoneClientAdapter: Symbol.for(
