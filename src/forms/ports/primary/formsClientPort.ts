@@ -26,4 +26,8 @@ export interface FormsClientPort {
     data,
     questions,
   }: SubmitVoyageProjectFormClientRequestDto) => Promise<SubmitVoyageProjectFormResponseDto>;
+
+  addSprintMeetingSection: (
+    props: AddSprintMeetingSectionClientRequestDto,
+  ) => Promise<AddSprintMeetingSectionClientResponseDto>;
 }
