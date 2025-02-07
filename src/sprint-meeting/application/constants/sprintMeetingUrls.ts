@@ -23,6 +23,10 @@ interface DeleteAgendaTopicUrlProps {
   agendaId: string;
 }
 
+interface ChangeAgendaTopicStatusUrlProps {
+  agendaId: string;
+}
+
 const SprintMeetingUrls = {
   fetchMeeting({ meetingId }: FetchMeetingUrlProps) {
     return `/api/v1/voyages/sprints/meetings/${meetingId}`;
@@ -40,6 +44,9 @@ const SprintMeetingUrls = {
     return `/api/v1/voyages/sprints/agendas/${agendaId}`;
   },
   deleteAgendaTopic({ agendaId }: DeleteAgendaTopicUrlProps) {
+    return `/api/v1/voyages/sprints/agendas/${agendaId}`;
+  },
+  changeAgendaTopicStatus({ agendaId }: ChangeAgendaTopicStatusUrlProps) {
     return `/api/v1/voyages/sprints/agendas/${agendaId}`;
   },
 } as const;
