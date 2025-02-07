@@ -65,6 +65,15 @@ export interface AddMeetingApiRequestDto {
   meetingLink?: string;
 }
 
+export interface EditMeetingApiRequestDto {
+  meetingId: string;
+  title?: string;
+  description?: string;
+  dateTime?: Date;
+  meetingLink?: string;
+  notes?: string;
+}
+
 export interface AddAgendaTopicApiRequestDto {
   meetingId: string;
   title: string;
