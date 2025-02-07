@@ -5,6 +5,7 @@ export {
   EditAgendaTopicClientRequestDto,
   DeleteAgendaTopicClientRequestDto,
   EditMeetingClientRequestDto,
+  ChangeAgendaTopicStatusClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   AddMeetingResponseDto,
@@ -12,6 +13,7 @@ export {
   EditAgendaTopicResponseDto,
   DeleteAgendaTopicResponseDto,
   EditMeetingResponseDto,
+  ChangeAgendaTopicStatusResponseDto,
 } from "./application/dtos/response.dto";
 export {
   Meeting,
