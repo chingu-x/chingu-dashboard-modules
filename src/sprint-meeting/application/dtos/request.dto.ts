@@ -5,7 +5,7 @@ import type {
 
 // client
 export interface FetchMeetingClientRequestDto {
-  meetingId: number;
+  meetingId: string;
 }
 
 export interface GetSprintMeetingIdClientRequesDto {
@@ -53,7 +53,7 @@ export interface DeleteAgendaTopicClientRequestDto {
 
 // api
 export interface FetchMeetingApiRequestDto {
-  meetingId: number;
+  meetingId: string;
 }
 
 export interface AddMeetingApiRequestDto {

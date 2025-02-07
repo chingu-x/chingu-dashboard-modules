@@ -10,8 +10,17 @@ export interface AddMeetingUsecaseDto {
   timezone: string;
 }
 
+export interface EditMeetingUsecaseDto {
+  teamId: string;
+  sprintNumber: string;
+  title: string;
+  description: string;
+  dateTime: string;
+  meetingLink?: string;
+}
+
 export interface FetchMeetingUsecaseDto {
-  meetingId: number;
+  meetingId: string;
 }
 
 export interface GetSprintMeetingIdUsecaseDto {
