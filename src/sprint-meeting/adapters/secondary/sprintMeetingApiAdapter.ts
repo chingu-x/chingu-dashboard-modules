@@ -7,6 +7,7 @@ import {
   AddMeetingResponseDto,
   DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
+  EditMeetingResponseDto,
   FetchMeetingResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 import {
@@ -14,6 +15,7 @@ import {
   AddMeetingApiRequestDto,
   DeleteAgendaTopicApiRequestDto,
   EditAgendaTopicApiRequestDto,
+  EditMeetingApiRequestDto,
   FetchMeetingApiRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import SprintMeetingUrls from "@/sprint-meeting/application/constants/sprintMeetingUrls";
@@ -44,6 +46,16 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
     return await this.apiClient.post({
       url: SprintMeetingUrls.addMeeting({ sprintNumber, teamId }),
       payload: { title, description, dateTime, meetingLink },
+    });
+  }
+
+  async editMeeting({
+    meetingId,
+    ...data
+  }: EditMeetingApiRequestDto): Promise<EditMeetingResponseDto> {
+    return await this.apiClient.patch({
+      url: SprintMeetingUrls.editMeeting({ meetingId }),
+      payload: { ...data },
     });
   }
 
