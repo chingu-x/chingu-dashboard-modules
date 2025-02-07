@@ -9,6 +9,7 @@ import type { AddAgendaTopicUsecase } from "@/sprint-meeting/application/usecase
 import type { EditAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/editAgendaTopicUsecase";
 import type { DeleteAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/deleteAgendaTopicUsecase";
 import type { EditMeetingUsecase } from "@/sprint-meeting/application/usecases/editMeetingUsecase";
+import type { ChangeAgendaTopicStatusUsecase } from "@/sprint-meeting/application/usecases/changeAgendaTopicStatusUsecase";
 
 export const SPRINT_MEETING_TYPES = {
   // ports
@@ -48,6 +49,10 @@ export const SPRINT_MEETING_TYPES = {
   EditMeetingUsecase: Symbol.for(
     "EditMeetingUsecase",
   ) as InjectionToken<EditMeetingUsecase>,
+
+  ChangeAgendaTopicStatusUsecase: Symbol.for(
+    "ChangeAgendaTopicStatusUsecase",
+  ) as InjectionToken<ChangeAgendaTopicStatusUsecase>,
 
   // adapters
   SprintMeetingClientAdapter: Symbol.for(
