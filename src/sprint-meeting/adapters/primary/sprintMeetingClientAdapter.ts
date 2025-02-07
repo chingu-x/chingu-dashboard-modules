@@ -6,6 +6,7 @@ import {
   AddMeetingClientRequestDto,
   DeleteAgendaTopicClientRequestDto,
   EditAgendaTopicClientRequestDto,
+  EditMeetingClientRequestDto,
   FetchMeetingClientRequestDto,
   GetSprintMeetingClientRequestDto,
   GetSprintMeetingIdClientRequesDto,
@@ -15,6 +16,7 @@ import {
   AddMeetingResponseDto,
   DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
+  EditMeetingResponseDto,
   FetchMeetingResponseDto,
   GetSprintMeetingIdResponseDto,
   GetSprintMeetingResponseDto,
@@ -50,6 +52,9 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
     @inject(TYPES.DeleteAgendaTopicUsecase)
     private readonly deleteAgendaTopicUsecase: DeleteAgendaTopicUsecase,
+
+    @inject(TYPES.EditMeetingUsecase)
+    private readonly editMeetingUsecase: EditMeetingUsecase,
   ) {}
 
   async fetchMeeting({
@@ -91,6 +96,16 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
       teamId,
       sprintNumber,
       timezone,
+    });
+  }
+
+  async editMeeting({
+    meetingId,
+    ...data
+  }: EditMeetingClientRequestDto): Promise<EditMeetingResponseDto> {
+    return await this.editMeetingUsecase.execute({
+      meetingId,
+      ...data,
     });
   }
 
