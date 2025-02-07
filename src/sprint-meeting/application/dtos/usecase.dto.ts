@@ -11,12 +11,12 @@ export interface AddMeetingUsecaseDto {
 }
 
 export interface EditMeetingUsecaseDto {
-  teamId: string;
-  sprintNumber: string;
-  title: string;
-  description: string;
-  dateTime: string;
+  meetingId: string;
+  title?: string;
+  description?: string;
+  dateTime?: Date;
   meetingLink?: string;
+  notes?: string;
 }
 
 export interface FetchMeetingUsecaseDto {
