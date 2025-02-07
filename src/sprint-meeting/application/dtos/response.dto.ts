@@ -5,16 +5,16 @@ export type GetSprintMeetingIdResponseDto = number | undefined;
 export type GetSprintMeetingResponseDto = Meeting;
 
 export interface AddMeetingResponseDto {
-  createdAt: string;
-  dateTime: string;
-  description: string;
   id: number;
+  sprintId: number;
+  voyageTeamId: string;
+  title: string;
+  description: string;
+  dateTime: string;
   meetingLink?: string;
   notes?: string;
-  sprintId: number;
-  title: string;
+  createdAt: string;
   updatedAt: string;
-  voyageTeamId: string;
 }
 
 export interface EditMeetingResponseDto {
@@ -32,21 +32,40 @@ export interface EditMeetingResponseDto {
 
 export interface AddAgendaTopicResponseDto {
   id: number;
+  teamMeetingId: number;
   title: string;
   description: string;
   status: boolean;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface EditAgendaTopicResponseDto {
   id: number;
+  teamMeetingId: number;
   title: string;
   description: string;
   status: boolean;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface DeleteAgendaTopicResponseDto {
   id: number;
+  teamMeetingId: number;
   title: string;
   description: string;
   status: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ChangeAgendaTopicStatusClientResponseDto {
+  id: number;
+  teamMeetingId: number;
+  title: string;
+  description: string;
+  status: boolean;
+  createdAt: string;
+  updatedAt: string;
 }
