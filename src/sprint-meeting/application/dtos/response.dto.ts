@@ -17,6 +17,19 @@ export interface AddMeetingResponseDto {
   voyageTeamId: string;
 }
 
+export interface EditMeetingResponseDto {
+  id: number;
+  sprintId: number;
+  voyageTeamId: number;
+  title: string;
+  description: string;
+  dateTime: string;
+  meetingLink: string;
+  notes: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface AddAgendaTopicResponseDto {
   id: number;
   title: string;
