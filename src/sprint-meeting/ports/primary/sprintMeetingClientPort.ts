@@ -51,4 +51,8 @@ export interface SprintMeetingClientPort {
   deleteAgendaTopic: (
     props: DeleteAgendaTopicClientRequestDto,
   ) => Promise<DeleteAgendaTopicResponseDto>;
+
+  changeAgendaTopicStatus: (
+    props: ChangeAgendaTopicStatusClientRequestDto,
+  ) => Promise<ChangeAgendaTopicStatusClientResponseDto>;
 }
