@@ -60,7 +60,7 @@ export interface DeleteAgendaTopicResponseDto {
   updatedAt: string;
 }
 
-export interface ChangeAgendaTopicStatusClientResponseDto {
+export interface ChangeAgendaTopicStatusResponseDto {
   id: number;
   teamMeetingId: number;
   title: string;

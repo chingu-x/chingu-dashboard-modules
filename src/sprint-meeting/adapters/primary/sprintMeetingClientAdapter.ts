@@ -15,7 +15,7 @@ import {
 import {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
-  ChangeAgendaTopicStatusClientResponseDto,
+  ChangeAgendaTopicStatusResponseDto,
   DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
   EditMeetingResponseDto,
@@ -150,7 +150,7 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
   async changeAgendaTopicStatus({
     agendaId,
     status,
-  }: ChangeAgendaTopicStatusClientRequestDto): Promise<ChangeAgendaTopicStatusClientResponseDto> {
+  }: ChangeAgendaTopicStatusClientRequestDto): Promise<ChangeAgendaTopicStatusResponseDto> {
     return await this.changeAgendaTopicStatusUsecase.execute({
       agendaId,
       status,

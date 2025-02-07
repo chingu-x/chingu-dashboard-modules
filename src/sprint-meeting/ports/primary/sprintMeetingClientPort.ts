@@ -12,7 +12,7 @@ import type {
 import type {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
-  ChangeAgendaTopicStatusClientResponseDto,
+  ChangeAgendaTopicStatusResponseDto,
   DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
   EditMeetingResponseDto,
@@ -56,5 +56,5 @@ export interface SprintMeetingClientPort {
 
   changeAgendaTopicStatus: (
     props: ChangeAgendaTopicStatusClientRequestDto,
-  ) => Promise<ChangeAgendaTopicStatusClientResponseDto>;
+  ) => Promise<ChangeAgendaTopicStatusResponseDto>;
 }

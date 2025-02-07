@@ -5,7 +5,7 @@ import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
-  ChangeAgendaTopicStatusClientResponseDto,
+  ChangeAgendaTopicStatusResponseDto,
   DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
   EditMeetingResponseDto,
@@ -95,7 +95,7 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
   async changeAgendaTopicStatus({
     agendaId,
     status,
-  }: ChangeAgendaTopicStatusApiRequestDto): Promise<ChangeAgendaTopicStatusClientResponseDto> {
+  }: ChangeAgendaTopicStatusApiRequestDto): Promise<ChangeAgendaTopicStatusResponseDto> {
     return await this.apiClient.patch({
       url: SprintMeetingUrls.changeAgendaTopicStatus({ agendaId }),
       payload: { status },
