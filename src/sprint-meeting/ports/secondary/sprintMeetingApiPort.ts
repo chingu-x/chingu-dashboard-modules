@@ -6,6 +6,7 @@ import type {
   DeleteAgendaTopicApiRequestDto,
   EditAgendaTopicApiRequestDto,
   EditMeetingApiRequestDto,
+  EditSprintMeetingSectionApiRequestDto,
   FetchMeetingApiRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
@@ -16,6 +17,7 @@ import type {
   DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
   EditMeetingResponseDto,
+  EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 
@@ -69,7 +71,9 @@ export interface SprintMeetingApiPort {
     formId,
   }: AddSprintMeetingSectionApiRequestDto) => Promise<AddSprintMeetingSectionResponseDto>;
 
-  editSprintMeetingSection: (
-    props: EditSprintMeetingSectionApiRequestDto,
-  ) => Promise<EditSprintMeetingSectionResponseDto>;
+  editSprintMeetingSection: ({
+    meetingId,
+    formId,
+    responses,
+  }: EditSprintMeetingSectionApiRequestDto) => Promise<EditSprintMeetingSectionResponseDto>;
 }
