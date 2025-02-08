@@ -32,6 +32,11 @@ interface AddSprintMeetingSectionUrlProps {
   formId: number;
 }
 
+interface EditSprintMeetingSectionUrlProps {
+  meetingId: string;
+  formId: number;
+}
+
 const SprintMeetingUrls = {
   fetchMeeting({ meetingId }: FetchMeetingUrlProps) {
     return `/api/v1/voyages/sprints/meetings/${meetingId}`;
@@ -58,6 +63,12 @@ const SprintMeetingUrls = {
     meetingId,
     formId,
   }: AddSprintMeetingSectionUrlProps) {
+    return `/api/v1/voyages/sprints/meetings/${meetingId}/forms/${formId}`;
+  },
+  editSprintMeetingSection({
+    meetingId,
+    formId,
+  }: EditSprintMeetingSectionUrlProps) {
     return `/api/v1/voyages/sprints/meetings/${meetingId}/forms/${formId}`;
   },
 } as const;
