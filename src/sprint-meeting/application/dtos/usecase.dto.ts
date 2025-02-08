@@ -1,4 +1,4 @@
-import { FormResponses } from "@/forms/application/types";
+import type { FormResponses } from "@/forms/application/types";
 import type {
   Meeting,
   MeetingFormData,
