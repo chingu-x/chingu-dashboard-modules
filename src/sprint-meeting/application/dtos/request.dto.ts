@@ -105,3 +105,8 @@ export interface ChangeAgendaTopicStatusApiRequestDto {
   agendaId: string;
   status: boolean;
 }
+
+export interface AddSprintMeetingSectionApiRequestDto {
+  meetingId: string;
+  formId: number;
+}

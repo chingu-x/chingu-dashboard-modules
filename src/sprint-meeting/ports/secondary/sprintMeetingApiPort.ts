@@ -1,6 +1,7 @@
 import type {
   AddAgendaTopicApiRequestDto,
   AddMeetingApiRequestDto,
+  AddSprintMeetingSectionApiRequestDto,
   ChangeAgendaTopicStatusApiRequestDto,
   DeleteAgendaTopicApiRequestDto,
   EditAgendaTopicApiRequestDto,
@@ -10,6 +11,7 @@ import type {
 import type {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
+  AddSprintMeetingSectionResponseDto,
   ChangeAgendaTopicStatusResponseDto,
   DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
@@ -61,4 +63,9 @@ export interface SprintMeetingApiPort {
     agendaId,
     status,
   }: ChangeAgendaTopicStatusApiRequestDto) => Promise<ChangeAgendaTopicStatusResponseDto>;
+
+  addSprintMeetingSection: ({
+    meetingId,
+    formId,
+  }: AddSprintMeetingSectionApiRequestDto) => Promise<AddSprintMeetingSectionResponseDto>;
 }
