@@ -78,3 +78,15 @@ export interface AddSprintMeetingSectionResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface EditSprintMeetingSectionResponseDto {
+  id: number;
+  questionId: number;
+  optionChoiceId: number;
+  numeric: number;
+  boolean: boolean;
+  text: string;
+  responseGroupId: number;
+  createdAt: string;
+  updatedAt: string;
+}
