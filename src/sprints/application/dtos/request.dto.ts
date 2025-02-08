@@ -1,3 +1,8 @@
+import type {
+  CreateFormResponseBody,
+  FormResponses,
+  Question,
+} from "@/forms/application/types";
 import type { Sprint } from "@/sprints/application/types";
 import type { User } from "@/user/application/types";
 
@@ -30,7 +35,20 @@ export interface IsVoyageProjestSubmissionAllowedClientRequestDto {
   sprintNumber: string;
 }
 
+export interface SubmitWeeklyCheckinClientRequestDto {
+  voyageTeamMemberId: number;
+  sprintId: number;
+  data: CreateFormResponseBody["data"];
+  questions: Question[];
+}
+
 // api
 export interface FetchSprintsApiRequestDto {
   teamId: string;
+}
+
+export interface SubmitWeeklyCheckinApiRequestDto {
+  voyageTeamMemberId: number;
+  sprintId: number;
+  responses: FormResponses[];
 }

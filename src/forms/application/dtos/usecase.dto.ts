@@ -29,13 +29,6 @@ export interface FetchWeeklyCheckinFormUsecaseDto {
   };
 }
 
-export interface SubmitWeeklyCheckinFormUsecaseDto {
-  voyageTeamMemberId: number;
-  sprintId: number;
-  data: CreateFormResponseBody["data"];
-  questions: Question[];
-}
-
 export interface SubmitVoyageProjectFormUsecaseDto {
   voyageTeamId: number;
   data: CreateFormResponseBody["data"];

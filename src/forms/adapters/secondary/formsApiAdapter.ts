@@ -4,12 +4,10 @@ import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
   FetchFormQuestionsApiRequestDto,
   SubmitVoyageProjectFormApiRequestDto,
-  SubmitWeeklyCheckinFormApiRequestDto,
 } from "@/forms/application/dtos/request.dto";
 import {
   FetchFormQuestionsResponseDto,
   SubmitVoyageProjectFormResponseDto,
-  SubmitWeeklyCheckinFormResponseDto,
 } from "@/forms/application/dtos/response.dto";
 import FormsUrls from "@/forms/application/constants/formsUrls";
 import { FormsApiPort } from "@/forms/ports/secondary/formApiPort";
@@ -26,17 +24,6 @@ export class FormsApiAdapter implements FormsApiPort {
   }: FetchFormQuestionsApiRequestDto): Promise<FetchFormQuestionsResponseDto> {
     return await this.apiClient.get({
       url: FormsUrls.fetchFormQuestions({ formId }),
-    });
-  }
-
-  async submitWeeklyCheckinForm({
-    voyageTeamMemberId,
-    sprintId,
-    responses,
-  }: SubmitWeeklyCheckinFormApiRequestDto): Promise<SubmitWeeklyCheckinFormResponseDto> {
-    return await this.apiClient.post({
-      url: FormsUrls.submitWeeklyCheckinForm(),
-      payload: { voyageTeamMemberId, sprintId, responses },
     });
   }
 

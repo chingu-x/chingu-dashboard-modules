@@ -7,3 +7,11 @@ export type GetMeetingResponseDto = Meeting;
 export type GetSprintCheckinStatusResponseDto = boolean;
 export type IsCurrentSprintResponseDto = boolean;
 export type IsVoyageProjestSubmissionAllowedResponseDto = boolean;
+
+export interface SubmitWeeklyCheckinResponseDto {
+  createdAt: string;
+  id: number;
+  responseGroupId: number;
+  sprintId: number;
+  voyageTeamMemberId: number;
+}

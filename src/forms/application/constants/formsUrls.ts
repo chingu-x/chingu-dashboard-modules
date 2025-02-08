@@ -6,9 +6,6 @@ const FormsUrls = {
   fetchFormQuestions({ formId }: FetchFormQuestionsUrlProps) {
     return `/api/v1/forms/${formId}`;
   },
-  submitWeeklyCheckinForm() {
-    return "/api/v1/voyages/sprints/check-in";
-  },
   submitVoyageProjectForm() {
     return "/api/v1/voyages/submit-project";
   },

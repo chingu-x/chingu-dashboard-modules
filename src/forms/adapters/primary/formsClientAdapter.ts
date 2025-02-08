@@ -4,19 +4,16 @@ import {
   FetchFormQuestionsClientRequestDto,
   FetchWeeklyCheckinFormClientRequestDto,
   SubmitVoyageProjectFormClientRequestDto,
-  SubmitWeeklyCheckinFormClientRequestDto,
 } from "@/forms/application/dtos/request.dto";
 import {
   FetchFormQuestionsResponseDto,
   FetchSubmitVoyageProjectFormResponseDto,
   FetchWeeklyCheckinFormResponseDto,
   SubmitVoyageProjectFormResponseDto,
-  SubmitWeeklyCheckinFormResponseDto,
 } from "@/forms/application/dtos/response.dto";
 import { FormsClientPort } from "@/forms/ports/primary/formsClientPort";
 import { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFormQuestionsUsecase";
 import { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetchWeeklyCheckinFormUsecase";
-import { SubmitWeeklyCheckinFormUsecase } from "@/forms/application/usecases/submitWeeklyCheckinFormUsecase";
 import { FetchSubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/fetchSubmitVoyageProjectFormUsecase";
 import { SubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/submitVoyageProjectFormUsecase";
 
@@ -28,9 +25,6 @@ export class FormsClientAdapter implements FormsClientPort {
 
     @inject(TYPES.FetchWeeklyCheckinFormUsecase)
     private readonly fetchWeeklyCheckinFormUsecase: FetchWeeklyCheckinFormUsecase,
-
-    @inject(TYPES.SubmitWeeklyCheckinFormUsecase)
-    private readonly submitWeeklyCheckinFormUsecase: SubmitWeeklyCheckinFormUsecase,
 
     @inject(TYPES.FetchSubmitVoyageProjectFormUsecase)
     private readonly fetchSubmitVoyageProjectFormUsecase: FetchSubmitVoyageProjectFormUsecase,
@@ -53,20 +47,6 @@ export class FormsClientAdapter implements FormsClientPort {
       fetchFormQuestions: this.fetchFormQuestions.bind(this),
       voyageTeamRoles,
       currentUserVoyageRole,
-    });
-  }
-
-  async submitWeeklyCheckinForm({
-    voyageTeamMemberId,
-    sprintId,
-    data,
-    questions,
-  }: SubmitWeeklyCheckinFormClientRequestDto): Promise<SubmitWeeklyCheckinFormResponseDto> {
-    return await this.submitWeeklyCheckinFormUsecase.execute({
-      voyageTeamMemberId,
-      sprintId,
-      data,
-      questions,
     });
   }
 

@@ -20,13 +20,6 @@ export interface FetchWeeklyCheckinFormClientRequestDto {
   };
 }
 
-export interface SubmitWeeklyCheckinFormClientRequestDto {
-  voyageTeamMemberId: number;
-  sprintId: number;
-  data: CreateFormResponseBody["data"];
-  questions: Question[];
-}
-
 export interface SubmitVoyageProjectFormClientRequestDto {
   voyageTeamId: number;
   data: CreateFormResponseBody["data"];
@@ -36,12 +29,6 @@ export interface SubmitVoyageProjectFormClientRequestDto {
 // api
 export interface FetchFormQuestionsApiRequestDto {
   formId: number;
-}
-
-export interface SubmitWeeklyCheckinFormApiRequestDto {
-  voyageTeamMemberId: number;
-  sprintId: number;
-  responses: FormResponses[];
 }
 
 export interface SubmitVoyageProjectFormApiRequestDto {

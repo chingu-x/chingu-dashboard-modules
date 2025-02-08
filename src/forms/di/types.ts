@@ -3,7 +3,6 @@ import type { FormsApiPort } from "@/forms/ports/secondary/formApiPort";
 import type { FormsClientAdapter } from "@/forms/adapters/primary/formsClientAdapter";
 import type { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFormQuestionsUsecase";
 import type { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetchWeeklyCheckinFormUsecase";
-import type { SubmitWeeklyCheckinFormUsecase } from "@/forms/application/usecases/submitWeeklyCheckinFormUsecase";
 import type { FetchSubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/fetchSubmitVoyageProjectFormUsecase";
 import type { SubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/submitVoyageProjectFormUsecase";
 
@@ -19,10 +18,6 @@ export const FORMS_TYPES = {
   FetchWeeklyCheckinFormUsecase: Symbol.for(
     "FetchWeeklyCheckinFormUsecase",
   ) as InjectionToken<FetchWeeklyCheckinFormUsecase>,
-
-  SubmitWeeklyCheckinFormUsecase: Symbol.for(
-    "SubmitWeeklyCheckinFormUsecase",
-  ) as InjectionToken<SubmitWeeklyCheckinFormUsecase>,
 
   FetchSubmitVoyageProjectFormUsecase: Symbol.for(
     "FetchSubmitVoyageProjectFormUsecase",

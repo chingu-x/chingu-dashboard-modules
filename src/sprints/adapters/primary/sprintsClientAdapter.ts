@@ -9,6 +9,7 @@ import {
   GetSprintCheckinStatusClientRequestDto,
   IsCurrentSprintClientRequestDto,
   IsVoyageProjestSubmissionAllowedClientRequestDto,
+  SubmitWeeklyCheckinClientRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import {
   FetchSprintsResponseDto,
@@ -17,12 +18,14 @@ import {
   GetSprintCheckinStatusResponseDto,
   IsCurrentSprintResponseDto,
   IsVoyageProjestSubmissionAllowedResponseDto,
+  SubmitWeeklyCheckinResponseDto,
 } from "@/sprints/application/dtos/response.dto";
 import { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
 import { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsecase";
 import { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/getSprintCheckinStatusUsecase";
 import { IsCurrentSprintUsecase } from "@/sprints/application/usecases/isCurrentSprintUsecase";
 import { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/isVoyageProjestSubmissionAllowedUsecase";
+import { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submitWeeklyCheckinUsecase";
 
 @injectable()
 export class SprintsClientAdapter implements SprintsClientPort {
@@ -44,6 +47,9 @@ export class SprintsClientAdapter implements SprintsClientPort {
 
     @inject(TYPES.IsVoyageProjestSubmissionAllowedUsecase)
     private readonly isVoyageProjestSubmissionAllowedUsecase: IsVoyageProjestSubmissionAllowedUsecase,
+
+    @inject(TYPES.SubmitWeeklyCheckinUsecase)
+    private readonly submitWeeklyCheckinUsecase: SubmitWeeklyCheckinUsecase,
   ) {}
 
   // gets the current voyage team
@@ -91,6 +97,20 @@ export class SprintsClientAdapter implements SprintsClientPort {
   }: IsVoyageProjestSubmissionAllowedClientRequestDto): IsVoyageProjestSubmissionAllowedResponseDto {
     return this.isVoyageProjestSubmissionAllowedUsecase.execute({
       sprintNumber,
+    });
+  }
+
+  async submitWeeklyCheckin({
+    voyageTeamMemberId,
+    sprintId,
+    data,
+    questions,
+  }: SubmitWeeklyCheckinClientRequestDto): Promise<SubmitWeeklyCheckinResponseDto> {
+    return await this.submitWeeklyCheckinUsecase.execute({
+      voyageTeamMemberId,
+      sprintId,
+      data,
+      questions,
     });
   }
 }
