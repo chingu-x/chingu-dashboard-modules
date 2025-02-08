@@ -5,7 +5,6 @@ import { FormsClientAdapter } from "@/forms/adapters/primary/formsClientAdapter"
 import { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFormQuestionsUsecase";
 import { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetchWeeklyCheckinFormUsecase";
 import { FetchSubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/fetchSubmitVoyageProjectFormUsecase";
-import { SubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/submitVoyageProjectFormUsecase";
 
 export const registerFormsDependencies = () => {
   // ports
@@ -22,10 +21,6 @@ export const registerFormsDependencies = () => {
 
   container.register(FORMS_TYPES.FetchSubmitVoyageProjectFormUsecase, {
     useClass: FetchSubmitVoyageProjectFormUsecase,
-  });
-
-  container.register(FORMS_TYPES.SubmitVoyageProjectFormUsecase, {
-    useClass: SubmitVoyageProjectFormUsecase,
   });
 
   // adapters

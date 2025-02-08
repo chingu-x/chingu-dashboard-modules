@@ -4,10 +4,12 @@ import { SprintsApiPort } from "@/sprints/ports/secondary/sprintsApiPort";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
   FetchSprintsApiRequestDto,
+  SubmitVoyageProjectApiRequestDto,
   SubmitWeeklyCheckinApiRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import {
   FetchSprintsResponseDto,
+  SubmitVoyageProjectResponseDto,
   SubmitWeeklyCheckinResponseDto,
 } from "@/sprints/application/dtos/response.dto";
 import SprintsUrls from "@/sprints/application/constants/sprintsUrls";
@@ -35,6 +37,16 @@ export class SprintsApiAdapter implements SprintsApiPort {
     return await this.apiClient.post({
       url: SprintsUrls.submitWeeklyCheckin(),
       payload: { voyageTeamMemberId, sprintId, responses },
+    });
+  }
+
+  async submitVoyageProject({
+    voyageTeamId,
+    responses,
+  }: SubmitVoyageProjectApiRequestDto): Promise<SubmitVoyageProjectResponseDto> {
+    return await this.apiClient.post({
+      url: SprintsUrls.submitVoyageProject(),
+      payload: { voyageTeamId, responses },
     });
   }
 }

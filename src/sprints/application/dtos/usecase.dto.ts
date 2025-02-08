@@ -39,3 +39,9 @@ export interface SubmitWeeklyCheckinUsecaseDto {
   data: CreateFormResponseBody["data"];
   questions: Question[];
 }
+
+export interface SubmitVoyageProjectUsecaseDto {
+  voyageTeamId: number;
+  data: CreateFormResponseBody["data"];
+  questions: Question[];
+}

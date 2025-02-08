@@ -15,12 +15,6 @@ export interface FormsClientPort {
 
   fetchSubmitVoyageProjectForm: () => Promise<FetchSubmitVoyageProjectFormResponseDto>;
 
-  submitVoyageProjectForm: ({
-    voyageTeamId,
-    data,
-    questions,
-  }: SubmitVoyageProjectFormClientRequestDto) => Promise<SubmitVoyageProjectFormResponseDto>;
-
   addSprintMeetingSection: (
     props: AddSprintMeetingSectionClientRequestDto,
   ) => Promise<AddSprintMeetingSectionClientResponseDto>;

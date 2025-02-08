@@ -1,9 +1,11 @@
 import type {
   FetchSprintsApiRequestDto,
+  SubmitVoyageProjectApiRequestDto,
   SubmitWeeklyCheckinApiRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import type {
   FetchSprintsResponseDto,
+  SubmitVoyageProjectResponseDto,
   SubmitWeeklyCheckinResponseDto,
 } from "@/sprints/application/dtos/response.dto";
 
@@ -17,4 +19,9 @@ export interface SprintsApiPort {
     sprintId,
     responses,
   }: SubmitWeeklyCheckinApiRequestDto) => Promise<SubmitWeeklyCheckinResponseDto>;
+
+  submitVoyageProject: ({
+    voyageTeamId,
+    responses,
+  }: SubmitVoyageProjectApiRequestDto) => Promise<SubmitVoyageProjectResponseDto>;
 }

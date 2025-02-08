@@ -9,6 +9,9 @@ const SprintsUrls = {
   submitWeeklyCheckin() {
     return "/api/v1/voyages/sprints/check-in";
   },
+  submitVoyageProject() {
+    return "/api/v1/voyages/submit-project";
+  },
 } as const;
 
 export default SprintsUrls;

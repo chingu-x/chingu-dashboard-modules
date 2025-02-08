@@ -1,9 +1,5 @@
 import type { FetchFormQuestionsClientRequestDto } from "./request.dto";
 import type { FetchFormQuestionsResponseDto } from "./response.dto";
-import type {
-  CreateFormResponseBody,
-  Question,
-} from "@/forms/application/types";
 
 export interface FetchFormQuestionsUsecaseDto {
   formId: number;
@@ -27,10 +23,4 @@ export interface FetchWeeklyCheckinFormUsecaseDto {
     isScrumMaster: boolean;
     isProductOwner: boolean;
   };
-}
-
-export interface SubmitVoyageProjectFormUsecaseDto {
-  voyageTeamId: number;
-  data: CreateFormResponseBody["data"];
-  questions: Question[];
 }

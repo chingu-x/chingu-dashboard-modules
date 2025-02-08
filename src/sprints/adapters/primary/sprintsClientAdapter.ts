@@ -9,6 +9,7 @@ import {
   GetSprintCheckinStatusClientRequestDto,
   IsCurrentSprintClientRequestDto,
   IsVoyageProjestSubmissionAllowedClientRequestDto,
+  SubmitVoyageProjectClientRequestDto,
   SubmitWeeklyCheckinClientRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import {
@@ -18,6 +19,7 @@ import {
   GetSprintCheckinStatusResponseDto,
   IsCurrentSprintResponseDto,
   IsVoyageProjestSubmissionAllowedResponseDto,
+  SubmitVoyageProjectResponseDto,
   SubmitWeeklyCheckinResponseDto,
 } from "@/sprints/application/dtos/response.dto";
 import { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
@@ -26,6 +28,7 @@ import { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/ge
 import { IsCurrentSprintUsecase } from "@/sprints/application/usecases/isCurrentSprintUsecase";
 import { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/isVoyageProjestSubmissionAllowedUsecase";
 import { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submitWeeklyCheckinUsecase";
+import { SubmitVoyageProjectUsecase } from "@/sprints/application/usecases/submitVoyageProjectUsecase";
 
 @injectable()
 export class SprintsClientAdapter implements SprintsClientPort {
@@ -50,6 +53,9 @@ export class SprintsClientAdapter implements SprintsClientPort {
 
     @inject(TYPES.SubmitWeeklyCheckinUsecase)
     private readonly submitWeeklyCheckinUsecase: SubmitWeeklyCheckinUsecase,
+
+    @inject(TYPES.SubmitVoyageProjectUsecase)
+    private readonly submitVoyageProjectUsecase: SubmitVoyageProjectUsecase,
   ) {}
 
   // gets the current voyage team
@@ -109,6 +115,18 @@ export class SprintsClientAdapter implements SprintsClientPort {
     return await this.submitWeeklyCheckinUsecase.execute({
       voyageTeamMemberId,
       sprintId,
+      data,
+      questions,
+    });
+  }
+
+  async submitVoyageProject({
+    voyageTeamId,
+    data,
+    questions,
+  }: SubmitVoyageProjectClientRequestDto): Promise<SubmitVoyageProjectResponseDto> {
+    return await this.submitVoyageProjectUsecase.execute({
+      voyageTeamId,
       data,
       questions,
     });

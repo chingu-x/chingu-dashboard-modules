@@ -15,3 +15,10 @@ export interface SubmitWeeklyCheckinResponseDto {
   sprintId: number;
   voyageTeamMemberId: number;
 }
+
+export interface SubmitVoyageProjectResponseDto {
+  createdAt: string;
+  id: number;
+  responseGroupId: number;
+  voyageTeamMemberId: number;
+}

@@ -42,6 +42,12 @@ export interface SubmitWeeklyCheckinClientRequestDto {
   questions: Question[];
 }
 
+export interface SubmitVoyageProjectClientRequestDto {
+  voyageTeamId: number;
+  data: CreateFormResponseBody["data"];
+  questions: Question[];
+}
+
 // api
 export interface FetchSprintsApiRequestDto {
   teamId: string;
@@ -50,5 +56,10 @@ export interface FetchSprintsApiRequestDto {
 export interface SubmitWeeklyCheckinApiRequestDto {
   voyageTeamMemberId: number;
   sprintId: number;
+  responses: FormResponses[];
+}
+
+export interface SubmitVoyageProjectApiRequestDto {
+  voyageTeamId: number;
   responses: FormResponses[];
 }

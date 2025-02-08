@@ -9,6 +9,7 @@ import { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsec
 import { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/getSprintCheckinStatusUsecase";
 import { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/isVoyageProjestSubmissionAllowedUsecase";
 import { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submitWeeklyCheckinUsecase";
+import { SubmitVoyageProjectUsecase } from "@/sprints/application/usecases/submitVoyageProjectUsecase";
 
 export const registerSprintsDependencies = () => {
   // ports
@@ -43,6 +44,10 @@ export const registerSprintsDependencies = () => {
 
   container.register(SPRINTS_TYPES.SubmitWeeklyCheckinUsecase, {
     useClass: SubmitWeeklyCheckinUsecase,
+  });
+
+  container.register(SPRINTS_TYPES.SubmitVoyageProjectUsecase, {
+    useClass: SubmitVoyageProjectUsecase,
   });
 
   // adapters

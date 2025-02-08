@@ -5,6 +5,7 @@ import type {
   GetSprintCheckinStatusClientRequestDto,
   IsCurrentSprintClientRequestDto,
   IsVoyageProjestSubmissionAllowedClientRequestDto,
+  SubmitVoyageProjectClientRequestDto,
   SubmitWeeklyCheckinClientRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import type {
@@ -14,6 +15,7 @@ import type {
   GetSprintCheckinStatusResponseDto,
   IsCurrentSprintResponseDto,
   IsVoyageProjestSubmissionAllowedResponseDto,
+  SubmitVoyageProjectResponseDto,
   SubmitWeeklyCheckinResponseDto,
 } from "@/sprints/application/dtos/response.dto";
 
@@ -45,4 +47,10 @@ export interface SprintsClientPort {
   submitWeeklyCheckin: (
     props: SubmitWeeklyCheckinClientRequestDto,
   ) => Promise<SubmitWeeklyCheckinResponseDto>;
+
+  submitVoyageProject: ({
+    voyageTeamId,
+    data,
+    questions,
+  }: SubmitVoyageProjectClientRequestDto) => Promise<SubmitVoyageProjectResponseDto>;
 }

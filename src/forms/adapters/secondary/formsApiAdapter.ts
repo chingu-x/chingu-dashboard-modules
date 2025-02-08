@@ -1,14 +1,8 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
-import {
-  FetchFormQuestionsApiRequestDto,
-  SubmitVoyageProjectFormApiRequestDto,
-} from "@/forms/application/dtos/request.dto";
-import {
-  FetchFormQuestionsResponseDto,
-  SubmitVoyageProjectFormResponseDto,
-} from "@/forms/application/dtos/response.dto";
+import { FetchFormQuestionsApiRequestDto } from "@/forms/application/dtos/request.dto";
+import { FetchFormQuestionsResponseDto } from "@/forms/application/dtos/response.dto";
 import FormsUrls from "@/forms/application/constants/formsUrls";
 import { FormsApiPort } from "@/forms/ports/secondary/formApiPort";
 
@@ -24,16 +18,6 @@ export class FormsApiAdapter implements FormsApiPort {
   }: FetchFormQuestionsApiRequestDto): Promise<FetchFormQuestionsResponseDto> {
     return await this.apiClient.get({
       url: FormsUrls.fetchFormQuestions({ formId }),
-    });
-  }
-
-  async submitVoyageProjectForm({
-    voyageTeamId,
-    responses,
-  }: SubmitVoyageProjectFormApiRequestDto): Promise<SubmitVoyageProjectFormResponseDto> {
-    return await this.apiClient.post({
-      url: FormsUrls.submitVoyageProjectForm(),
-      payload: { voyageTeamId, responses },
     });
   }
 }
