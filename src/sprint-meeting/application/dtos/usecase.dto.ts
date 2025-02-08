@@ -54,3 +54,8 @@ export interface ChangeAgendaTopicStatusUsecaseDto {
   agendaId: string;
   status: boolean;
 }
+
+export interface AddSprintMeetingSectionUsecaseDto {
+  meetingId: string;
+  formId: number;
+}
