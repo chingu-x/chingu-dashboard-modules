@@ -1,5 +1,3 @@
-import type { Meeting } from "@/sprint-meeting/application/types";
-
 export interface VoyageSprint {
   id: number;
   number: string;
@@ -17,5 +15,4 @@ export interface Sprint {
   startDate: string;
   endDate: string;
   teamMeetings: number[];
-  teamMeetingsData?: Meeting[];
 }

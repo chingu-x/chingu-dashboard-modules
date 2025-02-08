@@ -4,7 +4,6 @@ import type { SprintsApiPort } from "@/sprints/ports/secondary/sprintsApiPort";
 import type { SprintsClientAdapter } from "@/sprints/adapters/primary/sprintsClientAdapter";
 import type { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprintsUsecase";
 import type { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
-import type { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsecase";
 import type { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/getSprintCheckinStatusUsecase";
 import type { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/isVoyageProjestSubmissionAllowedUsecase";
 import type { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submitWeeklyCheckinUsecase";
@@ -24,10 +23,6 @@ export const SPRINTS_TYPES = {
   GetCurrentSprintUsecase: Symbol.for(
     "GetCurrentSprintUsecase",
   ) as InjectionToken<GetCurrentSprintUsecase>,
-
-  GetMeetingUsecase: Symbol.for(
-    "GetMeetingUsecase",
-  ) as InjectionToken<GetMeetingUsecase>,
 
   GetSprintCheckinStatusUsecase: Symbol.for(
     "GetSprintCheckinStatusUsecase",

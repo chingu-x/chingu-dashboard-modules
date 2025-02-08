@@ -83,11 +83,11 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
   }
 
   getSprintMeetingId({
-    meeting,
+    sprints,
     sprintNumber,
   }: GetSprintMeetingIdClientRequesDto): GetSprintMeetingIdResponseDto {
     return this.getSprintMeetingIdUsecase.execute({
-      meeting,
+      sprints,
       sprintNumber,
     });
   }

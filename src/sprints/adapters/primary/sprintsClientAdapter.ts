@@ -5,7 +5,6 @@ import { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprints
 import {
   FetchSprintsClientRequestDto,
   GetCurrentSprintClientRequestDto,
-  GetMeetingClientRequestDto,
   GetSprintCheckinStatusClientRequestDto,
   IsCurrentSprintClientRequestDto,
   IsVoyageProjestSubmissionAllowedClientRequestDto,
@@ -15,7 +14,6 @@ import {
 import {
   FetchSprintsResponseDto,
   GetCurrentSprintResponseDto,
-  GetMeetingResponseDto,
   GetSprintCheckinStatusResponseDto,
   IsCurrentSprintResponseDto,
   IsVoyageProjestSubmissionAllowedResponseDto,
@@ -23,7 +21,6 @@ import {
   SubmitWeeklyCheckinResponseDto,
 } from "@/sprints/application/dtos/response.dto";
 import { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
-import { GetMeetingUsecase } from "@/sprints/application/usecases/getMeetingUsecase";
 import { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/getSprintCheckinStatusUsecase";
 import { IsCurrentSprintUsecase } from "@/sprints/application/usecases/isCurrentSprintUsecase";
 import { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/isVoyageProjestSubmissionAllowedUsecase";
@@ -38,9 +35,6 @@ export class SprintsClientAdapter implements SprintsClientPort {
 
     @inject(TYPES.GetCurrentSprintUsecase)
     private readonly getCurrentSprintUsecase: GetCurrentSprintUsecase,
-
-    @inject(TYPES.GetMeetingUsecase)
-    private readonly getMeetingUsecase: GetMeetingUsecase,
 
     @inject(TYPES.GetSprintCheckinStatusUsecase)
     private readonly getSprintCheckinStatusUsecase: GetSprintCheckinStatusUsecase,
@@ -72,13 +66,6 @@ export class SprintsClientAdapter implements SprintsClientPort {
     | GetCurrentSprintResponseDto
     | undefined {
     return this.getCurrentSprintUsecase.execute({ sprints, currentDate });
-  }
-
-  getMeeting({
-    sprints,
-    sprintNumber,
-  }: GetMeetingClientRequestDto): GetMeetingResponseDto | null {
-    return this.getMeetingUsecase.execute({ sprints, sprintNumber });
   }
 
   getSprintCheckinStatus({

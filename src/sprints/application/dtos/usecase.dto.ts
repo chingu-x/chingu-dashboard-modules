@@ -14,11 +14,6 @@ export interface GetCurrentSprintUsecaseDto {
   currentDate: Date;
 }
 
-export interface GetMeetingUsecaseDto {
-  sprints: Sprint[];
-  sprintNumber: number;
-}
-
 export interface GetSprintCheckinStatusUsecaseDto {
   user: User;
   sprintId: number;
