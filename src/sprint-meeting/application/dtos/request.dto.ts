@@ -1,3 +1,4 @@
+import type { FormResponses } from "@/forms/application/types";
 import type {
   Meeting,
   MeetingFormData,
@@ -59,6 +60,12 @@ export interface ChangeAgendaTopicStatusClientRequestDto {
 export interface AddSprintMeetingSectionClientRequestDto {
   meetingId: string;
   formId: number;
+}
+
+export interface EditSprintMeetingSectionClientRequestDto {
+  meetingId: string;
+  formId: number;
+  responses: FormResponses;
 }
 
 // api
