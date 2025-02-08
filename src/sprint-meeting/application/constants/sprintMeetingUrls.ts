@@ -27,6 +27,11 @@ interface ChangeAgendaTopicStatusUrlProps {
   agendaId: string;
 }
 
+interface AddSprintMeetingSectionUrlProps {
+  meetingId: string;
+  formId: number;
+}
+
 const SprintMeetingUrls = {
   fetchMeeting({ meetingId }: FetchMeetingUrlProps) {
     return `/api/v1/voyages/sprints/meetings/${meetingId}`;
@@ -48,6 +53,12 @@ const SprintMeetingUrls = {
   },
   changeAgendaTopicStatus({ agendaId }: ChangeAgendaTopicStatusUrlProps) {
     return `/api/v1/voyages/sprints/agendas/${agendaId}`;
+  },
+  addSprintMeetingSection({
+    meetingId,
+    formId,
+  }: AddSprintMeetingSectionUrlProps) {
+    return `/api/v1/voyages/sprints/meetings/${meetingId}/forms/${formId}`;
   },
 } as const;
 
