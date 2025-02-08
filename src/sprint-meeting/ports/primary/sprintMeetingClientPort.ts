@@ -8,10 +8,12 @@ import type {
   DeleteAgendaTopicClientRequestDto,
   EditMeetingClientRequestDto,
   ChangeAgendaTopicStatusClientRequestDto,
+  AddSprintMeetingSectionClientRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
   AddAgendaTopicResponseDto,
   AddMeetingResponseDto,
+  AddSprintMeetingSectionResponseDto,
   ChangeAgendaTopicStatusResponseDto,
   DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
