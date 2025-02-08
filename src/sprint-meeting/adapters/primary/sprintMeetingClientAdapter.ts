@@ -120,10 +120,12 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
   async editMeeting({
     meetingId,
+    timezone,
     ...data
   }: EditMeetingClientRequestDto): Promise<EditMeetingResponseDto> {
     return await this.editMeetingUsecase.execute({
       meetingId,
+      timezone,
       ...data,
     });
   }

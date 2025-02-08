@@ -28,6 +28,7 @@ export interface AddMeetingClientRequestDto {
 
 export interface EditMeetingClientRequestDto {
   meetingId: string;
+  timezone: string;
   title?: string;
   description?: string;
   dateTime?: Date;
@@ -86,7 +87,7 @@ export interface EditMeetingApiRequestDto {
   meetingId: string;
   title?: string;
   description?: string;
-  dateTime?: Date;
+  dateTime?: string;
   meetingLink?: string;
   notes?: string;
 }

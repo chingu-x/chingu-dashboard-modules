@@ -13,6 +13,7 @@ export interface AddMeetingUsecaseDto {
 
 export interface EditMeetingUsecaseDto {
   meetingId: string;
+  timezone: string;
   title?: string;
   description?: string;
   dateTime?: Date;
