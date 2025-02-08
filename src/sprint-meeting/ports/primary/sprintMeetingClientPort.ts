@@ -57,4 +57,8 @@ export interface SprintMeetingClientPort {
   changeAgendaTopicStatus: (
     props: ChangeAgendaTopicStatusClientRequestDto,
   ) => Promise<ChangeAgendaTopicStatusResponseDto>;
+
+  addSprintMeetingSection: (
+    props: AddSprintMeetingSectionClientRequestDto,
+  ) => Promise<AddSprintMeetingSectionResponseDto>;
 }

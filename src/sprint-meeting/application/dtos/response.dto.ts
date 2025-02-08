@@ -69,3 +69,12 @@ export interface ChangeAgendaTopicStatusResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface AddSprintMeetingSectionResponseDto {
+  id: number;
+  formId: number;
+  meetingId: number;
+  responseGroupId: number;
+  createdAt: string;
+  updatedAt: string;
+}

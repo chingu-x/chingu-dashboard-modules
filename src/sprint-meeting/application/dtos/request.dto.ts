@@ -56,6 +56,11 @@ export interface ChangeAgendaTopicStatusClientRequestDto {
   status: boolean;
 }
 
+export interface AddSprintMeetingSectionClientRequestDto {
+  meetingId: string;
+  formId: number;
+}
+
 // api
 export interface FetchMeetingApiRequestDto {
   meetingId: string;
