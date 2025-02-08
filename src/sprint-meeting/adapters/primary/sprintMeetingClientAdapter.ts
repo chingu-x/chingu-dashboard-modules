@@ -34,6 +34,7 @@ import { EditAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/ed
 import { DeleteAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/deleteAgendaTopicUsecase";
 import { EditMeetingUsecase } from "@/sprint-meeting/application/usecases/editMeetingUsecase";
 import { ChangeAgendaTopicStatusUsecase } from "@/sprint-meeting/application/usecases/changeAgendaTopicStatusUsecase";
+import { AddSprintMeetingSectionUsecase } from "@/sprint-meeting/application/usecases/addSprintMeetingSectionUsecase";
 
 @injectable()
 export class SprintMeetingClientAdapter implements SprintMeetingClientPort {

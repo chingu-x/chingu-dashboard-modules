@@ -11,6 +11,7 @@ import { EditAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/ed
 import { DeleteAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/deleteAgendaTopicUsecase";
 import { EditMeetingUsecase } from "@/sprint-meeting/application/usecases/editMeetingUsecase";
 import { ChangeAgendaTopicStatusUsecase } from "@/sprint-meeting/application/usecases/changeAgendaTopicStatusUsecase";
+import { AddSprintMeetingSectionUsecase } from "@/sprint-meeting/application/usecases/addSprintMeetingSectionUsecase";
 
 export const registerSprintMeetingDependencies = () => {
   // ports
@@ -53,6 +54,10 @@ export const registerSprintMeetingDependencies = () => {
 
   container.register(SPRINT_MEETING_TYPES.ChangeAgendaTopicStatusUsecase, {
     useClass: ChangeAgendaTopicStatusUsecase,
+  });
+
+  container.register(SPRINT_MEETING_TYPES.AddSprintMeetingSectionUsecase, {
+    useClass: AddSprintMeetingSectionUsecase,
   });
 
   // adapters

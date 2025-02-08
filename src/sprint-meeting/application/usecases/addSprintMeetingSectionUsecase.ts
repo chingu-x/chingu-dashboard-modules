@@ -11,9 +11,9 @@ export class AddSprintMeetingSectionUsecase {
     private readonly sprintMeetingApi: SprintMeetingApiPort,
   ) {}
 
-  async execute({
-    ...props
-  }: AddSprintMeetingSectionUsecaseDto): Promise<AddSprintMeetingSectionResponseDto> {
+  async execute(
+    props: AddSprintMeetingSectionUsecaseDto,
+  ): Promise<AddSprintMeetingSectionResponseDto> {
     return await this.sprintMeetingApi.addSprintMeetingSection({
       ...props,
     });
