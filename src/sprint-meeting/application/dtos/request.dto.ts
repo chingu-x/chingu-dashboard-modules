@@ -117,3 +117,9 @@ export interface AddSprintMeetingSectionApiRequestDto {
   meetingId: string;
   formId: number;
 }
+
+export interface EditSprintMeetingSectionApiRequestDto {
+  meetingId: string;
+  formId: number;
+  responses: FormResponses;
+}

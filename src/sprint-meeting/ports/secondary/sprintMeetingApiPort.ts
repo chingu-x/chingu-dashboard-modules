@@ -68,4 +68,8 @@ export interface SprintMeetingApiPort {
     meetingId,
     formId,
   }: AddSprintMeetingSectionApiRequestDto) => Promise<AddSprintMeetingSectionResponseDto>;
+
+  editSprintMeetingSection: (
+    props: EditSprintMeetingSectionApiRequestDto,
+  ) => Promise<EditSprintMeetingSectionResponseDto>;
 }
