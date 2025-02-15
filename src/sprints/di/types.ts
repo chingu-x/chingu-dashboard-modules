@@ -8,6 +8,7 @@ import type { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecas
 import type { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/isVoyageProjestSubmissionAllowedUsecase";
 import type { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submitWeeklyCheckinUsecase";
 import type { SubmitVoyageProjectUsecase } from "@/sprints/application/usecases/submitVoyageProjectUsecase";
+import type { GetSprintByNumberUsecase } from "@/sprints/application/usecases/getSprintByNumberUsecase";
 
 export const SPRINTS_TYPES = {
   // ports
@@ -43,6 +44,10 @@ export const SPRINTS_TYPES = {
   SubmitVoyageProjectUsecase: Symbol.for(
     "SubmitVoyageProjectUsecase",
   ) as InjectionToken<SubmitVoyageProjectUsecase>,
+
+  GetSprintByNumberUsecase: Symbol.for(
+    "GetSprintByNumberUsecase",
+  ) as InjectionToken<GetSprintByNumberUsecase>,
 
   // adapters
   SprintsClientAdapter: Symbol.for(
