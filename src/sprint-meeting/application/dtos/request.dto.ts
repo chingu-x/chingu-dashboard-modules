@@ -76,11 +76,9 @@ export interface EditSprintReviewSectionClientRequestDto {
 }
 
 export interface GetAgendaByIdClientRequestDto {
-  sprints: Sprint[];
-  sprintNumber: string;
   meeting: Meeting[];
   meetingId: string;
-  agendaId: number;
+  agendaId: string;
 }
 
 // api

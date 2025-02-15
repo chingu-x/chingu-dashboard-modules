@@ -68,3 +68,8 @@ export interface EditSprintMeetingSectionUsecaseDto {
   formId: number;
   responses: FormResponses;
 }
+
+export interface GetAgendaByIdUsecaseDto {
+  sprintMeeting: Meeting;
+  agendaId: string;
+}

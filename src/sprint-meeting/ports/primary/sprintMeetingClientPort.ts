@@ -20,7 +20,7 @@ import type {
   DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
   EditMeetingResponseDto,
-  EditSprintMeetingSectionResponseDto,
+  // EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
   GetAgendaByIdResponseDto,
   GetSprintMeetingIdResponseDto,
