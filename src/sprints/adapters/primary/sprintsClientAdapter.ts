@@ -5,6 +5,7 @@ import { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprints
 import {
   FetchSprintsClientRequestDto,
   GetCurrentSprintClientRequestDto,
+  GetSprintByNumberClientRequestDto,
   GetSprintCheckinStatusClientRequestDto,
   IsCurrentSprintClientRequestDto,
   IsVoyageProjestSubmissionAllowedClientRequestDto,
@@ -14,6 +15,7 @@ import {
 import {
   FetchSprintsResponseDto,
   GetCurrentSprintResponseDto,
+  GetSprintByNumberResponseDto,
   GetSprintCheckinStatusResponseDto,
   IsCurrentSprintResponseDto,
   IsVoyageProjestSubmissionAllowedResponseDto,
@@ -50,6 +52,9 @@ export class SprintsClientAdapter implements SprintsClientPort {
 
     @inject(TYPES.SubmitVoyageProjectUsecase)
     private readonly submitVoyageProjectUsecase: SubmitVoyageProjectUsecase,
+
+    @inject(TYPES.GetSprintByNumberUsecase)
+    private readonly getSprintByNumberUsecase: GetSprintByNumberUsecase,
   ) {}
 
   // gets the current voyage team
@@ -117,5 +122,12 @@ export class SprintsClientAdapter implements SprintsClientPort {
       data,
       questions,
     });
+  }
+
+  getSprintByNumber({
+    sprints,
+    sprintNumber,
+  }: GetSprintByNumberClientRequestDto): GetSprintByNumberResponseDto {
+    return this.getSprintByNumberUsecase.execute({ sprints, sprintNumber });
   }
 }
