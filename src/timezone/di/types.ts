@@ -4,6 +4,7 @@ import type { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application
 import type { TimezoneClientAdapter } from "@/timezone/adapters/primary/timezoneClientAdapter";
 import type { GetMeetingDateUsecase } from "@/timezone/application/usecases/getMeetingDateUsecase";
 import type { GetMeetingTimeWithTZAbbreviationUsecase } from "@/timezone/application/usecases/getMeetingTimeWithTZAbbreviationUsecase";
+import type { GetSprintStartDateBySprintNumberUsecase } from "@/timezone/application/usecases/getSprintStartDateBySprintNumberUsecase";
 
 export const TIME_ZONE_TYPES = {
   // ports
@@ -24,6 +25,10 @@ export const TIME_ZONE_TYPES = {
   GetMeetingTimeWithTZAbbreviationUsecase: Symbol.for(
     "GetMeetingTimeWithTZAbbreviationUsecase",
   ) as InjectionToken<GetMeetingTimeWithTZAbbreviationUsecase>,
+
+  GetSprintStartDateBySprintNumberUsecase: Symbol.for(
+    "GetSprintStartDateBySprintNumberUsecase",
+  ) as InjectionToken<GetSprintStartDateBySprintNumberUsecase>,
 
   // adapters
   TimezoneClientAdapter: Symbol.for(

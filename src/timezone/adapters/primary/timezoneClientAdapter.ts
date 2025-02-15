@@ -17,6 +17,7 @@ import { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usec
 import { GetMeetingDateUsecase } from "@/timezone/application/usecases/getMeetingDateUsecase";
 import { GetMeetingTimeWithTZAbbreviationUsecase } from "@/timezone/application/usecases/getMeetingTimeWithTZAbbreviationUsecase";
 import { GetSprintByNumberUsecase } from "@/sprints/application/usecases/getSprintByNumberUsecase";
+import { GetSprintStartDateBySprintNumberUsecase } from "@/timezone/application/usecases/getSprintStartDateBySprintNumberUsecase";
 
 @injectable()
 export class TimezoneClientAdapter implements TimezoneClientPort {
