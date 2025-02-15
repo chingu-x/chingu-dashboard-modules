@@ -24,3 +24,8 @@ export interface GetSprintStartDateBySprintNumberUsecaseDto {
   sprint: Sprint;
   timezone: string;
 }
+
+export interface GetSprintEndDateBySprintNumberUsecaseDto {
+  sprint: Sprint;
+  timezone: string;
+}
