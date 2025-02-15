@@ -66,6 +66,10 @@ export interface SprintMeetingClientPort {
     props: AddSprintMeetingSectionClientRequestDto,
   ) => Promise<AddSprintMeetingSectionResponseDto>;
 
+  getAgendaById: (
+    props: GetAgendaByIdClientRequestDto,
+  ) => GetAgendaByIdClientResponseDto;
+
   // editSprintMeetingSection: (
   //   props: EditSprintMeetingSectionClientRequestDto,
   // ) => Promise<EditSprintMeetingSectionResponseDto>;
