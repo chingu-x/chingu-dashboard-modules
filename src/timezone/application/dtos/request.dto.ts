@@ -1,3 +1,5 @@
+import type { Sprint } from "@/sprints/application/types/index";
+
 // client
 export interface GetMeetingLongDateTimeFormatClientRequestDto {
   meetingDateTime: string;
@@ -15,7 +17,9 @@ export interface GetMeetingTimeWithTZAbbreviationClientRequestDto {
 }
 
 export interface GetSprintStartDateBySprintNumberClientRequestDto {
-  sprint;
+  sprints: Sprint[];
+  sprintNumber: string;
+  timezone: string;
 }
 
 // api
