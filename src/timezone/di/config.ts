@@ -6,6 +6,7 @@ import { TimezoneClientAdapter } from "@/timezone/adapters/primary/timezoneClien
 import { GetMeetingDateUsecase } from "@/timezone/application/usecases/getMeetingDateUsecase";
 import { GetMeetingTimeWithTZAbbreviationUsecase } from "@/timezone/application/usecases/getMeetingTimeWithTZAbbreviationUsecase";
 import { GetSprintStartDateBySprintNumberUsecase } from "@/timezone/application/usecases/getSprintStartDateBySprintNumberUsecase";
+import { GetSprintEndDateBySprintNumberUsecase } from "@/timezone/application/usecases/getSprintEndDateBySprintNumberUsecase";
 
 export const registerTimezoneDependencies = () => {
   // ports
@@ -29,6 +30,10 @@ export const registerTimezoneDependencies = () => {
 
   container.register(TIME_ZONE_TYPES.GetSprintStartDateBySprintNumberUsecase, {
     useClass: GetSprintStartDateBySprintNumberUsecase,
+  });
+
+  container.register(TIME_ZONE_TYPES.GetSprintEndDateBySprintNumberUsecase, {
+    useClass: GetSprintEndDateBySprintNumberUsecase,
   });
 
   // adapters
