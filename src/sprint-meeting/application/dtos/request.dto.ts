@@ -29,10 +29,10 @@ export interface AddMeetingClientRequestDto {
 
 export interface EditMeetingClientRequestDto {
   meetingId: string;
-  timezone: string;
+  timezone?: string;
   title?: string;
   description?: string;
-  dateTime?: Date;
+  dateTime?: string | Date;
   meetingLink?: string;
   notes?: string;
 }
@@ -70,10 +70,6 @@ export interface EditSprintMeetingSectionClientRequestDto {
   responses: FormResponses;
 }
 
-export interface GetMeetingNoteBySprintNumberClientRequestDto {
-  sprints: Sprint[];
-}
-
 // api
 export interface FetchMeetingApiRequestDto {
   meetingId: string;
@@ -92,7 +88,7 @@ export interface EditMeetingApiRequestDto {
   meetingId: string;
   title?: string;
   description?: string;
-  dateTime?: string;
+  dateTime?: string | Date;
   meetingLink?: string;
   notes?: string;
 }
