@@ -75,6 +75,12 @@ export interface EditSprintReviewSectionClientRequestDto {
   data: SprintReviewQuestions;
 }
 
+export interface GetAgendaByIdClientRequestDto {
+  sprints: Sprint[];
+  sprintNumber: string;
+  agendaId: number;
+}
+
 // api
 export interface FetchMeetingApiRequestDto {
   meetingId: string;
