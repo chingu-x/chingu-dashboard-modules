@@ -39,6 +39,7 @@ export interface MeetingFormData {
   description: string;
   dateTime: string | Date;
   meetingLink: string;
+  notes?: string;
 }
 
 export interface SprintReviewQuestions {

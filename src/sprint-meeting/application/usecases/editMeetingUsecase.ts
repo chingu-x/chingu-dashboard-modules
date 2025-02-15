@@ -18,39 +18,35 @@ export class EditMeetingUsecase {
     timezone,
     ...data
   }: EditMeetingUsecaseDto): Promise<EditMeetingResponseDto> {
-    let payload;
-
+    let dateTime;
     let newData: Partial<MeetingFormData>;
+
+    if (timezone) {
+      dateTime = format(data.dateTime!, "yyyy-MM-dd HH:mm:ssXXX", {
+        timeZone: timezone,
+      });
+    }
 
     if (data.meetingLink === "") {
       newData = {
         description: data.description,
         title: data.title,
+        notes: data.notes,
       };
     } else {
       newData = {
         description: data.description,
         title: data.title,
+        notes: data.notes,
         meetingLink: data.meetingLink,
       };
     }
 
-    if (timezone) {
-      const dateTime = format(data.dateTime!, "yyyy-MM-dd HH:mm:ssXXX", {
-        timeZone: timezone,
-      });
-
-      payload = {
-        ...newData,
-        meetingId,
-        dateTime,
-      };
-    } else {
-      payload = {
-        ...newData,
-        meetingId,
-      };
-    }
+    const payload = {
+      ...newData,
+      meetingId,
+      dateTime,
+    };
 
     return await this.sprintMeetingApi.editMeeting(payload);
   }

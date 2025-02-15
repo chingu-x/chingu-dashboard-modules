@@ -7,7 +7,7 @@ export {
   EditMeetingClientRequestDto,
   ChangeAgendaTopicStatusClientRequestDto,
   AddSprintMeetingSectionClientRequestDto,
-  EditSprintMeetingSectionClientRequestDto,
+  // EditSprintMeetingSectionClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   AddMeetingResponseDto,
