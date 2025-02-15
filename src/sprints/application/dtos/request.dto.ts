@@ -43,6 +43,11 @@ export interface SubmitVoyageProjectClientRequestDto {
   questions: Question[];
 }
 
+export interface GetSprintByNumberClientRequestDto {
+  sprints: Sprint[];
+  sprintNumber: string;
+}
+
 // api
 export interface FetchSprintsApiRequestDto {
   teamId: string;
