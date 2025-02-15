@@ -16,6 +16,7 @@ import {
 import { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/getMeetingLongDateTimeFormatUsecase";
 import { GetMeetingDateUsecase } from "@/timezone/application/usecases/getMeetingDateUsecase";
 import { GetMeetingTimeWithTZAbbreviationUsecase } from "@/timezone/application/usecases/getMeetingTimeWithTZAbbreviationUsecase";
+import { GetSprintByNumberUsecase } from "@/sprints/application/usecases/getSprintByNumberUsecase";
 
 @injectable()
 export class TimezoneClientAdapter implements TimezoneClientPort {
@@ -28,6 +29,9 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
 
     @inject(TYPES.GetMeetingTimeWithTZAbbreviationUsecase)
     private readonly getMeetingTimeWithTZAbbreviationUsecase: GetMeetingTimeWithTZAbbreviationUsecase,
+
+    @inject(TYPES.GetSprintByNumberUsecase)
+    private readonly getSprintByNumberUsecase: GetSprintByNumberUsecase,
 
     @inject(TYPES.GetSprintStartDateBySprintNumberUsecase)
     private readonly getSprintStartDateBySprintNumberUsecase: GetSprintStartDateBySprintNumberUsecase,
@@ -68,15 +72,18 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
     });
   }
 
-  // gets sprint start date by sprint number
   getSprintStartDateBySprintNumber({
     sprints,
     sprintNumber,
     timezone,
   }: GetSprintStartDateBySprintNumberClientRequestDto): GetSprintStartDateBySprintNumberResponseDto {
-    return this.getSprintStartDateBySprintNumberUsecase.execute({
+    const sprint = this.getSprintByNumberUsecase.execute({
       sprints,
       sprintNumber,
+    });
+
+    return this.getSprintStartDateBySprintNumberUsecase.execute({
+      sprint,
       timezone,
     });
   }

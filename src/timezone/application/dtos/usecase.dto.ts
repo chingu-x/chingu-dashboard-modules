@@ -21,7 +21,6 @@ export interface GetMeetingTimeWithTZAbbreviationUsecaseDto {
 }
 
 export interface GetSprintStartDateBySprintNumberUsecaseDto {
-  sprints: Sprint[];
-  sprintNumber: string;
+  sprint: Sprint;
   timezone: string;
 }
