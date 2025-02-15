@@ -2,12 +2,14 @@ import type {
   GetMeetingDateClientRequestDto,
   GetMeetingLongDateTimeFormatClientRequestDto,
   GetMeetingTimeWithTZAbbreviationClientRequestDto,
+  GetSprintEndDateBySprintNumberClientRequestDto,
   GetSprintStartDateBySprintNumberClientRequestDto,
 } from "@/timezone/application/dtos/request.dto";
 import type {
   GetMeetingDateResponseDto,
   GetMeetingLongDateTimeFormatResponseDto,
   GetMeetingTimeWithTZAbbreviationResponseDto,
+  GetSprintEndDateBySprintNumberResponseDto,
   GetSprintStartDateBySprintNumberResponseDto,
 } from "@/timezone/application/dtos/response.dto";
 
