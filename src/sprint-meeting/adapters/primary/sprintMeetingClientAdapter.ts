@@ -11,6 +11,7 @@ import {
   EditMeetingClientRequestDto,
   // EditSprintMeetingSectionClientRequestDto,
   FetchMeetingClientRequestDto,
+  GetAgendaByIdClientRequestDto,
   GetSprintMeetingClientRequestDto,
   GetSprintMeetingIdClientRequesDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
@@ -24,6 +25,7 @@ import {
   EditMeetingResponseDto,
   // EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
+  GetAgendaByIdResponseDto,
   GetSprintMeetingIdResponseDto,
   GetSprintMeetingResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
@@ -38,6 +40,7 @@ import { EditMeetingUsecase } from "@/sprint-meeting/application/usecases/editMe
 import { ChangeAgendaTopicStatusUsecase } from "@/sprint-meeting/application/usecases/changeAgendaTopicStatusUsecase";
 import { AddSprintMeetingSectionUsecase } from "@/sprint-meeting/application/usecases/addSprintMeetingSectionUsecase";
 import { EditSprintMeetingSectionUsecase } from "@/sprint-meeting/application/usecases/editSprintMeetingSectionUsecase";
+import { GetSprintByNumberUsecase } from "@/sprints/application/usecases/getSprintByNumberUsecase";
 
 @injectable()
 export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
@@ -74,6 +77,9 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
     @inject(TYPES.EditSprintMeetingSectionUsecase)
     private readonly editSprintMeetingSectionUsecase: EditSprintMeetingSectionUsecase,
+
+    @inject(TYPES.GetAgendaByIdUsecase)
+    private readonly getAgendaByIdUsecase: GetAgendaByIdUsecase,
   ) {}
 
   async fetchMeeting({
@@ -179,6 +185,19 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     return await this.addSprintMeetingSectionUsecase.execute({
       meetingId,
       formId,
+    });
+  }
+
+  getAgendaById({
+    meeting,
+    meetingId,
+    agendaId,
+  }: GetAgendaByIdClientRequestDto): GetAgendaByIdResponseDto {
+    const sprintMeeting = this.getSprintMeeting({ meeting, meetingId });
+
+    return this.getAgendaByIdUsecase.execute({
+      sprintMeeting,
+      agendaId,
     });
   }
 
