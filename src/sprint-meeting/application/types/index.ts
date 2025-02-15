@@ -28,9 +28,11 @@ export interface Section {
 
 export interface Agenda {
   id: number;
+  teamMeetingId: number;
   title: string;
   description: string;
   status: boolean;
+  createdAt: string;
   updatedAt: string;
 }
 
