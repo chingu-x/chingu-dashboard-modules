@@ -39,8 +39,7 @@ import { DeleteAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/
 import { EditMeetingUsecase } from "@/sprint-meeting/application/usecases/editMeetingUsecase";
 import { ChangeAgendaTopicStatusUsecase } from "@/sprint-meeting/application/usecases/changeAgendaTopicStatusUsecase";
 import { AddSprintMeetingSectionUsecase } from "@/sprint-meeting/application/usecases/addSprintMeetingSectionUsecase";
-import { EditSprintMeetingSectionUsecase } from "@/sprint-meeting/application/usecases/editSprintMeetingSectionUsecase";
-import { GetSprintByNumberUsecase } from "@/sprints/application/usecases/getSprintByNumberUsecase";
+import { GetAgendaByIdUsecase } from "@/sprint-meeting/application/usecases/getAgendaByIdUsecase";
 
 @injectable()
 export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
@@ -75,8 +74,8 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     @inject(TYPES.AddSprintMeetingSectionUsecase)
     private readonly addSprintMeetingSectionUsecase: AddSprintMeetingSectionUsecase,
 
-    @inject(TYPES.EditSprintMeetingSectionUsecase)
-    private readonly editSprintMeetingSectionUsecase: EditSprintMeetingSectionUsecase,
+    // @inject(TYPES.EditSprintMeetingSectionUsecase)
+    // private readonly editSprintMeetingSectionUsecase: EditSprintMeetingSectionUsecase,
 
     @inject(TYPES.GetAgendaByIdUsecase)
     private readonly getAgendaByIdUsecase: GetAgendaByIdUsecase,
@@ -193,7 +192,7 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     meetingId,
     agendaId,
   }: GetAgendaByIdClientRequestDto): GetAgendaByIdResponseDto {
-    const sprintMeeting = this.getSprintMeeting({ meeting, meetingId });
+    const sprintMeeting = this.getSprintMeeting({ meeting, meetingId })!;
 
     return this.getAgendaByIdUsecase.execute({
       sprintMeeting,

@@ -7,9 +7,9 @@ export class GetAgendaByIdUsecase {
   execute({
     sprintMeeting,
     agendaId,
-  }: GetAgendaByIdUsecaseDto): GetAgendaByIdResponseDto | undefined {
-    return sprintMeeting.agendas?.find(
+  }: GetAgendaByIdUsecaseDto): GetAgendaByIdResponseDto {
+    return sprintMeeting.agendas!.find(
       (topic) => topic.id === Number(agendaId),
-    );
+    )!;
   }
 }
