@@ -27,4 +27,8 @@ export interface TimezoneClientPort {
   getSprintStartDateBySprintNumber: (
     props: GetSprintStartDateBySprintNumberClientRequestDto,
   ) => GetSprintStartDateBySprintNumberResponseDto;
+
+  getSprintEndDateBySprintNumber: (
+    props: GetSprintEndDateBySprintNumberClientRequestDto,
+  ) => GetSprintEndDateBySprintNumberResponseDto;
 }
