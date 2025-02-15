@@ -40,3 +40,8 @@ export interface SubmitVoyageProjectUsecaseDto {
   data: CreateFormResponseBody["data"];
   questions: Question[];
 }
+
+export interface GetSprintByNumberUsecaseDto {
+  sprints: Sprint[];
+  sprintNumber: string;
+}
