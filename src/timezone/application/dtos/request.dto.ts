@@ -22,4 +22,10 @@ export interface GetSprintStartDateBySprintNumberClientRequestDto {
   timezone: string;
 }
 
+export interface GetSprintEndDateBySprintNumberClientRequestDto {
+  sprints: Sprint[];
+  sprintNumber: string;
+  timezone: string;
+}
+
 // api
