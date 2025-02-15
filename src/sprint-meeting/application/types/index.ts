@@ -40,3 +40,9 @@ export interface MeetingFormData {
   dateTime: string | Date;
   meetingLink: string;
 }
+
+export interface SprintReviewQuestions {
+  what_right: string;
+  what_to_improve: string;
+  what_to_change: string;
+}
