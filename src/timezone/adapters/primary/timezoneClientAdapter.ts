@@ -5,12 +5,14 @@ import {
   GetMeetingDateClientRequestDto,
   GetMeetingLongDateTimeFormatClientRequestDto,
   GetMeetingTimeWithTZAbbreviationClientRequestDto,
+  GetSprintEndDateBySprintNumberClientRequestDto,
   GetSprintStartDateBySprintNumberClientRequestDto,
 } from "@/timezone/application/dtos/request.dto";
 import {
   GetMeetingDateResponseDto,
   GetMeetingLongDateTimeFormatResponseDto,
   GetMeetingTimeWithTZAbbreviationResponseDto,
+  GetSprintEndDateBySprintNumberResponseDto,
   GetSprintStartDateBySprintNumberResponseDto,
 } from "@/timezone/application/dtos/response.dto";
 import { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/getMeetingLongDateTimeFormatUsecase";
@@ -36,6 +38,9 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
 
     @inject(TYPES.GetSprintStartDateBySprintNumberUsecase)
     private readonly getSprintStartDateBySprintNumberUsecase: GetSprintStartDateBySprintNumberUsecase,
+
+    @inject(TYPES.GetSprintEndDateBySprintNumberUsecase)
+    private readonly getSprintEndDateBySprintNumberUsecase: GetSprintEndDateBySprintNumberUsecase,
   ) {}
 
   // returns date in this format as a date: October 10, 2024 12:00 AM in the user's timezone
@@ -84,6 +89,22 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
     });
 
     return this.getSprintStartDateBySprintNumberUsecase.execute({
+      sprint,
+      timezone,
+    });
+  }
+
+  getSprintEndDateBySprintNumber({
+    sprints,
+    sprintNumber,
+    timezone,
+  }: GetSprintEndDateBySprintNumberClientRequestDto): GetSprintEndDateBySprintNumberResponseDto {
+    const sprint = this.getSprintByNumberUsecase.execute({
+      sprints,
+      sprintNumber,
+    });
+
+    return this.getSprintEndDateBySprintNumberUsecase.execute({
       sprint,
       timezone,
     });
