@@ -20,3 +20,5 @@ export interface SubmitVoyageProjectResponseDto {
   responseGroupId: number;
   voyageTeamMemberId: number;
 }
+
+export type GetSprintByNumberResponseDto = Sprint;
