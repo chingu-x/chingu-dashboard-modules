@@ -6,8 +6,9 @@ import { GetSprintStartDateBySprintNumberResponseDto } from "@/timezone/applicat
 @injectable()
 export class GetSprintStartDateBySprintNumberUsecase {
   execute({
-    sprints,
-    sprintNumber,
+    sprint,
     timezone,
-  }: GetSprintStartDateBySprintNumberUsecaseDto): GetSprintStartDateBySprintNumberResponseDto {}
+  }: GetSprintStartDateBySprintNumberUsecaseDto): GetSprintStartDateBySprintNumberResponseDto {
+    return convertStringToDate({ dateTime: sprint.startDate, timezone });
+  }
 }
