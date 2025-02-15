@@ -1,6 +1,7 @@
 import type {
   FetchSprintsClientRequestDto,
   GetCurrentSprintClientRequestDto,
+  GetSprintByNumberClientRequestDto,
   GetSprintCheckinStatusClientRequestDto,
   IsCurrentSprintClientRequestDto,
   IsVoyageProjestSubmissionAllowedClientRequestDto,
@@ -10,6 +11,7 @@ import type {
 import type {
   FetchSprintsResponseDto,
   GetCurrentSprintResponseDto,
+  GetSprintByNumberResponseDto,
   GetSprintCheckinStatusResponseDto,
   IsCurrentSprintResponseDto,
   IsVoyageProjestSubmissionAllowedResponseDto,
