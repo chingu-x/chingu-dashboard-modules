@@ -21,4 +21,8 @@ export interface TimezoneClientPort {
   getMeetingTimeWithTZAbbreviation: (
     props: GetMeetingTimeWithTZAbbreviationClientRequestDto,
   ) => GetMeetingTimeWithTZAbbreviationResponseDto;
+
+  getSprintStartDateBySprintNumber: (
+    props: GetSprintStartDateBySprintNumberClientRequestDto,
+  ) => GetSprintStartDateBySprintNumberResponseDto;
 }
