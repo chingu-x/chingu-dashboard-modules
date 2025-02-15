@@ -90,3 +90,5 @@ export interface EditSprintMeetingSectionResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export type GetMeetingNoteBySprintNumberClientResponseDto = string;
