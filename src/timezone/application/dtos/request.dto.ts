@@ -14,4 +14,8 @@ export interface GetMeetingTimeWithTZAbbreviationClientRequestDto {
   timezone: string;
 }
 
+export interface GetSprintStartDateBySprintNumberClientRequestDto {
+  sprint;
+}
+
 // api

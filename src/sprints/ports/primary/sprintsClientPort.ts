@@ -42,9 +42,11 @@ export interface SprintsClientPort {
     props: SubmitWeeklyCheckinClientRequestDto,
   ) => Promise<SubmitWeeklyCheckinResponseDto>;
 
-  submitVoyageProject: ({
-    voyageTeamId,
-    data,
-    questions,
-  }: SubmitVoyageProjectClientRequestDto) => Promise<SubmitVoyageProjectResponseDto>;
+  submitVoyageProject: (
+    props: SubmitVoyageProjectClientRequestDto,
+  ) => Promise<SubmitVoyageProjectResponseDto>;
+
+  getSprintByNumber: (
+    props: GetSprintByNumberClientRequestDto,
+  ) => GetSprintByNumberResponseDto;
 }

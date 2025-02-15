@@ -62,4 +62,7 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
       timezone,
     });
   }
+
+  // gets sprint start date by sprint number
+  getSprintStartDateBySprintNumber();
 }
