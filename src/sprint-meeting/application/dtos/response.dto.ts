@@ -1,4 +1,4 @@
-import type { Meeting } from "@/sprint-meeting/application/types";
+import type { Agenda, Meeting } from "@/sprint-meeting/application/types";
 
 export type FetchMeetingResponseDto = Meeting;
 export type GetSprintMeetingIdResponseDto = number | undefined;
@@ -90,3 +90,5 @@ export interface EditSprintMeetingSectionResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export type GetAgendaByIdResponseDto = Agenda;
