@@ -70,6 +70,10 @@ export interface EditSprintMeetingSectionClientRequestDto {
   responses: FormResponses;
 }
 
+export interface GetMeetingNoteBySprintNumberClientRequestDto {
+  sprints: Sprint[];
+}
+
 // api
 export interface FetchMeetingApiRequestDto {
   meetingId: string;
