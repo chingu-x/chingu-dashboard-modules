@@ -80,11 +80,10 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
     agendaId,
     title,
     description,
-    status,
   }: EditAgendaTopicApiRequestDto): Promise<EditAgendaTopicResponseDto> {
     return await this.apiClient.patch({
       url: SprintMeetingUrls.editAgendaTopic({ agendaId }),
-      payload: { title, description, status },
+      payload: { title, description },
     });
   }
 

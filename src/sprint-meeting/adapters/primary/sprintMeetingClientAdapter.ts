@@ -151,13 +151,11 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     agendaId,
     title,
     description,
-    status,
   }: EditAgendaTopicClientRequestDto): Promise<EditAgendaTopicResponseDto> {
     return await this.editAgendaTopicUsecase.execute({
       agendaId,
       title,
       description,
-      status,
     });
   }
 

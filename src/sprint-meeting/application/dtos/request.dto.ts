@@ -48,7 +48,6 @@ export interface EditAgendaTopicClientRequestDto {
   agendaId: string;
   title: string;
   description: string;
-  status: boolean;
 }
 
 export interface DeleteAgendaTopicClientRequestDto {
@@ -114,7 +113,6 @@ export interface EditAgendaTopicApiRequestDto {
   agendaId: string;
   title: string;
   description: string;
-  status: boolean;
 }
 
 export interface DeleteAgendaTopicApiRequestDto {

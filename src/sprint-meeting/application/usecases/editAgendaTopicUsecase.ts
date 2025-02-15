@@ -15,13 +15,11 @@ export class EditAgendaTopicUsecase {
     agendaId,
     title,
     description,
-    status,
   }: EditAgendaTopicUsecaseDto): Promise<EditAgendaTopicResponseDto> {
     return await this.sprintMeetingApi.editAgendaTopic({
       agendaId,
       title,
       description,
-      status,
     });
   }
 }

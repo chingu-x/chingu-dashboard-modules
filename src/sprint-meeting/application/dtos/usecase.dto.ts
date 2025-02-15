@@ -46,7 +46,6 @@ export interface EditAgendaTopicUsecaseDto {
   agendaId: string;
   title: string;
   description: string;
-  status: boolean;
 }
 
 export interface DeleteAgendaTopicUsecaseDto {
