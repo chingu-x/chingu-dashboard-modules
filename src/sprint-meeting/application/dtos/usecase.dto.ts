@@ -72,3 +72,7 @@ export interface GetAgendaByIdUsecaseDto {
   sprintMeeting: Meeting;
   agendaId: string;
 }
+
+export interface GetSprintReviewQuestionsUsecaseDto {
+  meeting: Meeting;
+}
