@@ -10,6 +10,7 @@ import type {
   ChangeAgendaTopicStatusClientRequestDto,
   AddSprintMeetingSectionClientRequestDto,
   GetAgendaByIdClientRequestDto,
+  GetSprintReviewQuestionsClientRequestDto,
   // EditSprintMeetingSectionClientRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
@@ -25,6 +26,7 @@ import type {
   GetAgendaByIdResponseDto,
   GetSprintMeetingIdResponseDto,
   GetSprintMeetingResponseDto,
+  GetSprintReviewQuestionsResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 
 export interface SprintMeetingClientPort {
