@@ -2,6 +2,7 @@ import type { FormResponses } from "@/forms/application/types";
 import type {
   Meeting,
   MeetingFormData,
+  SectionBody,
   SprintReviewQuestions,
 } from "@/sprint-meeting/application/types";
 import type { Sprint } from "@/sprints/application/types";
@@ -68,14 +69,10 @@ export interface GetSprintReviewQuestionsClientRequestDto {
   meeting: Meeting;
 }
 
-// export interface EditSprintMeetingSectionClientRequestDto {
-//   meetingId: string;
-//   formId: number;
-//   responses: FormResponses;
-// }
-
 export interface EditSprintReviewSectionClientRequestDto {
-  data: SprintReviewQuestions;
+  meetingId: string;
+  formId: number;
+  data: SectionBody;
 }
 
 export interface GetAgendaByIdClientRequestDto {

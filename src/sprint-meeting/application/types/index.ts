@@ -28,6 +28,17 @@ export interface Section {
   };
 }
 
+export interface SectionBody {
+  responses: {
+    questionId: number;
+    optionChoiceId?: number;
+    text?: string;
+    boolean?: boolean;
+    numeric?: number;
+    responseGroupId?: number;
+  }[];
+}
+
 export interface Agenda {
   id: number;
   teamMeetingId: number;

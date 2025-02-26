@@ -22,6 +22,7 @@ export {
 export {
   Meeting,
   Section,
+  SectionBody,
   Agenda,
   MeetingFormData,
 } from "./application/types/index";
