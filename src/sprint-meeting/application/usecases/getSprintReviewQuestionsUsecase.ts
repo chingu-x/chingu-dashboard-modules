@@ -23,6 +23,16 @@ export class GetSprintReviewQuestionsUsecase {
         (response) =>
           response.question.id === Number(ReviewQuestions.what_right),
       )!.text;
+
+      reviewQuestions.what_to_improve = responses.responseGroup.responses.find(
+        (response) =>
+          response.question.id === Number(ReviewQuestions.what_to_improve),
+      )!.text;
+
+      reviewQuestions.what_to_change = responses.responseGroup.responses.find(
+        (response) =>
+          response.question.id === Number(ReviewQuestions.what_to_change),
+      )!.text;
     }
 
     return reviewQuestions;
