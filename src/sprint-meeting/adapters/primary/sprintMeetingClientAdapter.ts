@@ -14,6 +14,7 @@ import {
   GetAgendaByIdClientRequestDto,
   GetSprintMeetingClientRequestDto,
   GetSprintMeetingIdClientRequesDto,
+  GetSprintReviewQuestionsClientRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import {
   AddAgendaTopicResponseDto,
@@ -28,6 +29,7 @@ import {
   GetAgendaByIdResponseDto,
   GetSprintMeetingIdResponseDto,
   GetSprintMeetingResponseDto,
+  GetSprintReviewQuestionsResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 import { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetchMeetingUsecase";
 import { GetSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/getSprintMeetingId";
@@ -73,6 +75,9 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
     @inject(TYPES.AddSprintMeetingSectionUsecase)
     private readonly addSprintMeetingSectionUsecase: AddSprintMeetingSectionUsecase,
+
+    @inject(TYPES.GetSprintReviewQuestionsUsecase)
+    private readonly getSprintReviewQuestionsUsecase: GetSprintReviewQuestionsUsecase,
 
     // @inject(TYPES.EditSprintMeetingSectionUsecase)
     // private readonly editSprintMeetingSectionUsecase: EditSprintMeetingSectionUsecase,
@@ -196,6 +201,12 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
       sprintMeeting,
       agendaId,
     });
+  }
+
+  getSprintReviewQuestions({
+    meeting,
+  }: GetSprintReviewQuestionsClientRequestDto): GetSprintReviewQuestionsResponseDto {
+    return this.getSprintReviewQuestionsUsecase.execute({ meeting });
   }
 
   // async editSprintMeetingSection({
