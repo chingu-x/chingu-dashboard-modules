@@ -78,11 +78,7 @@ export interface SprintMeetingClientPort {
     props: GetSprintReviewQuestionsClientRequestDto,
   ) => GetSprintReviewQuestionsResponseDto;
 
-  // editSprintMeetingSection: (
-  //   props: EditSprintMeetingSectionClientRequestDto,
-  // ) => Promise<EditSprintMeetingSectionResponseDto>;
-
-  // editSprintReviewSection: (
-  //   props: EditSprintReviewSectionClientRequestDto,
-  // ) => Promise<EditSprintReviewSectionResponseDto>;
+  editSprintReviewSection: (
+    props: EditSprintReviewSectionClientRequestDto,
+  ) => Promise<EditSprintReviewSectionResponseDto>;
 }
