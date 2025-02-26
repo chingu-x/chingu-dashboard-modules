@@ -13,8 +13,10 @@ export interface Meeting {
 }
 
 export interface Section {
+  id: number;
   form: {
     id: number;
+    title: string;
   };
   responseGroup: {
     responses: {
