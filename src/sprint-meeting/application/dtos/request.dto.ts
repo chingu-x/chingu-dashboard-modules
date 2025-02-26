@@ -64,6 +64,10 @@ export interface AddSprintMeetingSectionClientRequestDto {
   formId: number;
 }
 
+export interface GetSprintReviewQuestionsClientRequestDto {
+  meeting: Meeting;
+}
+
 // export interface EditSprintMeetingSectionClientRequestDto {
 //   meetingId: string;
 //   formId: number;
