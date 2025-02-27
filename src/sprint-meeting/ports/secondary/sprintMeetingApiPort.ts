@@ -70,7 +70,7 @@ export interface SprintMeetingApiPort {
     formId,
   }: AddSprintMeetingSectionApiRequestDto) => Promise<AddSprintMeetingSectionResponseDto>;
 
-  editSprintMeetingSection: ({
+  editSprintReviewSection: ({
     meetingId,
     formId,
     responses,
