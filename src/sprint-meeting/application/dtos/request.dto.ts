@@ -70,7 +70,6 @@ export interface GetSprintReviewQuestionsClientRequestDto {
 
 export interface EditSprintReviewSectionClientRequestDto {
   meetingId: string;
-  formId: number;
   data: SectionBody;
 }
 

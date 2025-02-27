@@ -214,12 +214,10 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
   async editSprintReviewSection({
     meetingId,
-    formId,
     data,
   }: EditSprintReviewSectionClientRequestDto): Promise<EditSprintMeetingSectionResponseDto> {
     return await this.editSprintReviewSectionUsecase.execute({
       meetingId,
-      formId,
       data,
     });
   }
