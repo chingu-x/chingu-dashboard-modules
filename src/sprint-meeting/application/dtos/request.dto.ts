@@ -3,7 +3,6 @@ import type {
   Meeting,
   MeetingFormData,
   SectionBody,
-  SprintReviewQuestions,
 } from "@/sprint-meeting/application/types";
 import type { Sprint } from "@/sprints/application/types";
 

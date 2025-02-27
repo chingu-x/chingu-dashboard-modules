@@ -9,6 +9,7 @@ import {
   DeleteAgendaTopicClientRequestDto,
   EditAgendaTopicClientRequestDto,
   EditMeetingClientRequestDto,
+  EditSprintReviewSectionClientRequestDto,
   // EditSprintMeetingSectionClientRequestDto,
   FetchMeetingClientRequestDto,
   GetAgendaByIdClientRequestDto,
@@ -24,6 +25,7 @@ import {
   DeleteAgendaTopicResponseDto,
   EditAgendaTopicResponseDto,
   EditMeetingResponseDto,
+  EditSprintMeetingSectionResponseDto,
   // EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
   GetAgendaByIdResponseDto,
@@ -80,11 +82,11 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     @inject(TYPES.GetSprintReviewQuestionsUsecase)
     private readonly getSprintReviewQuestionsUsecase: GetSprintReviewQuestionsUsecase,
 
-    // @inject(TYPES.EditSprintMeetingSectionUsecase)
-    // private readonly editSprintMeetingSectionUsecase: EditSprintMeetingSectionUsecase,
-
     @inject(TYPES.GetAgendaByIdUsecase)
     private readonly getAgendaByIdUsecase: GetAgendaByIdUsecase,
+
+    @inject(TYPES.EditSprintReviewSectionUsecase)
+    private readonly editSprintReviewSectionUsecase: EditSprintReviewSectionUsecase,
   ) {}
 
   async fetchMeeting({
@@ -210,15 +212,15 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     return this.getSprintReviewQuestionsUsecase.execute({ meeting });
   }
 
-  // async editSprintMeetingSection({
-  //   meetingId,
-  //   formId,
-  //   responses,
-  // }: EditSprintMeetingSectionClientRequestDto): Promise<EditSprintMeetingSectionResponseDto> {
-  //   return await this.editSprintMeetingSectionUsecase.execute({
-  //     meetingId,
-  //     formId,
-  //     responses,
-  //   });
-  // }
+  async editSprintReviewSection({
+    meetingId,
+    formId,
+    data,
+  }: EditSprintReviewSectionClientRequestDto): Promise<EditSprintMeetingSectionResponseDto> {
+    return await this.editSprintReviewSectionUsecase.execute({
+      meetingId,
+      formId,
+      data,
+    });
+  }
 }
