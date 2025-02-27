@@ -12,7 +12,6 @@ import type {
   GetAgendaByIdClientRequestDto,
   GetSprintReviewQuestionsClientRequestDto,
   EditSprintReviewSectionClientRequestDto,
-  // EditSprintMeetingSectionClientRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
   AddAgendaTopicResponseDto,
@@ -23,7 +22,6 @@ import type {
   EditAgendaTopicResponseDto,
   EditMeetingResponseDto,
   EditSprintMeetingSectionResponseDto,
-  // EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
   GetAgendaByIdResponseDto,
   GetSprintMeetingIdResponseDto,
