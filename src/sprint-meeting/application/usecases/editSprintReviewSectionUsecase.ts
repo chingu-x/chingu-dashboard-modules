@@ -1,9 +1,9 @@
 import { inject, injectable } from "tsyringe";
 import { SPRINT_MEETING_TYPES } from "@/sprint-meeting/di/types";
 import { SprintMeetingApiPort } from "@/sprint-meeting/ports/secondary/sprintMeetingApiPort";
-import { EditSprintMeetingSectionUsecaseDto } from "../dtos/usecase.dto";
-import { EditSprintMeetingSectionResponseDto } from "../dtos/response.dto";
-import { ReviewQuestions } from "@/forms/application/types";
+import { EditSprintMeetingSectionUsecaseDto } from "@/sprint-meeting/application/dtos/usecase.dto";
+import { EditSprintMeetingSectionResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
+import { Forms, ReviewQuestions } from "@/forms/application/types";
 
 @injectable()
 export class EditSprintReviewSectionUsecase {
@@ -30,6 +30,12 @@ export class EditSprintReviewSectionUsecase {
       responses.push(response);
     }
 
-    return await this.sprintMeetingApi.editSprintReviewSection(payload);
+    const formId = Number(Forms.review);
+
+    return await this.sprintMeetingApi.editSprintReviewSection({
+      meetingId,
+      formId,
+      responses,
+    });
   }
 }

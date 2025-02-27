@@ -1,4 +1,3 @@
-import type { FormResponses } from "@/forms/application/types";
 import type {
   Meeting,
   MeetingFormData,
@@ -131,5 +130,12 @@ export interface AddSprintMeetingSectionApiRequestDto {
 export interface EditSprintMeetingSectionApiRequestDto {
   meetingId: string;
   formId: number;
-  responses: FormResponses;
+  responses: {
+    questionId: number;
+    optionChoiceId?: number;
+    text?: string;
+    boolean?: boolean;
+    numeric?: number;
+    responseGroupId?: number;
+  }[];
 }

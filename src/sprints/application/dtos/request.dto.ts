@@ -1,6 +1,5 @@
 import type {
   CreateFormResponseBody,
-  FormResponses,
   Question,
 } from "@/forms/application/types";
 import type { Sprint } from "@/sprints/application/types";
@@ -56,10 +55,22 @@ export interface FetchSprintsApiRequestDto {
 export interface SubmitWeeklyCheckinApiRequestDto {
   voyageTeamMemberId: number;
   sprintId: number;
-  responses: FormResponses[];
+  responses: {
+    questionId: number;
+    text?: string;
+    optionChoiceId?: number;
+    boolean?: boolean;
+    numeric?: number;
+  }[];
 }
 
 export interface SubmitVoyageProjectApiRequestDto {
   voyageTeamId: number;
-  responses: FormResponses[];
+  responses: {
+    questionId: number;
+    text?: string;
+    optionChoiceId?: number;
+    boolean?: boolean;
+    numeric?: number;
+  }[];
 }
