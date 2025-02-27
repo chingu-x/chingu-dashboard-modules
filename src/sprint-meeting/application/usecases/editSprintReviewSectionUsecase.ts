@@ -32,7 +32,7 @@ export class EditSprintReviewSectionUsecase {
 
     const formId = Number(Forms.review);
 
-    return await this.sprintMeetingApi.editSprintReviewSection({
+    return await this.sprintMeetingApi.editSprintMeetingSection({
       meetingId,
       formId,
       responses,
