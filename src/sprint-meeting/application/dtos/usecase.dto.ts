@@ -1,7 +1,6 @@
 import type {
   Meeting,
   MeetingFormData,
-  SectionBody,
 } from "@/sprint-meeting/application/types";
 import type { Sprint } from "@/sprints/application/types";
 
@@ -73,5 +72,5 @@ export interface GetSprintReviewQuestionsUsecaseDto {
 
 export interface EditSprintMeetingSectionUsecaseDto {
   meetingId: string;
-  data: SectionBody;
+  data: Record<string, unknown>;
 }
