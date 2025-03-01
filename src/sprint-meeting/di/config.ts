@@ -15,6 +15,7 @@ import { AddSprintMeetingSectionUsecase } from "@/sprint-meeting/application/use
 import { GetAgendaByIdUsecase } from "@/sprint-meeting/application/usecases/getAgendaByIdUsecase";
 import { GetSprintReviewQuestionsUsecase } from "@/sprint-meeting/application/usecases/getSprintReviewQuestionsUsecase";
 import { EditSprintReviewSectionUsecase } from "@/sprint-meeting/application/usecases/editSprintReviewSectionUsecase";
+import { GetSprintPlanningQuestionsUsecase } from "@/sprint-meeting/application/usecases/getSprintPlanningQuestionsUsecase";
 
 export const registerSprintMeetingDependencies = () => {
   // ports
@@ -73,6 +74,10 @@ export const registerSprintMeetingDependencies = () => {
 
   container.register(SPRINT_MEETING_TYPES.EditSprintReviewSectionUsecase, {
     useClass: EditSprintReviewSectionUsecase,
+  });
+
+  container.register(SPRINT_MEETING_TYPES.GetSprintPlanningQuestionsUsecase, {
+    useClass: GetSprintPlanningQuestionsUsecase,
   });
 
   // adapters
