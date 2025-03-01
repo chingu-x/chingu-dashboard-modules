@@ -66,6 +66,10 @@ export interface GetSprintReviewQuestionsClientRequestDto {
   meeting: Meeting;
 }
 
+export interface GetSprintPlanningQuestionsClientRequestDto {
+  meeting: Meeting;
+}
+
 export interface EditSprintReviewSectionClientRequestDto {
   meetingId: string;
   data: Record<string, unknown>;
