@@ -62,3 +62,8 @@ export interface SprintReviewQuestions {
   what_to_improve: string;
   what_to_change: string;
 }
+
+export interface SprintPlanningQuestions {
+  goal: string;
+  timeline: string;
+}

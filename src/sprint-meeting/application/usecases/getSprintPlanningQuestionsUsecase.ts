@@ -1,40 +1,34 @@
 import { injectable } from "tsyringe";
+import { GetSprintPlanningQuestionsUsecaseDto } from "@/sprint-meeting/application/dtos/usecase.dto";
+import { GetSprintPlanningQuestionsResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
+import { Forms, PlanningQuestions } from "@/forms/application/types";
 
 @injectable()
-export class GetSprintReviewQuestionsUsecase {
+export class GetSprintPlanningQuestionsUsecase {
   execute({
     meeting,
-  }: GetSprintReviewQuestionsUsecaseDto): GetSprintReviewQuestionsResponseDto {
-    const reviewQuestions = {
-      what_right: "",
-      what_to_improve: "",
-      what_to_change: "",
+  }: GetSprintPlanningQuestionsUsecaseDto): GetSprintPlanningQuestionsResponseDto {
+    const planningQuestions = {
+      goal: "",
+      timeline: "",
     };
 
     const responses = meeting.formResponseMeeting?.find(
-      (form) => form.form.id === Number(Forms.review),
+      (form) => form.form.id === Number(Forms.planning),
     );
 
     if (responses) {
-      reviewQuestions.what_right =
+      planningQuestions.goal =
         responses.responseGroup.responses.find(
-          (response) =>
-            response.question.id === Number(ReviewQuestions.what_right),
+          (response) => response.question.id === Number(PlanningQuestions.goal),
         )?.text ?? "";
-
-      reviewQuestions.what_to_improve =
+      planningQuestions.timeline =
         responses.responseGroup.responses.find(
           (response) =>
-            response.question.id === Number(ReviewQuestions.what_to_improve),
-        )?.text ?? "";
-
-      reviewQuestions.what_to_change =
-        responses.responseGroup.responses.find(
-          (response) =>
-            response.question.id === Number(ReviewQuestions.what_to_change),
+            response.question.id === Number(PlanningQuestions.timeline),
         )?.text ?? "";
     }
 
-    return reviewQuestions;
+    return planningQuestions;
   }
 }
