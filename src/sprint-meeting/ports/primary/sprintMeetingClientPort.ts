@@ -81,4 +81,8 @@ export interface SprintMeetingClientPort {
   editSprintReviewSection: (
     props: EditSprintReviewSectionClientRequestDto,
   ) => Promise<EditSprintMeetingSectionResponseDto>;
+
+  getSprintPlanningQuestions: (
+    props: GetSprintPlanningQuestionsClientRequestDto,
+  ) => Promise<EditSprintMeetingSectionResponseDto>;
 }
