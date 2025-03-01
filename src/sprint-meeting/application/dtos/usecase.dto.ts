@@ -78,3 +78,8 @@ export interface EditSprintMeetingSectionUsecaseDto {
   meetingId: string;
   data: Record<string, unknown>;
 }
+
+export interface EditSprintPlanningSectionUsecaseDto {
+  meetingId: string;
+  data: Record<string, unknown>;
+}
