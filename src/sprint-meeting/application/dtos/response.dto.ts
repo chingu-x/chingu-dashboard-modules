@@ -98,3 +98,5 @@ export type EditSprintMeetingSectionResponseDto = {
 export type GetAgendaByIdResponseDto = Agenda;
 
 export type GetSprintReviewQuestionsResponseDto = SprintReviewQuestions;
+
+export type GetSprintPlanningQuestionsResponseDto = SprintReviewQuestions;

@@ -27,6 +27,7 @@ import type {
   GetAgendaByIdResponseDto,
   GetSprintMeetingIdResponseDto,
   GetSprintMeetingResponseDto,
+  GetSprintPlanningQuestionsResponseDto,
   GetSprintReviewQuestionsResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 
@@ -85,5 +86,5 @@ export interface SprintMeetingClientPort {
 
   getSprintPlanningQuestions: (
     props: GetSprintPlanningQuestionsClientRequestDto,
-  ) => Promise<EditSprintMeetingSectionResponseDto>;
+  ) => Promise<GetSprintPlanningQuestionsResponseDto>;
 }
