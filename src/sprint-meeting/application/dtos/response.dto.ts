@@ -1,6 +1,7 @@
 import type {
   Agenda,
   Meeting,
+  SprintPlanningQuestions,
   SprintReviewQuestions,
 } from "@/sprint-meeting/application/types";
 
@@ -99,4 +100,4 @@ export type GetAgendaByIdResponseDto = Agenda;
 
 export type GetSprintReviewQuestionsResponseDto = SprintReviewQuestions;
 
-export type GetSprintPlanningQuestionsResponseDto = SprintReviewQuestions;
+export type GetSprintPlanningQuestionsResponseDto = SprintPlanningQuestions;
