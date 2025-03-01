@@ -13,6 +13,7 @@ import type {
   GetSprintReviewQuestionsClientRequestDto,
   EditSprintReviewSectionClientRequestDto,
   GetSprintPlanningQuestionsClientRequestDto,
+  EditSprintPlanningSectionClientRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
   AddAgendaTopicResponseDto,
