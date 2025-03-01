@@ -83,7 +83,7 @@ export interface AddSprintMeetingSectionResponseDto {
   updatedAt: string;
 }
 
-export interface EditSprintMeetingSectionResponseDto {
+export type EditSprintMeetingSectionResponseDto = {
   id: number;
   questionId: number;
   optionChoiceId: number;
@@ -93,7 +93,7 @@ export interface EditSprintMeetingSectionResponseDto {
   responseGroupId: number;
   createdAt: string;
   updatedAt: string;
-}
+}[];
 
 export type GetAgendaByIdResponseDto = Agenda;
 
