@@ -70,6 +70,10 @@ export interface GetSprintReviewQuestionsUsecaseDto {
   meeting: Meeting;
 }
 
+export interface GetSprintPlanningQuestionsUsecaseDto {
+  meeting: Meeting;
+}
+
 export interface EditSprintMeetingSectionUsecaseDto {
   meetingId: string;
   data: Record<string, unknown>;
