@@ -15,6 +15,7 @@ import type {
   GetSprintPlanningQuestionsClientRequestDto,
   EditSprintPlanningSectionClientRequestDto,
   GetIncompleteTopicsClientRequestDto,
+  GetCompletedTopicsClientRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
   AddAgendaTopicResponseDto,
@@ -27,6 +28,7 @@ import type {
   EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
   GetAgendaByIdResponseDto,
+  GetCompletedTopicsResponseDto,
   GetIncompleteTopicsResponseDto,
   GetSprintMeetingIdResponseDto,
   GetSprintMeetingResponseDto,
