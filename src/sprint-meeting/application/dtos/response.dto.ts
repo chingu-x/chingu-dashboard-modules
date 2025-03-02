@@ -101,3 +101,5 @@ export type GetAgendaByIdResponseDto = Agenda;
 export type GetSprintReviewQuestionsResponseDto = SprintReviewQuestions;
 
 export type GetSprintPlanningQuestionsResponseDto = SprintPlanningQuestions;
+
+export type GetIncompleteTopicsResponseDto = Agenda[];
