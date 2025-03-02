@@ -1,4 +1,5 @@
 import type {
+  Agenda,
   Meeting,
   MeetingFormData,
 } from "@/sprint-meeting/application/types";
@@ -82,4 +83,8 @@ export interface EditSprintMeetingSectionUsecaseDto {
 export interface EditSprintPlanningSectionUsecaseDto {
   meetingId: string;
   data: Record<string, unknown>;
+}
+
+export interface GetIncompleteTopicsUsecaseDto {
+  agendas: Agenda[];
 }
