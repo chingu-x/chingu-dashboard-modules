@@ -88,3 +88,7 @@ export interface EditSprintPlanningSectionUsecaseDto {
 export interface GetIncompleteTopicsUsecaseDto {
   agendas: Agenda[];
 }
+
+export interface GetCompletedTopicsUsecaseDto {
+  agendas: Agenda[];
+}
