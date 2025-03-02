@@ -13,6 +13,7 @@ import {
   EditSprintReviewSectionClientRequestDto,
   FetchMeetingClientRequestDto,
   GetAgendaByIdClientRequestDto,
+  GetCompletedTopicsClientRequestDto,
   GetIncompleteTopicsClientRequestDto,
   GetSprintMeetingClientRequestDto,
   GetSprintMeetingIdClientRequesDto,
@@ -30,6 +31,7 @@ import {
   EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
   GetAgendaByIdResponseDto,
+  GetCompletedTopicsResponseDto,
   GetIncompleteTopicsResponseDto,
   GetSprintMeetingIdResponseDto,
   GetSprintMeetingResponseDto,
@@ -103,6 +105,9 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
     @inject(TYPES.GetIncompleteTopicsUsecase)
     private readonly getIncompleteTopicsUsecase: GetIncompleteTopicsUsecase,
+
+    @inject(TYPES.GetCompletedTopicsUsecase)
+    private readonly getCompletedTopicsUsecase: GetCompletedTopicsUsecase,
   ) {}
 
   async fetchMeeting({
@@ -258,5 +263,11 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     agendas,
   }: GetIncompleteTopicsClientRequestDto): GetIncompleteTopicsResponseDto {
     return this.getIncompleteTopicsUsecase.execute({ agendas });
+  }
+
+  getCompletedTopics({
+    agendas,
+  }: GetCompletedTopicsClientRequestDto): GetCompletedTopicsResponseDto {
+    return this.getCompletedTopicsUsecase.execute({ agendas });
   }
 }
