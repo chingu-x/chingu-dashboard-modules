@@ -98,4 +98,8 @@ export interface SprintMeetingClientPort {
   getIncompleteTopics: (
     props: GetIncompleteTopicsClientRequestDto,
   ) => GetIncompleteTopicsResponseDto;
+
+  getCompletedTopics: (
+    props: GetCompletedTopicsClientRequestDto,
+  ) => GetCompletedTopicsResponseDto;
 }
