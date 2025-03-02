@@ -51,6 +51,7 @@ import { GetSprintReviewQuestionsUsecase } from "@/sprint-meeting/application/us
 import { EditSprintReviewSectionUsecase } from "@/sprint-meeting/application/usecases/editSprintReviewSectionUsecase";
 import { GetSprintPlanningQuestionsUsecase } from "@/sprint-meeting/application/usecases/getSprintPlanningQuestionsUsecase";
 import { EditSprintPlanningSectionUsecase } from "@/sprint-meeting/application/usecases/editSprintPlanningSectionUsecase";
+import { GetIncompleteTopicsUsecase } from "@/sprint-meeting/application/usecases/getIncompleteTopicsUsecase";
 
 @injectable()
 export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
