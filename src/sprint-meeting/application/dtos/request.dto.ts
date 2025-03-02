@@ -1,4 +1,5 @@
 import type {
+  Agenda,
   Meeting,
   MeetingFormData,
 } from "@/sprint-meeting/application/types";
@@ -84,6 +85,10 @@ export interface GetAgendaByIdClientRequestDto {
   meeting: Meeting[];
   meetingId: string;
   agendaId: string;
+}
+
+export interface GetIncompleteTopicsClientRequestDto {
+  agendas: Agenda[];
 }
 
 // api
