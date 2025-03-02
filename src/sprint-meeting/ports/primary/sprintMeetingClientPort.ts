@@ -92,4 +92,8 @@ export interface SprintMeetingClientPort {
   editSprintPlanningSection: (
     props: EditSprintPlanningSectionClientRequestDto,
   ) => Promise<EditSprintMeetingSectionResponseDto>;
+
+  getIncompleteTopics: (
+    props: GetIncompleteTopicsClientRequestDto,
+  ) => GetIncompleteTopicsResponseDto;
 }
