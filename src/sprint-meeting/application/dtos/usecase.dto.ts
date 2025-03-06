@@ -92,3 +92,7 @@ export interface GetIncompleteTopicsUsecaseDto {
 export interface GetCompletedTopicsUsecaseDto {
   agendas: Agenda[];
 }
+
+export interface FetchSprintMeetingSectionResponsesUsecaseDto {
+  meetingId: string;
+}
