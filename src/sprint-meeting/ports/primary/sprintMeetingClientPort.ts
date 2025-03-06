@@ -104,4 +104,8 @@ export interface SprintMeetingClientPort {
   getCompletedTopics: (
     props: GetCompletedTopicsClientRequestDto,
   ) => GetCompletedTopicsResponseDto;
+
+  fetchSprintMeetingSectionResponses: (
+    props: FetchSprintMeetingSectionResponsesClientRequestDto
+  ) => Promise<FetchSprintMeetingSectionResponsesResponseDto
 }
