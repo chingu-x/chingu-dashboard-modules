@@ -279,9 +279,11 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
   async fetchSprintMeetingSectionResponses({
     meetingId,
+    formId,
   }: FetchSprintMeetingSectionResponsesClientRequestDto): Promise<FetchSprintMeetingSectionResponsesResponseDto> {
     return await this.fetchSprintMeetingSectionResponsesUsecase.execute({
       meetingId,
+      formId,
     });
   }
 }

@@ -97,6 +97,7 @@ export interface GetCompletedTopicsClientRequestDto {
 
 export interface FetchSprintMeetingSectionResponsesClientRequestDto {
   meetingId: string;
+  formId: number;
 }
 
 // api

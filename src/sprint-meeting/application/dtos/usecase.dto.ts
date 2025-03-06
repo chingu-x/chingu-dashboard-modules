@@ -95,4 +95,5 @@ export interface GetCompletedTopicsUsecaseDto {
 
 export interface FetchSprintMeetingSectionResponsesUsecaseDto {
   meetingId: string;
+  formId: number;
 }
