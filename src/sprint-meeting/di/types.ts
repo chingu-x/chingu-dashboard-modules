@@ -18,6 +18,7 @@ import type { GetSprintPlanningQuestionsUsecase } from "@/sprint-meeting/applica
 import type { EditSprintPlanningSectionUsecase } from "@/sprint-meeting/application/usecases/editSprintPlanningSectionUsecase";
 import type { GetIncompleteTopicsUsecase } from "@/sprint-meeting/application/usecases/getIncompleteTopicsUsecase";
 import type { GetCompletedTopicsUsecase } from "@/sprint-meeting/application/usecases/getCompletedTopicsUsecase";
+import type { FetchSprintMeetingSectionResponsesUsecase } from "@/sprint-meeting/application/usecases/fetchSprintMeetingSectionResponsesUsecase";
 
 export const SPRINT_MEETING_TYPES = {
   // ports
@@ -93,6 +94,10 @@ export const SPRINT_MEETING_TYPES = {
   GetCompletedTopicsUsecase: Symbol.for(
     "GetCompletedTopicsUsecase",
   ) as InjectionToken<GetCompletedTopicsUsecase>,
+
+  FetchSprintMeetingSectionResponsesUsecase: Symbol.for(
+    "FetchSprintMeetingSectionResponsesUsecase",
+  ) as InjectionToken<FetchSprintMeetingSectionResponsesUsecase>,
 
   // adapters
   SprintMeetingClientAdapter: Symbol.for(
