@@ -105,3 +105,12 @@ export type GetSprintPlanningQuestionsResponseDto = SprintPlanningQuestions;
 export type GetIncompleteTopicsResponseDto = Agenda[];
 
 export type GetCompletedTopicsResponseDto = Agenda[];
+
+export interface FetchSprintMeetingSectionResponsesResponseDto {
+  responses: {
+    question: {
+      id: number;
+    };
+    text: string;
+  }[];
+}
