@@ -12,6 +12,7 @@ import {
   EditSprintPlanningSectionClientRequestDto,
   EditSprintReviewSectionClientRequestDto,
   FetchMeetingClientRequestDto,
+  FetchSprintMeetingFormClientRequestDto,
   FetchSprintMeetingSectionResponsesClientRequestDto,
   GetAgendaByIdClientRequestDto,
   GetCompletedTopicsClientRequestDto,
@@ -31,6 +32,7 @@ import {
   EditMeetingResponseDto,
   EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
+  FetchSprintMeetingFormResponseDto,
   FetchSprintMeetingSectionResponsesResponseDto,
   GetAgendaByIdResponseDto,
   GetCompletedTopicsResponseDto,
@@ -112,6 +114,9 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
 
     @inject(TYPES.GetCompletedTopicsUsecase)
     private readonly getCompletedTopicsUsecase: GetCompletedTopicsUsecase,
+
+    @inject(TYPES.FetchSprintMeetingFormUsecase)
+    private readonly fetchSprintMeetingFormUsecase: FetchSprintMeetingFormUsecase,
 
     @inject(TYPES.FetchSprintMeetingSectionResponsesUsecase)
     private readonly fetchSprintMeetingSectionResponsesUsecase: FetchSprintMeetingSectionResponsesUsecase,
@@ -276,6 +281,16 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     agendas,
   }: GetCompletedTopicsClientRequestDto): GetCompletedTopicsResponseDto {
     return this.getCompletedTopicsUsecase.execute({ agendas });
+  }
+
+  async fetchSprintMeetingForm({
+    meetingId,
+    formId,
+  }: FetchSprintMeetingFormClientRequestDto): Promise<FetchSprintMeetingFormResponseDto> {
+    return await this.fetchSprintMeetingFormUsecase.execute({
+      meetingId,
+      formId,
+    });
   }
 
   async fetchSprintMeetingSectionResponses({
