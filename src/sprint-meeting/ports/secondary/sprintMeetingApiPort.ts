@@ -75,4 +75,9 @@ export interface SprintMeetingApiPort {
     formId,
     responses,
   }: EditSprintMeetingSectionApiRequestDto) => Promise<EditSprintMeetingSectionResponseDto>;
+
+  fetchSprintMeetingForm: ({
+    meetingId,
+    formId,
+  }: FetchSprintMeetingFormApiRequestDto) => Promise<FetchSprintMeetingFormApiResponseDto>;
 }

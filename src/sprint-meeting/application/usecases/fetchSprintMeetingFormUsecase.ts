@@ -1,6 +1,8 @@
 import { inject, injectable } from "tsyringe";
 import { SPRINT_MEETING_TYPES } from "@/sprint-meeting/di/types";
 import { SprintMeetingApiPort } from "@/sprint-meeting/ports/secondary/sprintMeetingApiPort";
+import { FetchSprintMeetingFormUsecaseDto } from "@/sprint-meeting/application/dtos/usecase.dto";
+import { FetchSprintMeetingFormResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
 
 @injectable()
 export class FetchSprintMeetingFormUsecase {
@@ -12,22 +14,8 @@ export class FetchSprintMeetingFormUsecase {
   async execute({
     meetingId,
     formId,
-  }: FetchSprintMeetingFormUsecaseDto): Promise<FetchSprintMeetingSectionResponsesResponseDto> {
-    const data = await this.sprintMeetingApi.fetchMeeting({ meetingId });
+  }: FetchSprintMeetingFormUsecaseDto): Promise<FetchSprintMeetingFormResponseDto> {
+    return await this.sprintMeetingApi.
 
-    const formResponseMeeting = data.formResponseMeeting!.find(
-      (meeting) => meeting.form.id === formId,
-    );
-
-    const responses = formResponseMeeting!.responseGroup.responses.map(
-      (response) => ({
-        question: {
-          id: response.question.id,
-        },
-        text: response.text,
-      }),
-    );
-
-    return { responses };
   }
 }
