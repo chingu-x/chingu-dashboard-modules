@@ -12,6 +12,7 @@ import {
   EditMeetingResponseDto,
   EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
+  FetchSprintMeetingFormResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 import {
   AddAgendaTopicApiRequestDto,
@@ -23,6 +24,7 @@ import {
   EditMeetingApiRequestDto,
   EditSprintMeetingSectionApiRequestDto,
   FetchMeetingApiRequestDto,
+  FetchSprintMeetingFormApiRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import SprintMeetingUrls from "@/sprint-meeting/application/constants/sprintMeetingUrls";
 
@@ -122,6 +124,15 @@ export class SprintMeetingApiAdapter implements SprintMeetingApiPort {
     return await this.apiClient.patch({
       url: SprintMeetingUrls.editSprintMeetingSection({ meetingId, formId }),
       payload: { responses },
+    });
+  }
+
+  async fetchSprintMeetingForm({
+    meetingId,
+    formId,
+  }: FetchSprintMeetingFormApiRequestDto): Promise<FetchSprintMeetingFormResponseDto> {
+    return await this.apiClient.get({
+      url: SprintMeetingUrls.fetchSprintMeetingForm({ meetingId, formId }),
     });
   }
 }
