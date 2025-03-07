@@ -8,6 +8,7 @@ import type {
   EditMeetingApiRequestDto,
   EditSprintMeetingSectionApiRequestDto,
   FetchMeetingApiRequestDto,
+  FetchSprintMeetingFormApiRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
   AddAgendaTopicResponseDto,
@@ -19,6 +20,7 @@ import type {
   EditMeetingResponseDto,
   EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
+  FetchSprintMeetingFormResponseDto,
 } from "@/sprint-meeting/application/dtos/response.dto";
 
 export interface SprintMeetingApiPort {
@@ -79,5 +81,5 @@ export interface SprintMeetingApiPort {
   fetchSprintMeetingForm: ({
     meetingId,
     formId,
-  }: FetchSprintMeetingFormApiRequestDto) => Promise<FetchSprintMeetingFormApiResponseDto>;
+  }: FetchSprintMeetingFormApiRequestDto) => Promise<FetchSprintMeetingFormResponseDto>;
 }
