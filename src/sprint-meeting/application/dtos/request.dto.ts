@@ -95,6 +95,11 @@ export interface GetCompletedTopicsClientRequestDto {
   agendas: Agenda[];
 }
 
+export interface FetchSprintMeetingFormClientRequestDto {
+  meetingId: string;
+  formId: number;
+}
+
 export interface FetchSprintMeetingSectionResponsesClientRequestDto {
   meetingId: string;
   formId: number;
