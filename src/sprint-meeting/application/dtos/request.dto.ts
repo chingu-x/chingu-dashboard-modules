@@ -2,6 +2,7 @@ import type {
   Agenda,
   Meeting,
   MeetingFormData,
+  SprintMeetingForm,
 } from "@/sprint-meeting/application/types";
 import type { Sprint } from "@/sprints/application/types";
 
@@ -101,6 +102,7 @@ export interface FetchSprintMeetingFormClientRequestDto {
 }
 
 export interface GetSprintMeetingSectionResponsesClientRequestDto {
+  sprintMeetingForm: SprintMeetingForm;
   meetingId: string;
   formId: number;
 }

@@ -68,3 +68,34 @@ export interface SprintPlanningQuestions {
   goal: string;
   timeline: string;
 }
+
+export interface SprintMeetingForm {
+  id: number;
+  formType: {
+    id: number;
+    name: string;
+  };
+  title: string;
+  description: string;
+  questions: {
+    id: number;
+    order: number;
+    inputType: {
+      id: number;
+      name: string;
+    };
+    text: string;
+    description: string;
+    answerRequired: boolean;
+    multipleAllowed: boolean;
+    optionGroup: number;
+    responses: [
+      {
+        optionChoice: number;
+        numberic: number;
+        boolean: boolean;
+        text: string;
+      },
+    ];
+  }[];
+}
