@@ -12,6 +12,7 @@ export class GetSprintMeetingSectionResponsesUsecase {
   ) {}
 
   async execute({
+    getSprintMeetingSectionResponses,
     meetingId,
     formId,
   }: GetSprintMeetingSectionResponsesUsecaseDto): Promise<GetSprintMeetingSectionResponsesResponseDto> {
