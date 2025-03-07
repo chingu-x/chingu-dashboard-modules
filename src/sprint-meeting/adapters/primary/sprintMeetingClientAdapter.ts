@@ -294,11 +294,15 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     });
   }
 
-  async getSprintMeetingSectionResponses(
-    sprintMeetingForm: GetSprintMeetingSectionResponsesClientRequestDto,
-  ): Promise<GetSprintMeetingSectionResponsesResponseDto> {
-    return await this.getSprintMeetingSectionResponsesUsecase.execute(
+  async getSprintMeetingSectionResponses({
+    sprintMeetingForm,
+    meetingId,
+    formId,
+  }: GetSprintMeetingSectionResponsesClientRequestDto): Promise<GetSprintMeetingSectionResponsesResponseDto> {
+    return await this.getSprintMeetingSectionResponsesUsecase.execute({
       sprintMeetingForm,
-    );
+      meetingId,
+      formId,
+    });
   }
 }
