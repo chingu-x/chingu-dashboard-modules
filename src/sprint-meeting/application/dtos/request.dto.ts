@@ -166,3 +166,8 @@ export interface EditSprintMeetingSectionApiRequestDto {
     responseGroupId?: number;
   }[];
 }
+
+export interface FetchSprintMeetingFormApiRequestDto {
+  meetingId: string;
+  formId: number;
+}
