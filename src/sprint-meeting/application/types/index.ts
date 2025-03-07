@@ -22,6 +22,7 @@ export interface Section {
     responses: {
       question: {
         id: number;
+        text: string;
       };
       text: string;
     }[];
