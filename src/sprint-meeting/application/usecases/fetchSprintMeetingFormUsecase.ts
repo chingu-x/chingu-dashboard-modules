@@ -15,7 +15,9 @@ export class FetchSprintMeetingFormUsecase {
     meetingId,
     formId,
   }: FetchSprintMeetingFormUsecaseDto): Promise<FetchSprintMeetingFormResponseDto> {
-    return await this.sprintMeetingApi.
-
+    return await this.sprintMeetingApi.fetchSprintMeetingForm({
+      meetingId,
+      formId,
+    });
   }
 }
