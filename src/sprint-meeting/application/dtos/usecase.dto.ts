@@ -98,7 +98,7 @@ export interface FetchSprintMeetingFormUsecaseDto {
   formId: number;
 }
 
-export interface FetchSprintMeetingSectionResponsesUsecaseDto {
+export interface GetSprintMeetingSectionResponsesUsecaseDto {
   meetingId: string;
   formId: number;
 }

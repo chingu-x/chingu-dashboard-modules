@@ -100,7 +100,7 @@ export interface FetchSprintMeetingFormClientRequestDto {
   formId: number;
 }
 
-export interface FetchSprintMeetingSectionResponsesClientRequestDto {
+export interface GetSprintMeetingSectionResponsesClientRequestDto {
   meetingId: string;
   formId: number;
 }

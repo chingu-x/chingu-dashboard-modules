@@ -1,11 +1,11 @@
 import { inject, injectable } from "tsyringe";
 import { SPRINT_MEETING_TYPES } from "@/sprint-meeting/di/types";
 import { SprintMeetingApiPort } from "@/sprint-meeting/ports/secondary/sprintMeetingApiPort";
-import { FetchSprintMeetingSectionResponsesUsecaseDto } from "@/sprint-meeting/application/dtos/usecase.dto";
-import { FetchSprintMeetingSectionResponsesResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
+import { GetSprintMeetingSectionResponsesUsecaseDto } from "@/sprint-meeting/application/dtos/usecase.dto";
+import { GetSprintMeetingSectionResponsesResponseDto } from "@/sprint-meeting/application/dtos/response.dto";
 
 @injectable()
-export class FetchSprintMeetingSectionResponsesUsecase {
+export class GetSprintMeetingSectionResponsesUsecase {
   constructor(
     @inject(SPRINT_MEETING_TYPES.SprintMeetingApiPort)
     private readonly sprintMeetingApi: SprintMeetingApiPort,
@@ -14,7 +14,7 @@ export class FetchSprintMeetingSectionResponsesUsecase {
   async execute({
     meetingId,
     formId,
-  }: FetchSprintMeetingSectionResponsesUsecaseDto): Promise<FetchSprintMeetingSectionResponsesResponseDto> {
+  }: GetSprintMeetingSectionResponsesUsecaseDto): Promise<GetSprintMeetingSectionResponsesResponseDto> {
     const data = await this.sprintMeetingApi.fetchMeeting({ meetingId });
 
     const formResponseMeeting = data.formResponseMeeting!.find(

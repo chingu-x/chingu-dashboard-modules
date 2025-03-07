@@ -16,7 +16,7 @@ import type {
   EditSprintPlanningSectionClientRequestDto,
   GetIncompleteTopicsClientRequestDto,
   GetCompletedTopicsClientRequestDto,
-  FetchSprintMeetingSectionResponsesClientRequestDto,
+  GetSprintMeetingSectionResponsesClientRequestDto,
   FetchSprintMeetingFormClientRequestDto,
 } from "@/sprint-meeting/application/dtos/request.dto";
 import type {
@@ -30,7 +30,7 @@ import type {
   EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
   FetchSprintMeetingFormResponseDto,
-  FetchSprintMeetingSectionResponsesResponseDto,
+  GetSprintMeetingSectionResponsesResponseDto,
   GetAgendaByIdResponseDto,
   GetCompletedTopicsResponseDto,
   GetIncompleteTopicsResponseDto,
@@ -113,7 +113,7 @@ export interface SprintMeetingClientPort {
     props: FetchSprintMeetingFormClientRequestDto,
   ) => Promise<FetchSprintMeetingFormResponseDto>;
 
-  fetchSprintMeetingSectionResponses: (
-    props: FetchSprintMeetingSectionResponsesClientRequestDto,
-  ) => Promise<FetchSprintMeetingSectionResponsesResponseDto>;
+  getSprintMeetingSectionResponses: (
+    props: GetSprintMeetingSectionResponsesClientRequestDto,
+  ) => Promise<GetSprintMeetingSectionResponsesResponseDto>;
 }

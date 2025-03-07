@@ -13,7 +13,7 @@ import {
   EditSprintReviewSectionClientRequestDto,
   FetchMeetingClientRequestDto,
   FetchSprintMeetingFormClientRequestDto,
-  FetchSprintMeetingSectionResponsesClientRequestDto,
+  GetSprintMeetingSectionResponsesClientRequestDto,
   GetAgendaByIdClientRequestDto,
   GetCompletedTopicsClientRequestDto,
   GetIncompleteTopicsClientRequestDto,
@@ -33,7 +33,7 @@ import {
   EditSprintMeetingSectionResponseDto,
   FetchMeetingResponseDto,
   FetchSprintMeetingFormResponseDto,
-  FetchSprintMeetingSectionResponsesResponseDto,
+  GetSprintMeetingSectionResponsesResponseDto,
   GetAgendaByIdResponseDto,
   GetCompletedTopicsResponseDto,
   GetIncompleteTopicsResponseDto,
@@ -59,7 +59,7 @@ import { GetSprintPlanningQuestionsUsecase } from "@/sprint-meeting/application/
 import { EditSprintPlanningSectionUsecase } from "@/sprint-meeting/application/usecases/editSprintPlanningSectionUsecase";
 import { GetIncompleteTopicsUsecase } from "@/sprint-meeting/application/usecases/getIncompleteTopicsUsecase";
 import { GetCompletedTopicsUsecase } from "@/sprint-meeting/application/usecases/getCompletedTopicsUsecase";
-import { FetchSprintMeetingSectionResponsesUsecase } from "@/sprint-meeting/application/usecases/fetchSprintMeetingSectionResponsesUsecase";
+import { GetSprintMeetingSectionResponsesUsecase } from "@/sprint-meeting/application/usecases/getSprintMeetingSectionResponsesUsecase";
 import { FetchSprintMeetingFormUsecase } from "@/sprint-meeting/application/usecases/fetchSprintMeetingFormUsecase";
 
 @injectable()
@@ -119,8 +119,8 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     @inject(TYPES.FetchSprintMeetingFormUsecase)
     private readonly fetchSprintMeetingFormUsecase: FetchSprintMeetingFormUsecase,
 
-    @inject(TYPES.FetchSprintMeetingSectionResponsesUsecase)
-    private readonly fetchSprintMeetingSectionResponsesUsecase: FetchSprintMeetingSectionResponsesUsecase,
+    @inject(TYPES.GetSprintMeetingSectionResponsesUsecase)
+    private readonly getSprintMeetingSectionResponsesUsecase: GetSprintMeetingSectionResponsesUsecase,
   ) {}
 
   async fetchMeeting({
@@ -294,11 +294,11 @@ export class SprintMeetingClientAdapter implements SprintMeetingClientPort {
     });
   }
 
-  async fetchSprintMeetingSectionResponses({
+  async getSprintMeetingSectionResponses({
     meetingId,
     formId,
-  }: FetchSprintMeetingSectionResponsesClientRequestDto): Promise<FetchSprintMeetingSectionResponsesResponseDto> {
-    return await this.fetchSprintMeetingSectionResponsesUsecase.execute({
+  }: GetSprintMeetingSectionResponsesClientRequestDto): Promise<GetSprintMeetingSectionResponsesResponseDto> {
+    return await this.getSprintMeetingSectionResponsesUsecase.execute({
       meetingId,
       formId,
     });

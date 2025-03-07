@@ -137,7 +137,7 @@ export interface FetchSprintMeetingFormResponseDto {
   }[];
 }
 
-export interface FetchSprintMeetingSectionResponsesResponseDto {
+export interface GetSprintMeetingSectionResponsesResponseDto {
   responses: {
     question: {
       id: number;
