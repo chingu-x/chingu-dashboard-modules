@@ -18,6 +18,7 @@ import type { GetSprintPlanningQuestionsUsecase } from "@/sprint-meeting/applica
 import type { EditSprintPlanningSectionUsecase } from "@/sprint-meeting/application/usecases/editSprintPlanningSectionUsecase";
 import type { GetIncompleteTopicsUsecase } from "@/sprint-meeting/application/usecases/getIncompleteTopicsUsecase";
 import type { GetCompletedTopicsUsecase } from "@/sprint-meeting/application/usecases/getCompletedTopicsUsecase";
+import type { FetchSprintMeetingFormUsecase } from "@/sprint-meeting/application/usecases/fetchSprintMeetingFormUsecase";
 import type { FetchSprintMeetingSectionResponsesUsecase } from "@/sprint-meeting/application/usecases/fetchSprintMeetingSectionResponsesUsecase";
 
 export const SPRINT_MEETING_TYPES = {
@@ -94,6 +95,10 @@ export const SPRINT_MEETING_TYPES = {
   GetCompletedTopicsUsecase: Symbol.for(
     "GetCompletedTopicsUsecase",
   ) as InjectionToken<GetCompletedTopicsUsecase>,
+
+  FetchSprintMeetingFormUsecase: Symbol.for(
+    "FetchSprintMeetingFormUsecase",
+  ) as InjectionToken<FetchSprintMeetingFormUsecase>,
 
   FetchSprintMeetingSectionResponsesUsecase: Symbol.for(
     "FetchSprintMeetingSectionResponsesUsecase",
