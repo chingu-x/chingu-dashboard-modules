@@ -14,6 +14,6 @@ export class GetSprintMeetingSectionResponsesUsecase {
       text: "",
     }));
 
-    return { responses };
+    return { title: sprintMeetingForm.title, responses };
   }
 }

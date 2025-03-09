@@ -110,6 +110,7 @@ export type GetCompletedTopicsResponseDto = Agenda[];
 export type FetchSprintMeetingFormResponseDto = SprintMeetingForm;
 
 export interface GetSprintMeetingSectionResponsesResponseDto {
+  title: string;
   responses: {
     question: {
       id: number;
