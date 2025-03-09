@@ -115,5 +115,5 @@ export interface SprintMeetingClientPort {
 
   getSprintMeetingSectionResponses: (
     props: GetSprintMeetingSectionResponsesClientRequestDto,
-  ) => Promise<GetSprintMeetingSectionResponsesResponseDto>;
+  ) => GetSprintMeetingSectionResponsesResponseDto;
 }

@@ -103,8 +103,6 @@ export interface FetchSprintMeetingFormClientRequestDto {
 
 export interface GetSprintMeetingSectionResponsesClientRequestDto {
   sprintMeetingForm: SprintMeetingForm;
-  meetingId: string;
-  formId: number;
 }
 
 // api
