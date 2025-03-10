@@ -1,15 +1,22 @@
 import type { User } from "@/user";
 
+// client
 export interface GetMyTeamClientRequestDto {
   teamId: string;
   user: User;
 }
 
-export interface GetMyTeamApiRequestDto {
-  teamId: number;
+export interface EditHoursClientRequestDto {
+  teamId: string;
+  hrPerSprint: number;
 }
 
-export interface EditHoursRequestDto {
-  teamId: number;
+// api
+export interface GetMyTeamApiRequestDto {
+  teamId: string;
+}
+
+export interface EditHoursApiRequestDto {
+  teamId: string;
   hrPerSprint: number;
 }

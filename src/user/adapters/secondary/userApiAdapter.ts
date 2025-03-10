@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import { UserApiPort } from "@/user/ports/secondary/userApiPort";
-import { GetUserResponseDto } from "@/user/application/dtos/response.dto";
+import { FetchUserResponseDto } from "@/user/application/dtos/response.dto";
 import UserUrls from "@/user/application/constants/userUrls";
 
 @injectable()
@@ -12,9 +12,9 @@ export class UserApiAdapter implements UserApiPort {
     private readonly apiClient: RestApiPort,
   ) {}
 
-  async getUser(): Promise<GetUserResponseDto> {
+  async fetchUser(): Promise<FetchUserResponseDto> {
     return await this.apiClient.get({
-      url: UserUrls.getUser(),
+      url: UserUrls.fetchUser(),
     });
   }
 }

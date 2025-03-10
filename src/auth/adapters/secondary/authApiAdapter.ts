@@ -3,14 +3,16 @@ import { TYPES } from "@/types";
 import { AuthApiPort } from "@/auth/ports/secondary/authApiPort";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
-  RequestResetPasswordDto,
-  LoginRequestDto,
-  ResetPasswordDto,
+  LoginApiRequestDto,
+  RequestResetPasswordApiRequestDto,
+  ResetPasswordApiRequestDto,
 } from "@/auth/application/dtos/request.dto";
 import AuthUrls from "@/auth/application/constants/authUrls";
 import {
   LogoutResponseDto,
   LoginResponseDto,
+  RequestResetPasswordResponseDto,
+  ResetPasswordResponseDto,
 } from "@/auth/application/dtos/response.dto";
 
 @injectable()
@@ -20,7 +22,10 @@ export class AuthApiAdapter implements AuthApiPort {
     private readonly apiClient: RestApiPort,
   ) {}
 
-  async login({ email, password }: LoginRequestDto): Promise<LoginResponseDto> {
+  async login({
+    email,
+    password,
+  }: LoginApiRequestDto): Promise<LoginResponseDto> {
     return await this.apiClient.post({
       url: AuthUrls.login(),
       payload: { email, password },
@@ -35,14 +40,17 @@ export class AuthApiAdapter implements AuthApiPort {
 
   async requestResetPassword({
     email,
-  }: RequestResetPasswordDto): Promise<void> {
+  }: RequestResetPasswordApiRequestDto): Promise<RequestResetPasswordResponseDto> {
     return await this.apiClient.post({
       url: AuthUrls.requestResetPassword(),
       payload: { email },
     });
   }
 
-  async resetPassword({ password, token }: ResetPasswordDto): Promise<void> {
+  async resetPassword({
+    password,
+    token,
+  }: ResetPasswordApiRequestDto): Promise<ResetPasswordResponseDto> {
     return await this.apiClient.post({
       url: AuthUrls.resetPassword(),
       payload: { password, token },

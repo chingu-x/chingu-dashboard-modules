@@ -3,7 +3,7 @@ import { TYPES } from "@/types";
 import { MyTeamApiPort } from "@/my-team/ports/secondary/myTeamApiPort";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
-  EditHoursRequestDto,
+  EditHoursApiRequestDto,
   GetMyTeamApiRequestDto,
 } from "@/my-team/application/dtos/request.dto";
 import {
@@ -23,16 +23,16 @@ export class MyTeamApiAdapter implements MyTeamApiPort {
     teamId,
   }: GetMyTeamApiRequestDto): Promise<GetMyTeamResponseDto> {
     return await this.apiClient.get({
-      url: MyTeamUrls.getMyTeam(teamId.toString()),
+      url: MyTeamUrls.getMyTeam({ teamId }),
     });
   }
 
   async editHours({
     teamId,
     hrPerSprint,
-  }: EditHoursRequestDto): Promise<EditHoursResponseDto> {
+  }: EditHoursApiRequestDto): Promise<EditHoursResponseDto> {
     return await this.apiClient.patch({
-      url: MyTeamUrls.editHours(teamId.toString()),
+      url: MyTeamUrls.editHours({ teamId }),
       payload: { hrPerSprint },
     });
   }

@@ -1,5 +1,5 @@
 const UserUrls = {
-  getUser() {
+  fetchUser() {
     return "/api/v1/users/me";
   },
 } as const;
