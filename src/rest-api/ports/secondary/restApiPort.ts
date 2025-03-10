@@ -1,16 +1,16 @@
 import type {
-  DeleteParams,
-  GetParams,
-  PatchParams,
-  PostParams,
-} from "@/rest-api/application/entities/restApiParams";
+  DeleteRequestDto,
+  GetRequestDto,
+  PatchRequestDto,
+  PostRequestDto,
+} from "@/rest-api/application/dtos/request.dto";
 
 export interface RestApiPort {
-  get: <X>(params: GetParams) => Promise<X>;
+  get: <X>(params: GetRequestDto) => Promise<X>;
 
-  post: <X, Y>(params: PostParams<X>) => Promise<Y>;
+  post: <X, Y>(params: PostRequestDto<X>) => Promise<Y>;
 
-  patch: <X, Y>(params: PatchParams<X>) => Promise<Y>;
+  patch: <X, Y>(params: PatchRequestDto<X>) => Promise<Y>;
 
-  delete: <X>(params: DeleteParams) => Promise<X>;
+  delete: <X>(params: DeleteRequestDto) => Promise<X>;
 }

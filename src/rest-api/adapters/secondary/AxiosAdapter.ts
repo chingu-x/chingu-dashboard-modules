@@ -6,11 +6,11 @@ import axios, {
 } from "axios";
 import { type RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import type {
-  DeleteParams,
-  GetParams,
-  PatchParams,
-  PostParams,
-} from "@/rest-api/application/entities/restApiParams";
+  DeleteRequestDto,
+  GetRequestDto,
+  PatchRequestDto,
+  PostRequestDto,
+} from "@/rest-api/application/dtos/request.dto";
 
 export class AxiosAdapter implements RestApiPort {
   private axiosInstance: AxiosInstance;
@@ -96,23 +96,23 @@ export class AxiosAdapter implements RestApiPort {
     this.failedRequestsQueue = [];
   }
 
-  async get<X>({ url }: GetParams): Promise<X> {
+  async get<X>({ url }: GetRequestDto): Promise<X> {
     const response = await this.axiosInstance.get<X>(url);
     return response.data;
   }
 
-  async patch<X, Y>({ url, payload }: PatchParams<X>): Promise<Y> {
+  async post<X, Y>({ url, payload }: PostRequestDto<X>): Promise<Y> {
+    const response = await this.axiosInstance.post<Y>(url, payload);
+    return response.data;
+  }
+
+  async patch<X, Y>({ url, payload }: PatchRequestDto<X>): Promise<Y> {
     const response = await this.axiosInstance.patch<Y>(url, payload);
     return response.data;
   }
 
-  async delete<X>({ url }: DeleteParams): Promise<X> {
+  async delete<X>({ url }: DeleteRequestDto): Promise<X> {
     const response = await this.axiosInstance.delete<X>(url);
-    return response.data;
-  }
-
-  async post<X, Y>({ url, payload }: PostParams<X>): Promise<Y> {
-    const response = await this.axiosInstance.post<Y>(url, payload);
     return response.data;
   }
 }

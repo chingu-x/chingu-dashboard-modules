@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { MyTeamClientPort } from "@/my-team/ports/primary/myTeamClientPort";
 import {
-  EditHoursRequestDto,
+  EditHoursClientRequestDto,
   GetMyTeamClientRequestDto,
 } from "@/my-team/application/dtos/request.dto";
 import {
@@ -11,6 +11,7 @@ import {
 } from "@/my-team/application/dtos/response.dto";
 import { GetMyTeamUsecase } from "@/my-team/application/usecases/getMyTeamUsecase";
 import { EditHoursUsecase } from "@/my-team/application/usecases/editHoursUsecase";
+import { UpdateDirectoryWithCurrentTimeUsecase } from "@/timezone/application/usecases/updateDirectoryWithCurrentTimeUsecase";
 
 @injectable()
 export class MyTeamClientAdapter implements MyTeamClientPort {
@@ -20,19 +21,28 @@ export class MyTeamClientAdapter implements MyTeamClientPort {
 
     @inject(TYPES.EditHoursUsecase)
     private readonly editHoursUsecase: EditHoursUsecase,
+
+    @inject(TYPES.UpdateDirectoryWithCurrentTimeUsecase)
+    private readonly updateDirectoryWithCurrentTimeUsecase: UpdateDirectoryWithCurrentTimeUsecase,
   ) {}
 
   async getMyTeam({
     teamId,
     user,
   }: GetMyTeamClientRequestDto): Promise<GetMyTeamResponseDto> {
-    return await this.getMyTeamUsecase.execute({ teamId, user });
+    const data = await this.getMyTeamUsecase.execute({ teamId, user });
+
+    this.updateDirectoryWithCurrentTimeUsecase.execute({
+      data,
+    });
+
+    return data;
   }
 
   async editHours({
     teamId,
     hrPerSprint,
-  }: EditHoursRequestDto): Promise<EditHoursResponseDto> {
+  }: EditHoursClientRequestDto): Promise<EditHoursResponseDto> {
     return await this.editHoursUsecase.execute({ teamId, hrPerSprint });
   }
 }

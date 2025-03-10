@@ -1,5 +1,5 @@
 import { type User } from "@/user/application/types";
 
-export type GetUserResponseDto = User;
+export type FetchUserResponseDto = User;
 
 export type GetChinguMemberStatusResponseDto = boolean;

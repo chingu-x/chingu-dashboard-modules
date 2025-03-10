@@ -1,13 +1,29 @@
-export interface LoginRequestDto {
+// client
+export interface LoginClientRequestDto {
   email: string;
   password: string;
 }
 
-export interface RequestResetPasswordDto {
+export interface RequestResetPasswordClientRequestDto {
   email: string;
 }
 
-export interface ResetPasswordDto {
+export interface ResetPasswordClientRequestDto {
+  password: string;
+  token: string;
+}
+
+// api
+export interface LoginApiRequestDto {
+  email: string;
+  password: string;
+}
+
+export interface RequestResetPasswordApiRequestDto {
+  email: string;
+}
+
+export interface ResetPasswordApiRequestDto {
   password: string;
   token: string;
 }

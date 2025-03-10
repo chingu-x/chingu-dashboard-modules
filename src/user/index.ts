@@ -1,7 +1,10 @@
 export { UserClientAdapter } from "./adapters/primary/userClientAdapter";
-export { GetUserRequestDto } from "./application/dtos/request.dtos";
 export {
-  GetUserResponseDto,
+  FetchCurrentUserClientRequestDto,
+  GetChinguMemberStatusClientRequestDto,
+} from "./application/dtos/request.dto";
+export {
+  FetchUserResponseDto,
   GetChinguMemberStatusResponseDto,
 } from "./application/dtos/response.dto";
 export { User, ProviderType } from "./application/types/index";

@@ -1,5 +1,5 @@
-import { type GetUserResponseDto } from "@/user/application/dtos/response.dto";
+import type { FetchUserResponseDto } from "@/user/application/dtos/response.dto";
 
 export interface UserApiPort {
-  getUser: () => Promise<GetUserResponseDto>;
+  fetchUser: () => Promise<FetchUserResponseDto>;
 }

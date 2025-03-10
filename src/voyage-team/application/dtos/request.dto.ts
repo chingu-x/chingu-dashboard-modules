@@ -1,18 +1,37 @@
-import type { GetUserVoyageTeamIdResponseDto } from "./response.dto";
-import { type UserVoyageTeamMember } from "@/voyage-team/application/types";
-import { type User } from "@/user/application/types";
+import type { User } from "@/user/application/types";
+import type { MyTeam } from "@/my-team/application/types";
 
-export type GetUserVoyageTeamIdRequestDto = UserVoyageTeamMember;
-export interface HasVoyageStartedRequestDto {
+export interface GetCurrentVoyageTeamClientRequestDto {
+  user: User;
+}
+
+export interface GetVoyageTeamIdClientRequestDto {
+  user: User;
+}
+
+export interface GetCurrentVoyageUserIdClientRequestDto {
+  user: User;
+}
+
+export interface HasVoyageStartedClientRequestDto {
   isAuthenticated: boolean;
   user: User;
 }
+
+export interface GetVoyageProjectSubmissionStatusClientRequestDto {
+  user: User;
+}
+
+export interface GetVoyageMemberRolesClientRequestDto {
+  voyageTeam: MyTeam;
+}
+
 export interface IsCurrentVoyageTeamClientRequestDto {
   user: User;
   teamId: string;
 }
 
-export interface IsCurrentVoyageTeamApiRequestDto {
-  teamId: string;
-  voyageTeamId: GetUserVoyageTeamIdResponseDto;
+export interface GetCurrentUserVoyageRoleClientRequestDto {
+  user: User;
+  voyageTeam: MyTeam;
 }
