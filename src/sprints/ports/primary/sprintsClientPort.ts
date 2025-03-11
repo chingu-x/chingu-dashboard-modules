@@ -9,6 +9,7 @@ import type {
   SubmitWeeklyCheckinClientRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import type {
+  FetchAllSprintsResponseDto,
   FetchSprintsResponseDto,
   GetCurrentSprintResponseDto,
   GetSprintByNumberResponseDto,
