@@ -51,4 +51,6 @@ export interface SprintsClientPort {
   getSprintByNumber: (
     props: GetSprintByNumberClientRequestDto,
   ) => GetSprintByNumberResponseDto;
+
+  fetchAllSprints: () => FetchAllSprintsResponseDto;
 }
