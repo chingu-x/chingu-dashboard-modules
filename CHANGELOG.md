@@ -1,3 +1,13 @@
+# [0.9.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.8.0...v0.9.0) (2025-03-11)
+
+
+### Features
+
+* implement fetchAllSprints function in sprints api adapter ([b25c73e](https://github.com/chingu-x/chingu-dashboard-modules/commit/b25c73e755c4f5722a7afd9344bbff9119539216))
+* implement fetchAllSprints function in sprints client adapter ([66693df](https://github.com/chingu-x/chingu-dashboard-modules/commit/66693df30ae8db5a29c02fcccd8dc3a47c8665cb))
+* implement FetchAllSprintsUsecase ([e70eff4](https://github.com/chingu-x/chingu-dashboard-modules/commit/e70eff43c8d775f5f8435342638d0dbba87384f3))
+* implement getActiveTeams function in user client adapter ([509b0ba](https://github.com/chingu-x/chingu-dashboard-modules/commit/509b0ba66bd09b30ef11455951ead929dc8e3559))
+
 # [0.8.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.7.0...v0.8.0) (2025-03-10)
 
 
