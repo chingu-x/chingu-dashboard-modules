@@ -4,6 +4,7 @@ import type {
   SubmitWeeklyCheckinApiRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import type {
+  FetchAllSprintsResponseDto,
   FetchSprintsResponseDto,
   SubmitVoyageProjectResponseDto,
   SubmitWeeklyCheckinResponseDto,
@@ -24,4 +25,6 @@ export interface SprintsApiPort {
     voyageTeamId,
     responses,
   }: SubmitVoyageProjectApiRequestDto) => Promise<SubmitVoyageProjectResponseDto>;
+
+  fetchAllSprints: () => Promise<FetchAllSprintsResponseDto>;
 }

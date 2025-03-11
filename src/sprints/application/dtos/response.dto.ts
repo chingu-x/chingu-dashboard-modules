@@ -22,3 +22,5 @@ export interface SubmitVoyageProjectResponseDto {
 }
 
 export type GetSprintByNumberResponseDto = Sprint;
+
+export type FetchAllSprintsResponseDto = VoyageSprint[];

@@ -11,6 +11,7 @@ export interface UserClientPort {
   fetchUser: (
     props: FetchCurrentUserClientRequestDto,
   ) => Promise<FetchUserResponseDto>;
+
   getChinguMemberStatus: (
     props: GetChinguMemberStatusClientRequestDto,
   ) => GetChinguMemberStatusResponseDto;

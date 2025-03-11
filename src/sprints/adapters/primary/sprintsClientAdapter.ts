@@ -13,6 +13,7 @@ import {
   SubmitWeeklyCheckinClientRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import {
+  FetchAllSprintsResponseDto,
   FetchSprintsResponseDto,
   GetCurrentSprintResponseDto,
   GetSprintByNumberResponseDto,
@@ -29,6 +30,7 @@ import { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/u
 import { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submitWeeklyCheckinUsecase";
 import { SubmitVoyageProjectUsecase } from "@/sprints/application/usecases/submitVoyageProjectUsecase";
 import { GetSprintByNumberUsecase } from "@/sprints/application/usecases/getSprintByNumberUsecase";
+import { FetchAllSprintsUsecase } from "@/sprints/application/usecases/fetchAllSprintsUsecase";
 
 @injectable()
 export class SprintsClientAdapter implements SprintsClientPort {
@@ -56,9 +58,11 @@ export class SprintsClientAdapter implements SprintsClientPort {
 
     @inject(TYPES.GetSprintByNumberUsecase)
     private readonly getSprintByNumberUsecase: GetSprintByNumberUsecase,
+
+    @inject(TYPES.FetchAllSprintsUsecase)
+    private readonly fetchAllSprintsUsecase: FetchAllSprintsUsecase,
   ) {}
 
-  // gets the current voyage team
   fetchSprints({
     teamId,
   }: FetchSprintsClientRequestDto): Promise<FetchSprintsResponseDto> {
@@ -130,5 +134,9 @@ export class SprintsClientAdapter implements SprintsClientPort {
     sprintNumber,
   }: GetSprintByNumberClientRequestDto): GetSprintByNumberResponseDto {
     return this.getSprintByNumberUsecase.execute({ sprints, sprintNumber });
+  }
+
+  async fetchAllSprints(): Promise<FetchAllSprintsResponseDto> {
+    return await this.fetchAllSprintsUsecase.execute();
   }
 }

@@ -9,6 +9,7 @@ import type {
   SubmitWeeklyCheckinClientRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import type {
+  FetchAllSprintsResponseDto,
   FetchSprintsResponseDto,
   GetCurrentSprintResponseDto,
   GetSprintByNumberResponseDto,
@@ -51,4 +52,6 @@ export interface SprintsClientPort {
   getSprintByNumber: (
     props: GetSprintByNumberClientRequestDto,
   ) => GetSprintByNumberResponseDto;
+
+  fetchAllSprints: () => Promise<FetchAllSprintsResponseDto>;
 }
