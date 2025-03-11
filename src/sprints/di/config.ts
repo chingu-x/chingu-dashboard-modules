@@ -10,6 +10,7 @@ import { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/u
 import { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submitWeeklyCheckinUsecase";
 import { SubmitVoyageProjectUsecase } from "@/sprints/application/usecases/submitVoyageProjectUsecase";
 import { GetSprintByNumberUsecase } from "@/sprints/application/usecases/getSprintByNumberUsecase";
+import { FetchAllSprintsUsecase } from "@/sprints/application/usecases/fetchAllSprintsUsecase";
 
 export const registerSprintsDependencies = () => {
   // ports
@@ -48,6 +49,10 @@ export const registerSprintsDependencies = () => {
 
   container.register(SPRINTS_TYPES.GetSprintByNumberUsecase, {
     useClass: GetSprintByNumberUsecase,
+  });
+
+  container.register(SPRINTS_TYPES.FetchAllSprintsUsecase, {
+    useClass: FetchAllSprintsUsecase,
   });
 
   // adapters

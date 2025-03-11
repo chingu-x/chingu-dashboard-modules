@@ -30,6 +30,7 @@ import { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/u
 import { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submitWeeklyCheckinUsecase";
 import { SubmitVoyageProjectUsecase } from "@/sprints/application/usecases/submitVoyageProjectUsecase";
 import { GetSprintByNumberUsecase } from "@/sprints/application/usecases/getSprintByNumberUsecase";
+import { FetchAllSprintsUsecase } from "@/sprints/application/usecases/fetchAllSprintsUsecase";
 
 @injectable()
 export class SprintsClientAdapter implements SprintsClientPort {
