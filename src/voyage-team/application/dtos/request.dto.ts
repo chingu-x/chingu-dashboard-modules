@@ -34,6 +34,6 @@ export interface IsCurrentVoyageTeamClientRequestDto {
 }
 
 export interface GetCurrentUserVoyageRoleClientRequestDto {
-  user: User;
-  voyageTeam: MyTeam;
+  currentVoyageTeam: UserVoyageTeamMember[];
+  teamId: string;
 }

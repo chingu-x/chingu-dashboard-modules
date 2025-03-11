@@ -40,5 +40,5 @@ export interface VoyageTeamClientPort {
 
   getCurrentUserVoyageRole: (
     props: GetCurrentUserVoyageRoleClientRequestDto,
-  ) => GetCurrentUserVoyageRoleResponseDto | undefined;
+  ) => GetCurrentUserVoyageRoleResponseDto;
 }

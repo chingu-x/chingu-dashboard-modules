@@ -112,16 +112,12 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   }
 
   getCurrentUserVoyageRole({
-    user,
-    voyageTeam,
-  }: GetCurrentUserVoyageRoleClientRequestDto):
-    | GetCurrentUserVoyageRoleResponseDto
-    | undefined {
-    const voyageMemberId = this.getCurrentVoyageUserId({ user });
-
+    currentVoyageTeam,
+    teamId,
+  }: GetCurrentUserVoyageRoleClientRequestDto): GetCurrentUserVoyageRoleResponseDto {
     return this.getCurrentUserVoyageRoleUsecase.execute({
-      voyageTeam,
-      voyageMemberId,
+      currentVoyageTeam,
+      teamId,
     });
   }
 }
