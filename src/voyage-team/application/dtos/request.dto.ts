@@ -1,6 +1,7 @@
 import type { User } from "@/user/application/types";
 import type { MyTeam } from "@/my-team/application/types";
 import type { VoyageSprint } from "@/sprints/application/types";
+import type { UserVoyageTeamMember } from "@/voyage-team/application/types";
 
 export interface GetCurrentVoyageTeamClientRequestDto {
   user: User;
@@ -9,7 +10,8 @@ export interface GetCurrentVoyageTeamClientRequestDto {
 }
 
 export interface GetCurrentVoyageUserIdClientRequestDto {
-  user: User;
+  currentVoyageTeam: UserVoyageTeamMember[];
+  teamId: string;
 }
 
 export interface HasVoyageStartedClientRequestDto {

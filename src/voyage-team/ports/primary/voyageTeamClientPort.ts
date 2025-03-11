@@ -24,7 +24,7 @@ export interface VoyageTeamClientPort {
 
   getCurrentVoyageUserId: (
     props: GetCurrentVoyageUserIdClientRequestDto,
-  ) => GetCurrentVoyageUserIdResponseDto | undefined;
+  ) => GetCurrentVoyageUserIdResponseDto;
 
   hasVoyageStarted: (
     props: HasVoyageStartedClientRequestDto,

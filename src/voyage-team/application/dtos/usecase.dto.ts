@@ -20,7 +20,8 @@ export interface GetCurrentVoyageTeamUsecaseDto {
 }
 
 export interface GetCurrentVoyageUserIdUsecaseDto {
-  userVoyageTeam: UserVoyageTeamMember;
+  currentVoyageTeam: UserVoyageTeamMember[];
+  teamId: string;
 }
 
 export type GetVoyageMemberRolesUsecaseDto =
