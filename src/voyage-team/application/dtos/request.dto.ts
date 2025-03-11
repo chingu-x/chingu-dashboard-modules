@@ -5,6 +5,7 @@ import type { VoyageSprint } from "@/sprints/application/types";
 export interface GetCurrentVoyageTeamClientRequestDto {
   user: User;
   sprints: VoyageSprint[];
+  currentDate: Date | string;
 }
 
 export interface GetVoyageTeamIdClientRequestDto {

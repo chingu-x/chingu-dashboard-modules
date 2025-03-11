@@ -22,7 +22,7 @@ import type {
 export interface VoyageTeamClientPort {
   getCurrentVoyageTeam: (
     props: GetCurrentVoyageTeamClientRequestDto,
-  ) => GetCurrentVoyageTeamResponseDto | undefined;
+  ) => GetCurrentVoyageTeamResponseDto;
 
   getVoyageTeamId: (
     props: GetVoyageTeamIdClientRequestDto,

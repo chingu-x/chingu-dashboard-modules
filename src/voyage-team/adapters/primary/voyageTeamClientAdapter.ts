@@ -61,10 +61,14 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   // gets the current voyage team
   getCurrentVoyageTeam({
     user,
-  }: GetCurrentVoyageTeamClientRequestDto):
-    | GetCurrentVoyageTeamResponseDto
-    | undefined {
-    return this.getCurrentVoyageTeamUsecase.execute({ user });
+    sprints,
+    currentDate,
+  }: GetCurrentVoyageTeamClientRequestDto): GetCurrentVoyageTeamResponseDto {
+    return this.getCurrentVoyageTeamUsecase.execute({
+      user,
+      sprints,
+      currentDate,
+    });
   }
 
   // Get the ID of the voyage team in current voyage

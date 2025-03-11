@@ -1,4 +1,3 @@
-import type { VoyageSprint } from "@/sprints/application/types";
 import type { User } from "@/user/application/types";
 
 export interface FetchCurrentUserClientRequestDto {
@@ -6,9 +5,4 @@ export interface FetchCurrentUserClientRequestDto {
 }
 export interface GetChinguMemberStatusClientRequestDto {
   user: User;
-}
-
-export interface GetActiveTeamsClientRequestDto {
-  user: User;
-  sprints: VoyageSprint[];
 }
