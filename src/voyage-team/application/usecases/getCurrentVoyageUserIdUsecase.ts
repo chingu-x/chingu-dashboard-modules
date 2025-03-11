@@ -7,10 +7,13 @@ import { GetCurrentVoyageUserIdResponseDto } from "@/voyage-team/application/dto
 @injectable()
 export class GetCurrentVoyageUserIdUsecase {
   execute({
-    userVoyageTeam,
-  }: GetCurrentVoyageUserIdUsecaseDto):
-    | GetCurrentVoyageUserIdResponseDto
-    | undefined {
-    return userVoyageTeam?.id;
+    currentVoyageTeam,
+    teamId,
+  }: GetCurrentVoyageUserIdUsecaseDto): GetCurrentVoyageUserIdResponseDto {
+    const currentTeam = currentVoyageTeam.find(
+      (team) => team.voyageTeamId === Number(teamId),
+    );
+
+    return currentTeam!.id;
   }
 }

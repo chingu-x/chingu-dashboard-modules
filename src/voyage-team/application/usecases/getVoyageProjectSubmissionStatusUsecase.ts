@@ -6,9 +6,12 @@ import { GetVoyageProjectSubmissionStatusUsecaseDto } from "@/voyage-team/applic
 export class GetVoyageProjectSubmissionStatusUsecase {
   execute({
     currentVoyageTeam,
-  }: GetVoyageProjectSubmissionStatusUsecaseDto):
-    | GetVoyageProjectSubmissionStatusResponseDto
-    | undefined {
-    return currentVoyageTeam?.voyageTeam.projectSubmitted;
+    teamId,
+  }: GetVoyageProjectSubmissionStatusUsecaseDto): GetVoyageProjectSubmissionStatusResponseDto {
+    const currentTeam = currentVoyageTeam.find(
+      (team) => team.voyageTeamId === Number(teamId),
+    );
+
+    return currentTeam?.voyageTeam.projectSubmitted ?? false;
   }
 }

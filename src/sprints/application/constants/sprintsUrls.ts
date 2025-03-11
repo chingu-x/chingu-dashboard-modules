@@ -12,6 +12,9 @@ const SprintsUrls = {
   submitVoyageProject() {
     return "/api/v1/voyages/submit-project";
   },
+  fetchAllSprints() {
+    return "/api/v1/voyages/sprints";
+  },
 } as const;
 
 export default SprintsUrls;

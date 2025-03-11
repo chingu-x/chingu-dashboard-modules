@@ -6,13 +6,11 @@ import { UserRole } from "@/forms/application/types";
 @injectable()
 export class GetCurrentUserVoyageRoleUsecase {
   execute({
-    voyageTeam,
-    voyageMemberId,
-  }: GetCurrentUserVoyageRoleUsecaseDto):
-    | GetCurrentUserVoyageRoleResponseDto
-    | undefined {
-    const userRole = voyageTeam.voyageTeamMembers.find(
-      (member) => member.id === voyageMemberId,
+    currentVoyageTeam,
+    teamId,
+  }: GetCurrentUserVoyageRoleUsecaseDto): GetCurrentUserVoyageRoleResponseDto {
+    const userRole = currentVoyageTeam.find(
+      (team) => team.voyageTeamId === Number(teamId),
     )?.voyageRole.name;
 
     const isScrumMaster = userRole === UserRole.scrumMaster.toString();

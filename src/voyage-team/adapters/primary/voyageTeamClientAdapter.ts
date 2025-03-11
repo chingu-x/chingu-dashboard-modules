@@ -2,7 +2,6 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { VoyageTeamClientPort } from "@/voyage-team/ports/primary/voyageTeamClientPort";
 import {
-  GetVoyageTeamIdResponseDto,
   GetCurrentVoyageTeamResponseDto,
   HasVoyageStartedResponseDto,
   IsCurrentVoyageTeamResponseDto,
@@ -12,14 +11,12 @@ import {
   GetCurrentUserVoyageRoleResponseDto,
 } from "@/voyage-team/application/dtos/response.dto";
 import { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
-import { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";
 import {
   GetCurrentUserVoyageRoleClientRequestDto,
   GetCurrentVoyageTeamClientRequestDto,
   GetCurrentVoyageUserIdClientRequestDto,
   GetVoyageMemberRolesClientRequestDto,
   GetVoyageProjectSubmissionStatusClientRequestDto,
-  GetVoyageTeamIdClientRequestDto,
   HasVoyageStartedClientRequestDto,
   IsCurrentVoyageTeamClientRequestDto,
 } from "@/voyage-team/application/dtos/request.dto";
@@ -35,9 +32,6 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   constructor(
     @inject(TYPES.GetCurrentVoyageTeamUsecase)
     private readonly getCurrentVoyageTeamUsecase: GetCurrentVoyageTeamUsecase,
-
-    @inject(TYPES.GetVoyageTeamIdUsecase)
-    private readonly getVoyageTeamIdUsecase: GetVoyageTeamIdUsecase,
 
     @inject(TYPES.GetCurrentVoyageUserIdUsecase)
     private readonly getCurrentVoyageUserIdUsecase: GetCurrentVoyageUserIdUsecase,
@@ -61,29 +55,25 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   // gets the current voyage team
   getCurrentVoyageTeam({
     user,
-  }: GetCurrentVoyageTeamClientRequestDto):
-    | GetCurrentVoyageTeamResponseDto
-    | undefined {
-    return this.getCurrentVoyageTeamUsecase.execute({ user });
-  }
-
-  // Get the ID of the voyage team in current voyage
-  getVoyageTeamId({
-    user,
-  }: GetVoyageTeamIdClientRequestDto): GetVoyageTeamIdResponseDto | undefined {
-    const userVoyageTeam = this.getCurrentVoyageTeam({ user })!;
-
-    return this.getVoyageTeamIdUsecase.execute({ userVoyageTeam });
+    sprints,
+    currentDate,
+  }: GetCurrentVoyageTeamClientRequestDto): GetCurrentVoyageTeamResponseDto {
+    return this.getCurrentVoyageTeamUsecase.execute({
+      user,
+      sprints,
+      currentDate,
+    });
   }
 
   // get the user's id in the current voyage
   getCurrentVoyageUserId({
-    user,
-  }: GetCurrentVoyageUserIdClientRequestDto):
-    | GetCurrentVoyageUserIdResponseDto
-    | undefined {
-    const userVoyageTeam = this.getCurrentVoyageTeam({ user })!;
-    return this.getCurrentVoyageUserIdUsecase.execute({ userVoyageTeam });
+    currentVoyageTeam,
+    teamId,
+  }: GetCurrentVoyageUserIdClientRequestDto): GetCurrentVoyageUserIdResponseDto {
+    return this.getCurrentVoyageUserIdUsecase.execute({
+      currentVoyageTeam,
+      teamId,
+    });
   }
 
   hasVoyageStarted({
@@ -95,22 +85,22 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
 
   // returns true / false whether the coyage team id is the id of the voyage team belonging to the current user
   isCurrentVoyageTeam({
-    user,
+    currentVoyageTeam,
     teamId,
   }: IsCurrentVoyageTeamClientRequestDto): IsCurrentVoyageTeamResponseDto {
-    const voyageTeamId = this.getVoyageTeamId({ user })!;
-    return this.isCurrentVoyageTeamUsecase.execute({ teamId, voyageTeamId });
+    return this.isCurrentVoyageTeamUsecase.execute({
+      teamId,
+      currentVoyageTeam,
+    });
   }
 
   getVoyageProjectSubmissionStatus({
-    user,
-  }: GetVoyageProjectSubmissionStatusClientRequestDto):
-    | GetVoyageProjectSubmissionStatusResponseDto
-    | undefined {
-    const currentVoyageTeam = this.getCurrentVoyageTeam({ user })!;
-
+    currentVoyageTeam,
+    teamId,
+  }: GetVoyageProjectSubmissionStatusClientRequestDto): GetVoyageProjectSubmissionStatusResponseDto {
     return this.getVoyageProjectSubmissionStatusUsecase.execute({
       currentVoyageTeam,
+      teamId,
     });
   }
 
@@ -122,16 +112,12 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   }
 
   getCurrentUserVoyageRole({
-    user,
-    voyageTeam,
-  }: GetCurrentUserVoyageRoleClientRequestDto):
-    | GetCurrentUserVoyageRoleResponseDto
-    | undefined {
-    const voyageMemberId = this.getCurrentVoyageUserId({ user });
-
+    currentVoyageTeam,
+    teamId,
+  }: GetCurrentUserVoyageRoleClientRequestDto): GetCurrentUserVoyageRoleResponseDto {
     return this.getCurrentUserVoyageRoleUsecase.execute({
-      voyageTeam,
-      voyageMemberId,
+      currentVoyageTeam,
+      teamId,
     });
   }
 }
