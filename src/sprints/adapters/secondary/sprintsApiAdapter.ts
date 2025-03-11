@@ -8,6 +8,7 @@ import {
   SubmitWeeklyCheckinApiRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import {
+  FetchAllSprintsResponseDto,
   FetchSprintsResponseDto,
   SubmitVoyageProjectResponseDto,
   SubmitWeeklyCheckinResponseDto,
@@ -47,6 +48,12 @@ export class SprintsApiAdapter implements SprintsApiPort {
     return await this.apiClient.post({
       url: SprintsUrls.submitVoyageProject(),
       payload: { voyageTeamId, responses },
+    });
+  }
+
+  async fetchAllSprints(): Promise<FetchAllSprintsResponseDto> {
+    return await this.apiClient.get({
+      url: SprintsUrls.fetchAllSprints(),
     });
   }
 }
