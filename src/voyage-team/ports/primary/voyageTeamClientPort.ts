@@ -32,7 +32,7 @@ export interface VoyageTeamClientPort {
 
   getVoyageProjectSubmissionStatus: (
     props: GetVoyageProjectSubmissionStatusClientRequestDto,
-  ) => GetVoyageProjectSubmissionStatusResponseDto | undefined;
+  ) => GetVoyageProjectSubmissionStatusResponseDto;
 
   getVoyageMemberRoles: (
     props: GetVoyageMemberRolesClientRequestDto,

@@ -20,7 +20,8 @@ export interface HasVoyageStartedClientRequestDto {
 }
 
 export interface GetVoyageProjectSubmissionStatusClientRequestDto {
-  user: User;
+  currentVoyageTeam: UserVoyageTeamMember[];
+  teamId: string;
 }
 
 export interface GetVoyageMemberRolesClientRequestDto {

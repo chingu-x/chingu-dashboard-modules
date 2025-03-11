@@ -95,14 +95,12 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   }
 
   getVoyageProjectSubmissionStatus({
-    user,
-  }: GetVoyageProjectSubmissionStatusClientRequestDto):
-    | GetVoyageProjectSubmissionStatusResponseDto
-    | undefined {
-    const currentVoyageTeam = this.getCurrentVoyageTeam({ user })!;
-
+    currentVoyageTeam,
+    teamId,
+  }: GetVoyageProjectSubmissionStatusClientRequestDto): GetVoyageProjectSubmissionStatusResponseDto {
     return this.getVoyageProjectSubmissionStatusUsecase.execute({
       currentVoyageTeam,
+      teamId,
     });
   }
 

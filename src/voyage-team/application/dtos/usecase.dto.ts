@@ -2,7 +2,6 @@ import type {
   GetVoyageMemberRolesClientRequestDto,
   HasVoyageStartedClientRequestDto,
 } from "./request.dto";
-import type { GetVoyageTeamIdResponseDto } from "./response.dto";
 import type { MyTeam } from "@/my-team/application/types";
 import type { VoyageSprint } from "@/sprints/application/types";
 import type { User } from "@/user/application/types";
@@ -28,7 +27,8 @@ export type GetVoyageMemberRolesUsecaseDto =
   GetVoyageMemberRolesClientRequestDto;
 
 export interface GetVoyageProjectSubmissionStatusUsecaseDto {
-  currentVoyageTeam: UserVoyageTeamMember;
+  currentVoyageTeam: UserVoyageTeamMember[];
+  teamId: string;
 }
 
 export type HasVoyageStartedUsecaseDto = HasVoyageStartedClientRequestDto;
