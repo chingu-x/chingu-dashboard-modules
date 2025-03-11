@@ -63,7 +63,6 @@ export class SprintsClientAdapter implements SprintsClientPort {
     private readonly fetchAllSprintsUsecase: FetchAllSprintsUsecase,
   ) {}
 
-  // gets the current voyage team
   fetchSprints({
     teamId,
   }: FetchSprintsClientRequestDto): Promise<FetchSprintsResponseDto> {

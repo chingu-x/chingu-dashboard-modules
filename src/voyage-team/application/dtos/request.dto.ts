@@ -1,8 +1,10 @@
 import type { User } from "@/user/application/types";
 import type { MyTeam } from "@/my-team/application/types";
+import type { VoyageSprint } from "@/sprints/application/types";
 
 export interface GetCurrentVoyageTeamClientRequestDto {
   user: User;
+  sprints: VoyageSprint[];
 }
 
 export interface GetVoyageTeamIdClientRequestDto {
