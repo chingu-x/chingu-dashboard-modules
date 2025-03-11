@@ -30,10 +30,6 @@ export interface GetVoyageProjectSubmissionStatusUsecaseDto {
   currentVoyageTeam: UserVoyageTeamMember;
 }
 
-export interface GetVoyageTeamIdUsecaseDto {
-  userVoyageTeam: UserVoyageTeamMember;
-}
-
 export type HasVoyageStartedUsecaseDto = HasVoyageStartedClientRequestDto;
 
 export interface IsCurrentVoyageTeamUsecaseDto {

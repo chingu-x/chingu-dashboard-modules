@@ -2,7 +2,6 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { VoyageTeamClientPort } from "@/voyage-team/ports/primary/voyageTeamClientPort";
 import {
-  GetVoyageTeamIdResponseDto,
   GetCurrentVoyageTeamResponseDto,
   HasVoyageStartedResponseDto,
   IsCurrentVoyageTeamResponseDto,
@@ -12,14 +11,12 @@ import {
   GetCurrentUserVoyageRoleResponseDto,
 } from "@/voyage-team/application/dtos/response.dto";
 import { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
-import { GetVoyageTeamIdUsecase } from "@/voyage-team/application/usecases/getVoyageTeamIdUsecase";
 import {
   GetCurrentUserVoyageRoleClientRequestDto,
   GetCurrentVoyageTeamClientRequestDto,
   GetCurrentVoyageUserIdClientRequestDto,
   GetVoyageMemberRolesClientRequestDto,
   GetVoyageProjectSubmissionStatusClientRequestDto,
-  GetVoyageTeamIdClientRequestDto,
   HasVoyageStartedClientRequestDto,
   IsCurrentVoyageTeamClientRequestDto,
 } from "@/voyage-team/application/dtos/request.dto";
@@ -35,9 +32,6 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
   constructor(
     @inject(TYPES.GetCurrentVoyageTeamUsecase)
     private readonly getCurrentVoyageTeamUsecase: GetCurrentVoyageTeamUsecase,
-
-    @inject(TYPES.GetVoyageTeamIdUsecase)
-    private readonly getVoyageTeamIdUsecase: GetVoyageTeamIdUsecase,
 
     @inject(TYPES.GetCurrentVoyageUserIdUsecase)
     private readonly getCurrentVoyageUserIdUsecase: GetCurrentVoyageUserIdUsecase,
@@ -69,15 +63,6 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
       sprints,
       currentDate,
     });
-  }
-
-  // Get the ID of the voyage team in current voyage
-  getVoyageTeamId({
-    user,
-  }: GetVoyageTeamIdClientRequestDto): GetVoyageTeamIdResponseDto | undefined {
-    const userVoyageTeam = this.getCurrentVoyageTeam({ user })!;
-
-    return this.getVoyageTeamIdUsecase.execute({ userVoyageTeam });
   }
 
   // get the user's id in the current voyage

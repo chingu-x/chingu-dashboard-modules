@@ -8,10 +8,6 @@ export interface GetCurrentVoyageTeamClientRequestDto {
   currentDate: Date | string;
 }
 
-export interface GetVoyageTeamIdClientRequestDto {
-  user: User;
-}
-
 export interface GetCurrentVoyageUserIdClientRequestDto {
   user: User;
 }
