@@ -8,8 +8,10 @@ import { IsCurrentVoyageTeamResponseDto } from "@/voyage-team/application/dtos/r
 export class IsCurrentVoyageTeamUsecase {
   execute({
     teamId,
-    voyageTeamId,
+    currentVoyageTeam,
   }: IsCurrentVoyageTeamUsecaseDto): IsCurrentVoyageTeamResponseDto {
-    return teamId === voyageTeamId;
+    return currentVoyageTeam.some(
+      (team) => team.voyageTeamId === Number(teamId),
+    );
   }
 }

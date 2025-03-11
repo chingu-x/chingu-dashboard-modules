@@ -85,11 +85,13 @@ export class VoyageTeamClientAdapter implements VoyageTeamClientPort {
 
   // returns true / false whether the coyage team id is the id of the voyage team belonging to the current user
   isCurrentVoyageTeam({
-    user,
+    currentVoyageTeam,
     teamId,
   }: IsCurrentVoyageTeamClientRequestDto): IsCurrentVoyageTeamResponseDto {
-    const voyageTeamId = this.getVoyageTeamId({ user })!;
-    return this.isCurrentVoyageTeamUsecase.execute({ teamId, voyageTeamId });
+    return this.isCurrentVoyageTeamUsecase.execute({
+      teamId,
+      currentVoyageTeam,
+    });
   }
 
   getVoyageProjectSubmissionStatus({

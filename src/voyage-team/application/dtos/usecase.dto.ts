@@ -35,5 +35,5 @@ export type HasVoyageStartedUsecaseDto = HasVoyageStartedClientRequestDto;
 
 export interface IsCurrentVoyageTeamUsecaseDto {
   teamId: string;
-  voyageTeamId: GetVoyageTeamIdResponseDto;
+  currentVoyageTeam: UserVoyageTeamMember[];
 }
