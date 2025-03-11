@@ -13,6 +13,7 @@ import {
   SubmitWeeklyCheckinClientRequestDto,
 } from "@/sprints/application/dtos/request.dto";
 import {
+  FetchAllSprintsResponseDto,
   FetchSprintsResponseDto,
   GetCurrentSprintResponseDto,
   GetSprintByNumberResponseDto,
@@ -56,6 +57,9 @@ export class SprintsClientAdapter implements SprintsClientPort {
 
     @inject(TYPES.GetSprintByNumberUsecase)
     private readonly getSprintByNumberUsecase: GetSprintByNumberUsecase,
+
+    @inject(TYPES.FetchAllSprintsUsecase)
+    private readonly fetchAllSprintsUsecase: FetchAllSprintsUsecase,
   ) {}
 
   // gets the current voyage team
@@ -130,5 +134,9 @@ export class SprintsClientAdapter implements SprintsClientPort {
     sprintNumber,
   }: GetSprintByNumberClientRequestDto): GetSprintByNumberResponseDto {
     return this.getSprintByNumberUsecase.execute({ sprints, sprintNumber });
+  }
+
+  async fetchAllSprints(): Promise<FetchAllSprintsResponseDto> {
+    return await this.fetchAllSprintsUsecase.execute();
   }
 }
