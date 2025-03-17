@@ -3,6 +3,7 @@ import { TYPES } from "@/types";
 import { FeaturesClientPort } from "@/features/ports/primary/featuresClientPort";
 import { FetchFeaturesClientRequestDto } from "@/features/application/dtos/request.dto";
 import { FetchFeaturesClientResponseDto } from "@/features/application/dtos/response.dto";
+import { FetchFeaturesUsecase } from "@/features/application/usecases/fetchFeaturesUsecase";
 
 @injectable()
 export class FeaturesClientAdapter implements FeaturesClientPort {
