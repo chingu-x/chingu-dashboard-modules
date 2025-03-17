@@ -22,9 +22,3 @@ export interface Features {
     member: VoyageMember;
   };
 }
-
-export interface FeaturesList {
-  categoryId: number;
-  categoryName: string;
-  features: Features[];
-}
