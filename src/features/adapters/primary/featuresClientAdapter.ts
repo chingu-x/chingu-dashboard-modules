@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { FeaturesClientPort } from "@/features/ports/primary/featuresClientPort";
 import { FetchFeaturesClientRequestDto } from "@/features/application/dtos/request.dto";
-import { FetchFeaturesResponseDto } from "@/features/application/dtos/response.dto";
+import { FetchFeaturesClientResponseDto } from "@/features/application/dtos/response.dto";
 
 @injectable()
 export class FeaturesClientAdapter implements FeaturesClientPort {
@@ -13,7 +13,7 @@ export class FeaturesClientAdapter implements FeaturesClientPort {
 
   fetchFeatures({
     teamId,
-  }: FetchFeaturesClientRequestDto): Promise<FetchFeaturesResponseDto> {
+  }: FetchFeaturesClientRequestDto): Promise<FetchFeaturesClientResponseDto> {
     return this.fetchFeaturesUsecase.execute({ teamId });
   }
 }
