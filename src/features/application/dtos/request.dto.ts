@@ -25,3 +25,9 @@ export interface AddFeatureApiRequestDto {
   description: string;
   featureCategoryId: number;
 }
+
+export interface EditFeatureApiRequestDto {
+  featureId: number;
+  teamMemberId: number;
+  description: string;
+}
