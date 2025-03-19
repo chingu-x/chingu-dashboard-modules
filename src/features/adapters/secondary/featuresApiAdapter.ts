@@ -4,10 +4,12 @@ import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import { FeaturesApiPort } from "@/features/ports/secondary/featuresApiPort";
 import {
   AddFeatureApiRequestDto,
+  EditFeatureApiRequestDto,
   FetchFeaturesApiRequestDto,
 } from "@/features/application/dtos/request.dto";
 import {
   AddFeatureApiResponseDto,
+  EditFeatureApiResponseDto,
   FetchFeaturesApiResponseDto,
 } from "@/features/application/dtos/response.dto";
 import FeaturesUrls from "@/features/application/constants/featuresUrls";
@@ -37,4 +39,10 @@ export class FeaturesApiAdapter implements FeaturesApiPort {
       payload: { description, featureCategoryId },
     });
   }
+
+  editFeature({
+    featureId,
+    teamMemberId,
+    description,
+  }: EditFeatureApiRequestDto): Promise<EditFeatureApiResponseDto> {}
 }
