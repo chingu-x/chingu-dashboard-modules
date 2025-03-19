@@ -10,6 +10,7 @@ import {
   FetchFeaturesClientResponseDto,
 } from "@/features/application/dtos/response.dto";
 import { FetchFeaturesUsecase } from "@/features/application/usecases/fetchFeaturesUsecase";
+import { AddFeatureUsecase } from "@/features/application/usecases/addFeatureUsecase";
 
 @injectable()
 export class FeaturesClientAdapter implements FeaturesClientPort {
