@@ -14,4 +14,7 @@ export interface FeaturesClientPort {
   addFeature: (
     props: AddFeatureClientRequestDto,
   ) => Promise<AddFeatureClientResponseDto>;
+  editFeature: (
+    props: EditFeatureClientRequestDto,
+  ) => Promise<EditFeatureClientResponseDto>;
 }
