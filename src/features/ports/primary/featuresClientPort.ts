@@ -1,5 +1,6 @@
 import type {
   AddFeatureClientRequestDto,
+  EditFeatureClientRequestDto,
   FetchFeaturesClientRequestDto,
 } from "@/features/application/dtos/request.dto";
 import type {
@@ -16,5 +17,5 @@ export interface FeaturesClientPort {
   ) => Promise<AddFeatureClientResponseDto>;
   editFeature: (
     props: EditFeatureClientRequestDto,
-  ) => Promise<EditFeatureClientResponseDto>;
+  ) => Promise<AddFeatureClientResponseDto>;
 }
