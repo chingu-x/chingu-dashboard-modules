@@ -12,7 +12,9 @@ export interface FeaturesApiPort {
     teamId,
   }: FetchFeaturesApiRequestDto) => Promise<FetchFeaturesApiResponseDto>;
 
-  addFeature: (
-    props: AddFeatureApiRequestDto,
-  ) => Promise<AddFeatureApiResponseDto>;
+  addFeature: ({
+    teamId,
+    description,
+    featureCategoryId,
+  }: AddFeatureApiRequestDto) => Promise<AddFeatureApiResponseDto>;
 }
