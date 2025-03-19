@@ -5,6 +5,7 @@ import type {
 } from "@/features/application/dtos/request.dto";
 import type {
   AddFeatureClientResponseDto,
+  EditFeatureClientResponseDto,
   FetchFeaturesClientResponseDto,
 } from "@/features/application/dtos/response.dto";
 
