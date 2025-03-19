@@ -7,5 +7,25 @@ export type FetchFeaturesClientResponseDto = {
   features: Features[];
 }[];
 
+export interface AddFeatureClientResponseDto {
+  id: number;
+  teamMemberId: number;
+  featureCategoryId: number;
+  description: string;
+  order: number;
+  createdAt: string | Date;
+  updatedAt: string | Date;
+}
+
 // api
 export type FetchFeaturesApiResponseDto = Features[];
+
+export interface AddFeatureApiResponseDto {
+  id: number;
+  teamMemberId: number;
+  featureCategoryId: number;
+  description: string;
+  order: number;
+  createdAt: string | Date;
+  updatedAt: string | Date;
+}
