@@ -22,3 +22,9 @@ export interface Features {
     member: VoyageMember;
   };
 }
+
+export type FetchFeaturesList = {
+  categoryId: number;
+  categoryName: string;
+  features: Features[];
+}[];
