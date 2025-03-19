@@ -3,6 +3,7 @@ import { FEATURES_TYPES } from "./types";
 import { FeaturesApiAdapter } from "@/features/adapters/secondary/featuresApiAdapter";
 import { FetchFeaturesUsecase } from "@/features/application/usecases/fetchFeaturesUsecase";
 import { FeaturesClientAdapter } from "@/features/adapters/primary/featuresClientAdapter";
+import { AddFeatureUsecase } from "@/features/application/usecases/addFeatureUsecase";
 
 export const registerFeaturesDependencies = () => {
   // ports
@@ -13,6 +14,10 @@ export const registerFeaturesDependencies = () => {
   // usecases
   container.register(FEATURES_TYPES.FetchFeaturesUsecase, {
     useClass: FetchFeaturesUsecase,
+  });
+
+  container.register(FEATURES_TYPES.AddFeatureUsecase, {
+    useClass: AddFeatureUsecase,
   });
 
   // adapters
