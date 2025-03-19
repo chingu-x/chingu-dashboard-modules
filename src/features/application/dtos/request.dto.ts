@@ -13,3 +13,9 @@ export interface AddFeatureClientRequestDto {
 export interface FetchFeaturesApiRequestDto {
   teamId: string;
 }
+
+export interface AddFeatureApiRequestDto {
+  teamId: string;
+  description: string;
+  featureCategoryId: number;
+}
