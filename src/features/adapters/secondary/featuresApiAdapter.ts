@@ -40,9 +40,16 @@ export class FeaturesApiAdapter implements FeaturesApiPort {
     });
   }
 
-  editFeature({
+  async editFeature({
     featureId,
     teamMemberId,
     description,
-  }: EditFeatureApiRequestDto): Promise<EditFeatureApiResponseDto> {}
+  }: EditFeatureApiRequestDto): Promise<EditFeatureApiResponseDto> {
+    return await this.apiClient.patch({
+      url: FeaturesUrls.editFeature({
+        featureId,
+      }),
+      payload: { teamMemberId, description },
+    });
+  }
 }
