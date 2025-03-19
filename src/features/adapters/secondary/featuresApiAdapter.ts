@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import { FeaturesApiPort } from "@/features/ports/secondary/featuresApiPort";
-import { FetchFeaturesClientRequestDto } from "@/features/application/dtos/request.dto";
+import { FetchFeaturesApiRequestDto } from "@/features/application/dtos/request.dto";
 import { FetchFeaturesApiResponseDto } from "@/features/application/dtos/response.dto";
 import FeaturesUrls from "@/features/application/constants/featuresUrls";
 
@@ -15,7 +15,7 @@ export class FeaturesApiAdapter implements FeaturesApiPort {
 
   async fetchFeatures({
     teamId,
-  }: FetchFeaturesClientRequestDto): Promise<FetchFeaturesApiResponseDto> {
+  }: FetchFeaturesApiRequestDto): Promise<FetchFeaturesApiResponseDto> {
     return await this.apiClient.get({
       url: FeaturesUrls.fetchFeatures({ teamId }),
     });
