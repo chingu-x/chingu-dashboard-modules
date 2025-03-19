@@ -5,4 +5,7 @@ export interface FeaturesClientPort {
   fetchFeatures: (
     props: FetchFeaturesClientRequestDto,
   ) => Promise<FetchFeaturesClientResponseDto>;
+  addFeature: (
+    props: AddFeatureClientRequestDto,
+  ) => Promise<AddFeatureResponseDto>;
 }
