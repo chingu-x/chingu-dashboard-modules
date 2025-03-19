@@ -17,10 +17,30 @@ export interface AddFeatureClientResponseDto {
   updatedAt: string | Date;
 }
 
+export interface EditFeatureClientResponseDto {
+  id: number;
+  teamMemberId: number;
+  featureCategoryId: number;
+  description: string;
+  order: number;
+  createdAt: string | Date;
+  updatedAt: string | Date;
+}
+
 // api
 export type FetchFeaturesApiResponseDto = Features[];
 
 export interface AddFeatureApiResponseDto {
+  id: number;
+  teamMemberId: number;
+  featureCategoryId: number;
+  description: string;
+  order: number;
+  createdAt: string | Date;
+  updatedAt: string | Date;
+}
+
+export interface EditFeatureApiResponseDto {
   id: number;
   teamMemberId: number;
   featureCategoryId: number;
