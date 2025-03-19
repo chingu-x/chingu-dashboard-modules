@@ -23,7 +23,7 @@ export interface Features {
   };
 }
 
-export type FetchFeaturesList = {
+export type FeaturesList = {
   categoryId: number;
   categoryName: string;
   features: Features[];
