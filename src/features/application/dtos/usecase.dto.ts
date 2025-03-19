@@ -7,3 +7,9 @@ export interface AddFeatureUsecaseDto {
   description: string;
   featureCategoryId: number;
 }
+
+export interface EditFeatureUsecaseDto {
+  featureId: number;
+  teamMemberId: number;
+  description: string;
+}
