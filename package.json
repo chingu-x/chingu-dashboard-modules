@@ -67,6 +67,10 @@
       "import": "./dist/auth/index.js",
       "types": "./dist/auth/index.d.ts"
     },
+    "./features": {
+      "import": "./dist/features/index.js",
+      "types": "./dist/features/index.d.ts"
+    },
     "./forms": {
       "import": "./dist/forms/index.js",
       "types": "./dist/forms/index.d.ts"
