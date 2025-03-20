@@ -8,6 +8,7 @@ import { EditFeatureUsecase } from "@/features/application/usecases/editFeatureU
 import { FetchFeatureUsecase } from "@/features/application/usecases/fetchFeatureUsecase";
 import { DeleteFeatureUsecase } from "@/features/application/usecases/deleteFeatureUsecase";
 import { SaveOrderUsecase } from "@/features/application/usecases/saveOrderUsecase";
+import { IsFeatureOwnerUsecase } from "@/features/application/usecases/isFeatureOwnerUsecase";
 
 export const registerFeaturesDependencies = () => {
   // ports
@@ -38,6 +39,10 @@ export const registerFeaturesDependencies = () => {
 
   container.register(FEATURES_TYPES.SaveOrderUsecase, {
     useClass: SaveOrderUsecase,
+  });
+
+  container.register(FEATURES_TYPES.IsFeatureOwnerUsecase, {
+    useClass: IsFeatureOwnerUsecase,
   });
 
   // adapters
