@@ -16,6 +16,7 @@ import {
 import { FetchFeaturesUsecase } from "@/features/application/usecases/fetchFeaturesUsecase";
 import { AddFeatureUsecase } from "@/features/application/usecases/addFeatureUsecase";
 import { EditFeatureUsecase } from "@/features/application/usecases/editFeatureUsecase";
+import { FetchFeatureUsecase } from "@/features/application/usecases/fetchFeatureUsecase";
 
 @injectable()
 export class FeaturesClientAdapter implements FeaturesClientPort {

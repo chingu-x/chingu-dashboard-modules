@@ -5,6 +5,7 @@ import { FetchFeaturesUsecase } from "@/features/application/usecases/fetchFeatu
 import { FeaturesClientAdapter } from "@/features/adapters/primary/featuresClientAdapter";
 import { AddFeatureUsecase } from "@/features/application/usecases/addFeatureUsecase";
 import { EditFeatureUsecase } from "@/features/application/usecases/editFeatureUsecase";
+import { FetchFeatureUsecase } from "@/features/application/usecases/fetchFeatureUsecase";
 
 export const registerFeaturesDependencies = () => {
   // ports
@@ -23,6 +24,10 @@ export const registerFeaturesDependencies = () => {
 
   container.register(FEATURES_TYPES.EditFeatureUsecase, {
     useClass: EditFeatureUsecase,
+  });
+
+  container.register(FEATURES_TYPES.FetchFeatureUsecase, {
+    useClass: FetchFeatureUsecase,
   });
 
   // adapters
