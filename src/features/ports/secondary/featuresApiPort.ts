@@ -4,6 +4,7 @@ import type {
   EditFeatureApiRequestDto,
   FetchFeatureApiRequestDto,
   FetchFeaturesApiRequestDto,
+  SaveOrderApiRequestDto,
 } from "@/features/application/dtos/request.dto";
 import type {
   AddFeatureApiResponseDto,
@@ -11,6 +12,7 @@ import type {
   EditFeatureApiResponseDto,
   FetchFeatureApiResponseDto,
   FetchFeaturesApiResponseDto,
+  SaveOrderApiResponseDto,
 } from "@/features/application/dtos/response.dto";
 
 export interface FeaturesApiPort {
@@ -37,4 +39,10 @@ export interface FeaturesApiPort {
   deleteFeature: ({
     featureId,
   }: DeleteFeatureApiRequestDto) => Promise<DeleteFeatureApiResponseDto>;
+
+  saveOrder: ({
+    featureId,
+    order,
+    featureCategoryId,
+  }: SaveOrderApiRequestDto) => Promise<SaveOrderApiResponseDto>;
 }
