@@ -34,4 +34,7 @@ export interface FeaturesClientPort {
   saveOrder: (
     props: SaveOrderClientRequestDto,
   ) => Promise<SaveOrderClientResponseDto>;
+  isFeatureOwner: (
+    props: IsFeatureOwnerClientRequestDto,
+  ) => Promise<IsFeatureOwnerClientResponseDto>;
 }
