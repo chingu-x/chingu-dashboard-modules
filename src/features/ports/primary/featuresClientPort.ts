@@ -4,6 +4,7 @@ import type {
   EditFeatureClientRequestDto,
   FetchFeatureClientRequestDto,
   FetchFeaturesClientRequestDto,
+  IsFeatureOwnerClientRequestDto,
   SaveOrderClientRequestDto,
 } from "@/features/application/dtos/request.dto";
 import type {
@@ -12,6 +13,7 @@ import type {
   EditFeatureClientResponseDto,
   FetchFeatureClientResponseDto,
   FetchFeaturesClientResponseDto,
+  IsFeatureOwnerClientResponseDto,
   SaveOrderClientResponseDto,
 } from "@/features/application/dtos/response.dto";
 
