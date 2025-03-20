@@ -15,6 +15,10 @@ export interface EditFeatureClientRequestDto {
   description: string;
 }
 
+export interface FetchFeatureClientRequestDto {
+  featureId: number;
+}
+
 // api
 export interface FetchFeaturesApiRequestDto {
   teamId: string;
