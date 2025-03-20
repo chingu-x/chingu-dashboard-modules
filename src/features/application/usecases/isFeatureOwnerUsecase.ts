@@ -1,17 +1,13 @@
-import { inject, injectable } from "tsyringe";
-import { TYPES } from "@/types";
+import { injectable } from "tsyringe";
+import { IsFeatureOwnerUsecaseDto } from "@/features/application/dtos/usecase.dto";
+import { IsFeatureOwnerClientResponseDto } from "@/features/application/dtos/response.dto";
 
 @injectable()
 export class IsFeatureOwnerUsecase {
-  async execute({
-    teamId,
-    description,
-    featureCategoryId,
-  }: AddFeatureUsecaseDto): Promise<AddFeatureClientResponseDto> {
-    return await this.featuresApi.addFeature({
-      teamId,
-      description,
-      featureCategoryId,
-    });
+  execute({
+    userId,
+    addedById,
+  }: IsFeatureOwnerUsecaseDto): IsFeatureOwnerClientResponseDto {
+    return userId === addedById;
   }
 }
