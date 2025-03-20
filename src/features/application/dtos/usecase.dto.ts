@@ -17,3 +17,7 @@ export interface EditFeatureUsecaseDto {
 export interface FetchFeatureUsecaseDto {
   featureId: number;
 }
+
+export interface DeleteFeatureUsecaseDto {
+  featureId: number;
+}
