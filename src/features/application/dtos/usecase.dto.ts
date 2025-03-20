@@ -27,3 +27,8 @@ export interface SaveOrderUsecaseDto {
   order: number;
   featureCategoryId: number;
 }
+
+export interface IsFeatureOwnerUsecaseDto {
+  userId: string;
+  addedById: string;
+}
