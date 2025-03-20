@@ -5,6 +5,7 @@ import type { FeaturesClientAdapter } from "@/features/adapters/primary/features
 import type { AddFeatureUsecase } from "@/features/application/usecases/addFeatureUsecase";
 import type { EditFeatureUsecase } from "@/features/application/usecases/editFeatureUsecase";
 import type { FetchFeatureUsecase } from "@/features/application/usecases/fetchFeatureUsecase";
+import type { DeleteFeatureUsecase } from "@/features/application/usecases/deleteFeatureUsecase";
 
 export const FEATURES_TYPES = {
   // ports
@@ -28,6 +29,10 @@ export const FEATURES_TYPES = {
   FetchFeatureUsecase: Symbol.for(
     "FetchFeatureUsecase",
   ) as InjectionToken<FetchFeatureUsecase>,
+
+  DeleteFeatureUsecase: Symbol.for(
+    "DeleteFeatureUsecase",
+  ) as InjectionToken<DeleteFeatureUsecase>,
 
   // adapters
   FeaturesClientAdapter: Symbol.for(
