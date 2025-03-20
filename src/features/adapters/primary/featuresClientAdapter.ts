@@ -7,6 +7,7 @@ import {
   EditFeatureClientRequestDto,
   FetchFeatureClientRequestDto,
   FetchFeaturesClientRequestDto,
+  SaveOrderClientRequestDto,
 } from "@/features/application/dtos/request.dto";
 import {
   AddFeatureClientResponseDto,
@@ -14,6 +15,7 @@ import {
   EditFeatureClientResponseDto,
   FetchFeatureClientResponseDto,
   FetchFeaturesClientResponseDto,
+  SaveOrderClientResponseDto,
 } from "@/features/application/dtos/response.dto";
 import { FetchFeaturesUsecase } from "@/features/application/usecases/fetchFeaturesUsecase";
 import { AddFeatureUsecase } from "@/features/application/usecases/addFeatureUsecase";
@@ -38,6 +40,9 @@ export class FeaturesClientAdapter implements FeaturesClientPort {
 
     @inject(TYPES.DeleteFeatureUsecase)
     private readonly deleteFeatureUsecase: DeleteFeatureUsecase,
+
+    @inject(TYPES.SaveOrderUsecase)
+    private readonly saveOrderUsecase: SaveOrderUsecase,
   ) {}
 
   async fetchFeatures({
@@ -80,5 +85,17 @@ export class FeaturesClientAdapter implements FeaturesClientPort {
     featureId,
   }: DeleteFeatureClientRequestDto): Promise<DeleteFeatureClientResponseDto> {
     return await this.deleteFeatureUsecase.execute({ featureId });
+  }
+
+  async saveOrder({
+    featureId,
+    order,
+    featureCategoryId,
+  }: SaveOrderClientRequestDto): Promise<SaveOrderClientResponseDto> {
+    return await this.saveOrderUsecase.execute({
+      featureId,
+      order,
+      featureCategoryId,
+    });
   }
 }
