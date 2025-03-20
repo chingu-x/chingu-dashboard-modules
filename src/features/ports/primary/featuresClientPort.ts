@@ -4,6 +4,7 @@ import type {
   EditFeatureClientRequestDto,
   FetchFeatureClientRequestDto,
   FetchFeaturesClientRequestDto,
+  SaveOrderClientRequestDto,
 } from "@/features/application/dtos/request.dto";
 import type {
   AddFeatureClientResponseDto,
@@ -11,6 +12,7 @@ import type {
   EditFeatureClientResponseDto,
   FetchFeatureClientResponseDto,
   FetchFeaturesClientResponseDto,
+  SaveOrderClientResponseDto,
 } from "@/features/application/dtos/response.dto";
 
 export interface FeaturesClientPort {
