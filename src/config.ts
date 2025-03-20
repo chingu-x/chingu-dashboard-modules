@@ -8,6 +8,7 @@ import { registerSprintsDependencies } from "./sprints/di/config";
 import { registerSprintMeetingDependencies } from "./sprint-meeting/di/config";
 import { registerFormsDependencies } from "./forms/di/config";
 import { registerTimezoneDependencies } from "./timezone/di/config";
+import { registerFeaturesDependencies } from "./features/di/config";
 
 export const registerDependencies = () => {
   registerRestApiDependencies();
@@ -19,6 +20,7 @@ export const registerDependencies = () => {
   registerSprintMeetingDependencies();
   registerFormsDependencies();
   registerTimezoneDependencies();
+  registerFeaturesDependencies();
 };
 
 registerDependencies();
