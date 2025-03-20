@@ -21,3 +21,9 @@ export interface FetchFeatureUsecaseDto {
 export interface DeleteFeatureUsecaseDto {
   featureId: number;
 }
+
+export interface SaveOrderUsecaseDto {
+  featureId: number;
+  order: number;
+  featureCategoryId: number;
+}
