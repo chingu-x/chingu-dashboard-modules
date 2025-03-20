@@ -13,3 +13,7 @@ export interface EditFeatureUsecaseDto {
   teamMemberId: number;
   description: string;
 }
+
+export interface FetchFeatureUsecaseDto {
+  featureId: number;
+}
