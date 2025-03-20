@@ -14,8 +14,8 @@ export interface Features {
   id: number;
   description: string;
   order: number;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string | Date;
+  updatedAt: string | Date;
   teamMemberId: number;
   category: Category;
   addedBy: {
