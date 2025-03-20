@@ -53,3 +53,9 @@ export interface FetchFeatureApiRequestDto {
 export interface DeleteFeatureApiRequestDto {
   featureId: number;
 }
+
+export interface SaveOrderApiRequestDto {
+  featureId: number;
+  order: number;
+  featureCategoryId: number;
+}
