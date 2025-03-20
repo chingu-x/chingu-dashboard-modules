@@ -24,4 +24,7 @@ export interface FeaturesClientPort {
   fetchFeature: (
     props: FetchFeatureClientRequestDto,
   ) => Promise<FetchFeatureClientResponseDto>;
+  deleteFeature: (
+    props: DeleteFeatureClientRequestDto,
+  ) => Promise<DeleteFeatureClientResponseDto>;
 }
