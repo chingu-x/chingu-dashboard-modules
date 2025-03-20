@@ -8,6 +8,7 @@ import {
   EditFeatureApiRequestDto,
   FetchFeatureApiRequestDto,
   FetchFeaturesApiRequestDto,
+  SaveOrderApiRequestDto,
 } from "@/features/application/dtos/request.dto";
 import {
   AddFeatureApiResponseDto,
@@ -15,6 +16,7 @@ import {
   EditFeatureApiResponseDto,
   FetchFeatureApiResponseDto,
   FetchFeaturesApiResponseDto,
+  SaveOrderApiResponseDto,
 } from "@/features/application/dtos/response.dto";
 import FeaturesUrls from "@/features/application/constants/featuresUrls";
 
@@ -70,6 +72,17 @@ export class FeaturesApiAdapter implements FeaturesApiPort {
   }: DeleteFeatureApiRequestDto): Promise<DeleteFeatureApiResponseDto> {
     return await this.apiClient.delete({
       url: FeaturesUrls.deleteFeature({ featureId }),
+    });
+  }
+
+  async saveOrder({
+    featureId,
+    order,
+    featureCategoryId,
+  }: SaveOrderApiRequestDto): Promise<SaveOrderApiResponseDto> {
+    return await this.apiClient.patch({
+      url: FeaturesUrls.saveOrder({ featureId }),
+      payload: { order, featureCategoryId },
     });
   }
 }
