@@ -29,6 +29,11 @@ export interface SaveOrderClientRequestDto {
   featureCategoryId: number;
 }
 
+export interface IsFeatureOwnerClientRequestDto {
+  userId: string;
+  addedById: string;
+}
+
 // api
 export interface FetchFeaturesApiRequestDto {
   teamId: string;
