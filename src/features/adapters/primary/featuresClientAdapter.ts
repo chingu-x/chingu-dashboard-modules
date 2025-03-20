@@ -3,12 +3,14 @@ import { TYPES } from "@/types";
 import { FeaturesClientPort } from "@/features/ports/primary/featuresClientPort";
 import {
   AddFeatureClientRequestDto,
+  DeleteFeatureClientRequestDto,
   EditFeatureClientRequestDto,
   FetchFeatureClientRequestDto,
   FetchFeaturesClientRequestDto,
 } from "@/features/application/dtos/request.dto";
 import {
   AddFeatureClientResponseDto,
+  DeleteFeatureClientResponseDto,
   EditFeatureClientResponseDto,
   FetchFeatureClientResponseDto,
   FetchFeaturesClientResponseDto,
@@ -32,6 +34,9 @@ export class FeaturesClientAdapter implements FeaturesClientPort {
 
     @inject(TYPES.FetchFeatureUsecase)
     private readonly fetchFeatureUsecase: FetchFeatureUsecase,
+
+    @inject(TYPES.DeleteFeatureUsecase)
+    private readonly deleteFeatureUsecase: DeleteFeatureUsecase,
   ) {}
 
   async fetchFeatures({
@@ -68,5 +73,11 @@ export class FeaturesClientAdapter implements FeaturesClientPort {
     featureId,
   }: FetchFeatureClientRequestDto): Promise<FetchFeatureClientResponseDto> {
     return await this.fetchFeatureUsecase.execute({ featureId });
+  }
+
+  async deleteFeature({
+    featureId,
+  }: DeleteFeatureClientRequestDto): Promise<DeleteFeatureClientResponseDto> {
+    return await this.deleteFeatureUsecase.execute({ featureId });
   }
 }
