@@ -1,11 +1,13 @@
 import type {
   AddFeatureClientRequestDto,
   EditFeatureClientRequestDto,
+  FetchFeatureClientRequestDto,
   FetchFeaturesClientRequestDto,
 } from "@/features/application/dtos/request.dto";
 import type {
   AddFeatureClientResponseDto,
   EditFeatureClientResponseDto,
+  FetchFeatureClientResponseDto,
   FetchFeaturesClientResponseDto,
 } from "@/features/application/dtos/response.dto";
 
