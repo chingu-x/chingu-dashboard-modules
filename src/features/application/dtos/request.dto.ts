@@ -35,3 +35,7 @@ export interface EditFeatureApiRequestDto {
   teamMemberId: number;
   description: string;
 }
+
+export interface FetchFeatureApiRequestDto {
+  featureId: number;
+}
