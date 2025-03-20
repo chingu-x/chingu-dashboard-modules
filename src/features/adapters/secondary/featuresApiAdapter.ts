@@ -57,5 +57,9 @@ export class FeaturesApiAdapter implements FeaturesApiPort {
 
   async fetchFeature({
     featureId,
-  }: FetchFeatureApiRequestDto): Promise<FetchFeatureApiResponseDto> {}
+  }: FetchFeatureApiRequestDto): Promise<FetchFeatureApiResponseDto> {
+    return await this.apiClient.get({
+      url: FeaturesUrls.fetchFeature({ featureId }),
+    });
+  }
 }
