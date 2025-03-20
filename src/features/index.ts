@@ -9,4 +9,4 @@ export {
   EditFeatureClientResponseDto,
   DeleteFeatureClientResponseDto,
 } from "./application/dtos/response.dto";
-export { VoyageMember, Features, FeaturesList } from "./application/types";
+export { VoyageMember, Feature, FeaturesList } from "./application/types";

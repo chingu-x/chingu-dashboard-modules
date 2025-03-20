@@ -1,6 +1,6 @@
 import type {
   Category,
-  Features,
+  Feature,
   VoyageMember,
 } from "@/features/application/types";
 
@@ -8,7 +8,7 @@ import type {
 export type FetchFeaturesClientResponseDto = {
   categoryId: number;
   categoryName: string;
-  features: Features[];
+  features: Feature[];
 }[];
 
 export interface AddFeatureClientResponseDto {
@@ -50,7 +50,7 @@ export interface DeleteFeatureClientResponseDto {
 }
 
 // api
-export type FetchFeaturesApiResponseDto = Features[];
+export type FetchFeaturesApiResponseDto = Feature[];
 
 export interface AddFeatureApiResponseDto {
   id: number;

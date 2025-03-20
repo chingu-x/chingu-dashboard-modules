@@ -10,7 +10,7 @@ export interface VoyageMember {
   lastName: string;
 }
 
-export interface Features {
+export interface Feature {
   id: number;
   description: string;
   order: number;
@@ -26,5 +26,5 @@ export interface Features {
 export type FeaturesList = {
   categoryId: number;
   categoryName: string;
-  features: Features[];
+  features: Feature[];
 }[];
