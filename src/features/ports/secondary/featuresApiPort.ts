@@ -1,11 +1,13 @@
 import type {
   AddFeatureApiRequestDto,
+  DeleteFeatureApiRequestDto,
   EditFeatureApiRequestDto,
   FetchFeatureApiRequestDto,
   FetchFeaturesApiRequestDto,
 } from "@/features/application/dtos/request.dto";
 import type {
   AddFeatureApiResponseDto,
+  DeleteFeatureApiResponseDto,
   EditFeatureApiResponseDto,
   FetchFeatureApiResponseDto,
   FetchFeaturesApiResponseDto,
@@ -31,4 +33,8 @@ export interface FeaturesApiPort {
   fetchFeature: ({
     featureId,
   }: FetchFeatureApiRequestDto) => Promise<FetchFeatureApiResponseDto>;
+
+  deleteFeature: ({
+    featureId,
+  }: DeleteFeatureApiRequestDto) => Promise<DeleteFeatureApiResponseDto>;
 }
