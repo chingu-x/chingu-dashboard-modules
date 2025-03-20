@@ -29,4 +29,7 @@ export interface FeaturesClientPort {
   deleteFeature: (
     props: DeleteFeatureClientRequestDto,
   ) => Promise<DeleteFeatureClientResponseDto>;
+  saveOrder: (
+    props: SaveOrderClientRequestDto,
+  ) => Promise<SaveOrderClientResponseDto>;
 }
