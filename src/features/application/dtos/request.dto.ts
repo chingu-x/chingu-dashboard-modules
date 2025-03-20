@@ -23,6 +23,12 @@ export interface DeleteFeatureClientRequestDto {
   featureId: number;
 }
 
+export interface SaveOrderClientRequestDto {
+  featureId: number;
+  order: number;
+  featureCategoryId: number;
+}
+
 // api
 export interface FetchFeaturesApiRequestDto {
   teamId: string;
