@@ -1,3 +1,28 @@
+# [0.10.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.9.0...v0.10.0) (2025-03-20)
+
+
+### Features
+
+* imlement addFeature function in features client adapter ([cc9f2b4](https://github.com/chingu-x/chingu-dashboard-modules/commit/cc9f2b40683a44cf2a2cc73f7ab4f3336297c7f3))
+* implement addFeature function in features api adapter ([b17a61d](https://github.com/chingu-x/chingu-dashboard-modules/commit/b17a61da54ca225684e42e9033e5f28cc93f0168))
+* implement AddFeatureUsecase ([bd69ca5](https://github.com/chingu-x/chingu-dashboard-modules/commit/bd69ca5bb3c3c0d98dd14edeab26e206e357a3bf))
+* implement deleteFeature function in features api adapter ([d4179eb](https://github.com/chingu-x/chingu-dashboard-modules/commit/d4179eb76ade7fb76a84841b9f11a72e9fd9efd8))
+* implement deleteFeature function in features client adapter ([3b3eab8](https://github.com/chingu-x/chingu-dashboard-modules/commit/3b3eab822d90973605f7a898c03dcb3543bc4508))
+* implement DeleteFeatureUsecase ([ef3e086](https://github.com/chingu-x/chingu-dashboard-modules/commit/ef3e086393d0572c78b642e8a17ba017071275f2))
+* implement editFeature function in features api adapter ([0a67385](https://github.com/chingu-x/chingu-dashboard-modules/commit/0a673850c6c71284b9c79b9dd916a9e458cdd945))
+* implement editFeature function in features client adapter ([e2d8b7e](https://github.com/chingu-x/chingu-dashboard-modules/commit/e2d8b7eafcc702766c964d164a146532d2957710))
+* implement EditFeatureUsecase ([0ecab1a](https://github.com/chingu-x/chingu-dashboard-modules/commit/0ecab1a17d3038b0ef84b163c73c7e53411a2349))
+* implement FeaturesApiAdapter ([0e7752f](https://github.com/chingu-x/chingu-dashboard-modules/commit/0e7752fd611fa35e9d31a3756d44d1e1d07e7cb2))
+* implement FeaturesClientAdapter function in features client adapter ([bf3f074](https://github.com/chingu-x/chingu-dashboard-modules/commit/bf3f074027da79dc62818ad4d188dbce32a1922a))
+* implement fetchFeature function in features api adapter ([7ed2837](https://github.com/chingu-x/chingu-dashboard-modules/commit/7ed2837ccf2f2e581b94aa58f360cd652cac0973))
+* implement fetchFeature function in features client adapter ([7a3509c](https://github.com/chingu-x/chingu-dashboard-modules/commit/7a3509c564dccf4aa378334b11912c8a80f0ddb6))
+* implement FetchFeatureUsecase ([38407d6](https://github.com/chingu-x/chingu-dashboard-modules/commit/38407d62589b581b34604cbda4ae1b33d4fcb06e))
+* implement isFeatureOwner function in features client adapter ([c48ceb6](https://github.com/chingu-x/chingu-dashboard-modules/commit/c48ceb698acbc0dc4715e8e9952b553d02e1591c))
+* implement IsFeatureOwnerUsecase ([d1e396b](https://github.com/chingu-x/chingu-dashboard-modules/commit/d1e396bc0fb2a7c33ffe86214f49d6d8a590c548))
+* implement saveOrder function in features api adapter ([0e3a3fd](https://github.com/chingu-x/chingu-dashboard-modules/commit/0e3a3fd4eab1f4c3fc985b3417b2152646bef996))
+* implement saveOrder function in features client adapter ([067b770](https://github.com/chingu-x/chingu-dashboard-modules/commit/067b770a355607570dd2e510d01f09098aa39967))
+* implement SaveOrderUsecase ([e48fc31](https://github.com/chingu-x/chingu-dashboard-modules/commit/e48fc31cb80b53affe99e72b340bd97b18312470))
+
 # [0.9.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.8.0...v0.9.0) (2025-03-11)
 
 
