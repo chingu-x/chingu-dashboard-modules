@@ -49,6 +49,8 @@ export interface DeleteFeatureClientResponseDto {
   status: number;
 }
 
+export type SaveOrderClientResponseDto = Feature[];
+
 // api
 export type FetchFeaturesApiResponseDto = Feature[];
 
