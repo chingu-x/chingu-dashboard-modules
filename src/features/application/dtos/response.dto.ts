@@ -49,6 +49,8 @@ export interface DeleteFeatureClientResponseDto {
   status: number;
 }
 
+export type IsFeatureOwnerClientResponseDto = boolean;
+
 export type SaveOrderClientResponseDto = Feature[];
 
 // api
