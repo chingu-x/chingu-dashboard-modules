@@ -4,11 +4,13 @@ import { FeaturesClientPort } from "@/features/ports/primary/featuresClientPort"
 import {
   AddFeatureClientRequestDto,
   EditFeatureClientRequestDto,
+  FetchFeatureClientRequestDto,
   FetchFeaturesClientRequestDto,
 } from "@/features/application/dtos/request.dto";
 import {
   AddFeatureClientResponseDto,
   EditFeatureClientResponseDto,
+  FetchFeatureClientResponseDto,
   FetchFeaturesClientResponseDto,
 } from "@/features/application/dtos/response.dto";
 import { FetchFeaturesUsecase } from "@/features/application/usecases/fetchFeaturesUsecase";
@@ -26,6 +28,9 @@ export class FeaturesClientAdapter implements FeaturesClientPort {
 
     @inject(TYPES.EditFeatureUsecase)
     private readonly editFeatureUsecase: EditFeatureUsecase,
+
+    @inject(TYPES.FetchFeatureUsecase)
+    private readonly fetchFeatureUsecase: FetchFeatureUsecase,
   ) {}
 
   async fetchFeatures({
@@ -56,5 +61,11 @@ export class FeaturesClientAdapter implements FeaturesClientPort {
       teamMemberId,
       description,
     });
+  }
+
+  async fetchFeature({
+    featureId,
+  }: FetchFeatureClientRequestDto): Promise<FetchFeatureClientResponseDto> {
+    return await this.fetchFeatureUsecase.execute({ featureId });
   }
 }
