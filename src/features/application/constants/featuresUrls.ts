@@ -10,6 +10,10 @@ interface EditFeatureUrlProps {
   featureId: number;
 }
 
+interface FetchFeatureUrlProps {
+  featureId: number;
+}
+
 const FeaturesUrls = {
   fetchFeatures({ teamId }: FetchFeaturesUrlProps) {
     return `api/v1/voyages/teams/${teamId}/features`;
@@ -19,6 +23,9 @@ const FeaturesUrls = {
   },
   editFeature({ featureId }: EditFeatureUrlProps) {
     return `api/v1/voyages/features/${featureId}`;
+  },
+  fetchFeature({ featureId }: FetchFeatureUrlProps) {
+    return `/api/v1/voyages/features/${featureId}`;
   },
 } as const;
 

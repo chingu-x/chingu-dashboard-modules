@@ -5,11 +5,13 @@ import { FeaturesApiPort } from "@/features/ports/secondary/featuresApiPort";
 import {
   AddFeatureApiRequestDto,
   EditFeatureApiRequestDto,
+  FetchFeatureApiRequestDto,
   FetchFeaturesApiRequestDto,
 } from "@/features/application/dtos/request.dto";
 import {
   AddFeatureApiResponseDto,
   EditFeatureApiResponseDto,
+  FetchFeatureApiResponseDto,
   FetchFeaturesApiResponseDto,
 } from "@/features/application/dtos/response.dto";
 import FeaturesUrls from "@/features/application/constants/featuresUrls";
@@ -52,4 +54,8 @@ export class FeaturesApiAdapter implements FeaturesApiPort {
       payload: { teamMemberId, description },
     });
   }
+
+  async fetchFeature({
+    featureId,
+  }: FetchFeatureApiRequestDto): Promise<FetchFeatureApiResponseDto> {}
 }
