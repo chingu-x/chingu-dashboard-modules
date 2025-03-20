@@ -4,12 +4,14 @@ import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import { FeaturesApiPort } from "@/features/ports/secondary/featuresApiPort";
 import {
   AddFeatureApiRequestDto,
+  DeleteFeatureApiRequestDto,
   EditFeatureApiRequestDto,
   FetchFeatureApiRequestDto,
   FetchFeaturesApiRequestDto,
 } from "@/features/application/dtos/request.dto";
 import {
   AddFeatureApiResponseDto,
+  DeleteFeatureApiResponseDto,
   EditFeatureApiResponseDto,
   FetchFeatureApiResponseDto,
   FetchFeaturesApiResponseDto,
@@ -60,6 +62,14 @@ export class FeaturesApiAdapter implements FeaturesApiPort {
   }: FetchFeatureApiRequestDto): Promise<FetchFeatureApiResponseDto> {
     return await this.apiClient.get({
       url: FeaturesUrls.fetchFeature({ featureId }),
+    });
+  }
+
+  async deleteFeature({
+    featureId,
+  }: DeleteFeatureApiRequestDto): Promise<DeleteFeatureApiResponseDto> {
+    return await this.apiClient.delete({
+      url: FeaturesUrls.deleteFeature({ featureId }),
     });
   }
 }
