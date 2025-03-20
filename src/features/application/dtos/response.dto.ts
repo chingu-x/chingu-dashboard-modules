@@ -66,3 +66,16 @@ export interface EditFeatureApiResponseDto {
   createdAt: string | Date;
   updatedAt: string | Date;
 }
+
+export interface FetchFeatureApiResponseDto {
+  id: number;
+  description: string;
+  order: number;
+  createdAt: Date;
+  updatedAt: Date;
+  teamMemberId: number;
+  category: Category;
+  addedBy: {
+    member: VoyageMember;
+  };
+}
