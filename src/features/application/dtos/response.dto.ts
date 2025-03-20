@@ -89,3 +89,5 @@ export interface DeleteFeatureApiResponseDto {
   message: string;
   status: number;
 }
+
+export type SaveOrderApiResponseDto = Feature[];
