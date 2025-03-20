@@ -43,3 +43,7 @@ export interface EditFeatureApiRequestDto {
 export interface FetchFeatureApiRequestDto {
   featureId: number;
 }
+
+export interface DeleteFeatureApiRequestDto {
+  featureId: number;
+}
