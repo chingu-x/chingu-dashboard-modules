@@ -44,6 +44,11 @@ export interface FetchFeatureClientResponseDto {
   };
 }
 
+export interface DeleteFeatureClientResponseDto {
+  message: string;
+  status: number;
+}
+
 // api
 export type FetchFeaturesApiResponseDto = Features[];
 
