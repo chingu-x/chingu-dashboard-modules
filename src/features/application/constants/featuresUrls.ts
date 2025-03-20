@@ -18,6 +18,10 @@ interface DeleteFeatureUrlProps {
   featureId: number;
 }
 
+interface SaveOrderUrlProps {
+  featureId: number;
+}
+
 const FeaturesUrls = {
   fetchFeatures({ teamId }: FetchFeaturesUrlProps) {
     return `api/v1/voyages/teams/${teamId}/features`;
@@ -33,6 +37,9 @@ const FeaturesUrls = {
   },
   deleteFeature({ featureId }: DeleteFeatureUrlProps) {
     return `/api/v1/voyages/features/${featureId}`;
+  },
+  saveOrder({ featureId }: SaveOrderUrlProps) {
+    return `/api/v1/voyages/features/${featureId}/reorder`;
   },
 } as const;
 
