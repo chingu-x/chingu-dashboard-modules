@@ -79,3 +79,8 @@ export interface FetchFeatureApiResponseDto {
     member: VoyageMember;
   };
 }
+
+export interface DeleteFeatureApiResponseDto {
+  message: string;
+  status: number;
+}
