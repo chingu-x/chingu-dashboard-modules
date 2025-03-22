@@ -4,11 +4,11 @@ import { MyTeamApiPort } from "@/my-team/ports/secondary/myTeamApiPort";
 import { RestApiPort } from "@/rest-api/ports/secondary/restApiPort";
 import {
   EditHoursApiRequestDto,
-  GetMyTeamApiRequestDto,
+  FetchMyTeamApiRequestDto,
 } from "@/my-team/application/dtos/request.dto";
 import {
   EditHoursResponseDto,
-  GetMyTeamResponseDto,
+  FetchMyTeamResponseDto,
 } from "@/my-team/application/dtos/response.dto";
 import MyTeamUrls from "@/my-team/application/constants/myTeamUrls";
 
@@ -19,11 +19,11 @@ export class MyTeamApiAdapter implements MyTeamApiPort {
     private readonly apiClient: RestApiPort,
   ) {}
 
-  async getMyTeam({
+  async fetchMyTeam({
     teamId,
-  }: GetMyTeamApiRequestDto): Promise<GetMyTeamResponseDto> {
+  }: FetchMyTeamApiRequestDto): Promise<FetchMyTeamResponseDto> {
     return await this.apiClient.get({
-      url: MyTeamUrls.getMyTeam({ teamId }),
+      url: MyTeamUrls.fetchMyTeam({ teamId }),
     });
   }
 

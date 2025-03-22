@@ -1,7 +1,7 @@
 import type { InjectionToken } from "tsyringe";
 import type { MyTeamApiPort } from "@/my-team/ports/secondary/myTeamApiPort";
 import type { MyTeamClientAdapter } from "@/my-team/adapters/primary/myTeamClientAdapter";
-import type { GetMyTeamUsecase } from "@/my-team/application/usecases/getMyTeamUsecase";
+import type { FetchMyTeamUsecase } from "@/my-team/application/usecases/fetchMyTeamUsecase";
 import type { EditHoursUsecase } from "@/my-team/application/usecases/editHoursUsecase";
 
 export const My_TEAM_TYPES = {
@@ -9,9 +9,9 @@ export const My_TEAM_TYPES = {
   MyTeamApiPort: Symbol.for("MyTeamApiPort") as InjectionToken<MyTeamApiPort>,
 
   // usecases
-  GetMyTeamUsecase: Symbol.for(
-    "GetMyTeamUsecase",
-  ) as InjectionToken<GetMyTeamUsecase>,
+  FetchMyTeamUsecase: Symbol.for(
+    "FetchMyTeamUsecase",
+  ) as InjectionToken<FetchMyTeamUsecase>,
   EditHoursUsecase: Symbol.for(
     "EditHoursUsecase",
   ) as InjectionToken<EditHoursUsecase>,

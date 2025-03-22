@@ -1,7 +1,7 @@
 import type { User } from "@/user";
 
 // client
-export interface GetMyTeamClientRequestDto {
+export interface FetchMyTeamClientRequestDto {
   teamId: string;
   user: User;
 }
@@ -12,7 +12,7 @@ export interface EditHoursClientRequestDto {
 }
 
 // api
-export interface GetMyTeamApiRequestDto {
+export interface FetchMyTeamApiRequestDto {
   teamId: string;
 }
 

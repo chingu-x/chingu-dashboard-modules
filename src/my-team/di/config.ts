@@ -2,7 +2,7 @@ import { container } from "tsyringe";
 import { My_TEAM_TYPES } from "./types";
 import { MyTeamApiAdapter } from "@/my-team/adapters/secondary/myTeamApiAdapter";
 import { MyTeamClientAdapter } from "@/my-team/adapters/primary/myTeamClientAdapter";
-import { GetMyTeamUsecase } from "@/my-team/application/usecases/getMyTeamUsecase";
+import { FetchMyTeamUsecase } from "@/my-team/application/usecases/fetchMyTeamUsecase";
 import { EditHoursUsecase } from "@/my-team/application/usecases/editHoursUsecase";
 
 export const registerMyTeamDependencies = () => {
@@ -12,8 +12,8 @@ export const registerMyTeamDependencies = () => {
   });
 
   // usecases
-  container.register(My_TEAM_TYPES.GetMyTeamUsecase, {
-    useClass: GetMyTeamUsecase,
+  container.register(My_TEAM_TYPES.FetchMyTeamUsecase, {
+    useClass: FetchMyTeamUsecase,
   });
   container.register(My_TEAM_TYPES.EditHoursUsecase, {
     useClass: EditHoursUsecase,

@@ -1,13 +1,13 @@
 import { inject, injectable } from "tsyringe";
 import { MyTeamApiPort } from "@/my-team/ports/secondary/myTeamApiPort";
 import { moveElementToFirst } from "@/my-team/application/utils/moveElementToFirst";
-import { GetMyTeamUsecaseDto } from "@/my-team/application/dtos/usecase.dto";
-import { GetMyTeamResponseDto } from "@/my-team/application/dtos/response.dto";
+import { FetchMyTeamUsecaseDto } from "@/my-team/application/dtos/usecase.dto";
+import { FetchMyTeamResponseDto } from "@/my-team/application/dtos/response.dto";
 import { CurrentVoyageTeamMember } from "@/voyage-team/application/types";
 import { My_TEAM_TYPES } from "@/my-team/di/types";
 
 @injectable()
-export class GetMyTeamUsecase {
+export class FetchMyTeamUsecase {
   constructor(
     @inject(My_TEAM_TYPES.MyTeamApiPort)
     private readonly myTeamApi: MyTeamApiPort,
@@ -16,8 +16,8 @@ export class GetMyTeamUsecase {
   async execute({
     teamId,
     user,
-  }: GetMyTeamUsecaseDto): Promise<GetMyTeamResponseDto> {
-    const data = await this.myTeamApi.getMyTeam({
+  }: FetchMyTeamUsecaseDto): Promise<FetchMyTeamResponseDto> {
+    const data = await this.myTeamApi.fetchMyTeam({
       teamId,
     });
 

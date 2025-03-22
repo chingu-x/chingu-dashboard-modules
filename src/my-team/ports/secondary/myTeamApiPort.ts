@@ -1,16 +1,16 @@
 import type {
   EditHoursApiRequestDto,
-  GetMyTeamApiRequestDto,
+  FetchMyTeamApiRequestDto,
 } from "@/my-team/application/dtos/request.dto";
 import type {
   EditHoursResponseDto,
-  GetMyTeamResponseDto,
+  FetchMyTeamResponseDto,
 } from "@/my-team/application/dtos/response.dto";
 
 export interface MyTeamApiPort {
-  getMyTeam: ({
+  fetchMyTeam: ({
     teamId,
-  }: GetMyTeamApiRequestDto) => Promise<GetMyTeamResponseDto>;
+  }: FetchMyTeamApiRequestDto) => Promise<FetchMyTeamResponseDto>;
   editHours: ({
     teamId,
     hrPerSprint,

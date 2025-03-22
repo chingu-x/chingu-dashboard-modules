@@ -1,4 +1,4 @@
-interface GetMyTeamUrlProps {
+interface FetchMyTeamUrlProps {
   teamId: string;
 }
 
@@ -7,7 +7,7 @@ interface EditHoursUrlProps {
 }
 
 const MyTeamUrls = {
-  getMyTeam({ teamId }: GetMyTeamUrlProps) {
+  fetchMyTeam({ teamId }: FetchMyTeamUrlProps) {
     return `/api/v1/teams/${teamId}`;
   },
   editHours({ teamId }: EditHoursUrlProps) {

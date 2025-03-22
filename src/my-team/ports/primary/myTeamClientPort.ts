@@ -1,16 +1,16 @@
 import type {
   EditHoursClientRequestDto,
-  GetMyTeamClientRequestDto,
+  FetchMyTeamClientRequestDto,
 } from "@/my-team/application/dtos/request.dto";
 import type {
   EditHoursResponseDto,
-  GetMyTeamResponseDto,
+  FetchMyTeamResponseDto,
 } from "@/my-team/application/dtos/response.dto";
 
 export interface MyTeamClientPort {
-  getMyTeam: (
-    props: GetMyTeamClientRequestDto,
-  ) => Promise<GetMyTeamResponseDto>;
+  fetchMyTeam: (
+    props: FetchMyTeamClientRequestDto,
+  ) => Promise<FetchMyTeamResponseDto>;
   editHours: (
     props: EditHoursClientRequestDto,
   ) => Promise<EditHoursResponseDto>;
