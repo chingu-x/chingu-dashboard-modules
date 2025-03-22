@@ -1,5 +1,6 @@
 export { SprintMeetingClientAdapter } from "./adapters/primary/sprintMeetingClientAdapter";
 export {
+  FetchMeetingClientRequestDto,
   AddMeetingClientRequestDto,
   AddAgendaTopicClientRequestDto,
   EditAgendaTopicClientRequestDto,
