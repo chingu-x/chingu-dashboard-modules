@@ -10,6 +10,8 @@ export {
   AddSprintMeetingSectionClientRequestDto,
   EditSprintReviewSectionClientRequestDto,
   EditSprintPlanningSectionClientRequestDto,
+  FetchSprintMeetingFormClientRequestDto,
+  GetAgendaByIdClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   AddMeetingResponseDto,
