@@ -7,7 +7,7 @@ export class GetSprintMeetingUsecase {
   execute({
     meeting,
     meetingId,
-  }: GetSprintMeetingUsecaseDto): GetSprintMeetingResponseDto | undefined {
-    return meeting.find((meeting) => meeting.id === Number(meetingId));
+  }: GetSprintMeetingUsecaseDto): GetSprintMeetingResponseDto {
+    return meeting.find((meeting) => meeting.id === Number(meetingId))!;
   }
 }

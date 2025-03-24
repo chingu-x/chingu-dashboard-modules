@@ -51,7 +51,7 @@ export interface SprintMeetingClientPort {
 
   getSprintMeeting: (
     props: GetSprintMeetingClientRequestDto,
-  ) => GetSprintMeetingResponseDto | undefined;
+  ) => GetSprintMeetingResponseDto;
 
   addMeeting: (
     props: AddMeetingClientRequestDto,

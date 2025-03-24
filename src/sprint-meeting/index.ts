@@ -12,6 +12,7 @@ export {
   EditSprintPlanningSectionClientRequestDto,
   FetchSprintMeetingFormClientRequestDto,
   GetAgendaByIdClientRequestDto,
+  GetSprintMeetingSectionResponsesClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   AddMeetingResponseDto,
@@ -29,4 +30,5 @@ export {
   SectionBody,
   Agenda,
   MeetingFormData,
+  SprintMeetingForm,
 } from "./application/types/index";
