@@ -2,6 +2,7 @@ export { SprintsClientAdapter } from "./adapters/primary/sprintsClientAdapter";
 export {
   SubmitWeeklyCheckinClientRequestDto,
   SubmitVoyageProjectClientRequestDto,
+  FetchSprintsClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   SubmitWeeklyCheckinResponseDto,

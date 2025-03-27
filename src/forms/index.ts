@@ -1,4 +1,5 @@
 export { FormsClientAdapter } from "./adapters/primary/formsClientAdapter";
+export { FetchWeeklyCheckinFormClientRequestDto } from "./application/dtos/request.dto";
 export {
   Forms,
   NotesQuestions,
