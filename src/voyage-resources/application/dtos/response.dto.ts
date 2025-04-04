@@ -13,3 +13,12 @@ export interface AddVoyageResourceResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface DeleteVoyageResourceResponseDto {
+  id: number;
+  teamMemberId: number;
+  url: string;
+  title: string;
+  createdAt: string;
+  updatedAt: string;
+}
