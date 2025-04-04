@@ -8,6 +8,7 @@ import { SPRINT_MEETING_TYPES } from "./sprint-meeting/di/types";
 import { FORMS_TYPES } from "./forms/di/types";
 import { TIME_ZONE_TYPES } from "./timezone/di/types";
 import { FEATURES_TYPES } from "./features/di/types";
+import { VOYAGE_RESOURCES_TYPES } from "./voyage-resources/application/di/types";
 
 export const TYPES = {
   ...USER_TYPES,
@@ -20,4 +21,5 @@ export const TYPES = {
   ...FORMS_TYPES,
   ...TIME_ZONE_TYPES,
   ...FEATURES_TYPES,
+  ...VOYAGE_RESOURCES_TYPES,
 };
