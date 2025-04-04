@@ -15,4 +15,8 @@ export interface VoyageResourcesClientPort {
   addVoyageResource: (
     props: AddVoyageResourceClientRequestDto,
   ) => Promise<AddVoyageResourceResponseDto>;
+
+  deleteVoyageResource: (
+    props: DeleteVoyageResourceClientRequestDto,
+  ) => Promise<DeleteVoyageResourceResponseDto>;
 }
