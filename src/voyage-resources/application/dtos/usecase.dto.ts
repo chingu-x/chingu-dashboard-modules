@@ -7,3 +7,8 @@ export interface AddVoyageResourceUsecaseDto {
   url: string;
   title: string;
 }
+
+export interface DeleteVoyageResourceUsecaseDto {
+  teamId: string;
+  resourceId: number;
+}
