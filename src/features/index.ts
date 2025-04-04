@@ -4,6 +4,8 @@ export {
   EditFeatureClientRequestDto,
   DeleteFeatureClientRequestDto,
   SaveOrderClientRequestDto,
+  FetchFeatureClientRequestDto,
+  FetchFeaturesClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   AddFeatureClientResponseDto,
