@@ -3,6 +3,7 @@ import { TYPES } from "@/types";
 import { VoyageResourcesClientPort } from "@/voyage-resources/ports/primary/voyage-resources-client-port";
 import { FetchVoyageResourcesClientRequestDto } from "@/voyage-resources/application/dtos/request.dto";
 import { FetchVoyageResourcesResponseDto } from "@/voyage-resources/application/dtos/response.dto";
+import { FetchVoyageResourcesUsecase } from "@/voyage-resources/application/usecases/fetch-voyage-resources-usecase";
 
 @injectable()
 export class VoyageResourcesClientAdapter implements VoyageResourcesClientPort {
