@@ -3,10 +3,12 @@ import { TYPES } from "@/types";
 import { VoyageResourcesClientPort } from "@/voyage-resources/ports/primary/voyage-resources-client-port";
 import {
   AddVoyageResourceClientRequestDto,
+  DeleteVoyageResourceClientRequestDto,
   FetchVoyageResourcesClientRequestDto,
 } from "@/voyage-resources/application/dtos/request.dto";
 import {
   AddVoyageResourceResponseDto,
+  DeleteVoyageResourceResponseDto,
   FetchVoyageResourcesResponseDto,
 } from "@/voyage-resources/application/dtos/response.dto";
 import { FetchVoyageResourcesUsecase } from "@/voyage-resources/application/usecases/fetch-voyage-resources-usecase";
@@ -20,6 +22,9 @@ export class VoyageResourcesClientAdapter implements VoyageResourcesClientPort {
 
     @inject(TYPES.AddVoyageResourceUsecase)
     private readonly addVoyageResourceUsecase: AddVoyageResourceUsecase,
+
+    @inject(TYPES.DeleteVoyageResourceUsecase)
+    private readonly deleteVoyageResourceUsecase: DeleteVoyageResourceUsecase,
   ) {}
 
   async fetchVoyageResources({
@@ -34,5 +39,15 @@ export class VoyageResourcesClientAdapter implements VoyageResourcesClientPort {
     title,
   }: AddVoyageResourceClientRequestDto): Promise<AddVoyageResourceResponseDto> {
     return await this.addVoyageResourceUsecase.execute({ teamId, url, title });
+  }
+
+  async deleteVoyageResource({
+    teamId,
+    resourceId,
+  }: DeleteVoyageResourceClientRequestDto): Promise<DeleteVoyageResourceResponseDto> {
+    return await this.deleteVoyageResourceUsecase.execute({
+      teamId,
+      resourceId,
+    });
   }
 }
