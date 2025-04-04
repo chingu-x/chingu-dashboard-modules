@@ -10,6 +10,7 @@ import {
   FetchVoyageResourcesResponseDto,
 } from "@/voyage-resources/application/dtos/response.dto";
 import { FetchVoyageResourcesUsecase } from "@/voyage-resources/application/usecases/fetch-voyage-resources-usecase";
+import { AddVoyageResourceUsecase } from "@/voyage-resources/application/usecases/add-voyage-resource-usecase";
 
 @injectable()
 export class VoyageResourcesClientAdapter implements VoyageResourcesClientPort {
