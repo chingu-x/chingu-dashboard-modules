@@ -87,6 +87,10 @@
       "import": "./dist/sprints/index.js",
       "types": "./dist/sprints/index.d.ts"
     },
+    "./test": {
+      "import": "./dist/test/index.js",
+      "types": "./dist/test/index.d.ts"
+    },
     "./timezone": {
       "import": "./dist/timezone/index.js",
       "types": "./dist/timezone/index.d.ts"
