@@ -5,4 +5,8 @@ export interface VoyageResourcesClientPort {
   fetchVoyageResources: (
     props: FetchVoyageResourcesClientRequestDto,
   ) => Promise<FetchVoyageResourcesResponseDto>;
+
+  addVoyageResource: (
+    props: AddVoyageResourceClientRequestDto,
+  ) => Promise<AddVoyageResourceResponseDto>;
 }
