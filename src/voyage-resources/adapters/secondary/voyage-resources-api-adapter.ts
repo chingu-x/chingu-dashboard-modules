@@ -4,10 +4,12 @@ import { RestApiPort } from "@/rest-api/ports/secondary/rest-api-port";
 import { VoyageResourcesApiPort } from "@/voyage-resources/ports/secondary/voyage-resources-api-port";
 import {
   AddVoyageResourceApiRequestDto,
+  DeleteVoyageResourceApiRequestDto,
   FetchVoyageResourcesApiRequestDto,
 } from "@/voyage-resources/application/dtos/request.dto";
 import {
   AddVoyageResourceResponseDto,
+  DeleteVoyageResourceResponseDto,
   FetchVoyageResourcesResponseDto,
 } from "@/voyage-resources/application/dtos/response.dto";
 import VoyageResourcesUrls from "@/voyage-resources/application/constants/voyage-resources-urls";
@@ -35,6 +37,14 @@ export class VoyageResourcesApiAdapter implements VoyageResourcesApiPort {
     return await this.apiClient.post({
       url: VoyageResourcesUrls.addVoyageResource({ teamId }),
       payload: { url, title },
+    });
+  }
+
+  async deleteVoyageResource({
+    resourceId,
+  }: DeleteVoyageResourceApiRequestDto): Promise<DeleteVoyageResourceResponseDto> {
+    return await this.apiClient.delete({
+      url: VoyageResourcesUrls.deleteVoyageResource({ resourceId }),
     });
   }
 }
