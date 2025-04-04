@@ -9,6 +9,11 @@ export interface AddVoyageResourceClientRequestDto {
   title: string;
 }
 
+export interface DeleteVoyageResourceClientRequestDto {
+  teamId: string;
+  resourceId: number;
+}
+
 // api
 export interface FetchVoyageResourcesApiRequestDto {
   teamId: string;
