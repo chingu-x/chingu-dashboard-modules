@@ -24,3 +24,8 @@ export interface AddVoyageResourceApiRequestDto {
   url: string;
   title: string;
 }
+
+export interface DeleteVoyageResourceApiRequestDto {
+  teamId: string;
+  resourceId: number;
+}
