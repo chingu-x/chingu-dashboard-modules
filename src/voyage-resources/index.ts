@@ -2,6 +2,10 @@ export { VoyageResourcesClientAdapter } from "./adapters/primary/voyage-resource
 export {
   FetchVoyageResourcesClientRequestDto,
   AddVoyageResourceClientRequestDto,
+  DeleteVoyageResourceClientRequestDto,
 } from "./application/dtos/request.dto";
-export { AddVoyageResourceResponseDto } from "./application/dtos/response.dto";
+export {
+  AddVoyageResourceResponseDto,
+  DeleteVoyageResourceResponseDto,
+} from "./application/dtos/response.dto";
 export { VoyageResource } from "./application/types/index";
