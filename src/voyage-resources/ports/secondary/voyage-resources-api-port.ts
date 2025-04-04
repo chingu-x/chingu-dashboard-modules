@@ -5,4 +5,6 @@ export interface VoyageResourcesApiPort {
   fetchVoyageResources: ({
     teamId,
   }: FetchVoyageResourcesApiRequestDto) => Promise<FetchVoyageResourcesResponseDto>;
+
+  addVoyageResource({ teamId, url, title }: AddVoyageResourceApiRequestDto) => Promise<AddVoyageResourceResponseDto>
 }
