@@ -42,11 +42,9 @@ export class VoyageResourcesClientAdapter implements VoyageResourcesClientPort {
   }
 
   async deleteVoyageResource({
-    teamId,
     resourceId,
   }: DeleteVoyageResourceClientRequestDto): Promise<DeleteVoyageResourceResponseDto> {
     return await this.deleteVoyageResourceUsecase.execute({
-      teamId,
       resourceId,
     });
   }

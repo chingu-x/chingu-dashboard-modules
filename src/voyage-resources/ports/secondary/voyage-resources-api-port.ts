@@ -21,7 +21,6 @@ export interface VoyageResourcesApiPort {
   }: AddVoyageResourceApiRequestDto) => Promise<AddVoyageResourceResponseDto>;
 
   deleteVoyageResource: ({
-    teamId,
     resourceId,
   }: DeleteVoyageResourceApiRequestDto) => Promise<DeleteVoyageResourceResponseDto>;
 }

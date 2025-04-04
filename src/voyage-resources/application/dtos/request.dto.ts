@@ -10,7 +10,6 @@ export interface AddVoyageResourceClientRequestDto {
 }
 
 export interface DeleteVoyageResourceClientRequestDto {
-  teamId: string;
   resourceId: number;
 }
 
@@ -26,6 +25,5 @@ export interface AddVoyageResourceApiRequestDto {
 }
 
 export interface DeleteVoyageResourceApiRequestDto {
-  teamId: string;
   resourceId: number;
 }

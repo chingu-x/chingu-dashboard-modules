@@ -9,6 +9,5 @@ export interface AddVoyageResourceUsecaseDto {
 }
 
 export interface DeleteVoyageResourceUsecaseDto {
-  teamId: string;
   resourceId: number;
 }
