@@ -1,5 +1,11 @@
-import type { FetchVoyageResourcesClientRequestDto } from "@/voyage-resources/application/dtos/request.dto";
-import type { FetchVoyageResourcesResponseDto } from "@/voyage-resources/application/dtos/response.dto";
+import type {
+  AddVoyageResourceClientRequestDto,
+  FetchVoyageResourcesClientRequestDto,
+} from "@/voyage-resources/application/dtos/request.dto";
+import type {
+  AddVoyageResourceResponseDto,
+  FetchVoyageResourcesResponseDto,
+} from "@/voyage-resources/application/dtos/response.dto";
 
 export interface VoyageResourcesClientPort {
   fetchVoyageResources: (
