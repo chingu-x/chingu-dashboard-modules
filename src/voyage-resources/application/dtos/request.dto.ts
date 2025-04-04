@@ -13,3 +13,9 @@ export interface AddVoyageResourceClientRequestDto {
 export interface FetchVoyageResourcesApiRequestDto {
   teamId: string;
 }
+
+export interface AddVoyageResourceApiRequestDto {
+  teamId: string;
+  url: string;
+  title: string;
+}
