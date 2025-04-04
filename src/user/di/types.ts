@@ -1,8 +1,8 @@
 import type { InjectionToken } from "tsyringe";
-import { type UserApiPort } from "@/user/ports/secondary/userApiPort";
-import { type UserClientAdapter } from "@/user/adapters/primary/userClientAdapter";
-import { type FetchUserUsecase } from "@/user/application/usecases/fetchUserUsecase";
-import { type GetChinguMemberStatusUsecase } from "@/user/application/usecases/getChinguMemberStatusUsecase";
+import { type UserApiPort } from "@/user/ports/secondary/user-api-port";
+import { type UserClientAdapter } from "@/user/adapters/primary/user-client-adapter";
+import { type FetchUserUsecase } from "@/user/application/usecases/fetch-user-usecase";
+import { type GetChinguMemberStatusUsecase } from "@/user/application/usecases/get-chingu-member-status-usecase";
 
 export const USER_TYPES = {
   // ports

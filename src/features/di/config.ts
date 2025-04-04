@@ -1,14 +1,14 @@
 import { container } from "tsyringe";
 import { FEATURES_TYPES } from "./types";
-import { FeaturesApiAdapter } from "@/features/adapters/secondary/featuresApiAdapter";
-import { FetchFeaturesUsecase } from "@/features/application/usecases/fetchFeaturesUsecase";
-import { FeaturesClientAdapter } from "@/features/adapters/primary/featuresClientAdapter";
-import { AddFeatureUsecase } from "@/features/application/usecases/addFeatureUsecase";
-import { EditFeatureUsecase } from "@/features/application/usecases/editFeatureUsecase";
-import { FetchFeatureUsecase } from "@/features/application/usecases/fetchFeatureUsecase";
-import { DeleteFeatureUsecase } from "@/features/application/usecases/deleteFeatureUsecase";
-import { SaveOrderUsecase } from "@/features/application/usecases/saveOrderUsecase";
-import { IsFeatureOwnerUsecase } from "@/features/application/usecases/isFeatureOwnerUsecase";
+import { FeaturesApiAdapter } from "@/features/adapters/secondary/features-api-adapter";
+import { FetchFeaturesUsecase } from "@/features/application/usecases/fetch-features-usecase";
+import { FeaturesClientAdapter } from "@/features/adapters/primary/features-client-adapter";
+import { AddFeatureUsecase } from "@/features/application/usecases/add-feature-usecase";
+import { EditFeatureUsecase } from "@/features/application/usecases/edit-feature-usecase";
+import { FetchFeatureUsecase } from "@/features/application/usecases/fetch-feature-usecase";
+import { DeleteFeatureUsecase } from "@/features/application/usecases/delete-feature-usecase";
+import { SaveOrderUsecase } from "@/features/application/usecases/save-order-usecase";
+import { IsFeatureOwnerUsecase } from "@/features/application/usecases/is-feature-owner-usecase";
 
 export const registerFeaturesDependencies = () => {
   // ports

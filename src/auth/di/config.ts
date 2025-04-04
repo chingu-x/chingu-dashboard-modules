@@ -1,11 +1,11 @@
 import { container } from "tsyringe";
 import { AUTH_TYPES } from "./types";
-import { AuthApiAdapter } from "@/auth/adapters/secondary/authApiAdapter";
-import { LoginUsecase } from "@/auth/application/usecases/loginUsecase";
-import { LogoutUsecase } from "@/auth/application/usecases/logoutUsecase";
-import { RequestResetPasswordUsecase } from "@/auth/application/usecases/requestResetPasswordUsecase";
-import { ResetPasswordUsecase } from "@/auth/application/usecases/resetPasswordUsecase";
-import { AuthClientAdapter } from "@/auth/adapters/primary/authClientAdapter";
+import { AuthApiAdapter } from "@/auth/adapters/secondary/auth-api-adapter";
+import { LoginUsecase } from "@/auth/application/usecases/login-usecase";
+import { LogoutUsecase } from "@/auth/application/usecases/logout-usecase";
+import { RequestResetPasswordUsecase } from "@/auth/application/usecases/request-reset-password-usecase";
+import { ResetPasswordUsecase } from "@/auth/application/usecases/reset-password-usecase";
+import { AuthClientAdapter } from "@/auth/adapters/primary/auth-client-adapter";
 
 export const registerAuthDependencies = () => {
   // ports

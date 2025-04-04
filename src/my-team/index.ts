@@ -1,4 +1,4 @@
-export { MyTeamClientAdapter } from "./adapters/primary/myTeamClientAdapter";
+export { MyTeamClientAdapter } from "./adapters/primary/my-team-client-adapter";
 export {
   EditHoursClientRequestDto,
   FetchMyTeamClientRequestDto,

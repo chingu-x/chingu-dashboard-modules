@@ -1,4 +1,4 @@
-export { SprintsClientAdapter } from "./adapters/primary/sprintsClientAdapter";
+export { SprintsClientAdapter } from "./adapters/primary/sprints-client-adapter";
 export {
   SubmitWeeklyCheckinClientRequestDto,
   SubmitVoyageProjectClientRequestDto,

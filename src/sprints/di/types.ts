@@ -1,15 +1,15 @@
 import type { InjectionToken } from "tsyringe";
-import type { IsCurrentSprintUsecase } from "@/sprints/application/usecases/isCurrentSprintUsecase";
-import type { SprintsApiPort } from "@/sprints/ports/secondary/sprintsApiPort";
-import type { SprintsClientAdapter } from "@/sprints/adapters/primary/sprintsClientAdapter";
-import type { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprintsUsecase";
-import type { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
-import type { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/getSprintCheckinStatusUsecase";
-import type { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/isVoyageProjestSubmissionAllowedUsecase";
-import type { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submitWeeklyCheckinUsecase";
-import type { SubmitVoyageProjectUsecase } from "@/sprints/application/usecases/submitVoyageProjectUsecase";
-import type { GetSprintByNumberUsecase } from "@/sprints/application/usecases/getSprintByNumberUsecase";
-import type { FetchAllSprintsUsecase } from "@/sprints/application/usecases/fetchAllSprintsUsecase";
+import type { IsCurrentSprintUsecase } from "@/sprints/application/usecases/is-current-sprint-usecase";
+import type { SprintsApiPort } from "@/sprints/ports/secondary/sprints-api-port";
+import type { SprintsClientAdapter } from "@/sprints/adapters/primary/sprints-client-adapter";
+import type { FetchSprintsUsecase } from "@/sprints/application/usecases/fetch-sprints-usecase";
+import type { GetCurrentSprintUsecase } from "@/sprints/application/usecases/get-current-sprint-usecase";
+import type { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/get-sprint-checkin-status-usecase";
+import type { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/is-voyage-projest-submission-allowed-usecase";
+import type { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submit-weekly-checkin-usecase";
+import type { SubmitVoyageProjectUsecase } from "@/sprints/application/usecases/submit-voyage-project-usecase";
+import type { GetSprintByNumberUsecase } from "@/sprints/application/usecases/get-sprint-by-number-usecase";
+import type { FetchAllSprintsUsecase } from "@/sprints/application/usecases/fetch-all-sprints-usecase";
 
 export const SPRINTS_TYPES = {
   // ports

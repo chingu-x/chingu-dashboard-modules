@@ -87,10 +87,6 @@
       "import": "./dist/sprints/index.js",
       "types": "./dist/sprints/index.d.ts"
     },
-    "./test": {
-      "import": "./dist/test/index.js",
-      "types": "./dist/test/index.d.ts"
-    },
     "./timezone": {
       "import": "./dist/timezone/index.js",
       "types": "./dist/timezone/index.d.ts"
@@ -98,6 +94,10 @@
     "./user": {
       "import": "./dist/user/index.js",
       "types": "./dist/user/index.d.ts"
+    },
+    "./voyage-resources": {
+      "import": "./dist/voyage-resources/index.js",
+      "types": "./dist/voyage-resources/index.d.ts"
     },
     "./voyage-team": {
       "import": "./dist/voyage-team/index.js",

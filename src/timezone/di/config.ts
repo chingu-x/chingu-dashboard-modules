@@ -1,12 +1,12 @@
 import { container } from "tsyringe";
 import { TIME_ZONE_TYPES } from "./types";
-import { UpdateDirectoryWithCurrentTimeUsecase } from "@/timezone/application/usecases/updateDirectoryWithCurrentTimeUsecase";
-import { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/getMeetingLongDateTimeFormatUsecase";
-import { TimezoneClientAdapter } from "@/timezone/adapters/primary/timezoneClientAdapter";
-import { GetMeetingDateUsecase } from "@/timezone/application/usecases/getMeetingDateUsecase";
-import { GetMeetingTimeWithTZAbbreviationUsecase } from "@/timezone/application/usecases/getMeetingTimeWithTZAbbreviationUsecase";
-import { GetSprintStartDateBySprintNumberUsecase } from "@/timezone/application/usecases/getSprintStartDateBySprintNumberUsecase";
-import { GetSprintEndDateBySprintNumberUsecase } from "@/timezone/application/usecases/getSprintEndDateBySprintNumberUsecase";
+import { UpdateDirectoryWithCurrentTimeUsecase } from "@/timezone/application/usecases/update-directory-with-current-time-usecase";
+import { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/get-meeting-long-date-time-format-usecase";
+import { TimezoneClientAdapter } from "@/timezone/adapters/primary/timezone-client-adapter";
+import { GetMeetingDateUsecase } from "@/timezone/application/usecases/get-meeting-date-usecase";
+import { GetMeetingTimeWithTZAbbreviationUsecase } from "@/timezone/application/usecases/get-meeting-time-with-tz-abbreviation-usecase";
+import { GetSprintStartDateBySprintNumberUsecase } from "@/timezone/application/usecases/get-sprint-start-date-by-sprint-number-usecase";
+import { GetSprintEndDateBySprintNumberUsecase } from "@/timezone/application/usecases/get-sprint-end-date-by-sprint-number-usecase";
 
 export const registerTimezoneDependencies = () => {
   // ports

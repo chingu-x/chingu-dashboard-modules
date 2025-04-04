@@ -1,26 +1,26 @@
 import { container } from "tsyringe";
 import { SPRINT_MEETING_TYPES } from "./types";
-import { SprintMeetingApiAdapter } from "@/sprint-meeting/adapters/secondary/sprintMeetingApiAdapter";
-import { SprintMeetingClientAdapter } from "@/sprint-meeting/adapters/primary/sprintMeetingClientAdapter";
-import { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetchMeetingUsecase";
-import { GetSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/getSprintMeetingId";
-import { GetSprintMeetingUsecase } from "@/sprint-meeting/application/usecases/getSprintMeetingUsecase";
-import { AddMeetingUsecase } from "@/sprint-meeting/application/usecases/addMeetingUsecase";
-import { AddAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/addAgendaTopicUsecase";
-import { EditAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/editAgendaTopicUsecase";
-import { DeleteAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/deleteAgendaTopicUsecase";
-import { EditMeetingUsecase } from "@/sprint-meeting/application/usecases/editMeetingUsecase";
-import { ChangeAgendaTopicStatusUsecase } from "@/sprint-meeting/application/usecases/changeAgendaTopicStatusUsecase";
-import { AddSprintMeetingSectionUsecase } from "@/sprint-meeting/application/usecases/addSprintMeetingSectionUsecase";
-import { GetAgendaByIdUsecase } from "@/sprint-meeting/application/usecases/getAgendaByIdUsecase";
-import { GetSprintReviewQuestionsUsecase } from "@/sprint-meeting/application/usecases/getSprintReviewQuestionsUsecase";
-import { EditSprintReviewSectionUsecase } from "@/sprint-meeting/application/usecases/editSprintReviewSectionUsecase";
-import { GetSprintPlanningQuestionsUsecase } from "@/sprint-meeting/application/usecases/getSprintPlanningQuestionsUsecase";
-import { EditSprintPlanningSectionUsecase } from "@/sprint-meeting/application/usecases/editSprintPlanningSectionUsecase";
-import { GetIncompleteTopicsUsecase } from "@/sprint-meeting/application/usecases/getIncompleteTopicsUsecase";
-import { GetCompletedTopicsUsecase } from "@/sprint-meeting/application/usecases/getCompletedTopicsUsecase";
-import { FetchSprintMeetingFormUsecase } from "@/sprint-meeting/application/usecases/fetchSprintMeetingFormUsecase";
-import { GetSprintMeetingSectionResponsesUsecase } from "@/sprint-meeting/application/usecases/getSprintMeetingSectionResponsesUsecase";
+import { SprintMeetingApiAdapter } from "@/sprint-meeting/adapters/secondary/sprint-meeting-api-adapter";
+import { SprintMeetingClientAdapter } from "@/sprint-meeting/adapters/primary/sprint-meeting-client-adapter";
+import { FetchMeetingUsecase } from "@/sprint-meeting/application/usecases/fetch-meeting-usecase";
+import { GetSprintMeetingIdUsecase } from "@/sprint-meeting/application/usecases/get-sprint-meeting-id-usecase";
+import { GetSprintMeetingUsecase } from "@/sprint-meeting/application/usecases/get-sprint-meeting-usecase";
+import { AddMeetingUsecase } from "@/sprint-meeting/application/usecases/add-meeting-usecase";
+import { AddAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/add-agenda-topic-usecase";
+import { EditAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/edit-agenda-topic-usecase";
+import { DeleteAgendaTopicUsecase } from "@/sprint-meeting/application/usecases/delete-agenda-topic-usecase";
+import { EditMeetingUsecase } from "@/sprint-meeting/application/usecases/edit-meeting-usecase";
+import { ChangeAgendaTopicStatusUsecase } from "@/sprint-meeting/application/usecases/change-agenda-topic-status-usecase";
+import { AddSprintMeetingSectionUsecase } from "@/sprint-meeting/application/usecases/add-sprint-meeting-section-usecase";
+import { GetAgendaByIdUsecase } from "@/sprint-meeting/application/usecases/get-agenda-by-id-usecase";
+import { GetSprintReviewQuestionsUsecase } from "@/sprint-meeting/application/usecases/get-sprint-review-questions-usecase";
+import { EditSprintReviewSectionUsecase } from "@/sprint-meeting/application/usecases/edit-sprint-review-section-usecase";
+import { GetSprintPlanningQuestionsUsecase } from "@/sprint-meeting/application/usecases/get-sprint-planning-questions-usecase";
+import { EditSprintPlanningSectionUsecase } from "@/sprint-meeting/application/usecases/edit-sprint-planning-section-usecase";
+import { GetIncompleteTopicsUsecase } from "@/sprint-meeting/application/usecases/get-incomplete-topics-usecase";
+import { GetCompletedTopicsUsecase } from "@/sprint-meeting/application/usecases/get-completed-topics-usecase";
+import { FetchSprintMeetingFormUsecase } from "@/sprint-meeting/application/usecases/fetch-sprint-meeting-form-usecase";
+import { GetSprintMeetingSectionResponsesUsecase } from "@/sprint-meeting/application/usecases/get-sprint-meeting-section-responses-usecase";
 
 export const registerSprintMeetingDependencies = () => {
   // ports

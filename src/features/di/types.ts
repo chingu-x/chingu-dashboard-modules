@@ -1,13 +1,13 @@
 import type { InjectionToken } from "tsyringe";
-import type { FeaturesApiPort } from "@/features/ports/secondary/featuresApiPort";
-import type { FetchFeaturesUsecase } from "@/features/application/usecases/fetchFeaturesUsecase";
-import type { FeaturesClientAdapter } from "@/features/adapters/primary/featuresClientAdapter";
-import type { AddFeatureUsecase } from "@/features/application/usecases/addFeatureUsecase";
-import type { EditFeatureUsecase } from "@/features/application/usecases/editFeatureUsecase";
-import type { FetchFeatureUsecase } from "@/features/application/usecases/fetchFeatureUsecase";
-import type { DeleteFeatureUsecase } from "@/features/application/usecases/deleteFeatureUsecase";
-import type { SaveOrderUsecase } from "@/features/application/usecases/saveOrderUsecase";
-import type { IsFeatureOwnerUsecase } from "@/features/application/usecases/isFeatureOwnerUsecase";
+import type { FeaturesApiPort } from "@/features/ports/secondary/features-api-port";
+import type { FetchFeaturesUsecase } from "@/features/application/usecases/fetch-features-usecase";
+import type { FeaturesClientAdapter } from "@/features/adapters/primary/features-client-adapter";
+import type { AddFeatureUsecase } from "@/features/application/usecases/add-feature-usecase";
+import type { EditFeatureUsecase } from "@/features/application/usecases/edit-feature-usecase";
+import type { FetchFeatureUsecase } from "@/features/application/usecases/fetch-feature-usecase";
+import type { DeleteFeatureUsecase } from "@/features/application/usecases/delete-feature-usecase";
+import type { SaveOrderUsecase } from "@/features/application/usecases/save-order-usecase";
+import type { IsFeatureOwnerUsecase } from "@/features/application/usecases/is-feature-owner-usecase";
 
 export const FEATURES_TYPES = {
   // ports

@@ -1,10 +1,10 @@
 import type { InjectionToken } from "tsyringe";
-import type { AuthApiPort } from "@/auth/ports/secondary/authApiPort";
-import type { AuthClientAdapter } from "@/auth/adapters/primary/authClientAdapter";
-import type { LoginUsecase } from "@/auth/application/usecases/loginUsecase";
-import type { LogoutUsecase } from "@/auth/application/usecases/logoutUsecase";
-import type { RequestResetPasswordUsecase } from "@/auth/application/usecases/requestResetPasswordUsecase";
-import type { ResetPasswordUsecase } from "@/auth/application/usecases/resetPasswordUsecase";
+import type { AuthApiPort } from "@/auth/ports/secondary/auth-api-port";
+import type { AuthClientAdapter } from "@/auth/adapters/primary/auth-client-adapter";
+import type { LoginUsecase } from "@/auth/application/usecases/login-usecase";
+import type { LogoutUsecase } from "@/auth/application/usecases/logout-usecase";
+import type { RequestResetPasswordUsecase } from "@/auth/application/usecases/request-reset-password-usecase";
+import type { ResetPasswordUsecase } from "@/auth/application/usecases/reset-password-usecase";
 
 export const AUTH_TYPES = {
   // ports
