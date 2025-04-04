@@ -1,8 +1,8 @@
 import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { VoyageResourcesApiPort } from "@/voyage-resources/ports/secondary/voyage-resources-api-port";
-import { FetchVoyageResourcesUsecaseDto } from "@/voyage-resources/application/dtos/usecase.dto";
-import { FetchVoyageResourcesResponseDto } from "@/voyage-resources/application/dtos/response.dto";
+import { AddVoyageResourceUsecaseDto } from "@/voyage-resources/application/dtos/usecase.dto";
+import { AddVoyageResourceResponseDto } from "@/voyage-resources/application/dtos/response.dto";
 
 @injectable()
 export class AddVoyageResourceUsecase {
@@ -12,8 +12,8 @@ export class AddVoyageResourceUsecase {
   ) {}
 
   async execute(
-    props: FetchVoyageResourcesUsecaseDto,
-  ): Promise<FetchVoyageResourcesResponseDto> {
-    return await this.voyageResourcesApi.fetchVoyageResources(props);
+    props: AddVoyageResourceUsecaseDto,
+  ): Promise<AddVoyageResourceResponseDto> {
+    return await this.voyageResourcesApi.addVoyageResource(props);
   }
 }
