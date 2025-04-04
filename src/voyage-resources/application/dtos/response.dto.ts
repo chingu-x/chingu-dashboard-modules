@@ -7,7 +7,7 @@ export type FetchVoyageResourcesResponseDto = VoyageResource[];
 
 export interface AddVoyageResourceResponseDto {
   id: number;
-  teamMemberId: NumberConstructor;
+  teamMemberId: number;
   url: string;
   title: string;
   createdAt: string;
