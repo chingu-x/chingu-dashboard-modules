@@ -4,3 +4,6 @@ export interface FetchVoyageResourcesClientRequestDto {
 }
 
 // api
+export interface FetchVoyageResourcesApiRequestDto {
+  teamId: string;
+}
