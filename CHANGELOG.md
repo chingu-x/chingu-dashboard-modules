@@ -1,3 +1,21 @@
+# [0.11.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.10.0...v0.11.0) (2025-04-05)
+
+
+### Features
+
+* implement addVoyageResource in VoyageResourcesApiAdapter ([720f430](https://github.com/chingu-x/chingu-dashboard-modules/commit/720f430568d25ac5ba9fd16f4253f4e38a239249))
+* implement addVoyageResource in VoyageResourcesClientAdapter ([c2594f7](https://github.com/chingu-x/chingu-dashboard-modules/commit/c2594f7029e2601ca6c6e3295379a15f7868a164))
+* implement AddVoyageResourceUsecase ([bb3234b](https://github.com/chingu-x/chingu-dashboard-modules/commit/bb3234b2f39821be769af26b966d28f864ae2be1))
+* implement deleteVoyageResource in VoyageResourcesApiAdapter ([ed3af31](https://github.com/chingu-x/chingu-dashboard-modules/commit/ed3af3117b37cf7a4c7cd11473a4c581fb170e24))
+* implement deleteVoyageResource in VoyageResourcesClientAdapter ([f49ffe3](https://github.com/chingu-x/chingu-dashboard-modules/commit/f49ffe3cc5dd0bb03d5d98c8defbcc3e596d001a))
+* implement DeleteVoyageResourceUsecase ([a51f1a8](https://github.com/chingu-x/chingu-dashboard-modules/commit/a51f1a80eed456a56bb912e4b7c91dbed527abd4))
+* implement fetchVoyageResources in VoyageResourcesApiAdapter ([d48b55f](https://github.com/chingu-x/chingu-dashboard-modules/commit/d48b55f32a520b5b34d1c96ad0a6b7daf6c0cc8e))
+* implement fetchVoyageResources in VoyageResourcesClientAdapter ([8dad4db](https://github.com/chingu-x/chingu-dashboard-modules/commit/8dad4db92eb2a3fae4e0af66c41afa0cec2bba61))
+* implement FetchVoyageResourcesUsecase ([5ea7c93](https://github.com/chingu-x/chingu-dashboard-modules/commit/5ea7c93c13b2bbf58ceec43a6475305f4040a8a6))
+* implement getVoyageResourceAddedDate in TimezoneClientAdapter ([c41c552](https://github.com/chingu-x/chingu-dashboard-modules/commit/c41c55265e4e3d16fdeb3e75947e19fb3b7e2ee8))
+* implement GetVoyageResourceDateUsecase ([b7b2da5](https://github.com/chingu-x/chingu-dashboard-modules/commit/b7b2da5e3208d444c43ecd54426a0b14c66786d0))
+* implement sortVoyageResources in VoyageResourcesClientAdapter ([5c953dd](https://github.com/chingu-x/chingu-dashboard-modules/commit/5c953ddfd32893aa612057726fd050b75b564d9a))
+
 # [0.10.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.9.0...v0.10.0) (2025-03-20)
 
 
