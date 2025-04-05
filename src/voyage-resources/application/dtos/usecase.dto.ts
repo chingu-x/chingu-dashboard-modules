@@ -1,3 +1,8 @@
+import type {
+  SortOption,
+  VoyageResource,
+} from "@/voyage-resources/application/types";
+
 export interface FetchVoyageResourcesUsecaseDto {
   teamId: string;
 }
@@ -10,4 +15,9 @@ export interface AddVoyageResourceUsecaseDto {
 
 export interface DeleteVoyageResourceUsecaseDto {
   resourceId: number;
+}
+
+export interface SortVoyageResourcesUsecaseDto {
+  order: SortOption;
+  voyageResources: VoyageResource[];
 }
