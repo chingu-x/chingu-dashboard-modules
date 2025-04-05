@@ -23,6 +23,7 @@ import { GetMeetingTimeWithTZAbbreviationUsecase } from "@/timezone/application/
 import { GetSprintByNumberUsecase } from "@/sprints/application/usecases/get-sprint-by-number-usecase";
 import { GetSprintStartDateBySprintNumberUsecase } from "@/timezone/application/usecases/get-sprint-start-date-by-sprint-number-usecase";
 import { GetSprintEndDateBySprintNumberUsecase } from "@/timezone/application/usecases/get-sprint-end-date-by-sprint-number-usecase";
+import { GetVoyageResourceDateUsecase } from "@/timezone/application/usecases/get-voyage-resource-added-date-usecase";
 
 @injectable()
 export class TimezoneClientAdapter implements TimezoneClientPort {
