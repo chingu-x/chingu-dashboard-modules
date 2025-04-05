@@ -5,11 +5,13 @@ import {
   AddVoyageResourceClientRequestDto,
   DeleteVoyageResourceClientRequestDto,
   FetchVoyageResourcesClientRequestDto,
+  SortVoyageResourcesClientRequestDto,
 } from "@/voyage-resources/application/dtos/request.dto";
 import {
   AddVoyageResourceResponseDto,
   DeleteVoyageResourceResponseDto,
   FetchVoyageResourcesResponseDto,
+  SortVoyageResourcesResponseDto,
 } from "@/voyage-resources/application/dtos/response.dto";
 import { FetchVoyageResourcesUsecase } from "@/voyage-resources/application/usecases/fetch-voyage-resources-usecase";
 import { AddVoyageResourceUsecase } from "@/voyage-resources/application/usecases/add-voyage-resource-usecase";
@@ -26,6 +28,9 @@ export class VoyageResourcesClientAdapter implements VoyageResourcesClientPort {
 
     @inject(TYPES.DeleteVoyageResourceUsecase)
     private readonly deleteVoyageResourceUsecase: DeleteVoyageResourceUsecase,
+
+    @inject(TYPES.SortVoyageResourcesUsecase)
+    private readonly sortVoyageResourcesUsecase: SortVoyageResourcesUsecase,
   ) {}
 
   async fetchVoyageResources({
@@ -48,5 +53,12 @@ export class VoyageResourcesClientAdapter implements VoyageResourcesClientPort {
     return await this.deleteVoyageResourceUsecase.execute({
       resourceId,
     });
+  }
+
+  sortVoyageResources({
+    order,
+    voyageResources,
+  }: SortVoyageResourcesClientRequestDto): SortVoyageResourcesResponseDto {
+    return this.sortVoyageResourcesUsecase.execute({ order, voyageResources });
   }
 }
