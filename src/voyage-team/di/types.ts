@@ -1,12 +1,12 @@
 import type { InjectionToken } from "tsyringe";
-import type { VoyageTeamClientAdapter } from "@/voyage-team/adapters/primary/voyageTeamClientAdapter";
-import type { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageTeamUsecase";
-import type { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases/hasVoyageStartedUsecase";
-import type { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/isCurrentVoyageTeamUseCase";
-import type { GetCurrentVoyageUserIdUsecase } from "@/voyage-team/application/usecases/getCurrentVoyageUserIdUsecase";
-import type { GetVoyageProjectSubmissionStatusUsecase } from "@/voyage-team/application/usecases/getVoyageProjectSubmissionStatusUsecase";
-import type { GetVoyageMemberRolesUsecase } from "@/voyage-team/application/usecases/getVoyageMemberRolesUsecase";
-import type { GetCurrentUserVoyageRoleUsecase } from "@/voyage-team/application/usecases/getCurrentUserVoyageRoleUsecase";
+import type { VoyageTeamClientAdapter } from "@/voyage-team/adapters/primary/voyage-team-client-adapter";
+import type { GetCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/get-current-voyage-team-usecase";
+import type { HasVoyageStartedUsecase } from "@/voyage-team/application/usecases/has-voyage-started-usecase";
+import type { IsCurrentVoyageTeamUsecase } from "@/voyage-team/application/usecases/is-current-voyage-team-usecase";
+import type { GetCurrentVoyageUserIdUsecase } from "@/voyage-team/application/usecases/get-current-voyage-user-id-usecase";
+import type { GetVoyageProjectSubmissionStatusUsecase } from "@/voyage-team/application/usecases/get-voyage-project-submission-status-usecase";
+import type { GetVoyageMemberRolesUsecase } from "@/voyage-team/application/usecases/get-voyage-member-roles-usecase";
+import type { GetCurrentUserVoyageRoleUsecase } from "@/voyage-team/application/usecases/get-current-user-voyage-role-usecase";
 
 export const VOYAGE_TEAM_TYPES = {
   // ports

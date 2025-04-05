@@ -1,4 +1,4 @@
-export { AuthClientAdapter } from "./adapters/primary/authClientAdapter";
+export { AuthClientAdapter } from "./adapters/primary/auth-client-adapter";
 export {
   LoginClientRequestDto,
   RequestResetPasswordClientRequestDto,

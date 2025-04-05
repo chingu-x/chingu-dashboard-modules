@@ -1,16 +1,16 @@
 import { container } from "tsyringe";
 import { SPRINTS_TYPES } from "./types";
-import { IsCurrentSprintUsecase } from "@/sprints/application/usecases/isCurrentSprintUsecase";
-import { SprintsApiAdapter } from "@/sprints/adapters/secondary/sprintsApiAdapter";
-import { SprintsClientAdapter } from "@/sprints/adapters/primary/sprintsClientAdapter";
-import { FetchSprintsUsecase } from "@/sprints/application/usecases/fetchSprintsUsecase";
-import { GetCurrentSprintUsecase } from "@/sprints/application/usecases/getCurrentSprintUsecase";
-import { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/getSprintCheckinStatusUsecase";
-import { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/isVoyageProjestSubmissionAllowedUsecase";
-import { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submitWeeklyCheckinUsecase";
-import { SubmitVoyageProjectUsecase } from "@/sprints/application/usecases/submitVoyageProjectUsecase";
-import { GetSprintByNumberUsecase } from "@/sprints/application/usecases/getSprintByNumberUsecase";
-import { FetchAllSprintsUsecase } from "@/sprints/application/usecases/fetchAllSprintsUsecase";
+import { IsCurrentSprintUsecase } from "@/sprints/application/usecases/is-current-sprint-usecase";
+import { SprintsApiAdapter } from "@/sprints/adapters/secondary/sprints-api-adapter";
+import { SprintsClientAdapter } from "@/sprints/adapters/primary/sprints-client-adapter";
+import { FetchSprintsUsecase } from "@/sprints/application/usecases/fetch-sprints-usecase";
+import { GetCurrentSprintUsecase } from "@/sprints/application/usecases/get-current-sprint-usecase";
+import { GetSprintCheckinStatusUsecase } from "@/sprints/application/usecases/get-sprint-checkin-status-usecase";
+import { IsVoyageProjestSubmissionAllowedUsecase } from "@/sprints/application/usecases/is-voyage-projest-submission-allowed-usecase";
+import { SubmitWeeklyCheckinUsecase } from "@/sprints/application/usecases/submit-weekly-checkin-usecase";
+import { SubmitVoyageProjectUsecase } from "@/sprints/application/usecases/submit-voyage-project-usecase";
+import { GetSprintByNumberUsecase } from "@/sprints/application/usecases/get-sprint-by-number-usecase";
+import { FetchAllSprintsUsecase } from "@/sprints/application/usecases/fetch-all-sprints-usecase";
 
 export const registerSprintsDependencies = () => {
   // ports

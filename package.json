@@ -99,6 +99,10 @@
       "import": "./dist/user/index.js",
       "types": "./dist/user/index.d.ts"
     },
+    "./voyage-resources": {
+      "import": "./dist/voyage-resources/index.js",
+      "types": "./dist/voyage-resources/index.d.ts"
+    },
     "./voyage-team": {
       "import": "./dist/voyage-team/index.js",
       "types": "./dist/voyage-team/index.d.ts"

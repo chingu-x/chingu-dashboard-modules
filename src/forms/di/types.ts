@@ -1,9 +1,9 @@
 import type { InjectionToken } from "tsyringe";
-import type { FormsApiPort } from "@/forms/ports/secondary/formApiPort";
-import type { FormsClientAdapter } from "@/forms/adapters/primary/formsClientAdapter";
-import type { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetchFormQuestionsUsecase";
-import type { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetchWeeklyCheckinFormUsecase";
-import type { FetchSubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/fetchSubmitVoyageProjectFormUsecase";
+import type { FormsApiPort } from "@/forms/ports/secondary/form-api-port";
+import type { FormsClientAdapter } from "@/forms/adapters/primary/forms-client-adapter";
+import type { FetchFormQuestionsUsecase } from "@/forms/application/usecases/fetch-form-questions-usecase";
+import type { FetchWeeklyCheckinFormUsecase } from "@/forms/application/usecases/fetch-weekly-checkin-form-usecase";
+import type { FetchSubmitVoyageProjectFormUsecase } from "@/forms/application/usecases/fetch-submit-voyage-project-form-usecase";
 
 export const FORMS_TYPES = {
   // ports
