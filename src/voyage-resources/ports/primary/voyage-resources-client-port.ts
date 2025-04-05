@@ -2,11 +2,13 @@ import type {
   AddVoyageResourceClientRequestDto,
   DeleteVoyageResourceClientRequestDto,
   FetchVoyageResourcesClientRequestDto,
+  SortVoyageResourcesClientRequestDto,
 } from "@/voyage-resources/application/dtos/request.dto";
 import type {
   AddVoyageResourceResponseDto,
   DeleteVoyageResourceResponseDto,
   FetchVoyageResourcesResponseDto,
+  SortVoyageResourcesResponseDto,
 } from "@/voyage-resources/application/dtos/response.dto";
 
 export interface VoyageResourcesClientPort {
