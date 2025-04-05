@@ -22,3 +22,5 @@ export interface DeleteVoyageResourceResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export type SortVoyageResourcesResponseDto = VoyageResource[];
