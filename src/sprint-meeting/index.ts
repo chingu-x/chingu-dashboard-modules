@@ -1,5 +1,6 @@
-export { SprintMeetingClientAdapter } from "./adapters/primary/sprintMeetingClientAdapter";
+export { SprintMeetingClientAdapter } from "./adapters/primary/sprint-meeting-client-adapter";
 export {
+  FetchMeetingClientRequestDto,
   AddMeetingClientRequestDto,
   AddAgendaTopicClientRequestDto,
   EditAgendaTopicClientRequestDto,
@@ -9,6 +10,10 @@ export {
   AddSprintMeetingSectionClientRequestDto,
   EditSprintReviewSectionClientRequestDto,
   EditSprintPlanningSectionClientRequestDto,
+  FetchSprintMeetingFormClientRequestDto,
+  GetAgendaByIdClientRequestDto,
+  GetSprintMeetingSectionResponsesClientRequestDto,
+  GetSprintMeetingIdClientRequesDto,
 } from "./application/dtos/request.dto";
 export {
   AddMeetingResponseDto,
@@ -26,4 +31,5 @@ export {
   SectionBody,
   Agenda,
   MeetingFormData,
+  SprintMeetingForm,
 } from "./application/types/index";

@@ -1,6 +1,6 @@
 import type { User } from "@/user/application/types";
 
-export interface GetMyTeamUsecaseDto {
+export interface FetchMyTeamUsecaseDto {
   teamId: string;
   user: User;
 }

@@ -1,11 +1,12 @@
 import type { InjectionToken } from "tsyringe";
-import type { UpdateDirectoryWithCurrentTimeUsecase } from "@/timezone/application/usecases/updateDirectoryWithCurrentTimeUsecase";
-import type { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/getMeetingLongDateTimeFormatUsecase";
-import type { TimezoneClientAdapter } from "@/timezone/adapters/primary/timezoneClientAdapter";
-import type { GetMeetingDateUsecase } from "@/timezone/application/usecases/getMeetingDateUsecase";
-import type { GetMeetingTimeWithTZAbbreviationUsecase } from "@/timezone/application/usecases/getMeetingTimeWithTZAbbreviationUsecase";
-import type { GetSprintStartDateBySprintNumberUsecase } from "@/timezone/application/usecases/getSprintStartDateBySprintNumberUsecase";
-import type { GetSprintEndDateBySprintNumberUsecase } from "@/timezone/application/usecases/getSprintEndDateBySprintNumberUsecase";
+import type { UpdateDirectoryWithCurrentTimeUsecase } from "@/timezone/application/usecases/update-directory-with-current-time-usecase";
+import type { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/get-meeting-long-date-time-format-usecase";
+import type { TimezoneClientAdapter } from "@/timezone/adapters/primary/timezone-client-adapter";
+import type { GetMeetingDateUsecase } from "@/timezone/application/usecases/get-meeting-date-usecase";
+import type { GetMeetingTimeWithTZAbbreviationUsecase } from "@/timezone/application/usecases/get-meeting-time-with-tz-abbreviation-usecase";
+import type { GetSprintStartDateBySprintNumberUsecase } from "@/timezone/application/usecases/get-sprint-start-date-by-sprint-number-usecase";
+import type { GetSprintEndDateBySprintNumberUsecase } from "@/timezone/application/usecases/get-sprint-end-date-by-sprint-number-usecase";
+import type { GetVoyageResourceDateUsecase } from "@/timezone/application/usecases/get-voyage-resource-added-date-usecase";
 
 export const TIME_ZONE_TYPES = {
   // ports
@@ -34,6 +35,10 @@ export const TIME_ZONE_TYPES = {
   GetSprintEndDateBySprintNumberUsecase: Symbol.for(
     "GetSprintEndDateBySprintNumberUsecase",
   ) as InjectionToken<GetSprintEndDateBySprintNumberUsecase>,
+
+  GetVoyageResourceDateUsecase: Symbol.for(
+    "GetVoyageResourceDateUsecase",
+  ) as InjectionToken<GetVoyageResourceDateUsecase>,
 
   // adapters
   TimezoneClientAdapter: Symbol.for(

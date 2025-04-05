@@ -1,6 +1,6 @@
 import type { MyTeam } from "@/my-team/application/types";
 
-export type GetMyTeamResponseDto = MyTeam;
+export type FetchMyTeamResponseDto = MyTeam;
 
 export interface EditHoursResponseDto {
   id: number;

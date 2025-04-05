@@ -1,4 +1,5 @@
 import type { Sprint } from "@/sprints/application/types/index";
+import type { VoyageResource } from "@/voyage-resources";
 
 // client
 export interface GetMeetingLongDateTimeFormatClientRequestDto {
@@ -25,6 +26,11 @@ export interface GetSprintStartDateBySprintNumberClientRequestDto {
 export interface GetSprintEndDateBySprintNumberClientRequestDto {
   sprints: Sprint[];
   sprintNumber: string;
+  timezone: string;
+}
+
+export interface GetVoyageResourceDateClientRequestDto {
+  voyageResources: VoyageResource[];
   timezone: string;
 }
 
