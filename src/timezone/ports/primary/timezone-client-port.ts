@@ -33,4 +33,8 @@ export interface TimezoneClientPort {
   getSprintEndDateBySprintNumber: (
     props: GetSprintEndDateBySprintNumberClientRequestDto,
   ) => GetSprintEndDateBySprintNumberResponseDto;
+
+  getVoyageResourceAddedDate: (
+    props: GetVoyageResourceAddedDateClientRequestDto,
+  ) => GetVoyageResourceAddedDateResponseDto;
 }
