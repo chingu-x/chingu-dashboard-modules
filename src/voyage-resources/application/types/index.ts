@@ -11,3 +11,8 @@ export interface VoyageResource {
     member: VoyageMember;
   };
 }
+
+export enum SortOption {
+  ASC = "ASC",
+  DESC = "DESC",
+}
