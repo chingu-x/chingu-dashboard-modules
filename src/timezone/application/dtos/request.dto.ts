@@ -1,5 +1,5 @@
 import type { Sprint } from "@/sprints/application/types/index";
-import { VoyageResource } from "@/voyage-resources";
+import type { VoyageResource } from "@/voyage-resources";
 
 // client
 export interface GetMeetingLongDateTimeFormatClientRequestDto {
