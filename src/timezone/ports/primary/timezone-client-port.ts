@@ -4,6 +4,7 @@ import type {
   GetMeetingTimeWithTZAbbreviationClientRequestDto,
   GetSprintEndDateBySprintNumberClientRequestDto,
   GetSprintStartDateBySprintNumberClientRequestDto,
+  GetVoyageResourceAddedDateClientRequestDto,
 } from "@/timezone/application/dtos/request.dto";
 import type {
   GetMeetingDateResponseDto,
@@ -11,6 +12,7 @@ import type {
   GetMeetingTimeWithTZAbbreviationResponseDto,
   GetSprintEndDateBySprintNumberResponseDto,
   GetSprintStartDateBySprintNumberResponseDto,
+  GetVoyageResourceAddedDateResponseDto,
 } from "@/timezone/application/dtos/response.dto";
 
 export interface TimezoneClientPort {
