@@ -7,6 +7,7 @@ import {
   GetMeetingTimeWithTZAbbreviationClientRequestDto,
   GetSprintEndDateBySprintNumberClientRequestDto,
   GetSprintStartDateBySprintNumberClientRequestDto,
+  GetVoyageResourceAddedDateClientRequestDto,
 } from "@/timezone/application/dtos/request.dto";
 import {
   GetMeetingDateResponseDto,
@@ -14,6 +15,7 @@ import {
   GetMeetingTimeWithTZAbbreviationResponseDto,
   GetSprintEndDateBySprintNumberResponseDto,
   GetSprintStartDateBySprintNumberResponseDto,
+  GetVoyageResourceAddedDateResponseDto,
 } from "@/timezone/application/dtos/response.dto";
 import { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/get-meeting-long-date-time-format-usecase";
 import { GetMeetingDateUsecase } from "@/timezone/application/usecases/get-meeting-date-usecase";
@@ -42,6 +44,9 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
 
     @inject(TYPES.GetSprintEndDateBySprintNumberUsecase)
     private readonly getSprintEndDateBySprintNumberUsecase: GetSprintEndDateBySprintNumberUsecase,
+
+    @inject(TYPES.GetVoyageResourceAddedDateUsecase)
+    private readonly getVoyageResourceAddedDateUsecase: GetVoyageResourceAddedDateUsecase,
   ) {}
 
   // returns date in this format as a date: October 10, 2024 12:00 AM in the user's timezone
@@ -107,6 +112,16 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
 
     return this.getSprintEndDateBySprintNumberUsecase.execute({
       sprint,
+      timezone,
+    });
+  }
+
+  getVoyageResourceAddedDate({
+    voyageResource,
+    timezone,
+  }: GetVoyageResourceAddedDateClientRequestDto): GetVoyageResourceAddedDateResponseDto {
+    return this.getVoyageResourceAddedDateUsecase.execute({
+      voyageResource,
       timezone,
     });
   }
