@@ -9,3 +9,5 @@ export type GetMeetingTimeWithTZAbbreviationResponseDto = string;
 export type GetSprintStartDateBySprintNumberResponseDto = Date;
 
 export type GetSprintEndDateBySprintNumberResponseDto = Date;
+
+export type GetVoyageResourceAddedDateResponseDto = string;
