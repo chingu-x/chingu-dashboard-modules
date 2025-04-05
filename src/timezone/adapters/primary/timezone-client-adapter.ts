@@ -7,7 +7,7 @@ import {
   GetMeetingTimeWithTZAbbreviationClientRequestDto,
   GetSprintEndDateBySprintNumberClientRequestDto,
   GetSprintStartDateBySprintNumberClientRequestDto,
-  GetVoyageResourceAddedDateClientRequestDto,
+  GetVoyageResourceDateClientRequestDto,
 } from "@/timezone/application/dtos/request.dto";
 import {
   GetMeetingDateResponseDto,
@@ -15,7 +15,7 @@ import {
   GetMeetingTimeWithTZAbbreviationResponseDto,
   GetSprintEndDateBySprintNumberResponseDto,
   GetSprintStartDateBySprintNumberResponseDto,
-  GetVoyageResourceAddedDateResponseDto,
+  GetVoyageResourceDateResponseDto,
 } from "@/timezone/application/dtos/response.dto";
 import { GetMeetingLongDateTimeFormatUsecase } from "@/timezone/application/usecases/get-meeting-long-date-time-format-usecase";
 import { GetMeetingDateUsecase } from "@/timezone/application/usecases/get-meeting-date-usecase";
@@ -45,8 +45,8 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
     @inject(TYPES.GetSprintEndDateBySprintNumberUsecase)
     private readonly getSprintEndDateBySprintNumberUsecase: GetSprintEndDateBySprintNumberUsecase,
 
-    @inject(TYPES.GetVoyageResourceAddedDateUsecase)
-    private readonly getVoyageResourceAddedDateUsecase: GetVoyageResourceAddedDateUsecase,
+    @inject(TYPES.GetVoyageResourceDateUsecase)
+    private readonly getVoyageResourceDateUsecase: GetVoyageResourceDateUsecase,
   ) {}
 
   // returns date in this format as a date: October 10, 2024 12:00 AM in the user's timezone
@@ -116,12 +116,12 @@ export class TimezoneClientAdapter implements TimezoneClientPort {
     });
   }
 
-  getVoyageResourceAddedDate({
-    voyageResource,
+  getVoyageResourceDate({
+    voyageResources,
     timezone,
-  }: GetVoyageResourceAddedDateClientRequestDto): GetVoyageResourceAddedDateResponseDto {
-    return this.getVoyageResourceAddedDateUsecase.execute({
-      voyageResource,
+  }: GetVoyageResourceDateClientRequestDto): GetVoyageResourceDateResponseDto {
+    return this.getVoyageResourceDateUsecase.execute({
+      voyageResources,
       timezone,
     });
   }

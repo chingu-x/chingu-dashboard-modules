@@ -31,7 +31,7 @@ export interface GetSprintEndDateBySprintNumberUsecaseDto {
   timezone: string;
 }
 
-export interface GetVoyageResourceAddedDateUsecaseDto {
-  voyageResource: VoyageResource;
+export interface GetVoyageResourceDateUsecaseDto {
+  voyageResources: VoyageResource[];
   timezone: string;
 }

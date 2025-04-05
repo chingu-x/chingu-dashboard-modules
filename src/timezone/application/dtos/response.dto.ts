@@ -1,3 +1,5 @@
+import type { VoyageResource } from "@/voyage-resources";
+
 export type UpdateDirectoryWithCurrentTimeResponseDto = void;
 
 export type GetMeetingLongDateTimeFormatResponseDto = Date;
@@ -10,4 +12,4 @@ export type GetSprintStartDateBySprintNumberResponseDto = Date;
 
 export type GetSprintEndDateBySprintNumberResponseDto = Date;
 
-export type GetVoyageResourceAddedDateResponseDto = string;
+export type GetVoyageResourceDateResponseDto = VoyageResource[];

@@ -29,8 +29,8 @@ export interface GetSprintEndDateBySprintNumberClientRequestDto {
   timezone: string;
 }
 
-export interface GetVoyageResourceAddedDateClientRequestDto {
-  voyageResource: VoyageResource;
+export interface GetVoyageResourceDateClientRequestDto {
+  voyageResources: VoyageResource[];
   timezone: string;
 }
 
