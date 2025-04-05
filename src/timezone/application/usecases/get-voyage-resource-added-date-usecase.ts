@@ -11,6 +11,7 @@ export class GetVoyageResourceDateUsecase {
   }: GetVoyageResourceDateUsecaseDto): GetVoyageResourceDateResponseDto {
     return voyageResources.map((resource) => ({
       ...resource,
+      createdAt: formatInTimeZone(resource.createdAt, timezone, "MMM dd, yyyy"),
       updatedAt: formatInTimeZone(resource.updatedAt, timezone, "MMM dd, yyyy"),
     }));
   }
