@@ -1,4 +1,7 @@
-import type { TechStackCategory } from "@/tech-stack/application/types";
+import type {
+  TechStackCategory,
+  TechStackItemVotes,
+} from "@/tech-stack/application/types";
 
 export type FetchTechStackResponseDto = TechStackCategory[];
 
@@ -8,4 +11,12 @@ export interface AddTechStackItemResponseDto {
   teamMemberId: number;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface EditTechStackItemResponseDto {
+  id: number;
+  name: string;
+  voyageTeamMemberId: number;
+  voyageTeamId: number;
+  teamTechStackItemVotes: TechStackItemVotes[];
 }
