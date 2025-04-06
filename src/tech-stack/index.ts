@@ -1,5 +1,9 @@
 export { TechStackClientAdapter } from "./adapters/primary/tech-stack-client-adapter";
-export { FetchTechStackClientRequestDto } from "./application/dtos/request.dto";
+export {
+  FetchTechStackClientRequestDto,
+  AddTechStackItemClientRequestDto,
+} from "./application/dtos/request.dto";
+export { AddTechStackItemResponseDto } from "./application/dtos/response.dto";
 export {
   TechStackCategory,
   TechStackItem,
