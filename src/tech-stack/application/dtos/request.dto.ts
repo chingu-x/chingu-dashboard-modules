@@ -15,6 +15,10 @@ export interface EditTechStackItemClientRequestDto {
   techName: string;
 }
 
+export interface DeleteTechStackItemClientRequestDto {
+  teamTechItemId: number;
+}
+
 // api
 export interface FetchTechStackApiRequestDto {
   teamId: string;
