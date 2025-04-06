@@ -43,3 +43,7 @@ export interface EditTechStackItemApiRequestDto {
 export interface DeleteTechStackItemApiRequestDto {
   teamTechItemId: number;
 }
+
+export interface AddTechStackItemVoteApiRequestDto {
+  teamTechItemId: number;
+}
