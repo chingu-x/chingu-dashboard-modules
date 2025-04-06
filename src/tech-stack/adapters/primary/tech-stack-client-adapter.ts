@@ -3,12 +3,14 @@ import { TYPES } from "@/types";
 import { TechStackClientPort } from "@/tech-stack/ports/primary/tech-stack-client-port";
 import {
   AddTechStackItemClientRequestDto,
+  AddTechStackItemVoteClientRequestDto,
   DeleteTechStackItemClientRequestDto,
   EditTechStackItemClientRequestDto,
   FetchTechStackClientRequestDto,
 } from "@/tech-stack/application/dtos/request.dto";
 import {
   AddTechStackItemResponseDto,
+  AddTechStackItemVoteResponseDto,
   DeleteTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
@@ -32,6 +34,9 @@ export class TechStackClientAdapter implements TechStackClientPort {
 
     @inject(TYPES.DeleteTechStackItemUsecase)
     private readonly deleteTechStackItemUsecase: DeleteTechStackItemUsecase,
+
+    @inject(TYPES.AddTechStackItemVoteUsecase)
+    private readonly addTechStackItemVoteUsecase: AddTechStackItemVoteUsecase,
   ) {}
 
   async fetchTechStack({
@@ -68,6 +73,14 @@ export class TechStackClientAdapter implements TechStackClientPort {
     teamTechItemId,
   }: DeleteTechStackItemClientRequestDto): Promise<DeleteTechStackItemResponseDto> {
     return await this.deleteTechStackItemUsecase.execute({
+      teamTechItemId,
+    });
+  }
+
+  async addTechStackItemVote({
+    teamTechItemId,
+  }: AddTechStackItemVoteClientRequestDto): Promise<AddTechStackItemVoteResponseDto> {
+    return await this.addTechStackItemVoteUsecase.execute({
       teamTechItemId,
     });
   }
