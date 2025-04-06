@@ -3,6 +3,7 @@ import { TYPES } from "@/types";
 import { TechStackClientPort } from "@/tech-stack/ports/primary/tech-stack-client-port";
 import { FetchTechStackClientRequestDto } from "@/tech-stack/application/dtos/request.dto";
 import { FetchTechStackResponseDto } from "@/tech-stack/application/dtos/response.dto";
+import { FetchTechStackUsecase } from "@/tech-stack/application/usecases/fetch-tech-stack-usecase";
 
 @injectable()
 export class TechStackClientAdapter implements TechStackClientPort {
