@@ -3,11 +3,13 @@ import { TYPES } from "@/types";
 import { TechStackClientPort } from "@/tech-stack/ports/primary/tech-stack-client-port";
 import {
   AddTechStackItemClientRequestDto,
+  DeleteTechStackItemClientRequestDto,
   EditTechStackItemClientRequestDto,
   FetchTechStackClientRequestDto,
 } from "@/tech-stack/application/dtos/request.dto";
 import {
   AddTechStackItemResponseDto,
+  DeleteTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
 } from "@/tech-stack/application/dtos/response.dto";
@@ -26,6 +28,9 @@ export class TechStackClientAdapter implements TechStackClientPort {
 
     @inject(TYPES.EditTechStackItemUsecase)
     private readonly editTechStackItemUsecase: EditTechStackItemUsecase,
+
+    @inject(TYPES.DeleteTechStackItemUsecase)
+    private readonly deleteTechStackItemUsecase: DeleteTechStackItemUsecase,
   ) {}
 
   async fetchTechStack({
@@ -55,6 +60,14 @@ export class TechStackClientAdapter implements TechStackClientPort {
     return await this.editTechStackItemUsecase.execute({
       teamTechItemId,
       techName,
+    });
+  }
+
+  async deleteTechStackItem({
+    teamTechItemId,
+  }: DeleteTechStackItemClientRequestDto): Promise<DeleteTechStackItemResponseDto> {
+    return await this.deleteTechStackItemUsecase.execute({
+      teamTechItemId,
     });
   }
 }
