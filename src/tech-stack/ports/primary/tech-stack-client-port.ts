@@ -1,11 +1,13 @@
 import type {
   AddTechStackItemClientRequestDto,
+  AddTechStackItemVoteClientRequestDto,
   DeleteTechStackItemClientRequestDto,
   EditTechStackItemClientRequestDto,
   FetchTechStackClientRequestDto,
 } from "@/tech-stack/application/dtos/request.dto";
 import type {
   AddTechStackItemResponseDto,
+  AddTechStackItemVoteResponseDto,
   DeleteTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
