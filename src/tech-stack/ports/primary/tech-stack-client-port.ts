@@ -15,4 +15,8 @@ export interface TechStackClientPort {
   addTechStackItem: (
     props: AddTechStackItemClientRequestDto,
   ) => Promise<AddTechStackItemResponseDto>;
+
+  editTechStackItem: (
+    props: EditTechStackItemClientRequestDto,
+  ) => Promise<EditTechStackItemResponseDto>;
 }
