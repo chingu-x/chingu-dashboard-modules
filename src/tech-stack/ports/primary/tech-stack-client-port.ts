@@ -5,4 +5,8 @@ export interface TechStackClientPort {
   fetchTechStack: (
     props: FetchTechStackClientRequestDto,
   ) => Promise<FetchTechStackResponseDto>;
+
+  addTechStackItem: (
+    props: AddTechTackItemClientRequestDto,
+  ) => Promise<AddTechTackItemResponseDto>;
 }
