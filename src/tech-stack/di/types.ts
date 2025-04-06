@@ -4,6 +4,7 @@ import type { TechStackClientAdapter } from "@/tech-stack/adapters/primary/tech-
 import type { FetchTechStackUsecase } from "@/tech-stack/application/usecases/fetch-tech-stack-usecase";
 import type { AddTechStackItemUsecase } from "@/tech-stack/application/usecases/add-tech-stack-item-usecase";
 import type { EditTechStackItemUsecase } from "@/tech-stack/application/usecases/edit-tech-stack-item-usecase";
+import type { DeleteTechStackItemUsecase } from "@/tech-stack/application/usecases/delete-tech-stack-item-usecase";
 
 export const TECH_STACK_TYPES = {
   // ports
@@ -23,6 +24,10 @@ export const TECH_STACK_TYPES = {
   EditTechStackItemUsecase: Symbol.for(
     "EditTechStackItemUsecase",
   ) as InjectionToken<EditTechStackItemUsecase>,
+
+  DeleteTechStackItemUsecase: Symbol.for(
+    "DeleteTechStackItemUsecase",
+  ) as InjectionToken<DeleteTechStackItemUsecase>,
 
   // adapters
   TechStackClientAdapter: Symbol.for(
