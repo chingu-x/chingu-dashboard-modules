@@ -10,6 +10,7 @@ import {
   FetchTechStackResponseDto,
 } from "@/tech-stack/application/dtos/response.dto";
 import { FetchTechStackUsecase } from "@/tech-stack/application/usecases/fetch-tech-stack-usecase";
+import { AddTechStackItemUsecase } from "@/tech-stack/application/usecases/add-tech-stack-item-usecase";
 
 @injectable()
 export class TechStackClientAdapter implements TechStackClientPort {
