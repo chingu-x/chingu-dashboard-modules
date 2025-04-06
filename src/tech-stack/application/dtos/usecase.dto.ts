@@ -8,3 +8,8 @@ export interface AddTechStackItemUsecaseDto {
   techCategoryId: number;
   voyageTeamMemberId: number;
 }
+
+export interface EditTechStackItemUsecaseDto {
+  teamTechItemId: number;
+  techName: string;
+}
