@@ -14,6 +14,10 @@ interface DeleteTechStackItemUrlProps {
   teamTechItemId: number;
 }
 
+interface AddTechStackItemVoteUrlProps {
+  teamTechItemId: number;
+}
+
 const TechStackUrls = {
   fetchTechStack({ teamId }: FetchTechStackUrlProps) {
     return `/api/v1/voyages/teams/${teamId}/techs`;
@@ -26,6 +30,9 @@ const TechStackUrls = {
   },
   deleteTechStackItem({ teamTechItemId }: DeleteTechStackItemUrlProps) {
     return `/api/v1/voyages/techs/${teamTechItemId}`;
+  },
+  addTechStackItemVote({ teamTechItemId }: AddTechStackItemVoteUrlProps) {
+    return `/api/v1/voyages/techs/${teamTechItemId}/vote`;
   },
 } as const;
 
