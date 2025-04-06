@@ -17,3 +17,7 @@ export interface EditTechStackItemUsecaseDto {
 export interface DeleteTechStackItemUsecaseDto {
   teamTechItemId: number;
 }
+
+export interface AddTechStackItemVoteUsecaseDto {
+  teamTechItemId: number;
+}
