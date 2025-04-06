@@ -4,6 +4,7 @@ import { RestApiPort } from "@/rest-api/ports/secondary/rest-api-port";
 import { TechStackApiPort } from "@/tech-stack/ports/secondary/tech-stack-api-port";
 import { FetchTechStackApiRequestDto } from "@/tech-stack/application/dtos/request.dto";
 import { FetchTechStackResponseDto } from "@/tech-stack/application/dtos/response.dto";
+import TechStackUrls from "@/tech-stack/application/constants/tech-stack-urls";
 
 @injectable()
 export class TechStackApiAdapter implements TechStackApiPort {
@@ -16,7 +17,7 @@ export class TechStackApiAdapter implements TechStackApiPort {
     teamId,
   }: FetchTechStackApiRequestDto): Promise<FetchTechStackResponseDto> {
     return await this.apiClient.get({
-      url: UserUrls.fetchUser(),
+      url: TechStackUrls.fetchTechStack({ teamId }),
     });
   }
 }
