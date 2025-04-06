@@ -28,11 +28,13 @@ export class TechStackClientAdapter implements TechStackClientPort {
   }
 
   async addTechStackItem({
+    teamId,
     techName,
     techCategoryId,
     voyageTeamMemberId,
   }: AddTechStackItemClientRequestDto): Promise<AddTechStackItemResponseDto> {
     return await this.addTechStackItemUsecase.execute({
+      teamId,
       techName,
       techCategoryId,
       voyageTeamMemberId,

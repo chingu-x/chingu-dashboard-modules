@@ -3,6 +3,7 @@ export interface FetchTechStackUsecaseDto {
 }
 
 export interface AddTechStackItemUsecaseDto {
+  teamId: string;
   techName: string;
   techCategoryId: number;
   voyageTeamMemberId: number;

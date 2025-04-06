@@ -1,23 +1,23 @@
-interface FetchVoyageResourcesProps {
+interface FetchVoyageResourcesUrlProps {
   teamId: string;
 }
 
-interface AddVoyageResourceProps {
+interface AddVoyageResourceUrlProps {
   teamId: string;
 }
 
-interface DeleteVoyageResourceProps {
+interface DeleteVoyageResourceUrlProps {
   resourceId: number;
 }
 
 const VoyageResourcesUrls = {
-  fetchVoyageResources({ teamId }: FetchVoyageResourcesProps) {
+  fetchVoyageResources({ teamId }: FetchVoyageResourcesUrlProps) {
     return `api/v1/voyages/teams/${teamId}`;
   },
-  addVoyageResource({ teamId }: AddVoyageResourceProps) {
+  addVoyageResource({ teamId }: AddVoyageResourceUrlProps) {
     return `api/v1/voyages/teams/${teamId}`;
   },
-  deleteVoyageResource({ resourceId }: DeleteVoyageResourceProps) {
+  deleteVoyageResource({ resourceId }: DeleteVoyageResourceUrlProps) {
     return `api/v1/voyages/resources/${resourceId}`;
   },
 } as const;

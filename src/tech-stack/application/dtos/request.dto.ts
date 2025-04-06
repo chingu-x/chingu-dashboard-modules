@@ -4,6 +4,7 @@ export interface FetchTechStackClientRequestDto {
 }
 
 export interface AddTechStackItemClientRequestDto {
+  teamId: string;
   techName: string;
   techCategoryId: number;
   voyageTeamMemberId: number;
@@ -15,6 +16,7 @@ export interface FetchTechStackApiRequestDto {
 }
 
 export interface AddTechStackItemApiRequestDto {
+  teamId: string;
   techName: string;
   techCategoryId: number;
   voyageTeamMemberId: number;
