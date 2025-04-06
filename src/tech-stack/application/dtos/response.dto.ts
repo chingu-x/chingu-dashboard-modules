@@ -20,3 +20,8 @@ export interface EditTechStackItemResponseDto {
   voyageTeamId: number;
   teamTechStackItemVotes: TechStackItemVotes[];
 }
+
+export interface DeleteTechStackItemResponseDto {
+  message: string;
+  statusCode: number;
+}
