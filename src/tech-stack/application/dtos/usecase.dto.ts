@@ -13,3 +13,7 @@ export interface EditTechStackItemUsecaseDto {
   teamTechItemId: number;
   techName: string;
 }
+
+export interface DeleteTechStackItemUsecaseDto {
+  teamTechItemId: number;
+}
