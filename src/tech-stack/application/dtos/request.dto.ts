@@ -35,3 +35,7 @@ export interface EditTechStackItemApiRequestDto {
   teamTechItemId: number;
   techName: string;
 }
+
+export interface DeleteTechStackItemApiRequestDto {
+  teamTechItemId: number;
+}
