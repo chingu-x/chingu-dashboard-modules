@@ -2,8 +2,14 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { RestApiPort } from "@/rest-api/ports/secondary/rest-api-port";
 import { TechStackApiPort } from "@/tech-stack/ports/secondary/tech-stack-api-port";
-import { FetchTechStackApiRequestDto } from "@/tech-stack/application/dtos/request.dto";
-import { FetchTechStackResponseDto } from "@/tech-stack/application/dtos/response.dto";
+import {
+  AddTechStackItemApiRequestDto,
+  FetchTechStackApiRequestDto,
+} from "@/tech-stack/application/dtos/request.dto";
+import {
+  AddTechStackItemResponseDto,
+  FetchTechStackResponseDto,
+} from "@/tech-stack/application/dtos/response.dto";
 import TechStackUrls from "@/tech-stack/application/constants/tech-stack-urls";
 
 @injectable()
@@ -18,6 +24,18 @@ export class TechStackApiAdapter implements TechStackApiPort {
   }: FetchTechStackApiRequestDto): Promise<FetchTechStackResponseDto> {
     return await this.apiClient.get({
       url: TechStackUrls.fetchTechStack({ teamId }),
+    });
+  }
+
+  async addTechStackItem({
+    teamId,
+    techName,
+    techCategoryId,
+    voyageTeamMemberId,
+  }: AddTechStackItemApiRequestDto): Promise<AddTechStackItemResponseDto> {
+    return await this.apiClient.post({
+      url: TechStackUrls.addTechStackItem({ teamId }),
+      payload: { techName, techCategoryId, voyageTeamMemberId },
     });
   }
 }
