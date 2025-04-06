@@ -4,12 +4,14 @@ import { RestApiPort } from "@/rest-api/ports/secondary/rest-api-port";
 import { TechStackApiPort } from "@/tech-stack/ports/secondary/tech-stack-api-port";
 import {
   AddTechStackItemApiRequestDto,
+  AddTechStackItemVoteApiRequestDto,
   DeleteTechStackItemApiRequestDto,
   EditTechStackItemApiRequestDto,
   FetchTechStackApiRequestDto,
 } from "@/tech-stack/application/dtos/request.dto";
 import {
   AddTechStackItemResponseDto,
+  AddTechStackItemVoteResponseDto,
   DeleteTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
@@ -58,6 +60,14 @@ export class TechStackApiAdapter implements TechStackApiPort {
   }: DeleteTechStackItemApiRequestDto): Promise<DeleteTechStackItemResponseDto> {
     return await this.apiClient.delete({
       url: TechStackUrls.deleteTechStackItem({ teamTechItemId }),
+    });
+  }
+
+  async addTechStackItemVote({
+    teamTechItemId,
+  }: AddTechStackItemVoteApiRequestDto): Promise<AddTechStackItemVoteResponseDto> {
+    return await this.apiClient.post({
+      url: TechStackUrls.addTechStackItemVote({ teamTechItemId }),
     });
   }
 }
