@@ -25,3 +25,11 @@ export interface DeleteTechStackItemResponseDto {
   message: string;
   statusCode: number;
 }
+
+export interface AddTechStackItemVoteResponseDto {
+  teamTechStackItemVoteId: number;
+  teamTechId: number;
+  teamMemberId: number;
+  createdAt: string;
+  updatedAt: string;
+}
