@@ -4,6 +4,7 @@ import { TechStackApiAdapter } from "@/tech-stack/adapters/secondary/tech-stack-
 import { TechStackClientAdapter } from "@/tech-stack/adapters/primary/tech-stack-client-adapter";
 import { FetchTechStackUsecase } from "@/tech-stack/application/usecases/fetch-tech-stack-usecase";
 import { AddTechStackItemUsecase } from "@/tech-stack/application/usecases/add-tech-stack-item-usecase";
+import { EditTechStackItemUsecase } from "@/tech-stack/application/usecases/edit-tech-stack-item-usecase";
 
 export const registerTechStackDependencies = () => {
   // ports
@@ -18,6 +19,10 @@ export const registerTechStackDependencies = () => {
 
   container.register(TECH_STACK_TYPES.AddTechStackItemUsecase, {
     useClass: AddTechStackItemUsecase,
+  });
+
+  container.register(TECH_STACK_TYPES.EditTechStackItemUsecase, {
+    useClass: EditTechStackItemUsecase,
   });
 
   // adapters
