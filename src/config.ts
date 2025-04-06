@@ -9,7 +9,7 @@ import { registerSprintMeetingDependencies } from "./sprint-meeting/di/config";
 import { registerFormsDependencies } from "./forms/di/config";
 import { registerTimezoneDependencies } from "./timezone/di/config";
 import { registerFeaturesDependencies } from "./features/di/config";
-import { registerVoyageResourcesDependencies } from "./voyage-resources/application/di/config";
+import { registerVoyageResourcesDependencies } from "./voyage-resources/di/config";
 
 export const registerDependencies = () => {
   registerRestApiDependencies();
