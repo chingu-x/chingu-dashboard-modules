@@ -3,10 +3,12 @@ import { TYPES } from "@/types";
 import { TechStackClientPort } from "@/tech-stack/ports/primary/tech-stack-client-port";
 import {
   AddTechStackItemClientRequestDto,
+  EditTechStackItemClientRequestDto,
   FetchTechStackClientRequestDto,
 } from "@/tech-stack/application/dtos/request.dto";
 import {
   AddTechStackItemResponseDto,
+  EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
 } from "@/tech-stack/application/dtos/response.dto";
 import { FetchTechStackUsecase } from "@/tech-stack/application/usecases/fetch-tech-stack-usecase";
@@ -20,6 +22,9 @@ export class TechStackClientAdapter implements TechStackClientPort {
 
     @inject(TYPES.AddTechStackItemUsecase)
     private readonly addTechStackItemUsecase: AddTechStackItemUsecase,
+
+    @inject(TYPES.EditTechStackItemUsecase)
+    private readonly editTechStackItemUsecase: EditTechStackItemUsecase,
   ) {}
 
   async fetchTechStack({
@@ -39,6 +44,16 @@ export class TechStackClientAdapter implements TechStackClientPort {
       techName,
       techCategoryId,
       voyageTeamMemberId,
+    });
+  }
+
+  async editTechStackItem({
+    teamTechItemId,
+    techName,
+  }: EditTechStackItemClientRequestDto): Promise<EditTechStackItemResponseDto> {
+    return await this.editTechStackItemUsecase.execute({
+      teamTechItemId,
+      techName,
     });
   }
 }
