@@ -21,4 +21,8 @@ export interface TechStackClientPort {
   editTechStackItem: (
     props: EditTechStackItemClientRequestDto,
   ) => Promise<EditTechStackItemResponseDto>;
+
+  deleteTechStackItem: (
+    props: DeleteTechStackItemClientRequestDto,
+  ) => Promise<DeleteTechStackItemResponseDto>;
 }
