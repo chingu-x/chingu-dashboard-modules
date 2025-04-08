@@ -6,6 +6,7 @@ export {
   DeleteTechStackItemClientRequestDto,
   AddTechStackItemVoteClientRequestDto,
   RemoveTechStackItemVoteClientRequestDto,
+  FinalizeTechStackClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   AddTechStackItemResponseDto,
@@ -13,6 +14,7 @@ export {
   DeleteTechStackItemResponseDto,
   AddTechStackItemVoteResponseDto,
   RemoveTechStackItemVoteResponseDto,
+  FinalizeTechStackResponseDto,
 } from "./application/dtos/response.dto";
 export {
   TechStackCategory,
