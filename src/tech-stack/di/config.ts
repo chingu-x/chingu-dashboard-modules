@@ -8,6 +8,7 @@ import { EditTechStackItemUsecase } from "@/tech-stack/application/usecases/edit
 import { DeleteTechStackItemUsecase } from "@/tech-stack/application/usecases/delete-tech-stack-item-usecase";
 import { AddTechStackItemVoteUsecase } from "@/tech-stack/application/usecases/add-tech-stack-item-vote-usecase";
 import { RemoveTechStackItemVoteUsecase } from "@/tech-stack/application/usecases/remove-tech-stack-item-vote-usecase";
+import { FinalizeTechStackUsecase } from "@/tech-stack/application/usecases/finalize-tech-stack-usecase";
 
 export const registerTechStackDependencies = () => {
   // ports
@@ -38,6 +39,10 @@ export const registerTechStackDependencies = () => {
 
   container.register(TECH_STACK_TYPES.RemoveTechStackItemVoteUsecase, {
     useClass: RemoveTechStackItemVoteUsecase,
+  });
+
+  container.register(TECH_STACK_TYPES.FinalizeTechStackUsecase, {
+    useClass: FinalizeTechStackUsecase,
   });
 
   // adapters

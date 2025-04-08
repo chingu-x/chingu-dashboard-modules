@@ -7,6 +7,7 @@ import type { EditTechStackItemUsecase } from "@/tech-stack/application/usecases
 import type { DeleteTechStackItemUsecase } from "@/tech-stack/application/usecases/delete-tech-stack-item-usecase";
 import type { AddTechStackItemVoteUsecase } from "@/tech-stack/application/usecases/add-tech-stack-item-vote-usecase";
 import type { RemoveTechStackItemVoteUsecase } from "@/tech-stack/application/usecases/remove-tech-stack-item-vote-usecase";
+import type { FinalizeTechStackUsecase } from "@/tech-stack/application/usecases/finalize-tech-stack-usecase";
 
 export const TECH_STACK_TYPES = {
   // ports
@@ -38,6 +39,10 @@ export const TECH_STACK_TYPES = {
   RemoveTechStackItemVoteUsecase: Symbol.for(
     "RemoveTechStackItemVoteUsecase",
   ) as InjectionToken<RemoveTechStackItemVoteUsecase>,
+
+  FinalizeTechStackUsecase: Symbol.for(
+    "FinalizeTechStackUsecase",
+  ) as InjectionToken<FinalizeTechStackUsecase>,
 
   // adapters
   TechStackClientAdapter: Symbol.for(
