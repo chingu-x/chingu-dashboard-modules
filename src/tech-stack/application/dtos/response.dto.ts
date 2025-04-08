@@ -33,3 +33,8 @@ export interface AddTechStackItemVoteResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface RemoveTechStackItemVoteResponseDto {
+  message: string;
+  statusCode: number;
+}
