@@ -4,6 +4,7 @@ import type {
   DeleteTechStackItemApiRequestDto,
   EditTechStackItemApiRequestDto,
   FetchTechStackApiRequestDto,
+  RemoveTechStackItemVoteApiRequestDto,
 } from "@/tech-stack/application/dtos/request.dto";
 import type {
   AddTechStackItemResponseDto,
@@ -11,6 +12,7 @@ import type {
   DeleteTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
+  RemoveTechStackItemVoteResponseDto,
 } from "@/tech-stack/application/dtos/response.dto";
 
 export interface TechStackApiPort {
@@ -37,4 +39,8 @@ export interface TechStackApiPort {
   addTechStackItemVote: ({
     teamTechItemId,
   }: AddTechStackItemVoteApiRequestDto) => Promise<AddTechStackItemVoteResponseDto>;
+
+  removeTechStackItemVote: ({
+    teamTechItemId,
+  }: RemoveTechStackItemVoteApiRequestDto) => Promise<RemoveTechStackItemVoteResponseDto>;
 }
