@@ -7,6 +7,7 @@ import {
   DeleteTechStackItemClientRequestDto,
   EditTechStackItemClientRequestDto,
   FetchTechStackClientRequestDto,
+  RemoveTechStackItemVoteClientRequestDto,
 } from "@/tech-stack/application/dtos/request.dto";
 import {
   AddTechStackItemResponseDto,
@@ -14,6 +15,7 @@ import {
   DeleteTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
+  RemoveTechStackItemVoteResponseDto,
 } from "@/tech-stack/application/dtos/response.dto";
 import { FetchTechStackUsecase } from "@/tech-stack/application/usecases/fetch-tech-stack-usecase";
 import { AddTechStackItemUsecase } from "@/tech-stack/application/usecases/add-tech-stack-item-usecase";
@@ -38,6 +40,9 @@ export class TechStackClientAdapter implements TechStackClientPort {
 
     @inject(TYPES.AddTechStackItemVoteUsecase)
     private readonly addTechStackItemVoteUsecase: AddTechStackItemVoteUsecase,
+
+    @inject(TYPES.RemoveTechStackItemVoteUsecase)
+    private readonly removeTechStackItemVoteUsecase: RemoveTechStackItemVoteUsecase,
   ) {}
 
   async fetchTechStack({
@@ -82,6 +87,14 @@ export class TechStackClientAdapter implements TechStackClientPort {
     teamTechItemId,
   }: AddTechStackItemVoteClientRequestDto): Promise<AddTechStackItemVoteResponseDto> {
     return await this.addTechStackItemVoteUsecase.execute({
+      teamTechItemId,
+    });
+  }
+
+  async removeTechStackItemVote({
+    teamTechItemId,
+  }: RemoveTechStackItemVoteClientRequestDto): Promise<RemoveTechStackItemVoteResponseDto> {
+    return await this.removeTechStackItemVoteUsecase.execute({
       teamTechItemId,
     });
   }
