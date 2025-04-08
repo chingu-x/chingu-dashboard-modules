@@ -28,4 +28,5 @@ export interface RemoveTechStackItemVoteUsecaseDto {
 
 export interface FinalizeTechStackUsecaseDto {
   techId: number;
+  isSelected: boolean;
 }

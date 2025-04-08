@@ -107,9 +107,11 @@ export class TechStackClientAdapter implements TechStackClientPort {
 
   async finalizeTechStack({
     techId,
+    isSelected,
   }: FinalizeTechStackClientRequestDto): Promise<FinalizeTechStackResponseDto> {
     return await this.finalizeTechStackUsecase.execute({
       techId,
+      isSelected,
     });
   }
 }

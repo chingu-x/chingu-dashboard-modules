@@ -29,6 +29,7 @@ export interface RemoveTechStackItemVoteClientRequestDto {
 
 export interface FinalizeTechStackClientRequestDto {
   techId: number;
+  isSelected: boolean;
 }
 
 // api
@@ -62,4 +63,5 @@ export interface RemoveTechStackItemVoteApiRequestDto {
 
 export interface FinalizeTechStackApiRequestDto {
   techId: number;
+  isSelected: boolean;
 }

@@ -8,6 +8,7 @@ import {
   DeleteTechStackItemApiRequestDto,
   EditTechStackItemApiRequestDto,
   FetchTechStackApiRequestDto,
+  FinalizeTechStackApiRequestDto,
   RemoveTechStackItemVoteApiRequestDto,
 } from "@/tech-stack/application/dtos/request.dto";
 import {
@@ -16,6 +17,7 @@ import {
   DeleteTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
+  FinalizeTechStackResponseDto,
   RemoveTechStackItemVoteResponseDto,
 } from "@/tech-stack/application/dtos/response.dto";
 import TechStackUrls from "@/tech-stack/application/constants/tech-stack-urls";
@@ -78,6 +80,16 @@ export class TechStackApiAdapter implements TechStackApiPort {
   }: RemoveTechStackItemVoteApiRequestDto): Promise<RemoveTechStackItemVoteResponseDto> {
     return await this.apiClient.delete({
       url: TechStackUrls.addTechStackItemVote({ teamTechItemId }),
+    });
+  }
+
+  async finalizeTechStack({
+    techId,
+    isSelected,
+  }: FinalizeTechStackApiRequestDto): Promise<FinalizeTechStackResponseDto> {
+    return await this.apiClient.patch({
+      url: TechStackUrls.finalizeTechStack({ techId }),
+      payload: { isSelected },
     });
   }
 }

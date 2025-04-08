@@ -48,5 +48,6 @@ export interface TechStackApiPort {
 
   finalizeTechStack: ({
     techId,
+    isSelected,
   }: FinalizeTechStackApiRequestDto) => Promise<FinalizeTechStackResponseDto>;
 }
