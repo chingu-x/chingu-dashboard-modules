@@ -38,3 +38,14 @@ export interface RemoveTechStackItemVoteResponseDto {
   message: string;
   statusCode: number;
 }
+
+export interface FinalizeTechStackResponseDto {
+  id: number;
+  name: string;
+  categoryId: number;
+  voyageTeamId: number;
+  isSelected: boolean;
+  voyageTeamMemberId: number;
+  createdAt: string;
+  updatedAt: string;
+}
