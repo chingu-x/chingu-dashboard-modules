@@ -4,6 +4,7 @@ import type {
   DeleteTechStackItemClientRequestDto,
   EditTechStackItemClientRequestDto,
   FetchTechStackClientRequestDto,
+  RemoveTechStackItemVoteClientRequestDto,
 } from "@/tech-stack/application/dtos/request.dto";
 import type {
   AddTechStackItemResponseDto,
@@ -11,6 +12,7 @@ import type {
   DeleteTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
+  RemoveTechStackItemVoteResponseDto,
 } from "@/tech-stack/application/dtos/response.dto";
 
 export interface TechStackClientPort {
