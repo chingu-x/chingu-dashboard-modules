@@ -8,6 +8,7 @@ import {
   DeleteTechStackItemApiRequestDto,
   EditTechStackItemApiRequestDto,
   FetchTechStackApiRequestDto,
+  RemoveTechStackItemVoteApiRequestDto,
 } from "@/tech-stack/application/dtos/request.dto";
 import {
   AddTechStackItemResponseDto,
@@ -15,6 +16,7 @@ import {
   DeleteTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
+  RemoveTechStackItemVoteResponseDto,
 } from "@/tech-stack/application/dtos/response.dto";
 import TechStackUrls from "@/tech-stack/application/constants/tech-stack-urls";
 
@@ -67,6 +69,14 @@ export class TechStackApiAdapter implements TechStackApiPort {
     teamTechItemId,
   }: AddTechStackItemVoteApiRequestDto): Promise<AddTechStackItemVoteResponseDto> {
     return await this.apiClient.post({
+      url: TechStackUrls.addTechStackItemVote({ teamTechItemId }),
+    });
+  }
+
+  async removeTechStackItemVote({
+    teamTechItemId,
+  }: RemoveTechStackItemVoteApiRequestDto): Promise<RemoveTechStackItemVoteResponseDto> {
+    return await this.apiClient.delete({
       url: TechStackUrls.addTechStackItemVote({ teamTechItemId }),
     });
   }
