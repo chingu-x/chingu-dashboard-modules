@@ -4,7 +4,7 @@ export {
   AddTechStackItemClientRequestDto,
   EditTechStackItemClientRequestDto,
   DeleteTechStackItemClientRequestDto,
-  AddTechStackItemVoteApiRequestDto,
+  AddTechStackItemVoteClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   AddTechStackItemResponseDto,
