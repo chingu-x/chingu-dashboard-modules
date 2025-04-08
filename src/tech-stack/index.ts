@@ -5,12 +5,14 @@ export {
   EditTechStackItemClientRequestDto,
   DeleteTechStackItemClientRequestDto,
   AddTechStackItemVoteClientRequestDto,
+  RemoveTechStackItemVoteClientRequestDto,
 } from "./application/dtos/request.dto";
 export {
   AddTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   DeleteTechStackItemResponseDto,
   AddTechStackItemVoteResponseDto,
+  RemoveTechStackItemVoteResponseDto,
 } from "./application/dtos/response.dto";
 export {
   TechStackCategory,
