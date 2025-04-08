@@ -28,7 +28,7 @@ export interface RemoveTechStackItemVoteClientRequestDto {
 }
 
 export interface FinalizeTechStackClientRequestDto {
-  techid: number;
+  techId: number;
 }
 
 // api
@@ -58,4 +58,8 @@ export interface AddTechStackItemVoteApiRequestDto {
 
 export interface RemoveTechStackItemVoteApiRequestDto {
   teamTechItemId: number;
+}
+
+export interface FinalizeTechStackApiRequestDto {
+  techId: number;
 }
