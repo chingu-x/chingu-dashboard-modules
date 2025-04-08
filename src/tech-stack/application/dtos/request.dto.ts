@@ -23,6 +23,10 @@ export interface AddTechStackItemVoteClientRequestDto {
   teamTechItemId: number;
 }
 
+export interface RemoveTechStackItemVoteClientRequestDto {
+  teamTechItemId: number;
+}
+
 // api
 export interface FetchTechStackApiRequestDto {
   teamId: string;
