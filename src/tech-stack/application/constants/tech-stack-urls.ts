@@ -22,6 +22,10 @@ interface RemoveTechStackItemVoteUrlProps {
   teamTechItemId: number;
 }
 
+interface FinalizeTechStackUrlProps {
+  techId: number;
+}
+
 const TechStackUrls = {
   fetchTechStack({ teamId }: FetchTechStackUrlProps) {
     return `/api/v1/voyages/teams/${teamId}/techs`;
@@ -40,6 +44,9 @@ const TechStackUrls = {
   },
   removeTechStackItemVote({ teamTechItemId }: RemoveTechStackItemVoteUrlProps) {
     return `/api/v1/voyages/techs/${teamTechItemId}/vote`;
+  },
+  finalizeTechStack({ techId }: FinalizeTechStackUrlProps) {
+    return `/api/v1/voyages/techs/${techId}/selection`;
   },
 } as const;
 
