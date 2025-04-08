@@ -39,4 +39,8 @@ export interface TechStackClientPort {
   removeTechStackItemVote: (
     props: RemoveTechStackItemVoteClientRequestDto,
   ) => Promise<RemoveTechStackItemVoteResponseDto>;
+
+  finalizeTechStack: (
+    props: FinalizeTechStackClientRequestDto,
+  ) => Promise<FinalizeTechStackResponseDto>;
 }
