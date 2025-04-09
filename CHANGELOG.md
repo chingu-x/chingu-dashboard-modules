@@ -1,3 +1,31 @@
+# [0.12.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.11.0...v0.12.0) (2025-04-09)
+
+
+### Features
+
+* implement addTechStackItem function addTechStackItem in TechStackApiAdapter ([86b28a4](https://github.com/chingu-x/chingu-dashboard-modules/commit/86b28a46b4230ab944bb61da3008e4342f8e1a93))
+* implement addTechStackItem function in TechStackClientAdapter ([ce67b37](https://github.com/chingu-x/chingu-dashboard-modules/commit/ce67b378ba192f78222859659f09b3a4cf9ba1e5))
+* implement AddTechStackItemUsecase ([411d56f](https://github.com/chingu-x/chingu-dashboard-modules/commit/411d56f29989c1c8c3c794e6d1295a1a43cb9fcb))
+* implement addTechStackItemVote function in TechStackApiAdapter ([30061c5](https://github.com/chingu-x/chingu-dashboard-modules/commit/30061c5fdf3ec092f6c4dbbc1d83506f29837ce0))
+* implement addTechStackItemVote function in TechStackClientAdapter ([6bd46eb](https://github.com/chingu-x/chingu-dashboard-modules/commit/6bd46ebd11fd9f5f062627e5dddb8b3e4dfcfa6b))
+* implement AddTechStackItemVoteUsecase ([78dfe99](https://github.com/chingu-x/chingu-dashboard-modules/commit/78dfe993963e41b3121fad85e311c28694045f21))
+* implement checkIfFinalized function in TechStackClientAdapter ([18f96b6](https://github.com/chingu-x/chingu-dashboard-modules/commit/18f96b60aa04c9b4794ba30c43a6bd25e27e7867))
+* implement deleteTechStackItem function in TechStackApiAdapter ([35fcfdd](https://github.com/chingu-x/chingu-dashboard-modules/commit/35fcfdde0573e431f06af42bb97930d70c8608a0))
+* implement deleteTechStackItem function in TechStackClientAdapter ([f56cf37](https://github.com/chingu-x/chingu-dashboard-modules/commit/f56cf3758c38f1b40c2e14a9bc1cf761c5bf71a2))
+* implement DeleteTechStackItemUsecase ([5e2321a](https://github.com/chingu-x/chingu-dashboard-modules/commit/5e2321a4ecf62940372b1cc28f9b326d7f26726e))
+* implement editTechStackItem function in TechStackApiAdapter ([fa6a642](https://github.com/chingu-x/chingu-dashboard-modules/commit/fa6a64255526a562f781bc266e30460fcc5731c6))
+* implement editTechStackItem function in TechStackClientAdapter ([0d1cc62](https://github.com/chingu-x/chingu-dashboard-modules/commit/0d1cc62defd79681b3fa72b5ca1ded424cb5c0e4))
+* implement EditTechStackItemUsecase ([bd405cf](https://github.com/chingu-x/chingu-dashboard-modules/commit/bd405cf8e8b05bbab71165e2dc7a7cb9cb8ecccc))
+* implement fetchTechStack function in TechStackApiAdapter ([ed58909](https://github.com/chingu-x/chingu-dashboard-modules/commit/ed58909f09a072c221ee2433c1198beafa63f62e))
+* implement fetchTechStack function in TechStackClientAdapter ([28c5b4d](https://github.com/chingu-x/chingu-dashboard-modules/commit/28c5b4dc7b174e08fc7468e030aeb8270fe11093))
+* implement FetchTechStackUsecase ([e919488](https://github.com/chingu-x/chingu-dashboard-modules/commit/e91948843eaa416205c7fea75f5b3d33374ce5e6))
+* implement finalizeTechStack function in TechStackApiAdapter ([7c9beb8](https://github.com/chingu-x/chingu-dashboard-modules/commit/7c9beb8d3b61fb8c75c87c595380a4870a931193))
+* implement finalizeTechStack function in TechStackClientAdapter ([3594ff1](https://github.com/chingu-x/chingu-dashboard-modules/commit/3594ff1db567ce773a69a9ae8d7b99717ea12420))
+* implement FinalizeTechStackUsecase ([8bad4f8](https://github.com/chingu-x/chingu-dashboard-modules/commit/8bad4f852a15af419047a068dda308d919bdda90))
+* implement removeTechStackItemVote function in TechStackApiAdapter ([49ef3de](https://github.com/chingu-x/chingu-dashboard-modules/commit/49ef3dee3a444aed39216e6a432d8977f85d6337))
+* implement removeTechStackItemVote function in TechStackClientAdapter ([471d4e7](https://github.com/chingu-x/chingu-dashboard-modules/commit/471d4e74fdbf5454bd249d806c17ffc0b2f9d3e0))
+* implement RemoveTechStackItemVoteUsecase ([4ed74e3](https://github.com/chingu-x/chingu-dashboard-modules/commit/4ed74e3f024dd56613af54cab0ee6ffb85307acb))
+
 # [0.11.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.10.0...v0.11.0) (2025-04-05)
 
 
