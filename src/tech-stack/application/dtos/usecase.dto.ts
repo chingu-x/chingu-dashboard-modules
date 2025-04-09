@@ -1,3 +1,5 @@
+import type { TechStackCategory } from "@/tech-stack/application/types";
+
 export interface FetchTechStackUsecaseDto {
   teamId: string;
 }
@@ -29,4 +31,8 @@ export interface RemoveTechStackItemVoteUsecaseDto {
 export interface FinalizeTechStackUsecaseDto {
   techId: number;
   isSelected: boolean;
+}
+
+export interface CheckIfFinalizedUsecaseDto {
+  techStack: TechStackCategory[];
 }
