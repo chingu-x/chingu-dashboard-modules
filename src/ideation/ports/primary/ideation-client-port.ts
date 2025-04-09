@@ -1,5 +1,5 @@
 export interface IdeationClientPort {
   fetchIdeation: (
-    props: FetchFeaturesClientRequestDto,
-  ) => Promise<FetchFeaturesClientResponseDto>;
+    props: FetchIdeationClientRequestDto,
+  ) => Promise<FetchIdeationClientResponseDto>;
 }
