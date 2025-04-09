@@ -4,6 +4,7 @@ import { TechStackClientPort } from "@/tech-stack/ports/primary/tech-stack-clien
 import {
   AddTechStackItemClientRequestDto,
   AddTechStackItemVoteClientRequestDto,
+  CheckIfFinalizedClientRequestDto,
   DeleteTechStackItemClientRequestDto,
   EditTechStackItemClientRequestDto,
   FetchTechStackClientRequestDto,
@@ -13,6 +14,7 @@ import {
 import {
   AddTechStackItemResponseDto,
   AddTechStackItemVoteResponseDto,
+  CheckIfFinalizedResponseDto,
   DeleteTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
@@ -50,6 +52,9 @@ export class TechStackClientAdapter implements TechStackClientPort {
 
     @inject(TYPES.FinalizeTechStackUsecase)
     private readonly finalizeTechStackUsecase: FinalizeTechStackUsecase,
+
+    @inject(TYPES.CheckIfFinalizedUsecase)
+    private readonly checkIfFinalizedUsecase: CheckIfFinalizedUsecase,
   ) {}
 
   async fetchTechStack({
@@ -113,6 +118,14 @@ export class TechStackClientAdapter implements TechStackClientPort {
     return await this.finalizeTechStackUsecase.execute({
       techId,
       isSelected,
+    });
+  }
+
+  checkIfFinalized({
+    techStack,
+  }: CheckIfFinalizedClientRequestDto): CheckIfFinalizedResponseDto {
+    return this.checkIfFinalizedUsecase.execute({
+      techStack,
     });
   }
 }
