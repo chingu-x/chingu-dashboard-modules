@@ -87,6 +87,10 @@
       "import": "./dist/sprints/index.js",
       "types": "./dist/sprints/index.d.ts"
     },
+    "./tech-stack": {
+      "import": "./dist/tech-stack/index.js",
+      "types": "./dist/tech-stack/index.d.ts"
+    },
     "./test": {
       "import": "./dist/test/index.js",
       "types": "./dist/test/index.d.ts"

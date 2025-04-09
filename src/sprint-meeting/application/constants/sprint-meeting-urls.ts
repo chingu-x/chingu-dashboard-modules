@@ -37,7 +37,7 @@ interface EditSprintMeetingSectionUrlProps {
   formId: number;
 }
 
-interface FetchSprintMeetingFormProps {
+interface FetchSprintMeetingFormUrlProps {
   meetingId: string;
   formId: number;
 }
@@ -76,7 +76,10 @@ const SprintMeetingUrls = {
   }: EditSprintMeetingSectionUrlProps) {
     return `/api/v1/voyages/sprints/meetings/${meetingId}/forms/${formId}`;
   },
-  fetchSprintMeetingForm({ meetingId, formId }: FetchSprintMeetingFormProps) {
+  fetchSprintMeetingForm({
+    meetingId,
+    formId,
+  }: FetchSprintMeetingFormUrlProps) {
     return `/api/v1/voyages/sprints/meetings/${meetingId}/forms/${formId}`;
   },
 } as const;
