@@ -4,3 +4,6 @@ export interface FetchIdeationClientRequestDto {
 }
 
 // api
+export interface FetchIdeationApiRequestDto {
+  teamId: string;
+}
