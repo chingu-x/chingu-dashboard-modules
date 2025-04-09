@@ -1,6 +1,7 @@
 import type {
   AddTechStackItemClientRequestDto,
   AddTechStackItemVoteClientRequestDto,
+  CheckIfFinalizedClientRequestDto,
   DeleteTechStackItemClientRequestDto,
   EditTechStackItemClientRequestDto,
   FetchTechStackClientRequestDto,
@@ -10,6 +11,7 @@ import type {
 import type {
   AddTechStackItemResponseDto,
   AddTechStackItemVoteResponseDto,
+  CheckIfFinalizedResponseDto,
   DeleteTechStackItemResponseDto,
   EditTechStackItemResponseDto,
   FetchTechStackResponseDto,
