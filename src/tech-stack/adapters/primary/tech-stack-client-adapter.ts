@@ -28,6 +28,7 @@ import { DeleteTechStackItemUsecase } from "@/tech-stack/application/usecases/de
 import { AddTechStackItemVoteUsecase } from "@/tech-stack/application/usecases/add-tech-stack-item-vote-usecase";
 import { RemoveTechStackItemVoteUsecase } from "@/tech-stack/application/usecases/remove-tech-stack-item-vote-usecase";
 import { FinalizeTechStackUsecase } from "@/tech-stack/application/usecases/finalize-tech-stack-usecase";
+import { CheckIfFinalizedUsecase } from "@/tech-stack/application/usecases/check-if-finalized-usecase";
 
 @injectable()
 export class TechStackClientAdapter implements TechStackClientPort {
