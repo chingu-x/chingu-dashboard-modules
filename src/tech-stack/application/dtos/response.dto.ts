@@ -49,3 +49,5 @@ export interface FinalizeTechStackResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export type CheckIfFinalizedResponseDto = boolean;
