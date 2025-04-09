@@ -11,6 +11,7 @@ import { registerTimezoneDependencies } from "./timezone/di/config";
 import { registerFeaturesDependencies } from "./features/di/config";
 import { registerVoyageResourcesDependencies } from "./voyage-resources/di/config";
 import { registerTechStackDependencies } from "./tech-stack/di/config";
+import { registerIdeationDependencies } from "./ideation/di/config";
 
 export const registerDependencies = () => {
   registerRestApiDependencies();
@@ -25,6 +26,7 @@ export const registerDependencies = () => {
   registerFeaturesDependencies();
   registerVoyageResourcesDependencies();
   registerTechStackDependencies();
+  registerIdeationDependencies();
 };
 
 registerDependencies();
