@@ -45,4 +45,8 @@ export interface TechStackClientPort {
   finalizeTechStack: (
     props: FinalizeTechStackClientRequestDto,
   ) => Promise<FinalizeTechStackResponseDto>;
+
+  checkIfFinalized: (
+    props: CheckIfFinalizedClientRequestDto,
+  ) => CheckIfFinalizedResponseDto;
 }
