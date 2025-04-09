@@ -1,4 +1,4 @@
-import type { VoyageMember } from "@/features/application/types/index";
+import type { VoyageMember } from "@/features/application/types";
 
 export interface Ideation {
   id: number;
