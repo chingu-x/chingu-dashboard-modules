@@ -1,3 +1,5 @@
+import type { TechStackCategory } from "@/tech-stack/application/types";
+
 // client
 export interface FetchTechStackClientRequestDto {
   teamId: string;
@@ -30,6 +32,10 @@ export interface RemoveTechStackItemVoteClientRequestDto {
 export interface FinalizeTechStackClientRequestDto {
   techId: number;
   isSelected: boolean;
+}
+
+export interface CheckIfFinalizedClientRequestDto {
+  techStack: TechStackCategory[];
 }
 
 // api
