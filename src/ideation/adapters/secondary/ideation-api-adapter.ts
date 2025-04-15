@@ -4,10 +4,12 @@ import { RestApiPort } from "@/rest-api/ports/secondary/rest-api-port";
 import { IdeationApiPort } from "@/ideation/ports/secondary/ideation-api-port";
 import {
   AddIdeationApiRequestDto,
+  EditIdeationApiRequestDto,
   FetchIdeationApiRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import {
   AddIdeationResponseDto,
+  EditIdeationResponseDto,
   FetchIdeationResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 import IdeationUrls from "@/ideation/application/constants/ideation-urls";
@@ -35,6 +37,18 @@ export class IdeationApiAdapter implements IdeationApiPort {
   }: AddIdeationApiRequestDto): Promise<AddIdeationResponseDto> {
     return await this.apiClient.post({
       url: IdeationUrls.addIdeation({ teamId }),
+      payload: { title, description, vision },
+    });
+  }
+
+  async editIdeation({
+    ideationId,
+    title,
+    description,
+    vision,
+  }: EditIdeationApiRequestDto): Promise<EditIdeationResponseDto> {
+    return await this.apiClient.post({
+      url: IdeationUrls.editIdeation({ ideationId }),
       payload: { title, description, vision },
     });
   }
