@@ -33,4 +33,8 @@ export interface IdeationClientPort {
   addIdeationVote: (
     props: AddIdeationVoteClientRequestDto,
   ) => Promise<AddIdeationVoteResponseDto>;
+
+  removeIdeationVote: (
+    props: RemoveIdeationVoteClientRequestDto,
+  ) => Promise<RemoveIdeationVoteResponseDto>;
 }
