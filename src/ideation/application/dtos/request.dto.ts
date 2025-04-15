@@ -29,6 +29,11 @@ export interface RemoveIdeationVoteClientRequestDto {
   ideationId: number;
 }
 
+export interface FinalizeIdeationClientRequestDto {
+  teamId: string;
+  ideationId: number;
+}
+
 // api
 export interface FetchIdeationApiRequestDto {
   teamId: string;
