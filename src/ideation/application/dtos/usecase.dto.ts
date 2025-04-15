@@ -8,3 +8,10 @@ export interface AddIdeationUsecaseDto {
   description: string;
   vision: string;
 }
+
+export interface EditIdeationUsecaseDto {
+  ideationId: number;
+  title?: string;
+  description?: string;
+  vision?: string;
+}
