@@ -1,5 +1,5 @@
-import { User } from "@/user";
-import { Ideation } from "../types";
+import type { User } from "@/user/application/types";
+import type { Ideation } from "@/ideation/application/types";
 
 export interface FetchIdeationUsecaseDto {
   teamId: string;

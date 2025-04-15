@@ -5,6 +5,7 @@ import type {
   EditIdeationClientRequestDto,
   FetchIdeationClientRequestDto,
   FinalizeIdeationClientRequestDto,
+  GetIdeationByIdClientRequestDto,
   RemoveIdeationVoteClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import type {
@@ -48,7 +49,7 @@ export interface IdeationClientPort {
 
   getIdeationById: (
     props: GetIdeationByIdClientRequestDto,
-  ) => GetIdeationByIdResponseDto;
+  ) => EditIdeationResponseDto;
 
   isCurrentUserVote: (
     props: IsCurrentUserVoteClientRequestDto,
