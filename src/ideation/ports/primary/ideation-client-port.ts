@@ -15,6 +15,7 @@ import type {
   EditIdeationResponseDto,
   FetchIdeationResponseDto,
   FinalizeIdeationResponseDto,
+  GetIdeationByIdResponseDto,
   RemoveIdeationVoteResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 
