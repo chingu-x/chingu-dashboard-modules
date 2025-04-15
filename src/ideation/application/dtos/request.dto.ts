@@ -39,3 +39,7 @@ export interface EditIdeationApiRequestDto {
   description?: string;
   vision?: string;
 }
+
+export interface DeleteIdeationApiRequestDto {
+  ideationId: number;
+}
