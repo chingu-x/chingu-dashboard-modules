@@ -7,6 +7,7 @@ import {
   DeleteIdeationClientRequestDto,
   EditIdeationClientRequestDto,
   FetchIdeationClientRequestDto,
+  FinalizeIdeationClientRequestDto,
   RemoveIdeationVoteClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import {
@@ -15,6 +16,7 @@ import {
   DeleteIdeationResponseDto,
   EditIdeationResponseDto,
   FetchIdeationResponseDto,
+  FinalizeIdeationResponseDto,
   RemoveIdeationVoteResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 import { FetchIdeationUsecase } from "@/ideation/application/usecases/fetch-ideation-usecase";
@@ -44,6 +46,9 @@ export class IdeationClientAdapter implements IdeationClientPort {
 
     @inject(TYPES.RemoveIdeationVoteUsecase)
     private readonly removeIdeationVoteUsecase: RemoveIdeationVoteUsecase,
+
+    @inject(TYPES.FinalizeIdeationUsecase)
+    private readonly finalizeIdeationUsecase: FinalizeIdeationUsecase,
   ) {}
 
   async fetchIdeation({
@@ -100,6 +105,16 @@ export class IdeationClientAdapter implements IdeationClientPort {
     ideationId,
   }: RemoveIdeationVoteClientRequestDto): Promise<RemoveIdeationVoteResponseDto> {
     return await this.removeIdeationVoteUsecase.execute({
+      ideationId,
+    });
+  }
+
+  async finalizeIdeation({
+    teamId,
+    ideationId,
+  }: FinalizeIdeationClientRequestDto): Promise<FinalizeIdeationResponseDto> {
+    return await this.finalizeIdeationUsecase.execute({
+      teamId,
       ideationId,
     });
   }
