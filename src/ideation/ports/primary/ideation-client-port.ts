@@ -63,4 +63,8 @@ export interface IdeationClientPort {
   hasCurrentUserVote: (
     props: HasCurrentUserVoteClientRequestDto,
   ) => HasCurrentUserVoteResponseDto;
+
+  getFinalizedIdeation: (
+    props: GetFinalizedIdeationClientRequestDto,
+  ) => GetFinalizedIdeationResponseDto;
 }
