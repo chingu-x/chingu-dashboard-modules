@@ -50,6 +50,9 @@ export class IdeationClientAdapter implements IdeationClientPort {
 
     @inject(TYPES.FinalizeIdeationUsecase)
     private readonly finalizeIdeationUsecase: FinalizeIdeationUsecase,
+
+    @inject(TYPES.GetIdeationByIdUsecase)
+    private readonly getIdeationByIdUsecase: GetIdeationByIdUsecase,
   ) {}
 
   async fetchIdeation({

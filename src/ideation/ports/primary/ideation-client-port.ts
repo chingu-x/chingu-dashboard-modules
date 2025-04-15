@@ -49,7 +49,7 @@ export interface IdeationClientPort {
 
   getIdeationById: (
     props: GetIdeationByIdClientRequestDto,
-  ) => EditIdeationResponseDto;
+  ) => GetIdeationByIdResponseDto;
 
   isCurrentUserVote: (
     props: IsCurrentUserVoteClientRequestDto,

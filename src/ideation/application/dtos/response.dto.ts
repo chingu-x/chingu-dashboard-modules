@@ -61,3 +61,5 @@ export interface FinalizeIdeationResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export type GetIdeationByIdResponseDto = Ideation;

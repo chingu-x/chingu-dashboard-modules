@@ -39,7 +39,7 @@ export interface FinalizeIdeationClientRequestDto {
 
 export interface GetIdeationByIdClientRequestDto {
   ideation: Ideation[];
-  id: number;
+  ideationId: number;
 }
 
 export interface IsCurrentUserVoteClientRequestDto {
