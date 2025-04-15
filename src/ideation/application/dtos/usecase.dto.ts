@@ -27,3 +27,8 @@ export interface AddIdeationVoteUsecaseDto {
 export interface RemoveIdeationVoteUsecaseDto {
   ideationId: number;
 }
+
+export interface FinalizeIdeationUsecaseDto {
+  teamId: string;
+  ideationId: number;
+}
