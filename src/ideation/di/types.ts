@@ -5,6 +5,7 @@ import type { FetchIdeationUsecase } from "@/ideation/application/usecases/fetch
 import type { AddIdeationUsecase } from "@/ideation/application/usecases/add-ideation-usecase";
 import type { EditIdeationUsecase } from "@/ideation/application/usecases/edit-ideation-usecase";
 import type { DeleteIdeationUsecase } from "@/ideation/application/usecases/delete-ideation-usecase";
+import type { AddIdeationVoteUsecase } from "@/ideation/application/usecases/add-ideation-vote-usecase";
 
 export const IDEATION_TYPES = {
   // ports
@@ -28,6 +29,10 @@ export const IDEATION_TYPES = {
   DeleteIdeationUsecase: Symbol.for(
     "DeleteIdeationUsecase",
   ) as InjectionToken<DeleteIdeationUsecase>,
+
+  AddIdeationVoteUsecase: Symbol.for(
+    "AddIdeationVoteUsecase",
+  ) as InjectionToken<AddIdeationVoteUsecase>,
 
   // adapters
   IdeationClientAdapter: Symbol.for(

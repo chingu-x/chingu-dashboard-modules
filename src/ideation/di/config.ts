@@ -6,6 +6,7 @@ import { FetchIdeationUsecase } from "@/ideation/application/usecases/fetch-idea
 import { AddIdeationUsecase } from "@/ideation/application/usecases/add-ideation-usecase";
 import { EditIdeationUsecase } from "@/ideation/application/usecases/edit-ideation-usecase";
 import { DeleteIdeationUsecase } from "@/ideation/application/usecases/delete-ideation-usecase";
+import { AddIdeationVoteUsecase } from "@/ideation/application/usecases/add-ideation-vote-usecase";
 
 export const registerIdeationDependencies = () => {
   // ports
@@ -28,6 +29,10 @@ export const registerIdeationDependencies = () => {
 
   container.register(IDEATION_TYPES.DeleteIdeationUsecase, {
     useClass: DeleteIdeationUsecase,
+  });
+
+  container.register(IDEATION_TYPES.AddIdeationVoteUsecase, {
+    useClass: AddIdeationVoteUsecase,
   });
 
   // adapters
