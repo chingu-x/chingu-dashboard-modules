@@ -75,6 +75,10 @@
       "import": "./dist/forms/index.js",
       "types": "./dist/forms/index.d.ts"
     },
+    "./ideation": {
+      "import": "./dist/ideation/index.js",
+      "types": "./dist/ideation/index.d.ts"
+    },
     "./my-team": {
       "import": "./dist/my-team/index.js",
       "types": "./dist/my-team/index.d.ts"
