@@ -6,6 +6,7 @@ import type {
   FetchIdeationClientRequestDto,
   FinalizeIdeationClientRequestDto,
   GetIdeationByIdClientRequestDto,
+  IsCurrentUserVoteClientRequestDto,
   RemoveIdeationVoteClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import type {
@@ -16,6 +17,7 @@ import type {
   FetchIdeationResponseDto,
   FinalizeIdeationResponseDto,
   GetIdeationByIdResponseDto,
+  IsCurrentUserVoteResponseDto,
   RemoveIdeationVoteResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 
