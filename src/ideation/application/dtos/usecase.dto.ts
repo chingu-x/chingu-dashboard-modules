@@ -15,3 +15,7 @@ export interface EditIdeationUsecaseDto {
   description?: string;
   vision?: string;
 }
+
+export interface DeleteIdeationUsecaseDto {
+  ideationId: number;
+}
