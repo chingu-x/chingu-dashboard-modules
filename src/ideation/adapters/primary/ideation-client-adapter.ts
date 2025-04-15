@@ -3,12 +3,14 @@ import { TYPES } from "@/types";
 import { IdeationClientPort } from "@/ideation/ports/primary/ideation-client-port";
 import {
   AddIdeationClientRequestDto,
+  AddIdeationVoteClientRequestDto,
   DeleteIdeationClientRequestDto,
   EditIdeationClientRequestDto,
   FetchIdeationClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import {
   AddIdeationResponseDto,
+  AddIdeationVoteResponseDto,
   DeleteIdeationResponseDto,
   EditIdeationResponseDto,
   FetchIdeationResponseDto,
@@ -32,6 +34,9 @@ export class IdeationClientAdapter implements IdeationClientPort {
 
     @inject(TYPES.DeleteIdeationUsecase)
     private readonly deleteIdeationUsecase: DeleteIdeationUsecase,
+
+    @inject(TYPES.AddIdeationVoteUsecase)
+    private readonly addIdeationVoteUsecase: AddIdeationVoteUsecase,
   ) {}
 
   async fetchIdeation({
@@ -72,6 +77,14 @@ export class IdeationClientAdapter implements IdeationClientPort {
     ideationId,
   }: DeleteIdeationClientRequestDto): Promise<DeleteIdeationResponseDto> {
     return await this.deleteIdeationUsecase.execute({
+      ideationId,
+    });
+  }
+
+  async addIdeationVote({
+    ideationId,
+  }: AddIdeationVoteClientRequestDto): Promise<AddIdeationVoteResponseDto> {
+    return await this.addIdeationVoteUsecase.execute({
       ideationId,
     });
   }
