@@ -10,6 +10,7 @@ import {
   FetchIdeationResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 import { FetchIdeationUsecase } from "@/ideation/application/usecases/fetch-ideation-usecase";
+import { AddIdeationUsecase } from "@/ideation/application/usecases/add-ideation-usecase";
 
 @injectable()
 export class IdeationClientAdapter implements IdeationClientPort {
