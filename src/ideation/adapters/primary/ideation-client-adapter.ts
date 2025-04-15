@@ -9,6 +9,7 @@ import {
   FetchIdeationClientRequestDto,
   FinalizeIdeationClientRequestDto,
   GetIdeationByIdClientRequestDto,
+  HasCurrentUserVoteClientRequestDto,
   IsCurrentUserVoteClientRequestDto,
   RemoveIdeationVoteClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
@@ -20,6 +21,7 @@ import {
   FetchIdeationResponseDto,
   FinalizeIdeationResponseDto,
   GetIdeationByIdResponseDto,
+  HasCurrentUserVoteResponseDto,
   IsCurrentUserVoteResponseDto,
   RemoveIdeationVoteResponseDto,
 } from "@/ideation/application/dtos/response.dto";
@@ -62,6 +64,9 @@ export class IdeationClientAdapter implements IdeationClientPort {
 
     @inject(TYPES.IsCurrentUserVoteUsecase)
     private readonly isCurrentUserVoteUsecase: IsCurrentUserVoteUsecase,
+
+    @inject(TYPES.HasCurrentUserVoteUsecase)
+    private readonly hasCurrentUserVoteUsecase: HasCurrentUserVoteUsecase,
   ) {}
 
   async fetchIdeation({
@@ -147,6 +152,16 @@ export class IdeationClientAdapter implements IdeationClientPort {
     user,
   }: IsCurrentUserVoteClientRequestDto): IsCurrentUserVoteResponseDto {
     return this.isCurrentUserVoteUsecase.execute({
+      ideation,
+      user,
+    });
+  }
+
+  hasCurrentUserVote({
+    ideation,
+    user,
+  }: HasCurrentUserVoteClientRequestDto): HasCurrentUserVoteResponseDto {
+    return this.hasCurrentUserVoteUsecase.execute({
       ideation,
       user,
     });
