@@ -50,3 +50,14 @@ export interface RemoveIdeationVoteResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface FinalizeIdeationResponseDto {
+  id: number;
+  voyageTeamMemberId: number;
+  title: string;
+  description: string;
+  vision: string;
+  isSelected: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
