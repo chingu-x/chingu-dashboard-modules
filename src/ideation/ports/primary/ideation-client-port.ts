@@ -5,6 +5,7 @@ import type {
   EditIdeationClientRequestDto,
   FetchIdeationClientRequestDto,
   FinalizeIdeationClientRequestDto,
+  GetFinalizedIdeationClientRequestDto,
   GetIdeationByIdClientRequestDto,
   HasCurrentUserVoteClientRequestDto,
   IsCurrentUserVoteClientRequestDto,
@@ -66,5 +67,5 @@ export interface IdeationClientPort {
 
   getFinalizedIdeation: (
     props: GetFinalizedIdeationClientRequestDto,
-  ) => GetFinalizedIdeationResponseDto;
+  ) => FinalizeIdeationResponseDto;
 }

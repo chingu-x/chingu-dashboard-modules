@@ -67,3 +67,5 @@ export type GetIdeationByIdResponseDto = Ideation;
 export type IsCurrentUserVoteResponseDto = boolean;
 
 export type HasCurrentUserVoteResponseDto = boolean;
+
+export type GetFinalizedIdeationResponseDto = Ideation;
