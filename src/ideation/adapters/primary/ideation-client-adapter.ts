@@ -8,6 +8,7 @@ import {
   EditIdeationClientRequestDto,
   FetchIdeationClientRequestDto,
   FinalizeIdeationClientRequestDto,
+  GetIdeationByIdClientRequestDto,
   RemoveIdeationVoteClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import {
@@ -17,6 +18,7 @@ import {
   EditIdeationResponseDto,
   FetchIdeationResponseDto,
   FinalizeIdeationResponseDto,
+  GetIdeationByIdResponseDto,
   RemoveIdeationVoteResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 import { FetchIdeationUsecase } from "@/ideation/application/usecases/fetch-ideation-usecase";
@@ -119,6 +121,16 @@ export class IdeationClientAdapter implements IdeationClientPort {
   }: FinalizeIdeationClientRequestDto): Promise<FinalizeIdeationResponseDto> {
     return await this.finalizeIdeationUsecase.execute({
       teamId,
+      ideationId,
+    });
+  }
+
+  getIdeationById({
+    ideation,
+    ideationId,
+  }: GetIdeationByIdClientRequestDto): GetIdeationByIdResponseDto {
+    return this.getIdeationByIdUsecase.execute({
+      ideation,
       ideationId,
     });
   }
