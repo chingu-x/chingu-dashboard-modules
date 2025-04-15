@@ -45,3 +45,8 @@ export interface IsCurrentUserVoteUsecaseDto {
   ideation: Ideation;
   user: User;
 }
+
+export interface HasCurrentUserVoteUsecaseDto {
+  ideation: Ideation;
+  user: User;
+}
