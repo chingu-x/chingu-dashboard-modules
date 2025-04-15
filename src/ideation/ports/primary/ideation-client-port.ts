@@ -46,6 +46,10 @@ export interface IdeationClientPort {
     props: FinalizeIdeationClientRequestDto,
   ) => Promise<FinalizeIdeationResponseDto>;
 
+  getIdeationById: (
+    props: GetIdeationByIdResponseDto,
+  ) => GetIdeationByIdResponseDto;
+
   isCurrentUserVote: (
     props: IsCurrentUserVoteClientRequestDto,
   ) => IsCurrentUserVoteResponseDto;

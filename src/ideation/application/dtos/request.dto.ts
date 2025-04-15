@@ -38,7 +38,7 @@ export interface FinalizeIdeationClientRequestDto {
 }
 
 export interface IsCurrentUserVoteClientRequestDto {
-  ideation: Ideation;
+  ideation: Ideation[];
   user: User;
 }
 

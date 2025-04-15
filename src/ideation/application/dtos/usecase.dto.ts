@@ -1,3 +1,6 @@
+import { User } from "@/user";
+import { Ideation } from "../types";
+
 export interface FetchIdeationUsecaseDto {
   teamId: string;
 }
@@ -31,4 +34,9 @@ export interface RemoveIdeationVoteUsecaseDto {
 export interface FinalizeIdeationUsecaseDto {
   teamId: string;
   ideationId: number;
+}
+
+export interface IsCurrentUserVoteUsecaseDto {
+  ideation: Ideation[];
+  user: User;
 }
