@@ -64,3 +64,8 @@ export interface AddIdeationVoteApiRequestDto {
 export interface RemoveIdeationVoteApiRequestDto {
   ideationId: number;
 }
+
+export interface FinalizeIdeationApiRequestDto {
+  teamId: string;
+  ideationId: number;
+}
