@@ -1,3 +1,41 @@
+# [0.13.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.12.0...v0.13.0) (2025-04-15)
+
+
+### Bug Fixes
+
+* update ideation type ([9ca0c9a](https://github.com/chingu-x/chingu-dashboard-modules/commit/9ca0c9a4a596ff1f9d796640ebf61ea78da49328))
+
+
+### Features
+
+* implement addIdeation function in IdeationApiAdapter ([5fa150a](https://github.com/chingu-x/chingu-dashboard-modules/commit/5fa150a9fc6ceed995f8f4ac034323c21846295f))
+* implement addIdeation function in IdeationClientAdapter ([4bd29a0](https://github.com/chingu-x/chingu-dashboard-modules/commit/4bd29a08515b9647ba6dede144eccbe9d7488564))
+* implement AddIdeationUsecase ([b2bed8b](https://github.com/chingu-x/chingu-dashboard-modules/commit/b2bed8b21ca838b6598a95746b2ccf77c898abfd))
+* implement addIdeationVote function in IdeationApiAdapter ([cd4442e](https://github.com/chingu-x/chingu-dashboard-modules/commit/cd4442ef6c5ab4b3b62e95fa25c65cf7ea035a32))
+* implement addIdeationVote function in IdeationClientAdapter ([994b416](https://github.com/chingu-x/chingu-dashboard-modules/commit/994b4164e3130256d3a34468060b2204e0d181f1))
+* implement AddIdeationVoteUsecase ([0e76273](https://github.com/chingu-x/chingu-dashboard-modules/commit/0e76273e67802a8beffe430ea7276d8d27878a6b))
+* implement deleteIdeation function in IdeationApiAdapter ([5b5d26e](https://github.com/chingu-x/chingu-dashboard-modules/commit/5b5d26eb51ec431831ac138d1760cb7a042297b0))
+* implement deleteIdeation function in IdeationClientAdapter ([527894e](https://github.com/chingu-x/chingu-dashboard-modules/commit/527894e4274d899dad8e4c6855229057ef4d4107))
+* implement DeleteIdeationUsecase ([8909711](https://github.com/chingu-x/chingu-dashboard-modules/commit/8909711dcf06880fa40d4095376c5f2075e90b3f))
+* implement editIdeation function in IdeationApiAdapter ([e1e31d3](https://github.com/chingu-x/chingu-dashboard-modules/commit/e1e31d3328605a6769cb9daaae552a7e87ce009d))
+* implement editIdeation function in IdeationClientAdapter ([8a9011d](https://github.com/chingu-x/chingu-dashboard-modules/commit/8a9011d703ad933eb16fb3cb11e2b0653aeb2a49))
+* implement EditIdeationUsecase ([d1ab395](https://github.com/chingu-x/chingu-dashboard-modules/commit/d1ab3955530e5df02683d01e14521672e1f1a6ee))
+* implement fetchIdeation function in IdeationApiAdapter ([0a58270](https://github.com/chingu-x/chingu-dashboard-modules/commit/0a582707853acc4f5d0f73c32a9d5163377ed8e5))
+* implement fetchIdeation function in IdeationClientAdapter ([7480bf4](https://github.com/chingu-x/chingu-dashboard-modules/commit/7480bf4c973ca136b7613ff42e2bd2349fb53d96))
+* implement FetchIdeationUsecase ([b48c08a](https://github.com/chingu-x/chingu-dashboard-modules/commit/b48c08a958bc52b260ce42ed2f253ebd5edacbf0))
+* implement finalizeIdeation function in IdeationApiAdapter ([0a71071](https://github.com/chingu-x/chingu-dashboard-modules/commit/0a7107112711188275b9c0fa6936a543b219f8c5))
+* implement finalizeIdeation function in IdeationClientAdapter ([2939a77](https://github.com/chingu-x/chingu-dashboard-modules/commit/2939a774bec13f2c912ecdfe5cd9073d27c54eb4))
+* implement FinalizeIdeationUsecase ([1f3467d](https://github.com/chingu-x/chingu-dashboard-modules/commit/1f3467d871cc6035d73b9129eec7415c95f63ada))
+* implement FinalizeIdeationUsecase ([40e87f5](https://github.com/chingu-x/chingu-dashboard-modules/commit/40e87f5a589a008093f92aefcb6ab668b9291ecf))
+* implement getIdeationById function in IdeationClientAdapter ([d8b010b](https://github.com/chingu-x/chingu-dashboard-modules/commit/d8b010b80742a89d31ddbb5c7d1af7c404738b63))
+* implement hasCurrentUserVote function in IdeationClientAdapter ([bbfd80a](https://github.com/chingu-x/chingu-dashboard-modules/commit/bbfd80aab24083f60f3f3513456ba929113bfbde))
+* implement HasCurrentUserVoteUsecase ([4f4f420](https://github.com/chingu-x/chingu-dashboard-modules/commit/4f4f4204e3f8e9a5bffafe6e2910c23df9376037))
+* implement isCurrentUserVote function in IdeationClientAdapter ([e3ae281](https://github.com/chingu-x/chingu-dashboard-modules/commit/e3ae281d4f5b3e71011ffbe491720d2bbfb59526))
+* implement IsCurrentUserVoteUsecase ([7039be5](https://github.com/chingu-x/chingu-dashboard-modules/commit/7039be519cb0b4cdcbd803bc830a26fa5509dda9))
+* implement removeIdeationVote function in IdeationApiAdapter ([efa89a5](https://github.com/chingu-x/chingu-dashboard-modules/commit/efa89a531362637273ed85fa39f5613211f2d8e6))
+* implement removeIdeationVote function in IdeationClientAdapter ([a0ce591](https://github.com/chingu-x/chingu-dashboard-modules/commit/a0ce591ad5f680f89ae30a8d72a0958bafa7fa55))
+* implement RemoveIdeationVoteUsecase ([5031b33](https://github.com/chingu-x/chingu-dashboard-modules/commit/5031b33656616b11487facde5f715c2d70f2b1ef))
+
 # [0.12.0](https://github.com/chingu-x/chingu-dashboard-modules/compare/v0.11.0...v0.12.0) (2025-04-09)
 
 
