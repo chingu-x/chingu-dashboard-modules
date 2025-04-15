@@ -15,4 +15,8 @@ export interface IdeationClientPort {
   addIdeation: (
     props: AddIdeationClientRequestDto,
   ) => Promise<AddIdeationResponseDto>;
+
+  editIdeation: (
+    props: EditIdeationClientRequestDto,
+  ) => Promise<EditIdeationResponseDto>;
 }
