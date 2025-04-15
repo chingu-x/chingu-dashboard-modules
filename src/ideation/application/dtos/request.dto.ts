@@ -14,3 +14,10 @@ export interface AddIdeationClientRequestDto {
 export interface FetchIdeationApiRequestDto {
   teamId: string;
 }
+
+export interface AddIdeationApiRequestDto {
+  teamId: string;
+  title: string;
+  description: string;
+  vision: string;
+}
