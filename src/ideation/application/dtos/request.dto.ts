@@ -47,3 +47,7 @@ export interface EditIdeationApiRequestDto {
 export interface DeleteIdeationApiRequestDto {
   ideationId: number;
 }
+
+export interface AddIdeationVoteApiRequestDto {
+  ideationId: number;
+}
