@@ -9,6 +9,7 @@ import type { AddIdeationVoteUsecase } from "@/ideation/application/usecases/add
 import type { RemoveIdeationVoteUsecase } from "@/ideation/application/usecases/remove-ideation-vote-usecase";
 import type { FinalizeIdeationUsecase } from "@/ideation/application/usecases/finalize-ideation-usecase";
 import type { GetIdeationByIdUsecase } from "@/ideation/application/usecases/get-ideation-by-id-usecase";
+import type { IsCurrentUserVoteUsecase } from "@/ideation/application/usecases/is-current-user-vote-usecase";
 
 export const IDEATION_TYPES = {
   // ports
@@ -48,6 +49,10 @@ export const IDEATION_TYPES = {
   GetIdeationByIdUsecase: Symbol.for(
     "GetIdeationByIdUsecase",
   ) as InjectionToken<GetIdeationByIdUsecase>,
+
+  IsCurrentUserVoteUsecase: Symbol.for(
+    "IsCurrentUserVoteUsecase",
+  ) as InjectionToken<IsCurrentUserVoteUsecase>,
 
   // adapters
   IdeationClientAdapter: Symbol.for(
