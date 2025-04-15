@@ -8,6 +8,7 @@ import type { FetchFeatureUsecase } from "@/features/application/usecases/fetch-
 import type { DeleteFeatureUsecase } from "@/features/application/usecases/delete-feature-usecase";
 import type { SaveOrderUsecase } from "@/features/application/usecases/save-order-usecase";
 import type { IsFeatureOwnerUsecase } from "@/features/application/usecases/is-feature-owner-usecase";
+import type { GetMustHaveFeaturesUsecase } from "@/features/application/usecases/get-must-have-features-usecase";
 
 export const FEATURES_TYPES = {
   // ports
@@ -43,6 +44,10 @@ export const FEATURES_TYPES = {
   IsFeatureOwnerUsecase: Symbol.for(
     "IsFeatureOwnerUsecase",
   ) as InjectionToken<IsFeatureOwnerUsecase>,
+
+  GetMustHaveFeaturesUsecase: Symbol.for(
+    "GetMustHaveFeaturesUsecase",
+  ) as InjectionToken<GetMustHaveFeaturesUsecase>,
 
   // adapters
   FeaturesClientAdapter: Symbol.for(

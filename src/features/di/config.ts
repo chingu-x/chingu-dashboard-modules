@@ -9,6 +9,7 @@ import { FetchFeatureUsecase } from "@/features/application/usecases/fetch-featu
 import { DeleteFeatureUsecase } from "@/features/application/usecases/delete-feature-usecase";
 import { SaveOrderUsecase } from "@/features/application/usecases/save-order-usecase";
 import { IsFeatureOwnerUsecase } from "@/features/application/usecases/is-feature-owner-usecase";
+import { GetMustHaveFeaturesUsecase } from "@/features/application/usecases/get-must-have-features-usecase";
 
 export const registerFeaturesDependencies = () => {
   // ports
@@ -43,6 +44,10 @@ export const registerFeaturesDependencies = () => {
 
   container.register(FEATURES_TYPES.IsFeatureOwnerUsecase, {
     useClass: IsFeatureOwnerUsecase,
+  });
+
+  container.register(FEATURES_TYPES.GetMustHaveFeaturesUsecase, {
+    useClass: GetMustHaveFeaturesUsecase,
   });
 
   // adapters
