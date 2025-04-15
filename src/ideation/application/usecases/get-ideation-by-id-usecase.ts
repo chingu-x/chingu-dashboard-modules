@@ -3,7 +3,7 @@ import { GetIdeationByIdUsecaseDto } from "@/ideation/application/dtos/usecase.d
 import { GetIdeationByIdResponseDto } from "@/ideation/application/dtos/response.dto";
 
 @injectable()
-export class FinalizeIdeationUsecase {
+export class GetIdeationByIdUsecase {
   execute({
     ideation,
     ideationId,
