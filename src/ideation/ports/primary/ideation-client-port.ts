@@ -27,4 +27,8 @@ export interface IdeationClientPort {
   deleteIdeation: (
     props: DeleteIdeationClientRequestDto,
   ) => Promise<DeleteIdeationResponseDto>;
+
+  addIdeationVote: (
+    props: AddIdeationVoteClientRequestDto,
+  ) => Promise<AddIdeationVoteResponseDto>;
 }
