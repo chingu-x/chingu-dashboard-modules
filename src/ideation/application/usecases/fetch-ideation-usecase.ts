@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { IdeationApiPort } from "@/ideation/ports/secondary/ideation-api-port";
 import { FetchIdeationUsecaseDto } from "@/ideation/application/dtos/usecase.dto";
-import { FetchIdeationClientResponseDto } from "@/ideation/application/dtos/response.dto";
+import { FetchIdeationResponseDto } from "@/ideation/application/dtos/response.dto";
 
 @injectable()
 export class FetchIdeationUsecase {
@@ -13,7 +13,7 @@ export class FetchIdeationUsecase {
 
   async execute(
     props: FetchIdeationUsecaseDto,
-  ): Promise<FetchIdeationClientResponseDto> {
+  ): Promise<FetchIdeationResponseDto> {
     return await this.ideationApi.fetchIdeation(props);
   }
 }
