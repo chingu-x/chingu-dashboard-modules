@@ -7,6 +7,7 @@ import {
   EditFeatureClientRequestDto,
   FetchFeatureClientRequestDto,
   FetchFeaturesClientRequestDto,
+  GetMustHaveFeaturesClientRequestDto,
   IsFeatureOwnerClientRequestDto,
   SaveOrderClientRequestDto,
 } from "@/features/application/dtos/request.dto";
@@ -16,6 +17,7 @@ import {
   EditFeatureClientResponseDto,
   FetchFeatureClientResponseDto,
   FetchFeaturesClientResponseDto,
+  GetMustHaveFeaturesResponseDto,
   IsFeatureOwnerClientResponseDto,
   SaveOrderClientResponseDto,
 } from "@/features/application/dtos/response.dto";
@@ -50,6 +52,9 @@ export class FeaturesClientAdapter implements FeaturesClientPort {
 
     @inject(TYPES.IsFeatureOwnerUsecase)
     private readonly isFeatureOwnerUsecase: IsFeatureOwnerUsecase,
+
+    @inject(TYPES.GetMustHaveFeaturesUsecase)
+    private readonly getMustHaveFeaturesUsecase: GetMustHaveFeaturesUsecase,
   ) {}
 
   async fetchFeatures({
@@ -111,5 +116,11 @@ export class FeaturesClientAdapter implements FeaturesClientPort {
     addedById,
   }: IsFeatureOwnerClientRequestDto): IsFeatureOwnerClientResponseDto {
     return this.isFeatureOwnerUsecase.execute({ userId, addedById });
+  }
+
+  getMustHaveFeatures({
+    features,
+  }: GetMustHaveFeaturesClientRequestDto): GetMustHaveFeaturesResponseDto {
+    return this.getMustHaveFeaturesUsecase.execute({ features });
   }
 }
