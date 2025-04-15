@@ -4,6 +4,7 @@ import type {
   DeleteIdeationApiRequestDto,
   EditIdeationApiRequestDto,
   FetchIdeationApiRequestDto,
+  FinalizeIdeationApiRequestDto,
   RemoveIdeationVoteApiRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import type {
@@ -12,6 +13,7 @@ import type {
   DeleteIdeationResponseDto,
   EditIdeationResponseDto,
   FetchIdeationResponseDto,
+  FinalizeIdeationResponseDto,
   RemoveIdeationVoteResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 
@@ -45,4 +47,9 @@ export interface IdeationApiPort {
   removeIdeationVote: ({
     ideationId,
   }: RemoveIdeationVoteApiRequestDto) => Promise<RemoveIdeationVoteResponseDto>;
+
+  finalizeIdeation: ({
+    teamId,
+    ideationId,
+  }: FinalizeIdeationApiRequestDto) => Promise<FinalizeIdeationResponseDto>;
 }
