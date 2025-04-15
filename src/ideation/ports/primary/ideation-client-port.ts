@@ -45,4 +45,8 @@ export interface IdeationClientPort {
   finalizeIdeation: (
     props: FinalizeIdeationClientRequestDto,
   ) => Promise<FinalizeIdeationResponseDto>;
+
+  isCurrentUserVote: (
+    props: IsCurrentUserVoteClientRequestDto,
+  ) => IsCurrentUserVoteResponseDto;
 }
