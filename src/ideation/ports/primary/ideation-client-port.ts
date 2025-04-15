@@ -57,4 +57,8 @@ export interface IdeationClientPort {
   isCurrentUserVote: (
     props: IsCurrentUserVoteClientRequestDto,
   ) => IsCurrentUserVoteResponseDto;
+
+  hasCurrentUserVote: (
+    props: HasCurrentUserVoteClientRequestDto,
+  ) => HasCurrentUserVoteResponseDto;
 }
