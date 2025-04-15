@@ -1,3 +1,5 @@
+import type { Feature } from "@/features/application/types";
+
 // client
 export interface FetchFeaturesClientRequestDto {
   teamId: string;
@@ -32,6 +34,10 @@ export interface SaveOrderClientRequestDto {
 export interface IsFeatureOwnerClientRequestDto {
   userId: string;
   addedById: string;
+}
+
+export interface GetMustHaveFeaturesClientRequestDto {
+  features: Feature[];
 }
 
 // api
