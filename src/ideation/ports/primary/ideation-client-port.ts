@@ -4,6 +4,7 @@ import type {
   DeleteIdeationClientRequestDto,
   EditIdeationClientRequestDto,
   FetchIdeationClientRequestDto,
+  FinalizeIdeationClientRequestDto,
   RemoveIdeationVoteClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import type {
@@ -12,6 +13,7 @@ import type {
   DeleteIdeationResponseDto,
   EditIdeationResponseDto,
   FetchIdeationResponseDto,
+  FinalizeIdeationResponseDto,
   RemoveIdeationVoteResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 
