@@ -1,3 +1,5 @@
+import type { Feature } from "@/features/application/types";
+
 export interface FetchFeaturesUsecaseDto {
   teamId: string;
 }
@@ -31,4 +33,8 @@ export interface SaveOrderUsecaseDto {
 export interface IsFeatureOwnerUsecaseDto {
   userId: string;
   addedById: string;
+}
+
+export interface GetMustHaveFeaturesUsecaseDto {
+  features: Feature[];
 }
