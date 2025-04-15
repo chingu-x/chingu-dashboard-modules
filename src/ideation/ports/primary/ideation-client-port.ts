@@ -3,16 +3,16 @@ import type {
   FetchIdeationClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import type {
-  AddIdeationClientResponseDto,
-  FetchIdeationClientResponseDto,
+  AddIdeationResponseDto,
+  FetchIdeationResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 
 export interface IdeationClientPort {
   fetchIdeation: (
     props: FetchIdeationClientRequestDto,
-  ) => Promise<FetchIdeationClientResponseDto>;
+  ) => Promise<FetchIdeationResponseDto>;
 
   addIdeation: (
     props: AddIdeationClientRequestDto,
-  ) => Promise<AddIdeationClientResponseDto>;
+  ) => Promise<AddIdeationResponseDto>;
 }

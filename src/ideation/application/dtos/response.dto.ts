@@ -1,8 +1,8 @@
 import type { Ideation } from "@/ideation/application/types";
 
-export type FetchIdeationClientResponseDto = Ideation[];
+export type FetchIdeationResponseDto = Ideation[];
 
-export interface AddIdeationClientResponseDto {
+export interface AddIdeationResponseDto {
   id: number;
   voyageTeamMemberId: number;
   title: string;
