@@ -5,6 +5,7 @@ import { IdeationClientAdapter } from "@/ideation/adapters/primary/ideation-clie
 import { FetchIdeationUsecase } from "@/ideation/application/usecases/fetch-ideation-usecase";
 import { AddIdeationUsecase } from "@/ideation/application/usecases/add-ideation-usecase";
 import { EditIdeationUsecase } from "@/ideation/application/usecases/edit-ideation-usecase";
+import { DeleteIdeationUsecase } from "@/ideation/application/usecases/delete-ideation-usecase";
 
 export const registerIdeationDependencies = () => {
   // ports
@@ -23,6 +24,10 @@ export const registerIdeationDependencies = () => {
 
   container.register(IDEATION_TYPES.EditIdeationUsecase, {
     useClass: EditIdeationUsecase,
+  });
+
+  container.register(IDEATION_TYPES.DeleteIdeationUsecase, {
+    useClass: DeleteIdeationUsecase,
   });
 
   // adapters

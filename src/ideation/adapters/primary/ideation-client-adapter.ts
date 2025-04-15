@@ -16,6 +16,7 @@ import {
 import { FetchIdeationUsecase } from "@/ideation/application/usecases/fetch-ideation-usecase";
 import { AddIdeationUsecase } from "@/ideation/application/usecases/add-ideation-usecase";
 import { EditIdeationUsecase } from "@/ideation/application/usecases/edit-ideation-usecase";
+import { DeleteIdeationUsecase } from "@/ideation/application/usecases/delete-ideation-usecase";
 
 @injectable()
 export class IdeationClientAdapter implements IdeationClientPort {
