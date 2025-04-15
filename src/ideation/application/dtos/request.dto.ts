@@ -55,3 +55,7 @@ export interface DeleteIdeationApiRequestDto {
 export interface AddIdeationVoteApiRequestDto {
   ideationId: number;
 }
+
+export interface RemoveIdeationVoteApiRequestDto {
+  ideationId: number;
+}
