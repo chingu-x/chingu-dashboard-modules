@@ -18,6 +18,7 @@ import type {
   EditIdeationResponseDto,
   FetchIdeationResponseDto,
   FinalizeIdeationResponseDto,
+  GetFinalizedIdeationResponseDto,
   GetIdeationByIdResponseDto,
   HasCurrentUserVoteResponseDto,
   IsCurrentUserVoteResponseDto,
@@ -67,5 +68,5 @@ export interface IdeationClientPort {
 
   getFinalizedIdeation: (
     props: GetFinalizedIdeationClientRequestDto,
-  ) => FinalizeIdeationResponseDto;
+  ) => GetFinalizedIdeationResponseDto;
 }
