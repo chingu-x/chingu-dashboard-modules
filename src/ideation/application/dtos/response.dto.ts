@@ -34,3 +34,11 @@ export interface DeleteIdeationResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface AddIdeationVoteResponseDto {
+  id: number;
+  voyageTeamMemberId: number;
+  projectIdeaId: number;
+  createdAt: string;
+  updatedAt: string;
+}
