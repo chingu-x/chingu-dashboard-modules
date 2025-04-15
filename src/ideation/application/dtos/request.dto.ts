@@ -1,3 +1,6 @@
+import type { User } from "@/user/application/types";
+import type { Ideation } from "@/ideation/application/types";
+
 // client
 export interface FetchIdeationClientRequestDto {
   teamId: string;
@@ -32,6 +35,11 @@ export interface RemoveIdeationVoteClientRequestDto {
 export interface FinalizeIdeationClientRequestDto {
   teamId: string;
   ideationId: number;
+}
+
+export interface IsCurrentUserVoteClientRequestDto {
+  ideation: Ideation;
+  user: User;
 }
 
 // api
