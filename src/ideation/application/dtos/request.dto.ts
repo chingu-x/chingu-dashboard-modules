@@ -47,6 +47,11 @@ export interface IsCurrentUserVoteClientRequestDto {
   user: User;
 }
 
+export interface HasCurrentUserVoteClientRequestDto {
+  ideation: Ideation;
+  user: User;
+}
+
 // api
 export interface FetchIdeationApiRequestDto {
   teamId: string;
