@@ -4,6 +4,7 @@ import { IdeationApiAdapter } from "@/ideation/adapters/secondary/ideation-api-a
 import { IdeationClientAdapter } from "@/ideation/adapters/primary/ideation-client-adapter";
 import { FetchIdeationUsecase } from "@/ideation/application/usecases/fetch-ideation-usecase";
 import { AddIdeationUsecase } from "@/ideation/application/usecases/add-ideation-usecase";
+import { EditIdeationUsecase } from "@/ideation/application/usecases/edit-ideation-usecase";
 
 export const registerIdeationDependencies = () => {
   // ports
@@ -18,6 +19,10 @@ export const registerIdeationDependencies = () => {
 
   container.register(IDEATION_TYPES.AddIdeationUsecase, {
     useClass: AddIdeationUsecase,
+  });
+
+  container.register(IDEATION_TYPES.EditIdeationUsecase, {
+    useClass: EditIdeationUsecase,
   });
 
   // adapters

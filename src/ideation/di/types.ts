@@ -3,6 +3,7 @@ import type { IdeationApiPort } from "@/ideation/ports/secondary/ideation-api-po
 import type { IdeationClientAdapter } from "@/ideation/adapters/primary/ideation-client-adapter";
 import type { FetchIdeationUsecase } from "@/ideation/application/usecases/fetch-ideation-usecase";
 import type { AddIdeationUsecase } from "@/ideation/application/usecases/add-ideation-usecase";
+import type { EditIdeationUsecase } from "@/ideation/application/usecases/edit-ideation-usecase";
 
 export const IDEATION_TYPES = {
   // ports
@@ -18,6 +19,10 @@ export const IDEATION_TYPES = {
   AddIdeationUsecase: Symbol.for(
     "AddIdeationUsecase",
   ) as InjectionToken<AddIdeationUsecase>,
+
+  EditIdeationUsecase: Symbol.for(
+    "EditIdeationUsecase",
+  ) as InjectionToken<EditIdeationUsecase>,
 
   // adapters
   IdeationClientAdapter: Symbol.for(
