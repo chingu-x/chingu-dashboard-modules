@@ -1,11 +1,13 @@
 import type {
   AddIdeationClientRequestDto,
+  AddIdeationVoteClientRequestDto,
   DeleteIdeationClientRequestDto,
   EditIdeationClientRequestDto,
   FetchIdeationClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import type {
   AddIdeationResponseDto,
+  AddIdeationVoteResponseDto,
   DeleteIdeationResponseDto,
   EditIdeationResponseDto,
   FetchIdeationResponseDto,
