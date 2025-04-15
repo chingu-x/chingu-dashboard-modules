@@ -4,6 +4,7 @@ import type {
   DeleteIdeationClientRequestDto,
   EditIdeationClientRequestDto,
   FetchIdeationClientRequestDto,
+  RemoveIdeationVoteClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import type {
   AddIdeationResponseDto,
@@ -11,6 +12,7 @@ import type {
   DeleteIdeationResponseDto,
   EditIdeationResponseDto,
   FetchIdeationResponseDto,
+  RemoveIdeationVoteResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 
 export interface IdeationClientPort {
