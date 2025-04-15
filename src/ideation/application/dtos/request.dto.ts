@@ -28,3 +28,10 @@ export interface AddIdeationApiRequestDto {
   description: string;
   vision: string;
 }
+
+export interface EditIdeationApiRequestDto {
+  ideationId: number;
+  title?: string;
+  description?: string;
+  vision?: string;
+}
