@@ -63,3 +63,5 @@ export interface FinalizeIdeationResponseDto {
 }
 
 export type GetIdeationByIdResponseDto = Ideation;
+
+export type IsCurrentUserVoteResponseDto = boolean;

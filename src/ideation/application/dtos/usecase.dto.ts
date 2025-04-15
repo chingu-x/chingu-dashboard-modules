@@ -42,6 +42,6 @@ export interface GetIdeationByIdUsecaseDto {
 }
 
 export interface IsCurrentUserVoteUsecaseDto {
-  ideation: Ideation[];
+  ideation: Ideation;
   user: User;
 }

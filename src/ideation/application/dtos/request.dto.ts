@@ -43,7 +43,7 @@ export interface GetIdeationByIdClientRequestDto {
 }
 
 export interface IsCurrentUserVoteClientRequestDto {
-  ideation: Ideation[];
+  ideation: Ideation;
   user: User;
 }
 
