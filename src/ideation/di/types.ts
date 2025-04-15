@@ -11,6 +11,7 @@ import type { FinalizeIdeationUsecase } from "@/ideation/application/usecases/fi
 import type { GetIdeationByIdUsecase } from "@/ideation/application/usecases/get-ideation-by-id-usecase";
 import type { IsCurrentUserVoteUsecase } from "@/ideation/application/usecases/is-current-user-vote-usecase";
 import type { HasCurrentUserVoteUsecase } from "@/ideation/application/usecases/has-current-user-vote-usecase";
+import type { GetFinalizedIdeationUsecase } from "@/ideation/application/usecases/get-finalized-ideation-usecase";
 
 export const IDEATION_TYPES = {
   // ports
@@ -58,6 +59,10 @@ export const IDEATION_TYPES = {
   HasCurrentUserVoteUsecase: Symbol.for(
     "HasCurrentUserVoteUsecase",
   ) as InjectionToken<HasCurrentUserVoteUsecase>,
+
+  GetFinalizedIdeationUsecase: Symbol.for(
+    "GetFinalizedIdeationUsecase",
+  ) as InjectionToken<GetFinalizedIdeationUsecase>,
 
   // adapters
   IdeationClientAdapter: Symbol.for(

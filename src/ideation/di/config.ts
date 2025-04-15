@@ -12,6 +12,7 @@ import { FinalizeIdeationUsecase } from "@/ideation/application/usecases/finaliz
 import { GetIdeationByIdUsecase } from "@/ideation/application/usecases/get-ideation-by-id-usecase";
 import { IsCurrentUserVoteUsecase } from "@/ideation/application/usecases/is-current-user-vote-usecase";
 import { HasCurrentUserVoteUsecase } from "@/ideation/application/usecases/has-current-user-vote-usecase";
+import { GetFinalizedIdeationUsecase } from "@/ideation/application/usecases/get-finalized-ideation-usecase";
 
 export const registerIdeationDependencies = () => {
   // ports
@@ -58,6 +59,10 @@ export const registerIdeationDependencies = () => {
 
   container.register(IDEATION_TYPES.HasCurrentUserVoteUsecase, {
     useClass: HasCurrentUserVoteUsecase,
+  });
+
+  container.register(IDEATION_TYPES.GetFinalizedIdeationUsecase, {
+    useClass: GetFinalizedIdeationUsecase,
   });
 
   // adapters

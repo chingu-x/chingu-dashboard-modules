@@ -37,6 +37,7 @@ import { FinalizeIdeationUsecase } from "@/ideation/application/usecases/finaliz
 import { GetIdeationByIdUsecase } from "@/ideation/application/usecases/get-ideation-by-id-usecase";
 import { IsCurrentUserVoteUsecase } from "@/ideation/application/usecases/is-current-user-vote-usecase";
 import { HasCurrentUserVoteUsecase } from "@/ideation/application/usecases/has-current-user-vote-usecase";
+import { GetFinalizedIdeationUsecase } from "@/ideation/application/usecases/get-finalized-ideation-usecase";
 
 @injectable()
 export class IdeationClientAdapter implements IdeationClientPort {
