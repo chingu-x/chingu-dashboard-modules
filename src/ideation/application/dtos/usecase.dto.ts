@@ -1,3 +1,10 @@
 export interface FetchIdeationUsecaseDto {
   teamId: string;
 }
+
+export interface AddIdeationUsecaseDto {
+  teamId: string;
+  title: string;
+  description: string;
+  vision: string;
+}
