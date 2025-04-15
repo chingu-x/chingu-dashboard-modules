@@ -4,11 +4,13 @@ import { RestApiPort } from "@/rest-api/ports/secondary/rest-api-port";
 import { IdeationApiPort } from "@/ideation/ports/secondary/ideation-api-port";
 import {
   AddIdeationApiRequestDto,
+  DeleteIdeationApiRequestDto,
   EditIdeationApiRequestDto,
   FetchIdeationApiRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import {
   AddIdeationResponseDto,
+  DeleteIdeationResponseDto,
   EditIdeationResponseDto,
   FetchIdeationResponseDto,
 } from "@/ideation/application/dtos/response.dto";
@@ -50,6 +52,14 @@ export class IdeationApiAdapter implements IdeationApiPort {
     return await this.apiClient.post({
       url: IdeationUrls.editIdeation({ ideationId }),
       payload: { title, description, vision },
+    });
+  }
+
+  async deleteIdeation({
+    ideationId,
+  }: DeleteIdeationApiRequestDto): Promise<DeleteIdeationResponseDto> {
+    return await this.apiClient.post({
+      url: IdeationUrls.deleteIdeation({ ideationId }),
     });
   }
 }
