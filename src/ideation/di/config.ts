@@ -8,6 +8,7 @@ import { EditIdeationUsecase } from "@/ideation/application/usecases/edit-ideati
 import { DeleteIdeationUsecase } from "@/ideation/application/usecases/delete-ideation-usecase";
 import { AddIdeationVoteUsecase } from "@/ideation/application/usecases/add-ideation-vote-usecase";
 import { RemoveIdeationVoteUsecase } from "@/ideation/application/usecases/remove-ideation-vote-usecase";
+import { FinalizeIdeationUsecase } from "@/ideation/application/usecases/finalize-ideation-usecase";
 
 export const registerIdeationDependencies = () => {
   // ports
@@ -38,6 +39,10 @@ export const registerIdeationDependencies = () => {
 
   container.register(IDEATION_TYPES.RemoveIdeationVoteUsecase, {
     useClass: RemoveIdeationVoteUsecase,
+  });
+
+  container.register(IDEATION_TYPES.FinalizeIdeationUsecase, {
+    useClass: FinalizeIdeationUsecase,
   });
 
   // adapters
