@@ -8,6 +8,7 @@ import {
   DeleteIdeationApiRequestDto,
   EditIdeationApiRequestDto,
   FetchIdeationApiRequestDto,
+  RemoveIdeationVoteApiRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import {
   AddIdeationResponseDto,
@@ -15,6 +16,7 @@ import {
   DeleteIdeationResponseDto,
   EditIdeationResponseDto,
   FetchIdeationResponseDto,
+  RemoveIdeationVoteResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 import IdeationUrls from "@/ideation/application/constants/ideation-urls";
 
@@ -70,6 +72,14 @@ export class IdeationApiAdapter implements IdeationApiPort {
   }: AddIdeationVoteApiRequestDto): Promise<AddIdeationVoteResponseDto> {
     return await this.apiClient.post({
       url: IdeationUrls.addIdeationVote({ ideationId }),
+    });
+  }
+
+  async removeIdeationVote({
+    ideationId,
+  }: RemoveIdeationVoteApiRequestDto): Promise<RemoveIdeationVoteResponseDto> {
+    return await this.apiClient.delete({
+      url: IdeationUrls.removeIdeationVote({ ideationId }),
     });
   }
 }
