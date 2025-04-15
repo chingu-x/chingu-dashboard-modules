@@ -19,3 +19,7 @@ export interface EditIdeationUsecaseDto {
 export interface DeleteIdeationUsecaseDto {
   ideationId: number;
 }
+
+export interface AddIdeationVoteUcaseDto {
+  ideationId: number;
+}
