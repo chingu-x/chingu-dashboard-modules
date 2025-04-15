@@ -23,3 +23,14 @@ export interface EditIdeationResponseDto {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface DeleteIdeationResponseDto {
+  id: number;
+  voyageTeamMemberId: number;
+  title: string;
+  description: string;
+  vision: string;
+  isSelected: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
