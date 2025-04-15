@@ -1,9 +1,11 @@
 import type {
   AddIdeationClientRequestDto,
+  EditIdeationClientRequestDto,
   FetchIdeationClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import type {
   AddIdeationResponseDto,
+  EditIdeationResponseDto,
   FetchIdeationResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 
