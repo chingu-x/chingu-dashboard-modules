@@ -52,5 +52,5 @@ export interface HasCurrentUserVoteUsecaseDto {
 }
 
 export interface GetFinalizedIdeationUsecaseDto {
-  ideation: Ideation;
+  ideation: Ideation[];
 }

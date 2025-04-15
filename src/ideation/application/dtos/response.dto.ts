@@ -68,4 +68,4 @@ export type IsCurrentUserVoteResponseDto = boolean;
 
 export type HasCurrentUserVoteResponseDto = boolean;
 
-export type GetFinalizedIdeationResponseDto = Ideation;
+export type GetFinalizedIdeationResponseDto = Ideation | undefined;

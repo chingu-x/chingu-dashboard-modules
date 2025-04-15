@@ -53,7 +53,7 @@ export interface HasCurrentUserVoteClientRequestDto {
 }
 
 export interface GetFinalizedIdeationClientRequestDto {
-  ideation: Ideation;
+  ideation: Ideation[];
 }
 
 // api
