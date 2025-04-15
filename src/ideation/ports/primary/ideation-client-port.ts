@@ -21,4 +21,8 @@ export interface IdeationClientPort {
   editIdeation: (
     props: EditIdeationClientRequestDto,
   ) => Promise<EditIdeationResponseDto>;
+
+  deleteIdeation: (
+    props: DeleteIdeationClientRequestDto,
+  ) => Promise<DeleteIdeationResponseDto>;
 }
