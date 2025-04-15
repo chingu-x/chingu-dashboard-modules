@@ -53,6 +53,8 @@ export type IsFeatureOwnerClientResponseDto = boolean;
 
 export type SaveOrderClientResponseDto = Feature[];
 
+export type GetMustHaveFeaturesResponseDto = Feature[];
+
 // api
 export type FetchFeaturesApiResponseDto = Feature[];
 
