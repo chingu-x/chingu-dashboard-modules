@@ -18,6 +18,10 @@ interface AddIdeationVoteUrlProps {
   ideationId: number;
 }
 
+interface RemoveIdeationVoteUrlProps {
+  ideationId: number;
+}
+
 const IdeationUrls = {
   fetchIdeation({ teamId }: FetchIdeationUrlProps) {
     return `/api/v1/voyages/teams/${teamId}/ideations`;
@@ -32,6 +36,9 @@ const IdeationUrls = {
     return `/api/v1/voyages/ideations/${ideationId}`;
   },
   addIdeationVote({ ideationId }: AddIdeationVoteUrlProps) {
+    return `/api/v1/voyages/ideations/${ideationId}/ideation-votes`;
+  },
+  removeIdeationVote({ ideationId }: RemoveIdeationVoteUrlProps) {
     return `/api/v1/voyages/ideations/${ideationId}/ideation-votes`;
   },
 } as const;
