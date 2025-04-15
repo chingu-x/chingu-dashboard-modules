@@ -17,6 +17,10 @@ export interface EditIdeationClientRequestDto {
   vision?: string;
 }
 
+export interface DeleteIdeationClientRequestDto {
+  ideationId: number;
+}
+
 // api
 export interface FetchIdeationApiRequestDto {
   teamId: string;
