@@ -3,10 +3,12 @@ import { TYPES } from "@/types";
 import { IdeationClientPort } from "@/ideation/ports/primary/ideation-client-port";
 import {
   AddIdeationClientRequestDto,
+  EditIdeationClientRequestDto,
   FetchIdeationClientRequestDto,
 } from "@/ideation/application/dtos/request.dto";
 import {
   AddIdeationResponseDto,
+  EditIdeationResponseDto,
   FetchIdeationResponseDto,
 } from "@/ideation/application/dtos/response.dto";
 import { FetchIdeationUsecase } from "@/ideation/application/usecases/fetch-ideation-usecase";
@@ -20,6 +22,9 @@ export class IdeationClientAdapter implements IdeationClientPort {
 
     @inject(TYPES.AddIdeationUsecase)
     private readonly addIdeationUsecase: AddIdeationUsecase,
+
+    @inject(TYPES.EditIdeationUsecase)
+    private readonly editIdeationUsecase: EditIdeationUsecase,
   ) {}
 
   async fetchIdeation({
@@ -36,6 +41,20 @@ export class IdeationClientAdapter implements IdeationClientPort {
   }: AddIdeationClientRequestDto): Promise<AddIdeationResponseDto> {
     return await this.addIdeationUsecase.execute({
       teamId,
+      title,
+      description,
+      vision,
+    });
+  }
+
+  async editIdeation({
+    ideationId,
+    title,
+    description,
+    vision,
+  }: EditIdeationClientRequestDto): Promise<EditIdeationResponseDto> {
+    return await this.editIdeationUsecase.execute({
+      ideationId,
       title,
       description,
       vision,
