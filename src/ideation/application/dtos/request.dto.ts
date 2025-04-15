@@ -25,6 +25,10 @@ export interface AddIdeationVoteClientRequestDto {
   ideationId: number;
 }
 
+export interface RemoveIdeationVoteClientRequestDto {
+  ideationId: number;
+}
+
 // api
 export interface FetchIdeationApiRequestDto {
   teamId: string;
