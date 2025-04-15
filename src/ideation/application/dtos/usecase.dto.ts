@@ -36,6 +36,11 @@ export interface FinalizeIdeationUsecaseDto {
   ideationId: number;
 }
 
+export interface GetIdeationByIdClientRequestDto {
+  ideation: Ideation[];
+  id: number;
+}
+
 export interface IsCurrentUserVoteUsecaseDto {
   ideation: Ideation[];
   user: User;
