@@ -11,7 +11,7 @@ export interface Ideation {
   contributedBy: {
     member: VoyageMember;
   };
-  projectIdeaVotes: ProjectIdeaVotes;
+  projectIdeaVotes: ProjectIdeaVotes[];
 }
 
 export interface ProjectIdeaVotes {
