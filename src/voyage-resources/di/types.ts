@@ -5,6 +5,7 @@ import type { VoyageResourcesClientAdapter } from "@/voyage-resources/adapters/p
 import type { AddVoyageResourceUsecase } from "@/voyage-resources/application/usecases/add-voyage-resource-usecase";
 import type { DeleteVoyageResourceUsecase } from "@/voyage-resources/application/usecases/delete-voyage-resource-usecase";
 import type { SortVoyageResourcesUsecase } from "@/voyage-resources/application/usecases/sort-voyage-resources-usecase";
+import type { GetTopFiveVoyageResourcesUsecase } from "@/voyage-resources/application/usecases/get-top-five-voyage-resources-usecase";
 
 export const VOYAGE_RESOURCES_TYPES = {
   // ports
@@ -28,6 +29,10 @@ export const VOYAGE_RESOURCES_TYPES = {
   SortVoyageResourcesUsecase: Symbol.for(
     "SortVoyageResourcesUsecase",
   ) as InjectionToken<SortVoyageResourcesUsecase>,
+
+  GetTopFiveVoyageResourcesUsecase: Symbol.for(
+    "GetTopFiveVoyageResourcesUsecase",
+  ) as InjectionToken<GetTopFiveVoyageResourcesUsecase>,
 
   // adapters
   VoyageResourcesClientAdapter: Symbol.for(

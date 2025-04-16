@@ -6,6 +6,7 @@ import { VoyageResourcesClientAdapter } from "@/voyage-resources/adapters/primar
 import { AddVoyageResourceUsecase } from "@/voyage-resources/application/usecases/add-voyage-resource-usecase";
 import { DeleteVoyageResourceUsecase } from "@/voyage-resources/application/usecases/delete-voyage-resource-usecase";
 import { SortVoyageResourcesUsecase } from "@/voyage-resources/application/usecases/sort-voyage-resources-usecase";
+import { GetTopFiveVoyageResourcesUsecase } from "@/voyage-resources/application/usecases/get-top-five-voyage-resources-usecase";
 
 export const registerVoyageResourcesDependencies = () => {
   // ports
@@ -28,6 +29,10 @@ export const registerVoyageResourcesDependencies = () => {
 
   container.register(VOYAGE_RESOURCES_TYPES.SortVoyageResourcesUsecase, {
     useClass: SortVoyageResourcesUsecase,
+  });
+
+  container.register(VOYAGE_RESOURCES_TYPES.GetTopFiveVoyageResourcesUsecase, {
+    useClass: GetTopFiveVoyageResourcesUsecase,
   });
 
   // adapters

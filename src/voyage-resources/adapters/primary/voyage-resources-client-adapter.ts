@@ -19,6 +19,7 @@ import { FetchVoyageResourcesUsecase } from "@/voyage-resources/application/usec
 import { AddVoyageResourceUsecase } from "@/voyage-resources/application/usecases/add-voyage-resource-usecase";
 import { DeleteVoyageResourceUsecase } from "@/voyage-resources/application/usecases/delete-voyage-resource-usecase";
 import { SortVoyageResourcesUsecase } from "@/voyage-resources/application/usecases/sort-voyage-resources-usecase";
+import { GetTopFiveVoyageResourcesUsecase } from "@/voyage-resources/application/usecases/get-top-five-voyage-resources-usecase";
 
 @injectable()
 export class VoyageResourcesClientAdapter implements VoyageResourcesClientPort {
