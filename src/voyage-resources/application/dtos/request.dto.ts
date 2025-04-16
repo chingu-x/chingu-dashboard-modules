@@ -23,7 +23,7 @@ export interface SortVoyageResourcesClientRequestDto {
   voyageResources: VoyageResource[];
 }
 
-export interface GetTopFiveResourcesClientRequestDto {
+export interface GetTopFiveVoyageResourcesClientRequestDto {
   voyageResources: VoyageResource[];
 }
 

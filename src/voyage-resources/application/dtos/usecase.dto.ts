@@ -22,6 +22,6 @@ export interface SortVoyageResourcesUsecaseDto {
   voyageResources: VoyageResource[];
 }
 
-export interface GetTopFiveResourcesUsecaseDto {
+export interface GetTopFiveVoyageResourcesUsecaseDto {
   voyageResources: VoyageResource[];
 }

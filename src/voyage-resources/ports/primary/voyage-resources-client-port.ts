@@ -30,7 +30,7 @@ export interface VoyageResourcesClientPort {
     props: SortVoyageResourcesClientRequestDto,
   ) => SortVoyageResourcesResponseDto;
 
-  getTopFiveResources: (
-    props: GetTopFiveResourcesClientRequestDto,
-  ) => GetTopFiveResourcesResponseDto;
+  getTopFiveVoyageResources: (
+    props: GetTopFiveVoyageResourcesClientRequestDto,
+  ) => GetTopFiveVoyageResourcesResponseDto;
 }
