@@ -2,12 +2,14 @@ import type {
   AddVoyageResourceClientRequestDto,
   DeleteVoyageResourceClientRequestDto,
   FetchVoyageResourcesClientRequestDto,
+  GetTopFiveResourcesClientRequestDto,
   SortVoyageResourcesClientRequestDto,
 } from "@/voyage-resources/application/dtos/request.dto";
 import type {
   AddVoyageResourceResponseDto,
   DeleteVoyageResourceResponseDto,
   FetchVoyageResourcesResponseDto,
+  GetTopFiveResourcesResponseDto,
   SortVoyageResourcesResponseDto,
 } from "@/voyage-resources/application/dtos/response.dto";
 
