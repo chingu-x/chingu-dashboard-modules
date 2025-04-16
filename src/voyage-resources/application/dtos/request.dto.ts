@@ -23,6 +23,10 @@ export interface SortVoyageResourcesClientRequestDto {
   voyageResources: VoyageResource[];
 }
 
+export interface GetTopFiveResourcesClientRequestDto {
+  voyageResources: VoyageResource[];
+}
+
 // api
 export interface FetchVoyageResourcesApiRequestDto {
   teamId: string;
