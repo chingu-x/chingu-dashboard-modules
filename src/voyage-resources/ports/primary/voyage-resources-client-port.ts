@@ -27,4 +27,8 @@ export interface VoyageResourcesClientPort {
   sortVoyageResources: (
     props: SortVoyageResourcesClientRequestDto,
   ) => SortVoyageResourcesResponseDto;
+
+  getTopFiveResources: (
+    props: GetTopFiveResourcesClientRequestDto,
+  ) => GetTopFiveResourcesResponseDto;
 }
