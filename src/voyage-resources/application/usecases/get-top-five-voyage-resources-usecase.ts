@@ -7,7 +7,7 @@ export class GetTopFiveVoyageResourcesUsecase {
   execute({
     voyageResources,
   }: GetTopFiveVoyageResourcesUsecaseDto): GetTopFiveVoyageResourcesResponseDto {
-    return voyageResources
+    const topFiveResources = [...voyageResources]
       .sort((a, b) => {
         const dateA = new Date(a.createdAt);
         const dateB = new Date(b.createdAt);
@@ -15,5 +15,7 @@ export class GetTopFiveVoyageResourcesUsecase {
         return dateB.getTime() - dateA.getTime();
       })
       .slice(0, 5);
+
+    return topFiveResources;
   }
 }
