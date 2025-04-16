@@ -24,3 +24,5 @@ export interface DeleteVoyageResourceResponseDto {
 }
 
 export type SortVoyageResourcesResponseDto = VoyageResource[];
+
+export type GetTopFiveResourcesResponseDto = VoyageResource[];
