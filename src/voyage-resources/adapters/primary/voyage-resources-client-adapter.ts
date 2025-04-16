@@ -5,12 +5,14 @@ import {
   AddVoyageResourceClientRequestDto,
   DeleteVoyageResourceClientRequestDto,
   FetchVoyageResourcesClientRequestDto,
+  GetTopFiveResourcesClientRequestDto,
   SortVoyageResourcesClientRequestDto,
 } from "@/voyage-resources/application/dtos/request.dto";
 import {
   AddVoyageResourceResponseDto,
   DeleteVoyageResourceResponseDto,
   FetchVoyageResourcesResponseDto,
+  GetTopFiveResourcesResponseDto,
   SortVoyageResourcesResponseDto,
 } from "@/voyage-resources/application/dtos/response.dto";
 import { FetchVoyageResourcesUsecase } from "@/voyage-resources/application/usecases/fetch-voyage-resources-usecase";
@@ -32,6 +34,9 @@ export class VoyageResourcesClientAdapter implements VoyageResourcesClientPort {
 
     @inject(TYPES.SortVoyageResourcesUsecase)
     private readonly sortVoyageResourcesUsecase: SortVoyageResourcesUsecase,
+
+    @inject(TYPES.GetTopFiveResourcesUsecase)
+    private readonly getTopFiveResourcesUsecase: GetTopFiveResourcesUsecase,
   ) {}
 
   async fetchVoyageResources({
@@ -61,5 +66,11 @@ export class VoyageResourcesClientAdapter implements VoyageResourcesClientPort {
     voyageResources,
   }: SortVoyageResourcesClientRequestDto): SortVoyageResourcesResponseDto {
     return this.sortVoyageResourcesUsecase.execute({ order, voyageResources });
+  }
+
+  getTopFiveResources({
+    voyageResources,
+  }: GetTopFiveResourcesClientRequestDto): GetTopFiveResourcesResponseDto {
+    return this.getTopFiveResourcesUsecase.execute({ voyageResources });
   }
 }
