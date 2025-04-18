@@ -5,7 +5,6 @@ import { FetchFeaturesUsecase } from "@/features/application/usecases/fetch-feat
 import { FeaturesClientAdapter } from "@/features/adapters/primary/features-client-adapter";
 import { AddFeatureUsecase } from "@/features/application/usecases/add-feature-usecase";
 import { EditFeatureUsecase } from "@/features/application/usecases/edit-feature-usecase";
-import { FetchFeatureUsecase } from "@/features/application/usecases/fetch-feature-usecase";
 import { DeleteFeatureUsecase } from "@/features/application/usecases/delete-feature-usecase";
 import { SaveOrderUsecase } from "@/features/application/usecases/save-order-usecase";
 import { IsFeatureOwnerUsecase } from "@/features/application/usecases/is-feature-owner-usecase";
@@ -28,10 +27,6 @@ export const registerFeaturesDependencies = () => {
 
   container.register(FEATURES_TYPES.EditFeatureUsecase, {
     useClass: EditFeatureUsecase,
-  });
-
-  container.register(FEATURES_TYPES.FetchFeatureUsecase, {
-    useClass: FetchFeatureUsecase,
   });
 
   container.register(FEATURES_TYPES.DeleteFeatureUsecase, {

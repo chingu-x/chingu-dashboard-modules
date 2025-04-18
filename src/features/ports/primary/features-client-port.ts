@@ -2,7 +2,6 @@ import type {
   AddFeatureClientRequestDto,
   DeleteFeatureClientRequestDto,
   EditFeatureClientRequestDto,
-  FetchFeatureClientRequestDto,
   FetchFeaturesClientRequestDto,
   GetMustHaveFeaturesClientRequestDto,
   IsFeatureOwnerClientRequestDto,
@@ -12,7 +11,6 @@ import type {
   AddFeatureClientResponseDto,
   DeleteFeatureClientResponseDto,
   EditFeatureClientResponseDto,
-  FetchFeatureClientResponseDto,
   FetchFeaturesClientResponseDto,
   GetMustHaveFeaturesResponseDto,
   IsFeatureOwnerClientResponseDto,
@@ -31,10 +29,6 @@ export interface FeaturesClientPort {
   editFeature: (
     props: EditFeatureClientRequestDto,
   ) => Promise<EditFeatureClientResponseDto>;
-
-  fetchFeature: (
-    props: FetchFeatureClientRequestDto,
-  ) => Promise<FetchFeatureClientResponseDto>;
 
   deleteFeature: (
     props: DeleteFeatureClientRequestDto,

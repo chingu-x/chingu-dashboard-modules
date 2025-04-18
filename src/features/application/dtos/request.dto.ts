@@ -17,10 +17,6 @@ export interface EditFeatureClientRequestDto {
   description: string;
 }
 
-export interface FetchFeatureClientRequestDto {
-  featureId: number;
-}
-
 export interface DeleteFeatureClientRequestDto {
   featureId: number;
 }
@@ -55,10 +51,6 @@ export interface EditFeatureApiRequestDto {
   featureId: number;
   teamMemberId: number;
   description: string;
-}
-
-export interface FetchFeatureApiRequestDto {
-  featureId: number;
 }
 
 export interface DeleteFeatureApiRequestDto {

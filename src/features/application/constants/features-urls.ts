@@ -10,10 +10,6 @@ interface EditFeatureUrlProps {
   featureId: number;
 }
 
-interface FetchFeatureUrlProps {
-  featureId: number;
-}
-
 interface DeleteFeatureUrlProps {
   featureId: number;
 }
@@ -31,9 +27,6 @@ const FeaturesUrls = {
   },
   editFeature({ featureId }: EditFeatureUrlProps) {
     return `api/v1/voyages/features/${featureId}`;
-  },
-  fetchFeature({ featureId }: FetchFeatureUrlProps) {
-    return `/api/v1/voyages/features/${featureId}`;
   },
   deleteFeature({ featureId }: DeleteFeatureUrlProps) {
     return `/api/v1/voyages/features/${featureId}`;

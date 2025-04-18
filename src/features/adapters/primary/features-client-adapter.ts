@@ -5,7 +5,6 @@ import {
   AddFeatureClientRequestDto,
   DeleteFeatureClientRequestDto,
   EditFeatureClientRequestDto,
-  FetchFeatureClientRequestDto,
   FetchFeaturesClientRequestDto,
   GetMustHaveFeaturesClientRequestDto,
   IsFeatureOwnerClientRequestDto,
@@ -15,7 +14,6 @@ import {
   AddFeatureClientResponseDto,
   DeleteFeatureClientResponseDto,
   EditFeatureClientResponseDto,
-  FetchFeatureClientResponseDto,
   FetchFeaturesClientResponseDto,
   GetMustHaveFeaturesResponseDto,
   IsFeatureOwnerClientResponseDto,
@@ -24,7 +22,6 @@ import {
 import { FetchFeaturesUsecase } from "@/features/application/usecases/fetch-features-usecase";
 import { AddFeatureUsecase } from "@/features/application/usecases/add-feature-usecase";
 import { EditFeatureUsecase } from "@/features/application/usecases/edit-feature-usecase";
-import { FetchFeatureUsecase } from "@/features/application/usecases/fetch-feature-usecase";
 import { DeleteFeatureUsecase } from "@/features/application/usecases/delete-feature-usecase";
 import { SaveOrderUsecase } from "@/features/application/usecases/save-order-usecase";
 import { IsFeatureOwnerUsecase } from "@/features/application/usecases/is-feature-owner-usecase";
@@ -41,9 +38,6 @@ export class FeaturesClientAdapter implements FeaturesClientPort {
 
     @inject(TYPES.EditFeatureUsecase)
     private readonly editFeatureUsecase: EditFeatureUsecase,
-
-    @inject(TYPES.FetchFeatureUsecase)
-    private readonly fetchFeatureUsecase: FetchFeatureUsecase,
 
     @inject(TYPES.DeleteFeatureUsecase)
     private readonly deleteFeatureUsecase: DeleteFeatureUsecase,
@@ -86,12 +80,6 @@ export class FeaturesClientAdapter implements FeaturesClientPort {
       teamMemberId,
       description,
     });
-  }
-
-  async fetchFeature({
-    featureId,
-  }: FetchFeatureClientRequestDto): Promise<FetchFeatureClientResponseDto> {
-    return await this.fetchFeatureUsecase.execute({ featureId });
   }
 
   async deleteFeature({

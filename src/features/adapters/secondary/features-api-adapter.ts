@@ -6,7 +6,6 @@ import {
   AddFeatureApiRequestDto,
   DeleteFeatureApiRequestDto,
   EditFeatureApiRequestDto,
-  FetchFeatureApiRequestDto,
   FetchFeaturesApiRequestDto,
   SaveOrderApiRequestDto,
 } from "@/features/application/dtos/request.dto";
@@ -14,7 +13,6 @@ import {
   AddFeatureApiResponseDto,
   DeleteFeatureApiResponseDto,
   EditFeatureApiResponseDto,
-  FetchFeatureApiResponseDto,
   FetchFeaturesApiResponseDto,
   SaveOrderApiResponseDto,
 } from "@/features/application/dtos/response.dto";
@@ -56,14 +54,6 @@ export class FeaturesApiAdapter implements FeaturesApiPort {
         featureId,
       }),
       payload: { teamMemberId, description },
-    });
-  }
-
-  async fetchFeature({
-    featureId,
-  }: FetchFeatureApiRequestDto): Promise<FetchFeatureApiResponseDto> {
-    return await this.apiClient.get({
-      url: FeaturesUrls.fetchFeature({ featureId }),
     });
   }
 
