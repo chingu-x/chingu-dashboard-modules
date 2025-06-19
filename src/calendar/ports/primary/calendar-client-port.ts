@@ -4,5 +4,5 @@ import type { GetVoyageStartDateResponseDto } from "@/calendar/application/dtos/
 export interface CalendarClientPort {
   getVoyageStartDate: (
     props: GetVoyageStartDateClientRequestDto,
-  ) => Promise<GetVoyageStartDateResponseDto>;
+  ) => GetVoyageStartDateResponseDto;
 }

@@ -12,6 +12,7 @@ import { registerFeaturesDependencies } from "./features/di/config";
 import { registerVoyageResourcesDependencies } from "./voyage-resources/di/config";
 import { registerTechStackDependencies } from "./tech-stack/di/config";
 import { registerIdeationDependencies } from "./ideation/di/config";
+import { registerCalendarDependencies } from "./calendar/di/config";
 
 export const registerDependencies = () => {
   registerRestApiDependencies();
@@ -27,6 +28,7 @@ export const registerDependencies = () => {
   registerVoyageResourcesDependencies();
   registerTechStackDependencies();
   registerIdeationDependencies();
+  registerCalendarDependencies();
 };
 
 registerDependencies();

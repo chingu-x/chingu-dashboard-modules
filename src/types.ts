@@ -11,6 +11,7 @@ import { FEATURES_TYPES } from "./features/di/types";
 import { VOYAGE_RESOURCES_TYPES } from "./voyage-resources/di/types";
 import { TECH_STACK_TYPES } from "./tech-stack/di/types";
 import { IDEATION_TYPES } from "./ideation/di/types";
+import { CALENDAR_TYPES } from "./calendar/di/types";
 
 export const TYPES = {
   ...USER_TYPES,
@@ -26,4 +27,5 @@ export const TYPES = {
   ...VOYAGE_RESOURCES_TYPES,
   ...TECH_STACK_TYPES,
   ...IDEATION_TYPES,
+  ...CALENDAR_TYPES,
 };
