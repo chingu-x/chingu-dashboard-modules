@@ -9,7 +9,7 @@ import {
   GetVoyageEndDateResponseDto,
   GetVoyageStartDateResponseDto,
 } from "@/calendar/application/dtos/response.dto";
-import { GetVoyageStartDateUsecase } from "@/calendar/application/usecases/get-voyage-start-data-usecase";
+import { GetVoyageStartDateUsecase } from "@/calendar/application/usecases/get-voyage-start-date-usecase";
 
 @injectable()
 export class CalendarClientAdapter implements CalendarClientPort {

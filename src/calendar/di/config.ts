@@ -1,6 +1,6 @@
 import { container } from "tsyringe";
 import { CALENDAR_TYPES } from "./types";
-import { GetVoyageStartDateUsecase } from "@/calendar/application/usecases/get-voyage-start-data-usecase";
+import { GetVoyageStartDateUsecase } from "@/calendar/application/usecases/get-voyage-start-date-usecase";
 import { CalendarClientAdapter } from "@/calendar/adapters/primary/calendar-client-adapter";
 
 export const registerCalendarDependencies = () => {
