@@ -1,1 +1,1 @@
-export type GetVoyageStartDateResponseDto = string;
+export type GetVoyageStartDateResponseDto = string | undefined;
