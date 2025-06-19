@@ -1,5 +1,8 @@
+import type { GetVoyageStartDateClientRequestDto } from "@/calendar/application/dtos/request.dto";
+import type { GetVoyageStartDateResponseDto } from "@/calendar/application/dtos/response.dto";
+
 export interface FeaturesClientPort {
   getVoyageStartDate: (
-    props: FetchFeaturesClientRequestDto,
-  ) => Promise<FetchFeaturesClientResponseDto>;
+    props: GetVoyageStartDateClientRequestDto,
+  ) => Promise<GetVoyageStartDateResponseDto>;
 }
