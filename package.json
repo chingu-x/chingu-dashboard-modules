@@ -67,6 +67,10 @@
       "import": "./dist/auth/index.js",
       "types": "./dist/auth/index.d.ts"
     },
+    "./calendar": {
+      "import": "./dist/calendar/index.js",
+      "types": "./dist/calendar/index.d.ts"
+    },
     "./features": {
       "import": "./dist/features/index.js",
       "types": "./dist/features/index.d.ts"

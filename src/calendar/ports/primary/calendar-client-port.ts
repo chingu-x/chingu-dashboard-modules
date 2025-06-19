@@ -5,4 +5,8 @@ export interface CalendarClientPort {
   getVoyageStartDate: (
     props: GetVoyageStartDateClientRequestDto,
   ) => GetVoyageStartDateResponseDto;
+
+  getVoyageEndDate: (
+    props: GetVoyageEndDateClientRequestDto,
+  ) => GetVoyageEndDateResponseDto;
 }

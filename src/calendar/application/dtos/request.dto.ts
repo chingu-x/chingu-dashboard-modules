@@ -5,4 +5,8 @@ export interface GetVoyageStartDateClientRequestDto {
   sprintsData: Sprint[];
 }
 
+export interface GetVoyageEndDateClientRequestDto {
+  sprintsData: Sprint[];
+}
+
 // api
