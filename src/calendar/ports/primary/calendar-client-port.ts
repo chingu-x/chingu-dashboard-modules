@@ -15,4 +15,8 @@ export interface CalendarClientPort {
   getVoyageEndDate: (
     props: GetVoyageEndDateClientRequestDto,
   ) => GetVoyageEndDateResponseDto;
+
+  isWithinTwoDates: (
+    props: IsWithinTwoDatesClientRequestDto,
+  ) => IsWithinTwoDatesResponseDto;
 }
