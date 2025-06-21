@@ -4,10 +4,12 @@ import { CalendarClientPort } from "@/calendar/ports/primary/calendar-client-por
 import {
   GetVoyageEndDateClientRequestDto,
   GetVoyageStartDateClientRequestDto,
+  IsWithinSprintRangeClientRequestDto,
 } from "@/calendar/application/dtos/request.dto";
 import {
   GetVoyageEndDateResponseDto,
   GetVoyageStartDateResponseDto,
+  IsWithinSprintRangeResponseDto,
 } from "@/calendar/application/dtos/response.dto";
 import { GetVoyageStartDateUsecase } from "@/calendar/application/usecases/get-voyage-start-date-usecase";
 import { GetVoyageEndDateUsecase } from "@/calendar/application/usecases/get-voyage-end-date-usecase";
@@ -20,6 +22,9 @@ export class CalendarClientAdapter implements CalendarClientPort {
 
     @inject(TYPES.GetVoyageEndDateUsecase)
     private readonly getVoyageEndDateUsecase: GetVoyageEndDateUsecase,
+
+    @inject(TYPES.IsWithinSprintRangeUsecase)
+    private readonly isWithinSprintRangeUsecase: IsWithinSprintRangeUsecase,
   ) {}
 
   getVoyageStartDate({
@@ -32,5 +37,11 @@ export class CalendarClientAdapter implements CalendarClientPort {
     sprintsData,
   }: GetVoyageEndDateClientRequestDto): GetVoyageEndDateResponseDto {
     return this.getVoyageEndDateUsecase.execute({ sprintsData });
+  }
+
+  isWithinSprintRange({
+    currentDate,
+  }: IsWithinSprintRangeClientRequestDto): IsWithinSprintRangeResponseDto {
+    return this.isWithinSprintRangeUsecase.execute({ currentDate });
   }
 }
