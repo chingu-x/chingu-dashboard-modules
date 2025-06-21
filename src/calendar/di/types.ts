@@ -2,6 +2,7 @@ import type { InjectionToken } from "tsyringe";
 import type { CalendarClientAdapter } from "@/calendar/adapters/primary/calendar-client-adapter";
 import type { GetVoyageStartDateUsecase } from "@/calendar/application/usecases/get-voyage-start-date-usecase";
 import type { GetVoyageEndDateUsecase } from "@/calendar/application/usecases/get-voyage-end-date-usecase";
+import type { IsWithinSprintRangeUsecase } from "@/calendar/application/usecases/is-within-sprint-range-usecase";
 
 export const CALENDAR_TYPES = {
   // ports
@@ -14,6 +15,10 @@ export const CALENDAR_TYPES = {
   GetVoyageEndDateUsecase: Symbol.for(
     "GetVoyageEndDateUsecase",
   ) as InjectionToken<GetVoyageEndDateUsecase>,
+
+  IsWithinSprintRangeUsecase: Symbol.for(
+    "IsWithinSprintRangeUsecase",
+  ) as InjectionToken<IsWithinSprintRangeUsecase>,
 
   // adapters
   CalendarClientAdapter: Symbol.for(
