@@ -1,7 +1,7 @@
 import { isSameDay } from "date-fns";
 
 interface IsWithinTwoDatesProps {
-  currentDate: Date | string;
+  currentDate: Date;
   startDate: Date | string;
   endDate: Date | string;
 }

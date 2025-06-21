@@ -9,5 +9,8 @@ export interface GetVoyageEndDateUsecaseDto {
 }
 
 export interface IsWithinSprintRangeUsecaseDto {
-  currentDate: Date | string;
+  currentDate: Date;
+  startDate: string;
+  endDate: string;
+  timezone: string;
 }

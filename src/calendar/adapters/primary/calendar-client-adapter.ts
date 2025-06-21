@@ -41,7 +41,15 @@ export class CalendarClientAdapter implements CalendarClientPort {
 
   isWithinSprintRange({
     currentDate,
+    startDate,
+    endDate,
+    timezone,
   }: IsWithinSprintRangeClientRequestDto): IsWithinSprintRangeResponseDto {
-    return this.isWithinSprintRangeUsecase.execute({ currentDate });
+    return this.isWithinSprintRangeUsecase.execute({
+      currentDate,
+      startDate,
+      endDate,
+      timezone,
+    });
   }
 }

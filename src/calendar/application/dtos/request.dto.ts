@@ -10,7 +10,10 @@ export interface GetVoyageEndDateClientRequestDto {
 }
 
 export interface IsWithinSprintRangeClientRequestDto {
-  currentDate: Date | string;
+  currentDate: Date;
+  startDate: string;
+  endDate: string;
+  timezone: string;
 }
 
 // api
