@@ -9,10 +9,4 @@ export interface GetVoyageEndDateClientRequestDto {
   sprintsData: Sprint[];
 }
 
-export interface IsWithinTwoDatesClientRequestDto {
-  currentDate: Date | string;
-  startDate: Date | string;
-  endDate: Date | string;
-}
-
 // api
