@@ -9,4 +9,8 @@ export interface GetVoyageEndDateClientRequestDto {
   sprintsData: Sprint[];
 }
 
+export interface IsWithinSprintRangeClientRequestDto {
+  currentDate: Date | string;
+}
+
 // api
