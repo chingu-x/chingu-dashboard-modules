@@ -7,3 +7,7 @@ export interface GetVoyageStartDateUsecaseDto {
 export interface GetVoyageEndDateUsecaseDto {
   sprintsData: Sprint[];
 }
+
+export interface IsWithinSprintRangeUsecaseDto {
+  currentDate: Date | string;
+}
