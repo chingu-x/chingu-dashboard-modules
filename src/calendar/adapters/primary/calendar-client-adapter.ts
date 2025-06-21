@@ -13,6 +13,7 @@ import {
 } from "@/calendar/application/dtos/response.dto";
 import { GetVoyageStartDateUsecase } from "@/calendar/application/usecases/get-voyage-start-date-usecase";
 import { GetVoyageEndDateUsecase } from "@/calendar/application/usecases/get-voyage-end-date-usecase";
+import { IsWithinSprintRangeUsecase } from "@/calendar/application/usecases/is-within-sprint-range-usecase";
 
 @injectable()
 export class CalendarClientAdapter implements CalendarClientPort {
