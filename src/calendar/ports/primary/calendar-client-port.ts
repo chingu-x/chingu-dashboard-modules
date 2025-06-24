@@ -1,9 +1,11 @@
 import type {
+  GetSelectedSprintClientRequestDto,
   GetVoyageEndDateClientRequestDto,
   GetVoyageStartDateClientRequestDto,
   IsWithinSprintRangeClientRequestDto,
 } from "@/calendar/application/dtos/request.dto";
 import type {
+  GetSelectedSprintResponseDto,
   GetVoyageEndDateResponseDto,
   GetVoyageStartDateResponseDto,
   IsWithinSprintRangeResponseDto,
@@ -22,5 +24,7 @@ export interface CalendarClientPort {
     props: IsWithinSprintRangeClientRequestDto,
   ) => IsWithinSprintRangeResponseDto;
 
-  getSelectedSprint(props: GetSelectedSprintClientRequestDto) => GetSelectedSprintResponseDto
+  getSelectedSprint: (
+    props: GetSelectedSprintClientRequestDto,
+  ) => GetSelectedSprintResponseDto;
 }
