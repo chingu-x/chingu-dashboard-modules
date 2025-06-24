@@ -21,6 +21,7 @@ export interface GetSelectedSprintClientRequestDto {
   selectedDate: Date;
   startDate: string;
   endDate: string;
+  timezone: string;
 }
 
 // api

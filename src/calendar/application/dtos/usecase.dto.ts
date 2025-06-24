@@ -1,4 +1,5 @@
 import type { Sprint } from "@/sprints/application/types";
+import { IsWithinSprintRangeResponseDto } from "./response.dto";
 
 export interface GetVoyageStartDateUsecaseDto {
   sprintsData: Sprint[];
@@ -20,4 +21,8 @@ export interface GetSelectedSprintUsecaseDto {
   selectedDate: Date;
   startDate: string;
   endDate: string;
+  timezone: string;
+  isWithinTwoDates: (
+    props: IsWithinSprintRangeUsecaseDto,
+  ) => IsWithinSprintRangeResponseDto;
 }
