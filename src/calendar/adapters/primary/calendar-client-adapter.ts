@@ -2,11 +2,13 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { CalendarClientPort } from "@/calendar/ports/primary/calendar-client-port";
 import {
+  GetSelectedSprintClientRequestDto,
   GetVoyageEndDateClientRequestDto,
   GetVoyageStartDateClientRequestDto,
   IsWithinSprintRangeClientRequestDto,
 } from "@/calendar/application/dtos/request.dto";
 import {
+  GetSelectedSprintResponseDto,
   GetVoyageEndDateResponseDto,
   GetVoyageStartDateResponseDto,
   IsWithinSprintRangeResponseDto,
@@ -26,6 +28,9 @@ export class CalendarClientAdapter implements CalendarClientPort {
 
     @inject(TYPES.IsWithinSprintRangeUsecase)
     private readonly isWithinSprintRangeUsecase: IsWithinSprintRangeUsecase,
+
+    @inject(TYPES.GetSelectedSprintUsecase)
+    private readonly getSelectedSprintUsecase: GetSelectedSprintUsecase,
   ) {}
 
   getVoyageStartDate({
@@ -51,6 +56,21 @@ export class CalendarClientAdapter implements CalendarClientPort {
       startDate,
       endDate,
       timezone,
+    });
+  }
+
+  getSelectedSprint({
+    sprints,
+    selectedDate,
+    startDate,
+    endDate,
+  }: GetSelectedSprintClientRequestDto): GetSelectedSprintResponseDto {
+    return this.getSelectedSprintUsecase.execute({
+      sprints,
+      selectedDate,
+      startDate,
+      endDate,
+      isWithinTwoDates: this.isWithinSprintRange.bind(this),
     });
   }
 }
