@@ -17,4 +17,7 @@ export interface IsWithinSprintRangeUsecaseDto {
 
 export interface GetSelectedSprintUsecaseDto {
   sprints: Sprint[];
+  selectedDate: Date;
+  startDate: string;
+  endDate: string;
 }
