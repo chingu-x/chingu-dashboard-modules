@@ -14,3 +14,7 @@ export interface IsWithinSprintRangeUsecaseDto {
   endDate: string;
   timezone: string;
 }
+
+export interface GetSelectedSprintUsecaseDto {
+  sprints: Sprint[];
+}

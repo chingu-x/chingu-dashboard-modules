@@ -18,6 +18,9 @@ export interface IsWithinSprintRangeClientRequestDto {
 
 export interface GetSelectedSprintClientRequestDto {
   sprints: Sprint[];
+  selectedDate: Date;
+  startDate: string;
+  endDate: string;
 }
 
 // api
