@@ -21,4 +21,6 @@ export interface CalendarClientPort {
   isWithinSprintRange: (
     props: IsWithinSprintRangeClientRequestDto,
   ) => IsWithinSprintRangeResponseDto;
+
+  getSelectedSprint(props: GetSelectedSprintClientRequestDto) => GetSelectedSprintResponseDto
 }

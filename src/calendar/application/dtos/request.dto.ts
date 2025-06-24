@@ -16,4 +16,8 @@ export interface IsWithinSprintRangeClientRequestDto {
   timezone: string;
 }
 
+export interface GetSelectedSprintClientRequestDto {
+  sprints: Sprint[];
+}
+
 // api
