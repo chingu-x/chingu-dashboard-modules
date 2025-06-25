@@ -1,10 +1,12 @@
 import type {
+  GetMeetingEventDataClientRequestDto,
   GetSelectedSprintClientRequestDto,
   GetVoyageEndDateClientRequestDto,
   GetVoyageStartDateClientRequestDto,
   IsWithinSprintRangeClientRequestDto,
 } from "@/calendar/application/dtos/request.dto";
 import type {
+  GetMeetingEventDataResponseDto,
   GetSelectedSprintResponseDto,
   GetVoyageEndDateResponseDto,
   GetVoyageStartDateResponseDto,
@@ -27,4 +29,8 @@ export interface CalendarClientPort {
   getSelectedSprint: (
     props: GetSelectedSprintClientRequestDto,
   ) => GetSelectedSprintResponseDto;
+
+  getMeetingEventData: (
+    props: GetMeetingEventDataClientRequestDto,
+  ) => GetMeetingEventDataResponseDto;
 }
