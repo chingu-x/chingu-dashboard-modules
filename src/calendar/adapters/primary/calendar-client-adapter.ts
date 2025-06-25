@@ -19,6 +19,7 @@ import { GetVoyageStartDateUsecase } from "@/calendar/application/usecases/get-v
 import { GetVoyageEndDateUsecase } from "@/calendar/application/usecases/get-voyage-end-date-usecase";
 import { IsWithinSprintRangeUsecase } from "@/calendar/application/usecases/is-within-sprint-range-usecase";
 import { GetSelectedSprintUsecase } from "@/calendar/application/usecases/get-selected-sprint-usecase";
+import { GetMeetingEventDataUsecase } from "@/calendar/application/usecases/get-meeting-event-data-usecase";
 
 @injectable()
 export class CalendarClientAdapter implements CalendarClientPort {
