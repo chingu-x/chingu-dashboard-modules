@@ -1,4 +1,5 @@
 import type { Sprint } from "@/sprints/application/types";
+import type { Event } from "@/calendar/application/types";
 
 export interface GetVoyageStartDateUsecaseDto {
   sprintsData: Sprint[];

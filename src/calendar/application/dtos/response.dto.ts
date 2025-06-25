@@ -1,4 +1,4 @@
-import type { Meeting } from "@/sprint-meeting/application/types";
+import type { Event } from "@/calendar/application/types";
 
 export type GetVoyageStartDateResponseDto = string | undefined;
 
@@ -8,4 +8,4 @@ export type IsWithinSprintRangeResponseDto = boolean;
 
 export type GetSelectedSprintResponseDto = number | undefined;
 
-export type GetMeetingEventDataResponseDto = Meeting;
+export type GetMeetingEventDataResponseDto = Event | undefined;
