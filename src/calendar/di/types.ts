@@ -4,6 +4,7 @@ import type { GetVoyageStartDateUsecase } from "@/calendar/application/usecases/
 import type { GetVoyageEndDateUsecase } from "@/calendar/application/usecases/get-voyage-end-date-usecase";
 import type { IsWithinSprintRangeUsecase } from "@/calendar/application/usecases/is-within-sprint-range-usecase";
 import type { GetSelectedSprintUsecase } from "@/calendar/application/usecases/get-selected-sprint-usecase";
+import type { GetMeetingEventDataUsecase } from "@/calendar/application/usecases/get-meeting-event-data-usecase";
 
 export const CALENDAR_TYPES = {
   // ports
@@ -24,6 +25,10 @@ export const CALENDAR_TYPES = {
   GetSelectedSprintUsecase: Symbol.for(
     "GetSelectedSprintUsecase",
   ) as InjectionToken<GetSelectedSprintUsecase>,
+
+  GetMeetingEventDataUsecase: Symbol.for(
+    "GetMeetingEventDataUsecase",
+  ) as InjectionToken<GetMeetingEventDataUsecase>,
 
   // adapters
   CalendarClientAdapter: Symbol.for(
