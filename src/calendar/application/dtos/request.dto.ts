@@ -1,3 +1,4 @@
+import type { Event } from "@/calendar/application/types";
 import type { Sprint } from "@/sprints/application/types";
 
 // client
@@ -22,4 +23,8 @@ export interface GetSelectedSprintClientRequestDto {
   timezone: string;
 }
 
+export interface GetMeetingEventDataClientRequestDto {
+  data: Event[];
+  date: Date;
+}
 // api
