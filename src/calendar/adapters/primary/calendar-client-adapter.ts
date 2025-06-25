@@ -62,15 +62,11 @@ export class CalendarClientAdapter implements CalendarClientPort {
   getSelectedSprint({
     sprints,
     selectedDate,
-    startDate,
-    endDate,
     timezone,
   }: GetSelectedSprintClientRequestDto): GetSelectedSprintResponseDto {
     return this.getSelectedSprintUsecase.execute({
       sprints,
       selectedDate,
-      startDate,
-      endDate,
       timezone,
     });
   }
