@@ -4,6 +4,7 @@ import { GetVoyageStartDateUsecase } from "@/calendar/application/usecases/get-v
 import { CalendarClientAdapter } from "@/calendar/adapters/primary/calendar-client-adapter";
 import { GetVoyageEndDateUsecase } from "@/calendar/application/usecases/get-voyage-end-date-usecase";
 import { IsWithinSprintRangeUsecase } from "@/calendar/application/usecases/is-within-sprint-range-usecase";
+import { GetSelectedSprintUsecase } from "@/calendar/application/usecases/get-selected-sprint-usecase";
 
 export const registerCalendarDependencies = () => {
   // ports
@@ -19,6 +20,10 @@ export const registerCalendarDependencies = () => {
 
   container.register(CALENDAR_TYPES.IsWithinSprintRangeUsecase, {
     useClass: IsWithinSprintRangeUsecase,
+  });
+
+  container.register(CALENDAR_TYPES.GetSelectedSprintUsecase, {
+    useClass: GetSelectedSprintUsecase,
   });
 
   // adapters
