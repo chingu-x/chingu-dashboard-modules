@@ -20,3 +20,9 @@ export interface GetSelectedSprintUsecaseDto {
   selectedDate: Date;
   timezone: string;
 }
+
+export interface GetMeetingEventDataUsecaseDto {
+  data: Event[];
+  date: Date;
+  timezone: string;
+}

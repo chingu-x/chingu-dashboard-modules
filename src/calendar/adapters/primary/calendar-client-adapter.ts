@@ -80,7 +80,8 @@ export class CalendarClientAdapter implements CalendarClientPort {
   getMeetingEventData({
     data,
     date,
+    timezone,
   }: GetMeetingEventDataClientRequestDto): GetMeetingEventDataResponseDto {
-    return this.getMeetingEventDataUsecase.execute({ data, date });
+    return this.getMeetingEventDataUsecase.execute({ data, date, timezone });
   }
 }

@@ -26,5 +26,7 @@ export interface GetSelectedSprintClientRequestDto {
 export interface GetMeetingEventDataClientRequestDto {
   data: Event[];
   date: Date;
+  timezone: string;
 }
+
 // api
