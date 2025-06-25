@@ -2,12 +2,14 @@ import { inject, injectable } from "tsyringe";
 import { TYPES } from "@/types";
 import { CalendarClientPort } from "@/calendar/ports/primary/calendar-client-port";
 import {
+  GetMeetingEventDataClientRequestDto,
   GetSelectedSprintClientRequestDto,
   GetVoyageEndDateClientRequestDto,
   GetVoyageStartDateClientRequestDto,
   IsWithinSprintRangeClientRequestDto,
 } from "@/calendar/application/dtos/request.dto";
 import {
+  GetMeetingEventDataResponseDto,
   GetSelectedSprintResponseDto,
   GetVoyageEndDateResponseDto,
   GetVoyageStartDateResponseDto,
@@ -32,6 +34,9 @@ export class CalendarClientAdapter implements CalendarClientPort {
 
     @inject(TYPES.GetSelectedSprintUsecase)
     private readonly getSelectedSprintUsecase: GetSelectedSprintUsecase,
+
+    @inject(TYPES.GetMeetingEventDataUsecase)
+    private readonly getMeetingEventDataUsecase: GetMeetingEventDataUsecase,
   ) {}
 
   getVoyageStartDate({
@@ -70,5 +75,12 @@ export class CalendarClientAdapter implements CalendarClientPort {
       selectedDate,
       timezone,
     });
+  }
+
+  getMeetingEventData({
+    data,
+    date,
+  }: GetMeetingEventDataClientRequestDto): GetMeetingEventDataResponseDto {
+    return this.getMeetingEventDataUsecase.execute({ data, date });
   }
 }
