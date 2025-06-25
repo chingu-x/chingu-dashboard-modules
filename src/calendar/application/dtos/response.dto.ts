@@ -4,4 +4,4 @@ export type GetVoyageEndDateResponseDto = string | undefined;
 
 export type IsWithinSprintRangeResponseDto = boolean;
 
-export type GetSelectedSprintResponseDto = number;
+export type GetSelectedSprintResponseDto = number | undefined;
